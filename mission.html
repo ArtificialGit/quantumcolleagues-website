@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Statement — QuantumColleagues.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            color: #050830;
+        }
+        .logo-text .light { font-weight: 300; }
+        .logo-text .bold { font-weight: 700; }
+        .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* ===== MAIN CONTENT ===== */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e6e6e6;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-text {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        /* ===== THREE COLUMNS ===== */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .column {
+            border-top: 3px solid #2D8C6F;
+            padding-top: 1.2rem;
+        }
+
+        .column h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2D8C6F;
+            margin-bottom: 0.2rem;
+        }
+
+        .column .col-subtitle {
+            font-size: 0.8rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .item {
+            margin-bottom: 1rem;
+        }
+
+        .item-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .item-bullet {
+            color: #2D8C6F;
+            font-size: 0.6rem;
+            margin-top: 0.35rem;
+            flex-shrink: 0;
+        }
+
+        .item-title span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #050830;
+        }
+
+        .item-desc {
+            font-size: 0.82rem;
+            color: #666;
+            margin-left: 1rem;
+            line-height: 1.5;
+        }
+
+        /* ===== OPERATING MODEL (SLIDE 2) ===== */
+        .section-break {
+            height: 1px;
+            background: #e6e6e6;
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            margin-bottom: 2rem;
+        }
+
+        .stages {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .stage-box {
+            background: #fafafc;
+            border: 1px solid #e6e6e6;
+            border-top: 3px solid #2D8C6F;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+
+        .stage-box.augment { border-top-color: #2D648C; }
+        .stage-box.amplify { border-top-color: #050830; }
+
+        .stage-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .stage-box .stage-sub {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            margin-bottom: 0.8rem;
+        }
+
+        .stage-box .stage-body {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .stage-box .stage-tag {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #8c8eaf;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #2D8C6F;
+            font-weight: 700;
+            padding: 0 0.5rem;
+            margin-top: 3rem;
+        }
+
+        /* ===== HUMAN SPARK ===== */
+        .spark-section {
+            border-top: 1px solid #e6e6e6;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .spark-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #050830;
+            margin-bottom: 1rem;
+        }
+
+        .qualities {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .quality {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .quality-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2D8C6F;
+            flex-shrink: 0;
+        }
+
+        .quality span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #050830;
+        }
+
+        .evidence {
+            border-top: 1px solid #e6e6e6;
+            padding-top: 0.8rem;
+            font-size: 0.8rem;
+            color: #8c8eaf;
+            text-align: center;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid #e6e6e6;
+            margin-top: 3rem;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer .right {
+            color: #8c8eaf;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .page { padding: 2rem 1.5rem; }
+            .page-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.4rem; }
+
+            .columns {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stages {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .arrow {
+                margin-top: 0;
+                transform: rotate(90deg);
+                padding: 0.3rem;
+            }
+
+            .qualities { gap: 1rem; }
+
+            footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <span class="logo-text">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <a href="index.html" class="back-link">&larr; Home</a>
+    </header>
+
+    <!-- PAGE 1: MISSION STATEMENT -->
+    <div class="page">
+        <h1 class="page-title">MISSION STATEMENT</h1>
+        <p class="page-subtitle">Community Interest Company under Development</p>
+        <div class="divider"></div>
+
+        <p class="mission-text">
+            Our mission is to empower small and medium enterprises and charities by providing professional, affordable AI solutions to boost their success. We reinvest our profits to provide training and education for young people and pre-retirees, offering them the skills and guidance needed to thrive in an AI-driven world.
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- THREE COLUMNS -->
+        <div class="columns">
+
+            <!-- Column 1: SMEs & Charities -->
+            <div class="column">
+                <h3>SMEs &amp; Charities</h3>
+                <p class="col-subtitle">The Revenue Model</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Off-the-shelf AI agents</span>
+                    </div>
+                    <p class="item-desc">Downloadable or cloud-based agents for admin, project management &amp; operations</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Bespoke AI solutions</span>
+                    </div>
+                    <p class="item-desc">Custom-built agents tailored to each organisation's needs</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Expert consulting</span>
+                    </div>
+                    <p class="item-desc">The same quality insight that big consulting firms reserve for large enterprises</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Affordable access</span>
+                    </div>
+                    <p class="item-desc">Enterprise-grade expertise for SMEs and charities who are usually priced out</p>
+                </div>
+            </div>
+
+            <!-- Column 2: Young People -->
+            <div class="column">
+                <h3>Young People</h3>
+                <p class="col-subtitle">Social Mission: Future-Proofing Careers</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>AI training &amp; education</span>
+                    </div>
+                    <p class="item-desc">Preparing young people for the future of work with practical AI skills</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Career protection</span>
+                    </div>
+                    <p class="item-desc">Helping the next generation protect themselves from the oncoming change in AI</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Inclusivity &amp; access</span>
+                    </div>
+                    <p class="item-desc">Fostering inclusivity in the tech world and giving everyone a foot in the door</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Building their future</span>
+                    </div>
+                    <p class="item-desc">Enabling young people to create something for themselves using new technology</p>
+                </div>
+            </div>
+
+            <!-- Column 3: Pre-Retirees -->
+            <div class="column">
+                <h3>Pre-Retirees &amp; Retirees</h3>
+                <p class="col-subtitle">Social Mission: Giving Back &amp; Building Anew</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>AI upskilling (55-65+)</span>
+                    </div>
+                    <p class="item-desc">Learning how AI works and how it can open new post-retirement pathways</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Mentoring the young</span>
+                    </div>
+                    <p class="item-desc">Giving back by mentoring younger people into the workforce</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Purpose in retirement</span>
+                    </div>
+                    <p class="item-desc">Allowing the older age group to do something useful and meaningful</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Bridging generations</span>
+                    </div>
+                    <p class="item-desc">A framework where experience meets innovation for mutual benefit</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPERATING MODEL -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">THE AI-HUMAN OPERATING MODEL</h2>
+        <p class="section-subtitle">Neither alone is enough. Together, they're transformational.</p>
+
+        <div class="stages">
+            <div class="stage-box">
+                <h3>AUTOMATE</h3>
+                <p class="stage-sub">AI handles the routine</p>
+                <p class="stage-body">Repetitive tasks, data processing, pattern recognition, error detection</p>
+                <p class="stage-tag">Frees human capacity for what matters</p>
+            </div>
+
+            <div class="arrow">&rarr;</div>
+
+            <div class="stage-box augment">
+                <h3>AUGMENT</h3>
+                <p class="stage-sub">AI enhances human decision-making</p>
+                <p class="stage-body">Real-time insights, predictive analytics, intelligent drafting</p>
+                <p class="stage-tag">Humans retain control, AI amplifies reach</p>
+            </div>
+
+            <div class="arrow">&rarr;</div>
+
+            <div class="stage-box amplify">
+                <h3>AMPLIFY</h3>
+                <p class="stage-sub">Small teams, massive impact</p>
+                <p class="stage-body">2-5 humans managing 50-100 AI agents</p>
+                <p class="stage-tag">The human spark scales without limits</p>
+            </div>
+        </div>
+
+        <!-- HUMAN SPARK -->
+        <div class="spark-section">
+            <p class="spark-title">The Human Spark &mdash; What AI Cannot Replace</p>
+
+            <div class="qualities">
+                <div class="quality"><div class="quality-dot"></div><span>Creativity</span></div>
+                <div class="quality"><div class="quality-dot"></div><span>Empathy</span></div>
+                <div class="quality"><div class="quality-dot"></div><span>Judgment</span></div>
+                <div class="quality"><div class="quality-dot"></div><span>Ethics</span></div>
+                <div class="quality"><div class="quality-dot"></div><span>Leadership</span></div>
+                <div class="quality"><div class="quality-dot"></div><span>Context</span></div>
+            </div>
+
+            <p class="evidence">
+                $2.9T economic value by 2030 (McKinsey) &nbsp;|&nbsp; 2x earnings for AI-human companies (BCG) &nbsp;|&nbsp; 30-50% faster processes (Accenture)
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
+        <span class="right">Consulting powered by Deliver.Change.Grow.</span>
+    </footer>
+
+</body>
+</html>

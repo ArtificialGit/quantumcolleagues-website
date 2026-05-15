@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products &mdash; QuantumColleagues.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            color: #050830;
+        }
+        .logo-text .light { font-weight: 300; }
+        .logo-text .bold { font-weight: 700; }
+        .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* ===== MAIN CONTENT ===== */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e6e6e6;
+            margin-bottom: 1.5rem;
+        }
+
+        .lede {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 900px;
+        }
+
+        /* ===== PRODUCT STAGES (Wedge -> Core -> Future) ===== */
+        .stages {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .stage-box {
+            background: #fafafc;
+            border: 1px solid #e6e6e6;
+            border-top: 3px solid #2D8C6F;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+
+        .stage-box.augment { border-top-color: #2D648C; }
+        .stage-box.amplify { border-top-color: #050830; }
+
+        .stage-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .stage-box .stage-sub {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            margin-bottom: 0.8rem;
+        }
+
+        .stage-box .stage-body {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .stage-box .stage-tag {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #8c8eaf;
+        }
+
+        .stage-box .stage-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            font-size: 0.82rem;
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .stage-box .stage-link:hover { text-decoration: underline; }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #2D8C6F;
+            font-weight: 700;
+            padding: 0 0.5rem;
+            margin-top: 3rem;
+        }
+
+        /* ===== THREE COLUMNS (delivery models) ===== */
+        .section-break {
+            height: 1px;
+            background: #e6e6e6;
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            margin-bottom: 2rem;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .column {
+            border-top: 3px solid #2D8C6F;
+            padding-top: 1.2rem;
+        }
+
+        .column h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2D8C6F;
+            margin-bottom: 0.2rem;
+        }
+
+        .column .col-subtitle {
+            font-size: 0.8rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .item {
+            margin-bottom: 1rem;
+        }
+
+        .item-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .item-bullet {
+            color: #2D8C6F;
+            font-size: 0.6rem;
+            margin-top: 0.35rem;
+            flex-shrink: 0;
+        }
+
+        .item-title span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #050830;
+        }
+
+        .item-desc {
+            font-size: 0.82rem;
+            color: #666;
+            margin-left: 1rem;
+            line-height: 1.5;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid #e6e6e6;
+            margin-top: 3rem;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer .right {
+            color: #8c8eaf;
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .page { padding: 2rem 1.5rem; }
+            .page-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.4rem; }
+
+            .columns {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stages {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .arrow {
+                margin-top: 0;
+                transform: rotate(90deg);
+                padding: 0.3rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <span class="logo-text">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <a href="index.html" class="back-link">&larr; Home</a>
+    </header>
+
+    <!-- PRODUCTS -->
+    <div class="page">
+        <h1 class="page-title">PRODUCTS</h1>
+        <p class="page-subtitle">Three categories. One mission. Each earns the next.</p>
+        <div class="divider"></div>
+
+        <p class="lede">
+            Off-the-shelf AI colleagues, sold direct and through accredited channel partners. Affordable, private, ready-to-use AI for the organisations the market ignores. Every sale generates surplus &mdash; and every pound of surplus funds AI training for every generation.
+        </p>
+
+        <div class="stages">
+            <div class="stage-box">
+                <h3>PROUST</h3>
+                <p class="stage-sub">Founder Assist &mdash; Available now</p>
+                <p class="stage-body">Inbox, calendar, morning brief. Proust remembers so you don&rsquo;t have to &mdash; founder-grade AI, set up in ninety seconds.</p>
+                <p class="stage-tag">Founders &middot; Exec leaders &middot; Fractional operators</p>
+                <a class="stage-link" href="proust.html">Explore Proust &rarr;</a>
+            </div>
+
+            <div class="arrow">&rarr;</div>
+
+            <div class="stage-box augment">
+                <h3>ADMIN CORE</h3>
+                <p class="stage-sub">SME Assist &mdash; Pilots Q3 2026</p>
+                <p class="stage-body">HR, finance, contracts, compliance. The back-office crew every SME needs but can&rsquo;t afford to hire.</p>
+                <p class="stage-tag">SMEs &middot; Charities &middot; Social enterprises (5&ndash;50 staff)</p>
+            </div>
+
+            <div class="arrow">&rarr;</div>
+
+            <div class="stage-box amplify">
+                <h3>PROJECT MANAGER</h3>
+                <p class="stage-sub">QuantumColleagues &mdash; Launch TBC</p>
+                <p class="stage-body">Plans, tracks, reports, chases. Runs projects so your humans can run people.</p>
+                <p class="stage-tag">Delivery teams &middot; Programme managers &middot; Agencies</p>
+            </div>
+        </div>
+
+        <!-- HOW CLIENTS BUY -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">HOW CLIENTS BUY</h2>
+        <p class="section-subtitle">Three delivery models. Every product supports the one that fits your environment.</p>
+
+        <div class="columns">
+            <div class="column">
+                <h3>Download</h3>
+                <p class="col-subtitle">Self-hosted &middot; Annual licence</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Docker container, your inference</span>
+                    </div>
+                    <p class="item-desc">Bundled setup wizard. Your infrastructure, your data, your control.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Community tier available</span>
+                    </div>
+                    <p class="item-desc">For technical teams, charities, education, community groups.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>Managed</h3>
+                <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Hosted, monitored, updated</span>
+                    </div>
+                    <p class="item-desc">QC manages the infrastructure. You get the agent without running a server.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Tiered by usage</span>
+                    </div>
+                    <p class="item-desc">For SMEs and non-profits wanting zero overhead.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>Appliance</h3>
+                <p class="col-subtitle">On-premise &middot; Hardware + retainer</p>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Pre-configured device</span>
+                    </div>
+                    <p class="item-desc">Everything runs on your network. Shipped, set up, supported.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>For regulated sectors</span>
+                    </div>
+                    <p class="item-desc">Data residency, GDPR, safeguarding &mdash; built-in by design.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHANNEL PARTNERS -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">CHANNEL PARTNERS</h2>
+        <p class="section-subtitle">Accredited consultancies and MSPs who resell and embed our agents.</p>
+
+        <p class="lede">
+            We work with consultancies and IT providers who deliver on our behalf &mdash; embedding Proust and Admin Core into their own client engagements. Channel-ready from day one. <a href="mission.html#contact" style="color:#2D8C6F;text-decoration:none;font-weight:500;">Get in touch</a> to apply.
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
+        <span class="right">Consulting powered by Deliver.Change.Grow.</span>
+    </footer>
+
+</body>
+</html>

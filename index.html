@@ -9,49 +9,252 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background-color: #050830; color: #050830; min-height: 100vh; overflow: hidden; }
-        #mosaic { position: fixed; inset: 0; display: grid; grid-template-columns: repeat(auto-fill, 80px); grid-auto-rows: 80px; gap: 2px; z-index: 0; }
-        #mosaic .tile { background-color: #0d1240; background-size: cover; background-position: center; transition: opacity 0.6s ease; opacity: 0; }
-        #overlay { position: fixed; inset: 0; background: rgba(5,8,48,0.50); z-index: 1; }
-        .stage { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
-        .container { text-align: center; padding: 3rem 3.5rem; max-width: 560px; background: rgba(255,255,255,0.90); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 4px; box-shadow: 0 8px 40px rgba(5,8,48,0.35); }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #050830;
+            color: #050830;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* ── Mosaic grid ── */
+        #mosaic {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 80px);
+            grid-auto-rows: 80px;
+            gap: 2px;
+            z-index: 0;
+        }
+
+        #mosaic .tile {
+            background-color: #0d1240;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.6s ease;
+            opacity: 0;
+        }
+
+        /* ── Dark tint overlay ── */
+        #overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 8, 48, 0.50);
+            z-index: 1;
+        }
+
+        /* ── Centred content ── */
+        .stage {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            padding: 3rem 3.5rem;
+            max-width: 560px;
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 4px;
+            box-shadow: 0 8px 40px rgba(5, 8, 48, 0.35);
+        }
+
         .logo { margin-bottom: 2.5rem; }
-        .logo-text { font-size: 2.4rem; letter-spacing: -0.5px; color: #050830; }
+
+        .logo-text {
+            font-size: 2.4rem;
+            letter-spacing: -0.5px;
+            color: #050830;
+        }
+
         .logo-text .light { font-weight: 300; }
         .logo-text .bold  { font-weight: 700; }
         .logo-text .dot   { color: #2D8C6F; font-weight: 700; }
-        .divider { width: 60px; height: 3px; background-color: #2D8C6F; margin: 0 auto 2rem; }
-        h1 { font-size: 1.1rem; font-weight: 400; color: #6b6e8a; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
-        .tagline { font-size: 0.95rem; color: #9a9cb8; font-weight: 300; line-height: 1.6; }
-        .tagline a { color: #2D8C6F; text-decoration: none; font-weight: 400; }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #2D8C6F;
+            margin: 0 auto 2rem;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: #9a9cb8;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .tagline a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
         .tagline a:hover { text-decoration: underline; }
-        .footer { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 0.75rem; color: rgba(255,255,255,0.40); letter-spacing: 0.05em; z-index: 3; }
-        @media (max-width: 480px) { .logo-text { font-size: 1.8rem; } h1 { font-size: 0.95rem; } .container { padding: 2rem 1.75rem; } }
+
+        .footer {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.40);
+            letter-spacing: 0.05em;
+            z-index: 3;
+        }
+
+        @media (max-width: 480px) {
+            .logo-text { font-size: 1.8rem; }
+            h1 { font-size: 0.95rem; }
+            .container { padding: 2rem 1.75rem; }
+        }
     </style>
 </head>
 <body>
+
     <div id="mosaic"></div>
     <div id="overlay"></div>
+
     <div class="stage">
         <div class="container">
-            <div class="logo"><span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span></div>
+            <div class="logo">
+                <span class="logo-text">
+                    <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+                </span>
+            </div>
+
             <div class="divider"></div>
-            <h1>Arriving May 2026</h1>
-            <p class="tagline">Humans &amp; AI Agents working together. Post-AI Training for every generation.<br><br><a href="mission.html">Mission</a> &middot; <a href="products.html">Products</a> &middot; <a href="proust.html">Proust</a></p>
+
+            <h1>Do some good with AI.</h1>
+
+            <p class="tagline">
+                Humans &amp; AI Agents working together. Post-AI Training for every generation.<br><br>
+                <a href="mission.html">Mission</a> · <a href="products.html">Products</a> · <a href="proust.html">Proust</a>
+            </p>
         </div>
     </div>
+
     <!-- Photos sourced via Unsplash (unsplash.com) under the Unsplash License -->
     <div class="footer">quantumcolleagues.org</div>
+
     <script>
-    (function(){var TILE_SIZE=82,SHIFT_BASE=1400,SHIFT_JITTER=800,FADE_MS=600,pool=[];
-    var KEY='Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
-    var QUERIES=['elderly face candid','senior face','middle aged face','old man face','old woman face','black british person','asian british face','diverse face real'];
-    var fetches=QUERIES.map(function(q){var url='https://api.unsplash.com/search/photos?query='+encodeURIComponent(q)+'&per_page=15&content_filter=high&client_id='+KEY;return fetch(url).then(function(r){return r.json();}).then(function(data){var photos=data.results||[];return photos.map(function(p){return p.urls.raw+'?w=160&h=160&fit=crop&crop=faces&auto=format&q=80';});}).catch(function(){return[];});});
-    Promise.all(fetches).then(function(results){pool=[].concat.apply([],results).sort(function(){return Math.random()-0.5;});if(pool.length>0)init();});
-    var mosaic=document.getElementById('mosaic'),cols=Math.ceil(window.innerWidth/TILE_SIZE)+1,rows=Math.ceil(window.innerHeight/TILE_SIZE)+1,needed=cols*rows,tiles=[];
-    for(var i=0;i<needed;i++){var div=document.createElement('div');div.className='tile';mosaic.appendChild(div);tiles.push(div);}
-    function init(){var order=tiles.slice().sort(function(){return Math.random()-0.5;});order.forEach(function(tile,i){setTimeout(function(){tile.style.backgroundImage='url('+pool[i%pool.length]+')';tile.style.opacity='1';},i*4);});setTimeout(startShifting,needed*4+1000);}
-    function startShifting(){function shift(){var count=2+Math.floor(Math.random()*2),picked=tiles.slice().sort(function(){return Math.random()-0.5;}).slice(0,count);picked.forEach(function(tile){tile.style.opacity='0';setTimeout(function(){tile.style.backgroundImage='url('+pool[Math.floor(Math.random()*pool.length)]+')';tile.style.opacity='1';},FADE_MS+50);});setTimeout(shift,SHIFT_BASE+Math.random()*SHIFT_JITTER);}shift();}
+    (function () {
+        var TILE_SIZE    = 82;   // 80px tile + 2px gap
+        var SHIFT_BASE   = 1400; // minimum ms between shifts
+        var SHIFT_JITTER = 800;  // random extra ms per interval
+        var FADE_MS      = 600;  // tile fade duration (matches CSS transition)
+
+        var pool = [];
+
+        // Unsplash API — real people, commercially licensed.
+        // Five parallel queries targeting different age groups so the mosaic
+        // has a genuine spread from 18s to 80s rather than skewing young.
+        // Face-crop applied so every tile centres on the person's face.
+        var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
+        // Search endpoint is far more reliable than photos/random for specific queries.
+        // Simple short queries return many more face results than long complex ones.
+        var QUERIES = [
+            'elderly face candid',
+            'senior face',
+            'middle aged face',
+            'old man face',
+            'old woman face',
+            'black british person',
+            'asian british face',
+            'diverse face real'
+        ];
+
+        var fetches = QUERIES.map(function (q) {
+            var url = 'https://api.unsplash.com/search/photos'
+                + '?query=' + encodeURIComponent(q)
+                + '&per_page=15'
+                + '&content_filter=high'
+                + '&client_id=' + KEY;
+            return fetch(url)
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    var photos = data.results || [];
+                    return photos.map(function (photo) {
+                        return photo.urls.raw
+                            + '?w=160&h=160&fit=crop&crop=faces&auto=format&q=80';
+                    });
+                })
+                .catch(function () { return []; });
+        });
+
+        Promise.all(fetches).then(function (results) {
+            // Flatten all age-group results and shuffle into one pool
+            pool = [].concat.apply([], results)
+                     .sort(function () { return Math.random() - 0.5; });
+            if (pool.length > 0) init();
+        });
+
+        // ── Build tile grid ──────────────────────────────────────────────
+        var mosaic = document.getElementById('mosaic');
+        var cols   = Math.ceil(window.innerWidth  / TILE_SIZE) + 1;
+        var rows   = Math.ceil(window.innerHeight / TILE_SIZE) + 1;
+        var needed = cols * rows;
+        var tiles  = [];
+
+        for (var i = 0; i < needed; i++) {
+            var div = document.createElement('div');
+            div.className = 'tile';
+            mosaic.appendChild(div);
+            tiles.push(div);
+        }
+
+        // ── Distribute pool across tiles, then start shifting ────────────
+        function init() {
+            var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
+            order.forEach(function (tile, i) {
+                setTimeout(function () {
+                    tile.style.backgroundImage = 'url(' + pool[i % pool.length] + ')';
+                    tile.style.opacity = '1';
+                }, i * 4);
+            });
+            setTimeout(startShifting, needed * 4 + 1000);
+        }
+
+        // ── Continuous shifting: 2–3 random tiles swap every ~1.5s ───────
+        function startShifting() {
+            function shift() {
+                var count  = 2 + Math.floor(Math.random() * 2);
+                var picked = tiles.slice()
+                    .sort(function () { return Math.random() - 0.5; })
+                    .slice(0, count);
+
+                picked.forEach(function (tile) {
+                    tile.style.opacity = '0';
+                    setTimeout(function () {
+                        tile.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')';
+                        tile.style.opacity = '1';
+                    }, FADE_MS + 50);
+                });
+
+                setTimeout(shift, SHIFT_BASE + Math.random() * SHIFT_JITTER);
+            }
+            shift();
+        }
+
     })();
     </script>
 </body>

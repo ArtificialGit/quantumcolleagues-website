@@ -43,6 +43,22 @@
         }
         .back-link:hover { text-decoration: underline; }
 
+        /* ===== STRAPLINE ===== */
+        .strapline-strip {
+            background: #fafafc;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 0.7rem 1rem;
+            text-align: center;
+        }
+        .strapline-text {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+
         /* ===== MAIN CONTENT ===== */
         .page {
             max-width: 1100px;
@@ -146,7 +162,7 @@
             margin-top: 3rem;
         }
 
-        /* ===== THREE COLUMNS (delivery models) ===== */
+        /* ===== TWO COLUMNS (delivery models) ===== */
         .section-break {
             height: 1px;
             background: #e6e6e6;
@@ -285,6 +301,11 @@
         <a href="index.html" class="back-link">&larr; Home</a>
     </header>
 
+    <!-- STRAPLINE -->
+    <div class="strapline-strip">
+        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
+    </div>
+
     <!-- PRODUCTS -->
     <div class="page">
         <h1 class="page-title">PRODUCTS</h1>
@@ -292,7 +313,7 @@
         <div class="divider"></div>
 
         <p class="lede">
-            Off-the-shelf AI colleagues, sold direct and through accredited channel partners. Affordable, private, ready-to-use AI for the organisations the market ignores. Every sale generates surplus &mdash; and every pound of surplus funds AI training for every generation.
+            Off-the-shelf AI colleagues, sold direct and through accredited channel partners. Affordable, private, ready-to-use AI for SMEs and organisations ignored by traditional AI providers. Every sale generates funds supporting AI training, for every generation.
         </p>
 
         <div class="stages">
@@ -329,28 +350,7 @@
         <h2 class="section-title">HOW CLIENTS BUY</h2>
         <p class="section-subtitle">Three delivery models. Every product supports the one that fits your environment.</p>
 
-        <div class="columns">
-            <div class="column">
-                <h3>Download</h3>
-                <p class="col-subtitle">Self-hosted &middot; Annual licence</p>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Docker container, your inference</span>
-                    </div>
-                    <p class="item-desc">Bundled setup wizard. Your infrastructure, your data, your control.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Community tier available</span>
-                    </div>
-                    <p class="item-desc">For technical teams, charities, education, community groups.</p>
-                </div>
-            </div>
-
+        <div class="columns" style="grid-template-columns: repeat(2, 1fr);">
             <div class="column">
                 <h3>Managed</h3>
                 <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
@@ -369,6 +369,22 @@
                         <span>Tiered by usage</span>
                     </div>
                     <p class="item-desc">For SMEs and non-profits wanting zero overhead.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Docker container, your inference</span>
+                    </div>
+                    <p class="item-desc">Bundled setup wizard. Your infrastructure, your data, your control.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Community tier available</span>
+                    </div>
+                    <p class="item-desc">For technical teams, charities, education, community groups.</p>
                 </div>
             </div>
 

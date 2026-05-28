@@ -92,7 +92,24 @@
             color: #333;
             line-height: 1.7;
             margin-bottom: 1.5rem;
-            max-width: 900px;
+        }
+
+        /* ===== MISSION HERO (two-column) ===== */
+        .mission-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .mission-video {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+            background: #050830;
         }
 
         /* ===== THREE COLUMNS ===== */
@@ -306,6 +323,11 @@
             .page-title { font-size: 1.6rem; }
             .section-title { font-size: 1.4rem; }
 
+            .mission-hero {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .columns {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -350,13 +372,22 @@
 
     <!-- PAGE 1: MISSION STATEMENT -->
     <div class="page">
-        <h1 class="page-title">MISSION STATEMENT</h1>
-        <p class="page-subtitle">Community Interest Company under Development</p>
-        <div class="divider"></div>
 
-        <p class="mission-text">
-            Our mission is to empower small and medium enterprises and charities by providing professional, affordable AI solutions to boost success. We reinvest our profits to provide training and education for young people and pre-retirees, offering them the skills and guidance needed to thrive in a post-AI world.
-        </p>
+        <div class="mission-hero">
+            <div>
+                <h1 class="page-title">MISSION STATEMENT</h1>
+                <p class="page-subtitle">Do Some Good with AI.</p>
+                <div class="divider"></div>
+                <p class="mission-text">
+                    Our mission is to empower small and medium enterprises and charities by providing professional, affordable AI solutions to boost success. We reinvest our profits to provide training and education for young people and pre-retirees, offering them the skills and guidance needed to thrive in a post-AI world.
+                </p>
+            </div>
+            <div>
+                <video class="mission-video" controls playsinline preload="metadata">
+                    <source src="QuantumColleagues%20Square%20mp4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
 
         <div class="divider"></div>
 

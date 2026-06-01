@@ -296,6 +296,18 @@
         }
         .cta a:hover { text-decoration: underline; }
 
+
+        /* ===== JOIN SECTION ===== */
+        .join-section { background: #fafafc; border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
+        .join-inner { max-width: 480px; margin: 0 auto; }
+        .join-title { font-size: 1.3rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; }
+        .join-sub { font-size: 0.88rem; color: #6b6e8a; margin-bottom: 1.4rem; line-height: 1.5; }
+        .join-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+        .join-input { flex: 1; padding: 0.65rem 1rem; border: 1px solid #e6e6e6; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: #333; outline: none; }
+        .join-input:focus { border-color: #2D8C6F; }
+        .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+        .join-btn:hover { background: #236b55; }
+        .join-thanks { font-size: 0.88rem; color: #2D8C6F; font-weight: 500; margin-top: 0.6rem; }
         /* ===== FOOTER ===== */
         footer {
             border-top: 1px solid #e6e6e6;
@@ -450,15 +462,10 @@
         <!-- DEPLOY MODELS -->
         <div class="section-break"></div>
 
-        <h2 class="section-title">THREE WAYS TO DEPLOY</h2>
-        <p class="section-subtitle">All three models require Microsoft 365 admin consent. Proust v1 is M365-first; Google Workspace follows.</p>
+        <h2 class="section-title">TWO WAYS TO DEPLOY</h2>
+        <p class="section-subtitle">Both models require Microsoft 365 admin consent. Proust v1 is M365-first; Google Workspace follows.</p>
 
-        <div class="columns">
-            <div class="column">
-                <h3>Download</h3>
-                <p class="col-subtitle">Self-hosted &middot; Annual licence</p>
-                <p>Docker container with first-run wizard. Your inference, your infrastructure, your data.</p>
-            </div>
+        <div class="columns" style="grid-template-columns: 1fr 1fr;">
             <div class="column">
                 <h3>Managed</h3>
                 <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
@@ -486,6 +493,30 @@
         <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
         <span class="right">Consulting powered by Deliver.Change.Grow.</span>
     </footer>
+
+
+    <!-- CO-FOUNDER JOIN SECTION -->
+    <div class="join-section" id="co-found">
+        <div class="join-inner">
+            <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;color:#2D8C6F;text-transform:uppercase;margin-bottom:0.5rem;">Founding circle &mdash; invitation only</p>
+            <h2 class="join-title">Co-test Proust with us.</h2>
+            <p class="join-sub">We&rsquo;re looking for a small group of founders to help shape Proust before wider release. You get early access, direct input into the product, and a line to the builder. We get real-world feedback from people who actually run companies.<br><br>Five spots. No cost. You just need to use it and tell us what you think.</p>
+            <form class="join-form" id="coFoundForm" onsubmit="handleJoin(event)">
+                <input class="join-input" type="email" id="joinEmail" placeholder="your@email.com" required autocomplete="email">
+                <button class="join-btn" type="submit">Apply to co-test</button>
+            </form>
+            <p class="join-thanks" id="joinThanks" style="display:none;">Thanks &mdash; we&rsquo;ll be in touch directly.</p>
+            <p style="font-size:0.78rem;color:#aaa;margin-top:0.8rem;">Founders only. We won&rsquo;t add you to a list without asking first.</p>
+        </div>
+    </div>
+
+    <script>
+    function handleJoin(e) {
+        e.preventDefault();
+        document.getElementById('coFoundForm').style.display = 'none';
+        document.getElementById('joinThanks').style.display = 'block';
+    }
+    </script>
 
 </body>
 </html>

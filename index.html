@@ -23,7 +23,7 @@
             position: fixed;
             inset: 0;
             display: grid;
-            grid-template-columns: repeat(auto-fill, 80px);
+            /* grid-template-columns set dynamically by JS so tiles stretch to fill full width */
             grid-auto-rows: 80px;
             gap: 2px;
             z-index: 0;
@@ -164,14 +164,13 @@
         var FADE_MS      = 600;  // tile fade duration (matches CSS transition)
 
         var pool = [];
+        var tiles = [];
+        var initialized = false;
 
         // Unsplash API — real people, commercially licensed.
-        // Five parallel queries targeting different age groups so the mosaic
-        // has a genuine spread from 18s to 80s rather than skewing young.
-        // Face-crop applied so every tile centres on the person's face.
+        // Parallel queries across age groups for a genuine spread.
+        // Face-crop so every tile centres on the person's face.
         var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
-        // Search endpoint is far more reliable than photos/random for specific queries.
-        // Simple short queries return many more face results than long complex ones.
         var QUERIES = [
             'elderly face candid',
             'senior face',
@@ -202,28 +201,46 @@
         });
 
         Promise.all(fetches).then(function (results) {
-            // Flatten all age-group results and shuffle into one pool
             pool = [].concat.apply([], results)
                      .sort(function () { return Math.random() - 0.5; });
-            if (pool.length > 0) init();
+            if (pool.length > 0 && !initialized) init();
         });
 
-        // ── Build tile grid ──────────────────────────────────────────────
+        // ── Build/expand tile grid to always cover the full viewport ─────
+        // Uses explicit column count (not auto-fill) so 1fr columns stretch
+        // to fill the full width — no gap strip on the right edge.
+        // Called once on load and again on every resize.
         var mosaic = document.getElementById('mosaic');
-        var cols   = Math.ceil(window.innerWidth  / TILE_SIZE) + 1;
-        var rows   = Math.ceil(window.innerHeight / TILE_SIZE) + 1;
-        var needed = cols * rows;
-        var tiles  = [];
 
-        for (var i = 0; i < needed; i++) {
-            var div = document.createElement('div');
-            div.className = 'tile';
-            mosaic.appendChild(div);
-            tiles.push(div);
+        function ensureTiles() {
+            var cols = Math.ceil(window.innerWidth  / TILE_SIZE) + 2;
+            var rows = Math.ceil(window.innerHeight / TILE_SIZE) + 2;
+            var needed = cols * rows;
+
+            // Stretch tiles to fill full width with no remainder gap
+            mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+
+            // Only add tiles — never remove (avoids re-triggering init)
+            var toAdd = needed - tiles.length;
+            for (var i = 0; i < toAdd; i++) {
+                var div = document.createElement('div');
+                div.className = 'tile';
+                mosaic.appendChild(div);
+                tiles.push(div);
+                // Populate immediately if pool is already loaded
+                if (pool.length > 0) {
+                    div.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')';
+                    div.style.opacity = '1';
+                }
+            }
         }
 
-        // ── Distribute pool across tiles, then start shifting ────────────
+        ensureTiles();
+        window.addEventListener('resize', ensureTiles);
+
+        // ── Distribute pool across all tiles, then start shifting ────────
         function init() {
+            initialized = true;
             var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
             order.forEach(function (tile, i) {
                 setTimeout(function () {
@@ -231,7 +248,7 @@
                     tile.style.opacity = '1';
                 }, i * 4);
             });
-            setTimeout(startShifting, needed * 4 + 1000);
+            setTimeout(startShifting, tiles.length * 4 + 1000);
         }
 
         // ── Continuous shifting: 2–3 random tiles swap every ~1.5s ───────

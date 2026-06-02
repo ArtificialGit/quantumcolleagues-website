@@ -43,6 +43,22 @@
         }
         .back-link:hover { text-decoration: underline; }
 
+        /* ===== STRAPLINE ===== */
+        .strapline-strip {
+            background: #fafafc;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 0.7rem 1rem;
+            text-align: center;
+        }
+        .strapline-text {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+
         /* ===== MAIN CONTENT ===== */
         .page {
             max-width: 1100px;
@@ -77,6 +93,22 @@
             line-height: 1.7;
             margin-bottom: 2rem;
             max-width: 900px;
+        }
+
+        /* ===== INTRO ROW (lede + social image) ===== */
+        .intro-row {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .social-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 6px 32px rgba(5, 8, 48, 0.14);
+            display: block;
         }
 
         /* ===== TWO-COL FEATURE + BRIEF CARD ===== */
@@ -296,7 +328,6 @@
         }
         .cta a:hover { text-decoration: underline; }
 
-
         /* ===== JOIN SECTION ===== */
         .join-section { background: #fafafc; border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
         .join-inner { max-width: 480px; margin: 0 auto; }
@@ -308,6 +339,7 @@
         .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
         .join-btn:hover { background: #236b55; }
         .join-thanks { font-size: 0.88rem; color: #2D8C6F; font-weight: 500; margin-top: 0.6rem; }
+
         /* ===== FOOTER ===== */
         footer {
             border-top: 1px solid #e6e6e6;
@@ -335,6 +367,7 @@
             .page-title { font-size: 1.6rem; }
             .section-title { font-size: 1.4rem; }
 
+            .intro-row { grid-template-columns: 1fr; }
             .feature-row { grid-template-columns: 1fr; }
             .columns { grid-template-columns: 1fr; gap: 1.5rem; }
             .stages { grid-template-columns: 1fr; gap: 1rem; }
@@ -359,15 +392,24 @@
         <a href="products.html" class="back-link">&larr; All products</a>
     </header>
 
+    <!-- STRAPLINE -->
+    <div class="strapline-strip">
+        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
+    </div>
+
     <!-- PROUST -->
     <div class="page">
         <h1 class="page-title">PROUST</h1>
         <p class="page-subtitle">Founder Assist &mdash; Available now</p>
         <div class="divider"></div>
 
-        <p class="lede">
-            Proust reads your email, manages your calendar, and briefs you every morning &mdash; so you lead, not triage. Set up in ninety seconds. Private by design: calendar and email run inside your Microsoft 365 tenant. Inference is processed in QC&rsquo;s private EU/UK environment (Managed) or on your own hardware (Appliance) &mdash; your data stays in your control.
-        </p>
+        <!-- INTRO: LEDE + SOCIAL IMAGE -->
+        <div class="intro-row">
+            <p class="lede" style="margin-bottom: 0;">
+                Proust reads your email, manages your calendar, and briefs you every morning &mdash; so you lead, not triage. Set up in ninety seconds. Private by design: calendar and email run inside your Microsoft 365 tenant. Inference is processed in QC&rsquo;s private EU/UK environment (Managed) or on your own hardware (Appliance) &mdash; your data stays in your control.
+            </p>
+            <img src="proust_social.png" alt="Proust &mdash; Every business owner needs support" class="social-img">
+        </div>
 
         <!-- WHAT IT DOES + BRIEF CARD -->
         <div class="feature-row">
@@ -469,31 +511,40 @@
             <div class="column">
                 <h3>Managed</h3>
                 <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
-                <p>QC manages infrastructure and updates. Get Proust without running a server.</p>
+                <p>We run it. You use it. Nothing to install or maintain &mdash; live inside your M365 tenant from day one.</p>
             </div>
             <div class="column">
                 <h3>Appliance</h3>
-                <p class="col-subtitle">On-premise &middot; Hardware + retainer</p>
-                <p>Pre-configured device shipped to your office. Everything runs on your network.</p>
+                <p class="col-subtitle">On-premise hardware &middot; Retainer</p>
+                <p>Proust on your hardware, inside your network. For organisations where data must stay on site.</p>
             </div>
         </div>
 
-        <!-- CTA -->
-        <div class="cta">
-            <h3>Founder co-test now open.</h3>
-            <p>
-                Full Proust access, dedicated onboarding, direct line to Jonathan. Discounted or free during co-testing. Real-world feedback shapes the roadmap.
-            </p>
-            <a href="mission.html">Read the mission &rarr;</a>
+        <!-- CHANNEL PARTNERS -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">ACCREDITED PARTNERS</h2>
+        <p class="section-subtitle">Consultancies and MSPs who resell and embed Proust into client delivery. Channel-ready from day one.</p>
+
+        <div class="columns">
+            <div class="column">
+                <h3>Resell</h3>
+                <p class="col-subtitle">White-label or co-branded</p>
+                <p>Add Proust to your product portfolio. We supply, you deliver. Margin built in.</p>
+            </div>
+            <div class="column">
+                <h3>Embed</h3>
+                <p class="col-subtitle">Inside your client delivery</p>
+                <p>Run Proust as part of a wider digital transformation or AI enablement programme.</p>
+            </div>
+            <div class="column">
+                <h3>Refer</h3>
+                <p class="col-subtitle">Introductions welcome</p>
+                <p>Know a founder who needs this? Make the introduction &mdash; we&rsquo;ll handle the rest.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
-        <span class="right">Consulting powered by Deliver.Change.Grow.</span>
-    </footer>
-
+    </div><!-- end .page -->
 
     <!-- CO-FOUNDER JOIN SECTION -->
     <div class="join-section" id="co-found">
@@ -510,6 +561,14 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
+    <footer>
+        <span class="logo-text" style="font-size:1rem;">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <span class="right">Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a></span>
+    </footer>
+
     <script>
     function handleJoin(e) {
         e.preventDefault();
@@ -519,4 +578,4 @@
     </script>
 
 </body>
-</html>
+    </html>

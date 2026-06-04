@@ -148,7 +148,7 @@
 
             <p class="tagline">
                 Humans &amp; AI Agents working together. Post-AI Training for every generation.<br><br>
-                <a href="mission.html">Mission</a> · <a href="products.html">Products</a> · <a href="proust.html">Proust</a>
+                <a href="mission.html">Mission</a> &middot; <a href="products.html">Products</a> &middot; <a href="proust.html">Proust</a> &middot; <a href="press.html">Press</a>
             </p>
         </div>
     </div>
@@ -158,18 +158,15 @@
 
     <script>
     (function () {
-        var TILE_SIZE    = 82;   // 80px tile + 2px gap
-        var SHIFT_BASE   = 1400; // minimum ms between shifts
-        var SHIFT_JITTER = 800;  // random extra ms per interval
-        var FADE_MS      = 600;  // tile fade duration (matches CSS transition)
+        var TILE_SIZE    = 82;
+        var SHIFT_BASE   = 1400;
+        var SHIFT_JITTER = 800;
+        var FADE_MS      = 600;
 
         var pool = [];
         var tiles = [];
         var initialized = false;
 
-        // Unsplash API — real people, commercially licensed.
-        // Parallel queries across age groups for a genuine spread.
-        // Face-crop so every tile centres on the person's face.
         var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
         var QUERIES = [
             'elderly face candid',
@@ -206,10 +203,6 @@
             if (pool.length > 0 && !initialized) init();
         });
 
-        // ── Build/expand tile grid to always cover the full viewport ─────
-        // Uses explicit column count (not auto-fill) so 1fr columns stretch
-        // to fill the full width — no gap strip on the right edge.
-        // Called once on load and again on every resize.
         var mosaic = document.getElementById('mosaic');
 
         function ensureTiles() {
@@ -217,17 +210,14 @@
             var rows = Math.ceil(window.innerHeight / TILE_SIZE) + 2;
             var needed = cols * rows;
 
-            // Stretch tiles to fill full width with no remainder gap
             mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
 
-            // Only add tiles — never remove (avoids re-triggering init)
             var toAdd = needed - tiles.length;
             for (var i = 0; i < toAdd; i++) {
                 var div = document.createElement('div');
                 div.className = 'tile';
                 mosaic.appendChild(div);
                 tiles.push(div);
-                // Populate immediately if pool is already loaded
                 if (pool.length > 0) {
                     div.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')';
                     div.style.opacity = '1';
@@ -238,7 +228,6 @@
         ensureTiles();
         window.addEventListener('resize', ensureTiles);
 
-        // ── Distribute pool across all tiles, then start shifting ────────
         function init() {
             initialized = true;
             var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
@@ -251,7 +240,6 @@
             setTimeout(startShifting, tiles.length * 4 + 1000);
         }
 
-        // ── Continuous shifting: 2–3 random tiles swap every ~1.5s ───────
         function startShifting() {
             function shift() {
                 var count  = 2 + Math.floor(Math.random() * 2);

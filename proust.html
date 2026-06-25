@@ -3,266 +3,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proust — AI Executive Assistant — QuantumColleagues.</title>
-    <meta name="description" content="Proust reads your email, manages your calendar, and briefs you every morning. Founder-grade AI, set up in ninety seconds inside your Microsoft 365.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="QuantumColleagues.">
-    <meta property="og:title" content="Proust — AI Executive Assistant — QuantumColleagues.">
-    <meta property="og:description" content="Proust reads your email, manages your calendar, and briefs you every morning. Founder-grade AI, set up in ninety seconds inside your Microsoft 365.">
-    <meta property="og:url" content="https://quantumcolleagues.org/proust.html">
+    <title>Proust &mdash; QuantumColleagues.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', -apple-system, sans-serif; background: #fff; color: #352F38; line-height: 1.65; }
 
-        /* HEADER */
-        header { padding: 1.2rem 3rem; border-bottom: 1px solid #E0D9D9; display: flex; align-items: center; justify-content: space-between; }
-        .logo-text { font-size: 1.4rem; color: #050830; letter-spacing: -0.3px; }
-        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
-        .back-link { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; text-decoration: none; }
-        .back-link:hover { text-decoration: underline; }
-
-        /* HERO BANNER */
-        .hero-banner { background: #2D648C; padding: 2.4rem 3rem; text-align: center; }
-        .hero-banner h2 { font-size: 2.2rem; font-weight: 800; color: #fff; letter-spacing: -0.8px; }
-        .hero-banner h2 .dot { color: #7FE0C4; }
-        .hero-banner .hero-sub { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 0.6rem; }
-
-        /* SECTION BANNERS (alternating dark strips) */
-        .section-banner { padding: 2rem 3rem; }
-        .section-banner.navy { background: #050830; }
-        .section-banner.deep-teal { background: #1F6B53; }
-        .section-banner.deep-blue { background: #2D648C; }
-        .section-banner .eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: #7FE0C4; margin-bottom: 0.4rem; }
-        .section-banner h2 { font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: -0.6px; margin-bottom: 0.4rem; }
-        .section-banner p { font-size: 0.88rem; color: rgba(255,255,255,0.68); max-width: 700px; }
-
-        /* PAGE */
-        .page { max-width: 1100px; margin: 0 auto; padding: 3rem 3rem; }
-        .page-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
-        .page-title { font-size: 2.4rem; font-weight: 800; color: #050830; letter-spacing: -1px; margin-bottom: 0.4rem; }
-        .page-subtitle { font-size: 0.9rem; color: #6F6772; margin-bottom: 1.5rem; }
-        .divider { height: 1px; background: #E0D9D9; margin-bottom: 1.5rem; }
-        .lede, .mission-text { font-size: 0.95rem; color: #352F38; line-height: 1.72; margin-bottom: 1.2rem; max-width: 900px; }
-
-        /* LINKS */
-        a { color: #1F6B53; font-weight: 600; text-decoration: none; } a:hover { text-decoration: underline; }
-
-        /* COLUMNS */
-        .columns { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin: 2rem 0; }
-        .columns.two-col { grid-template-columns: repeat(2,1fr); }
-        .column { border-top: 3px solid #2D8C6F; padding-top: 1.2rem; }
-        .column h3 { font-size: 1.05rem; font-weight: 600; color: #2D8C6F; margin-bottom: 0.2rem; }
-        .column .col-subtitle { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6F6772; margin-bottom: 1rem; }
-        .column p { font-size: 0.85rem; color: #555; line-height: 1.55; }
-
-        /* ITEMS */
-        .item { margin-bottom: 1rem; }
-        .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.15rem; }
-        .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.35rem; flex-shrink: 0; }
-        .item-title span { font-size: 0.9rem; font-weight: 600; color: #050830; }
-        .item-desc { font-size: 0.82rem; color: #666; margin-left: 1rem; line-height: 1.5; }
-
-        /* STAGES */
-        .stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: start; margin-bottom: 2rem; }
-        .stage-box { background: #F5F2F2; border: 1px solid #E0D9D9; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.5rem; }
-        .stage-box.augment { border-top-color: #2D648C; }
-        .stage-box.amplify { border-top-color: #050830; }
-        .stage-box .stage-num, .stage-box .stage-sub { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; display: block; margin-bottom: 0.3rem; }
-        .stage-box.augment .stage-sub, .stage-box.augment .stage-num { color: #2D648C; }
-        .stage-box h3 { font-size: 1.1rem; font-weight: 800; color: #050830; letter-spacing: -0.3px; margin-bottom: 0.35rem; }
-        .stage-box .stage-body { font-size: 0.85rem; color: #555; line-height: 1.55; margin-bottom: 0.8rem; }
-        .stage-box .stage-tag { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.10em; text-transform: uppercase; color: #6F6772; }
-        .stage-box .stage-link { display: inline-block; margin-top: 0.8rem; font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.10em; text-transform: uppercase; color: #2D8C6F; }
-        .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #2D8C6F; font-weight: 700; padding: 0 0.5rem; margin-top: 3rem; }
-
-        /* WITHIN-PAGE SECTIONS */
-        .section-break { height: 1px; background: #E0D9D9; margin: 3rem 0 2rem; }
-        .section-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.4rem; }
-        .section-title { font-size: 1.6rem; font-weight: 800; color: #050830; letter-spacing: -0.5px; margin-bottom: 0.3rem; }
-        .section-subtitle { font-size: 0.88rem; color: #6F6772; margin-bottom: 2rem; }
-        .evidence { font-size: 0.8rem; color: #6F6772; text-align: center; padding: 0.8rem 0; }
-
-        /* CAROUSEL GALLERIES */
-        .carousel-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; max-width: 1100px; margin: 0 auto; padding: 2.5rem 3rem; }
-        .carousel-gallery.two-col { grid-template-columns: repeat(2,1fr); max-width: 820px; }
-        .carousel-img { width: 100%; aspect-ratio: 1/1; border-radius: 10px; object-fit: cover; display: block; box-shadow: 0 4px 20px rgba(5,8,48,0.10); }
-        a.carousel-link { display: block; } a.carousel-link:hover .carousel-img { opacity: 0.88; }
-
-        /* CARD ELEMENTS */
-        .brief-card, .dashboard-card { background: #050830; color: #fff; border-radius: 4px; padding: 1.5rem; }
-        .brief-card .head, .dashboard-card .head { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.2rem; }
-        .brief-card .sub, .dashboard-card .sub { font-size: 0.78rem; font-style: italic; color: #9a9cb8; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.12); }
-        .brief-row, .dash-row { display: grid; grid-template-columns: 80px 1fr; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.83rem; }
-        .dash-row { grid-template-columns: 100px 1fr; }
-        .brief-row:last-child, .dash-row:last-child { border-bottom: none; }
-        .brief-row .label, .dash-label { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; align-self: center; }
-        .brief-row .text, .dash-text { color: rgba(255,255,255,0.92); }
-
-        /* HUMAN SPARK */
-        .spark-section { border-top: 1px solid #E0D9D9; padding-top: 1.5rem; margin-top: 1.5rem; }
-        .spark-title { font-size: 1rem; font-weight: 600; color: #050830; margin-bottom: 1rem; }
-        .qualities { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-        .quality { display: flex; align-items: center; gap: 0.4rem; }
-        .quality-dot { width: 8px; height: 8px; border-radius: 50%; background: #2D8C6F; flex-shrink: 0; }
-        .quality span { font-size: 0.9rem; font-weight: 600; color: #050830; }
-
-        /* MISSION HERO */
-        .mission-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 2rem; }
-        .mission-video { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 6px; display: block; background: #050830; }
-
-        /* FEATURE ROW */
-        .intro-row, .feature-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin: 2rem 0; }
-        .social-img { width: 100%; border-radius: 10px; box-shadow: 0 6px 32px rgba(5,8,48,0.14); display: block; }
-        .feature-list .item { margin-bottom: 1.2rem; }
-        .feature-list .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.2rem; }
-        .feature-list .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.4rem; flex-shrink: 0; }
-        .feature-list .item-title span { font-size: 0.95rem; font-weight: 600; color: #050830; }
-        .feature-list .item-desc { font-size: 0.85rem; color: #666; margin-left: 1rem; line-height: 1.55; }
-
-        /* JOIN SECTION */
-        .join-section { background: #F5F2F2; border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
-        .join-inner { max-width: 480px; margin: 0 auto; }
-        .join-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
-        .join-title { font-size: 1.3rem; font-weight: 800; color: #050830; margin-bottom: 0.5rem; letter-spacing: -0.3px; }
-        .join-sub { font-size: 0.88rem; color: #6F6772; margin-bottom: 1.4rem; line-height: 1.5; }
-        .join-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
-        .join-input { flex: 1; padding: 0.65rem 1rem; border: 1px solid #E0D9D9; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: #333; outline: none; }
-        .join-input:focus { border-color: #2D8C6F; }
-        .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'League Spartan', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
-        .join-btn:hover { background: #236b55; }
-        .join-thanks { font-size: 0.88rem; color: #2D8C6F; font-weight: 600; margin-top: 0.6rem; }
-
-        /* PRESS */
-        .release { border: 1px solid #E0D9D9; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2.5rem; }
-        .embargo { display: inline-block; background: #E8F5EF; color: #050830; border: 1px solid #2D8C6F; border-radius: 3px; font-family: 'League Spartan', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.8rem; margin-bottom: 1.5rem; }
-        .release-headline { font-size: 1.7rem; font-weight: 800; color: #050830; line-height: 1.3; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
-        .release-standfirst { font-size: 1rem; color: #2D648C; line-height: 1.55; margin-bottom: 1.5rem; }
-        .release-meta { font-family: 'League Spartan', sans-serif; font-size: 0.75rem; color: #6F6772; letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 1.5rem; }
-        .release p { font-size: 0.95rem; color: #333; line-height: 1.7; margin-bottom: 1.1rem; }
-        .release p strong { color: #050830; font-weight: 600; }
-        .pullquote { border-left: 3px solid #2D8C6F; background: #F5F2F2; padding: 1.2rem 1.4rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
-        .pullquote p { font-size: 0.98rem; font-style: italic; color: #050830; margin-bottom: 0.6rem; line-height: 1.6; }
-        .pullquote .attrib { font-family: 'League Spartan', sans-serif; font-size: 0.78rem; font-weight: 600; font-style: normal; color: #6F6772; margin-bottom: 0; letter-spacing: 0.06em; }
-        .ends { text-align: center; font-family: 'League Spartan', sans-serif; font-weight: 600; color: #6F6772; letter-spacing: 0.2em; font-size: 0.8rem; margin: 1.5rem 0; }
-        .notes { border-top: 1px solid #E0D9D9; margin-top: 1.5rem; padding-top: 1.5rem; }
-        .notes h3 { font-family: 'League Spartan', sans-serif; font-size: 0.82rem; font-weight: 600; color: #050830; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.9rem; }
-        .notes .item { display: flex; gap: 0.5rem; margin-bottom: 0.7rem; }
-        .notes .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.4rem; flex-shrink: 0; }
-        .notes .item p { font-size: 0.85rem; color: #555; margin-bottom: 0; line-height: 1.55; }
-        .contact-card { background: #050830; border-radius: 4px; padding: 1.6rem 1.8rem; margin-top: 1.5rem; }
-        .contact-card .label { font-family: 'League Spartan', sans-serif; font-size: 0.7rem; color: #2D8C6F; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; margin-bottom: 0.4rem; }
-        .contact-card .name { font-size: 1rem; color: #fff; font-weight: 600; margin-bottom: 0.2rem; }
-        .contact-card .detail { font-size: 0.88rem; color: #9a9cb8; margin-bottom: 0.1rem; }
-        .assets-note { font-size: 0.8rem; color: #6F6772; text-align: center; margin-top: 2rem; }
-
-        /* FOOTER */
-        footer { border-top: 1px solid #E0D9D9; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
-        footer a { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; }
-        footer .right { color: #6F6772; }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            header { padding: 1rem 1.5rem; }
-            .hero-banner { padding: 1.6rem 1.5rem; } .hero-banner h2 { font-size: 1.6rem; }
-            .section-banner { padding: 1.4rem 1.5rem; } .section-banner h2 { font-size: 1.4rem; }
-            .page { padding: 2rem 1.5rem; } .page-title { font-size: 1.8rem; } .section-title { font-size: 1.3rem; }
-            .mission-hero, .intro-row, .feature-row { grid-template-columns: 1fr; gap: 1.5rem; }
-            .columns, .columns.two-col { grid-template-columns: 1fr; gap: 1.5rem; }
-            .stages { grid-template-columns: 1fr; gap: 1rem; } .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
-            .carousel-gallery, .carousel-gallery.two-col { grid-template-columns: 1fr; padding: 1.5rem 1.5rem; }
-            .qualities { gap: 1rem; }
-            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
-            .join-form { flex-direction: column; }
-            .release { padding: 1.6rem 1.3rem; }
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
         }
 
-        .brief-card { max-width: 560px; }
+        /* ===== HEADER ===== */
+        header {
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
+        .logo-text {
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            color: #050830;
+        }
+        .logo-text .light { font-weight: 300; }
+        .logo-text .bold { font-weight: 700; }
+        .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* ===== STRAPLINE ===== */
+        .strapline-strip {
+            background: #fafafc;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 0.7rem 1rem;
+            text-align: center;
+        }
+        .strapline-text {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        /* ===== MAIN CONTENT ===== */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e6e6e6;
+            margin-bottom: 1.5rem;
+        }
+
+        .lede {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 900px;
+        }
+
+        /* ===== INTRO ROW (lede + social image) ===== */
+        .intro-row {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .social-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 6px 32px rgba(5, 8, 48, 0.14);
+            display: block;
+        }
+
+        /* ===== TWO-COL FEATURE + BRIEF CARD ===== */
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin: 2rem 0;
+        }
+
+        .feature-list .item {
+            margin-bottom: 1.2rem;
+        }
+
+        .feature-list .item-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-list .item-bullet {
+            color: #2D8C6F;
+            font-size: 0.6rem;
+            margin-top: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        .feature-list .item-title span {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #050830;
+        }
+
+        .feature-list .item-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-left: 1rem;
+            line-height: 1.55;
+        }
+
+        /* Morning brief mock card */
+        .brief-card {
+            background: #050830;
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+        .brief-card .head {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: #2D8C6F;
+            margin-bottom: 0.2rem;
+        }
+        .brief-card .sub {
+            font-size: 0.78rem;
+            font-style: italic;
+            color: #9a9cb8;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+        .brief-row {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.83rem;
+        }
+        .brief-row:last-child { border-bottom: none; }
+        .brief-row .label {
+            color: #2D8C6F;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            align-self: center;
+        }
+        .brief-row .text {
+            color: rgba(255,255,255,0.92);
+        }
+
+        /* ===== ONBOARDING STAGES ===== */
+        .section-break {
+            height: 1px;
+            background: #e6e6e6;
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            margin-bottom: 2rem;
+        }
+
+        .product-shot {
+            margin: 0 0 2.5rem;
+        }
+        .product-shot img {
+            width: 100%;
+            max-width: 880px;
+            display: block;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(5, 8, 48, 0.10);
+        }
+        .product-shot figcaption {
+            font-size: 0.78rem;
+            color: #8c8eaf;
+            margin-top: 0.6rem;
+            max-width: 880px;
+        }
+
+        .stages {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .stage-box {
+            background: #fafafc;
+            border: 1px solid #e6e6e6;
+            border-top: 3px solid #2D8C6F;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+
+        .stage-box h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .stage-box .stage-num {
+            font-size: 0.75rem;
+            color: #2D8C6F;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.4rem;
+        }
+
+        .stage-box .stage-body {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.55;
+            margin-bottom: 0.6rem;
+        }
+
+        .stage-box .stage-tag {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #8c8eaf;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #2D8C6F;
+            font-weight: 700;
+            padding: 0 0.5rem;
+            margin-top: 3rem;
+        }
+
+        /* ===== THREE-COL DEPLOY MODELS ===== */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .column {
+            border-top: 3px solid #2D8C6F;
+            padding-top: 1.2rem;
+        }
+
+        .column h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2D8C6F;
+            margin-bottom: 0.2rem;
+        }
+
+        .column .col-subtitle {
+            font-size: 0.8rem;
+            color: #8c8eaf;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .column p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.55;
+        }
+
+        /* ===== CALL TO ACTION ===== */
+        .cta {
+            background: #fafafc;
+            border-top: 3px solid #2D8C6F;
+            border-radius: 4px;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #050830;
+            margin-bottom: 0.5rem;
+        }
+        .cta p {
+            font-size: 0.9rem;
+            color: #555;
+            max-width: 640px;
+            margin: 0 auto 1rem;
+        }
+        .cta a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .cta a:hover { text-decoration: underline; }
+
+        /* ===== JOIN SECTION ===== */
+        .join-section { background: #fafafc; border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
+        .join-inner { max-width: 480px; margin: 0 auto; }
+        .join-title { font-size: 1.3rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; }
+        .join-sub { font-size: 0.88rem; color: #6b6e8a; margin-bottom: 1.4rem; line-height: 1.5; }
+        .join-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+        .join-input { flex: 1; padding: 0.65rem 1rem; border: 1px solid #e6e6e6; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: #333; outline: none; }
+        .join-input:focus { border-color: #2D8C6F; }
+        .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+        .join-btn:hover { background: #236b55; }
+        .join-thanks { font-size: 0.88rem; color: #2D8C6F; font-weight: 500; margin-top: 0.6rem; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid #e6e6e6;
+            margin-top: 3rem;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer .right {
+            color: #8c8eaf;
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .page { padding: 2rem 1.5rem; }
+            .page-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.4rem; }
+
+            .intro-row { grid-template-columns: 1fr; }
+            .feature-row { grid-template-columns: 1fr; }
+            .columns { grid-template-columns: 1fr; gap: 1.5rem; }
+            .stages { grid-template-columns: 1fr; gap: 1rem; }
+            .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
+
+            footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="logo-text">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
         <a href="products.html" class="back-link">&larr; All products</a>
     </header>
-    <div class="hero-banner"><h2>Do some good with AI<span class="dot">.</span></h2><p class="hero-sub">quantumcolleagues.org &mdash; AI for good</p></div>
-    <div class="page">
-        <p class="page-eyebrow">Founder Assist &mdash; Available now</p>
-        <h1 class="page-title">Proust.</h1>
-        <p class="page-subtitle">Your inbox. Your calendar. Your morning brief. Handled.</p>
-        <div class="divider"></div>
-        <p class="lede">Proust reads your email, manages your calendar, and briefs you every morning &mdash; so you lead, not triage. Set up in ninety seconds. Private by design: runs inside your Microsoft 365 tenant or on your own hardware.</p>
 
+    <!-- STRAPLINE -->
+    <div class="strapline-strip">
+        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
+    </div>
+
+    <!-- PROUST -->
+    <div class="page">
+        <h1 class="page-title">PROUST</h1>
+        <p class="page-subtitle">Founder Assist &mdash; Available now</p>
+        <div class="divider"></div>
+
+        <!-- INTRO: LEDE + SOCIAL IMAGE -->
+        <div class="intro-row">
+            <p class="lede" style="margin-bottom: 0;">
+                Proust reads your email, manages your calendar, and briefs you every morning &mdash; so you lead, not triage. Set up in ninety seconds. Private by design: calendar and email run inside your Microsoft 365 tenant. Inference is processed in QC&rsquo;s private EU/UK environment (Managed) or on your own hardware (Appliance) &mdash; your data stays in your control.
+            </p>
+            <img src="data:image/jpeg;base64,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" alt="Proust — Every business owner needs support" class="social-img">
+        </div>
+
+        <!-- WHAT IT DOES + BRIEF CARD -->
         <div class="feature-row">
             <div class="feature-list">
-                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Reads your inbox</span></div><p class="item-desc">Prioritises, drafts, and routes. Surfaces the three things you actually need to do today.</p></div>
-                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Manages your calendar</span></div><p class="item-desc">Schedules, briefs, and chases. Owns your diary so you don&rsquo;t have to &mdash; and reschedules without losing context.</p></div>
-                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Briefs you every morning</span></div><p class="item-desc">Every day at 8 am: what&rsquo;s urgent, what&rsquo;s on, who needs you. Read it in sixty seconds with your first coffee.</p></div>
-                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Remembers across sessions</span></div><p class="item-desc">Names, decisions, drafts, follow-ups. Never asks the same question twice.</p></div>
-                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Stays in your tenant</span></div><p class="item-desc">Runs inside your Microsoft 365. Private by design, auditable by default.</p></div>
-            </div>
-            </div>
-    </div>
 
-    <!-- MORNING BRIEF (navy) -->
-    <div class="section-banner navy">
-        <p class="eyebrow">Daily digest</p>
-        <h2>The morning brief.</h2>
-        <p>Every morning at 8 am &mdash; a 60-second read with your first coffee.</p>
-    </div>
-    <div class="page">
-        <div class="brief-card">
-            <div class="head">PROUST &middot; MORNING BRIEF &middot; 08:00</div>
-            <div class="sub">Tuesday &middot; 6 priorities &middot; 3 meetings &middot; 2 awaiting reply</div>
-            <div class="brief-row"><div class="label">PRIORITY</div><div class="text">Reply to client proposal by midday</div></div>
-            <div class="brief-row"><div class="label">ACTION</div><div class="text">Reschedule 1:1 &mdash; clash with leadership offsite</div></div>
-            <div class="brief-row"><div class="label">ACTION</div><div class="text">Send contract to legal team (drafted)</div></div>
-            <div class="brief-row"><div class="label">REMINDER</div><div class="text">Quarterly board prep &mdash; 2 days out</div></div>
-            <div class="brief-row"><div class="label">TRACKED</div><div class="text">New hire offer accepted &mdash; added to onboarding</div></div>
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Reads your inbox</span>
+                    </div>
+                    <p class="item-desc">Prioritises, drafts, and routes. Surfaces the three things you actually need to do today.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Manages your calendar</span>
+                    </div>
+                    <p class="item-desc">Schedules, briefs, and chases. Owns your diary so you don&rsquo;t have to &mdash; and reschedules without losing context.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Briefs you every morning</span>
+                    </div>
+                    <p class="item-desc">Every day at 8 am: what&rsquo;s urgent, what&rsquo;s on, who needs you. Read it in sixty seconds with your first coffee.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Remembers across sessions</span>
+                    </div>
+                    <p class="item-desc">Names, decisions, drafts, follow-ups. Never asks the same question twice.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">
+                        <span class="item-bullet">&#9632;</span>
+                        <span>Stays in your tenant</span>
+                    </div>
+                    <p class="item-desc">Runs inside your Microsoft 365. Private by design, audited by default.</p>
+                </div>
+
+            </div>
+
+            <div class="brief-card">
+                <div class="head">PROUST &middot; MORNING BRIEF &middot; 08:00</div>
+                <div class="sub">Tuesday &middot; 6 priorities &middot; 3 meetings &middot; 2 awaiting reply</div>
+                <div class="brief-row"><div class="label">PRIORITY</div><div class="text">Reply to client proposal by midday</div></div>
+                <div class="brief-row"><div class="label">ACTION</div><div class="text">Reschedule 1:1 &mdash; clash with leadership offsite</div></div>
+                <div class="brief-row"><div class="label">ACTION</div><div class="text">Send contract to legal team (drafted)</div></div>
+                <div class="brief-row"><div class="label">REMINDER</div><div class="text">Quarterly board prep &mdash; 2 days out</div></div>
+                <div class="brief-row"><div class="label">TRACKED</div><div class="text">New hire offer accepted &mdash; added to onboarding</div></div>
+            </div>
         </div>
-    </div>
 
-    <!-- ONBOARDING (deep teal) -->
-    <div class="section-banner deep-teal">
-        <p class="eyebrow">Getting started</p>
-        <h2>Three screens. Under ninety seconds.</h2>
-        <p>No download, no install. Live by tomorrow morning.</p>
-    </div>
-    <div class="page">
+        <!-- LIFESTYLE / SWITCH-OFF IMAGE -->
+        <figure class="product-shot">
+            <img src="proust-beach.jpg" loading="lazy"
+                 alt="A laptop on a beach towel showing the Proust morning brief, with sea and sand behind">
+            <figcaption>Switch off &mdash; Proust keeps your inbox, calendar and outreach moving while you&rsquo;re away, so a day out of office doesn&rsquo;t become a backlog.</figcaption>
+        </figure>
+
+        <!-- ONBOARDING -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">CUSTOMER ONBOARDING</h2>
+        <p class="section-subtitle">Three screens. Under ninety seconds. No download, no install.</p>
+
+        <figure class="product-shot">
+            <img src="proust_onboarding_connect.jpg" loading="lazy"
+                 alt="Proust onboarding, screen one of three &mdash; In search of your lost time. Connect your Microsoft 365 or Google Workspace mailbox to begin.">
+            <figcaption>Screen one, as shipped &mdash; carrying the same faces as our front page. The people your purchase trains are looking back at you.</figcaption>
+        </figure>
+
         <div class="stages">
-            <div class="stage-box"><span class="stage-num">STEP 01</span><h3>CONNECT</h3><p class="stage-body">One-click Microsoft 365 OAuth consent. Mail, Calendar, and Contacts scopes shown before approval. Nothing stored outside your tenant.</p><p class="stage-tag">Auto-advances to Step 02</p></div>
+            <div class="stage-box">
+                <p class="stage-num">STEP 01</p>
+                <h3>CONNECT</h3>
+                <p class="stage-body">One-click Microsoft 365 OAuth consent. Mail, Calendar, and Contacts scopes shown before approval. Nothing stored outside your tenant.</p>
+                <p class="stage-tag">Auto-advances to Step 02</p>
+            </div>
+
             <div class="arrow">&rarr;</div>
-            <div class="stage-box"><span class="stage-num">STEP 02</span><h3>CONFIGURE</h3><p class="stage-body">Display name, job title, organisation. Pre-filled from M365. Tone, working hours, timezone &mdash; written to agent memory, not config.</p><p class="stage-tag">Only one required field</p></div>
+
+            <div class="stage-box">
+                <p class="stage-num">STEP 02</p>
+                <h3>CONFIGURE</h3>
+                <p class="stage-body">Display name, job title, organisation. Pre-filled from M365. Tone, working hours, timezone &mdash; written to agent memory, not config.</p>
+                <p class="stage-tag">Only one required field</p>
+            </div>
+
             <div class="arrow">&rarr;</div>
-            <div class="stage-box"><span class="stage-num">STEP 03</span><h3>READY</h3><p class="stage-body">Confirmation, agent intro, immediate CTA: &ldquo;What&rsquo;s on today?&rdquo; &mdash; no tour. First morning brief arrives tomorrow at 8 am.</p><p class="stage-tag">Live by tomorrow morning</p></div>
+
+            <div class="stage-box">
+                <p class="stage-num">STEP 03</p>
+                <h3>READY</h3>
+                <p class="stage-body">Confirmation, agent intro, immediate CTA: &ldquo;What&rsquo;s on today?&rdquo; &mdash; no tour. First morning brief arrives tomorrow at 8 am.</p>
+                <p class="stage-tag">Live by tomorrow morning</p>
+            </div>
         </div>
 
+        <!-- DEPLOY MODELS -->
         <div class="section-break"></div>
-        <p class="section-eyebrow">Deployment options</p>
-        <h2 class="section-title">Two ways to run Proust.</h2>
-        <p class="section-subtitle">Both require Microsoft 365 admin consent. Google Workspace follows Proust v1.</p>
-        <div class="columns two-col">
-            <div class="column"><h3>Managed</h3><p class="col-subtitle">QC-hosted &middot; Monthly subscription</p><p>We run it. You use it. Nothing to install or maintain &mdash; live inside your M365 tenant from day one.</p></div>
-            <div class="column"><h3>Appliance</h3><p class="col-subtitle">On-premise hardware &middot; Retainer</p><p>Proust on your hardware, inside your network. For organisations where data must stay on site.</p></div>
+
+        <h2 class="section-title">TWO WAYS TO DEPLOY</h2>
+        <p class="section-subtitle">Both models require Microsoft 365 admin consent. Proust v1 is M365-first; Google Workspace follows.</p>
+
+        <div class="columns" style="grid-template-columns: 1fr 1fr;">
+            <div class="column">
+                <h3>Managed</h3>
+                <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
+                <p>We run it. You use it. Nothing to install or maintain &mdash; live inside your M365 tenant from day one.</p>
+            </div>
+            <div class="column">
+                <h3>Appliance</h3>
+                <p class="col-subtitle">On-premise hardware &middot; Retainer</p>
+                <p>Proust on your hardware, inside your network. For organisations where data must stay on site.</p>
+            </div>
         </div>
 
+        <!-- CHANNEL PARTNERS -->
         <div class="section-break"></div>
-        <p class="section-eyebrow">Channel partners</p>
-        <h2 class="section-title">Accredited partners.</h2>
-        <p class="section-subtitle">Consultancies and MSPs who resell and embed Proust into client delivery.</p>
+
+        <h2 class="section-title">ACCREDITED PARTNERS</h2>
+        <p class="section-subtitle">Consultancies and MSPs who resell and embed Proust into client delivery. Channel-ready from day one.</p>
+
         <div class="columns">
-            <div class="column"><h3>Resell</h3><p class="col-subtitle">White-label or co-branded</p><p>Add Proust to your product portfolio. We supply, you deliver. Margin built in.</p></div>
-            <div class="column"><h3>Embed</h3><p class="col-subtitle">Inside your client delivery</p><p>Run Proust as part of a wider digital transformation or AI enablement programme.</p></div>
-            <div class="column"><h3>Refer</h3><p class="col-subtitle">Introductions welcome</p><p>Know a founder who needs this? Make the introduction &mdash; we&rsquo;ll handle the rest.</p></div>
+            <div class="column">
+                <h3>Resell</h3>
+                <p class="col-subtitle">White-label or co-branded</p>
+                <p>Add Proust to your product portfolio. We supply, you deliver. Margin built in.</p>
+            </div>
+            <div class="column">
+                <h3>Embed</h3>
+                <p class="col-subtitle">Inside your client delivery</p>
+                <p>Run Proust as part of a wider digital transformation or AI enablement programme.</p>
+            </div>
+            <div class="column">
+                <h3>Refer</h3>
+                <p class="col-subtitle">Introductions welcome</p>
+                <p>Know a founder who needs this? Make the introduction &mdash; we&rsquo;ll handle the rest.</p>
+            </div>
         </div>
-    </div>
 
+    </div><!-- end .page -->
+
+    <!-- CO-FOUNDER JOIN SECTION -->
     <div class="join-section" id="co-found">
         <div class="join-inner">
-            <p class="join-eyebrow">Founding circle &mdash; invitation only</p>
+            <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;color:#2D8C6F;text-transform:uppercase;margin-bottom:0.5rem;">Founding circle &mdash; invitation only</p>
             <h2 class="join-title">Co-test Proust with us.</h2>
             <p class="join-sub">We&rsquo;re looking for a small group of founders to help shape Proust before wider release. You get early access, direct input into the product, and a line to the builder. We get real-world feedback from people who actually run companies.<br><br>Five spots. No cost. You just need to use it and tell us what you think.</p>
             <form class="join-form" id="coFoundForm" onsubmit="handleJoin(event)">
@@ -273,10 +591,22 @@
             <p style="font-size:0.78rem;color:#aaa;margin-top:0.8rem;">Founders only. We won&rsquo;t add you to a list without asking first.</p>
         </div>
     </div>
+
+    <!-- FOOTER -->
     <footer>
-        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
-        <span class="right">Quantum Colleagues Training CIC &mdash; <a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="press.html">Press</a></span>
+        <span class="logo-text" style="font-size:1rem;">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <span class="right"><a href="press.html">Press</a> &middot; Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a></span>
     </footer>
-    <script>function handleJoin(e){e.preventDefault();document.getElementById('coFoundForm').style.display='none';document.getElementById('joinThanks').style.display='block';}</script>
+
+    <script>
+    function handleJoin(e) {
+        e.preventDefault();
+        document.getElementById('coFoundForm').style.display = 'none';
+        document.getElementById('joinThanks').style.display = 'block';
+    }
+    </script>
+
 </body>
 </html>

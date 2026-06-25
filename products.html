@@ -3,431 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products &mdash; QuantumColleagues.</title>
+    <title>Products — AI for Good — QuantumColleagues.</title>
+    <meta name="description" content="Off-the-shelf AI colleagues for founders and SMEs. Buy AI for your business and do some good with AI — every sale funds post-AI training for every generation.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="QuantumColleagues.">
+    <meta property="og:title" content="Products — AI for Good — QuantumColleagues.">
+    <meta property="og:description" content="Off-the-shelf AI colleagues for founders and SMEs. Buy AI for your business and do some good with AI — every sale funds post-AI training for every generation.">
+    <meta property="og:url" content="https://quantumcolleagues.org/products.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', -apple-system, sans-serif; background: #fff; color: #352F38; line-height: 1.65; }
 
-        body {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-        }
-
-        /* ===== HEADER ===== */
-        header {
-            padding: 1.5rem 3rem;
-            border-bottom: 1px solid #e6e6e6;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-text {
-            font-size: 1.4rem;
-            letter-spacing: -0.3px;
-            color: #050830;
-        }
-        .logo-text .light { font-weight: 300; }
-        .logo-text .bold { font-weight: 700; }
-        .logo-text .dot { color: #2D8C6F; font-weight: 700; }
-
-        .back-link {
-            font-size: 0.85rem;
-            color: #2D8C6F;
-            text-decoration: none;
-            font-weight: 500;
-        }
+        /* HEADER */
+        header { padding: 1.2rem 3rem; border-bottom: 1px solid #E0D9D9; display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; color: #050830; letter-spacing: -0.3px; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
 
-        /* ===== STRAPLINE ===== */
-        .strapline-strip {
-            background: #fafafc;
-            border-bottom: 1px solid #e6e6e6;
-            padding: 0.7rem 1rem;
-            text-align: center;
-        }
-        .strapline-text {
-            font-size: 0.78rem;
-            font-weight: 400;
-            color: #6b6e8a;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-        }
-        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        /* HERO BANNER */
+        .hero-banner { background: #2D648C; padding: 2.4rem 3rem; text-align: center; }
+        .hero-banner h2 { font-size: 2.2rem; font-weight: 800; color: #fff; letter-spacing: -0.8px; }
+        .hero-banner h2 .dot { color: #7FE0C4; }
+        .hero-banner .hero-sub { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 0.6rem; }
 
-        /* ===== MAIN CONTENT ===== */
-        .page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+        /* SECTION BANNERS (alternating dark strips) */
+        .section-banner { padding: 2rem 3rem; }
+        .section-banner.navy { background: #050830; }
+        .section-banner.deep-teal { background: #1F6B53; }
+        .section-banner.deep-blue { background: #2D648C; }
+        .section-banner .eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: #7FE0C4; margin-bottom: 0.4rem; }
+        .section-banner h2 { font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: -0.6px; margin-bottom: 0.4rem; }
+        .section-banner p { font-size: 0.88rem; color: rgba(255,255,255,0.68); max-width: 700px; }
 
-        .page-title {
-            font-size: 2.2rem;
-            font-weight: 300;
-            color: #050830;
-            margin-bottom: 0.3rem;
-            letter-spacing: -0.5px;
-        }
+        /* PAGE */
+        .page { max-width: 1100px; margin: 0 auto; padding: 3rem 3rem; }
+        .page-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
+        .page-title { font-size: 2.4rem; font-weight: 800; color: #050830; letter-spacing: -1px; margin-bottom: 0.4rem; }
+        .page-subtitle { font-size: 0.9rem; color: #6F6772; margin-bottom: 1.5rem; }
+        .divider { height: 1px; background: #E0D9D9; margin-bottom: 1.5rem; }
+        .lede, .mission-text { font-size: 0.95rem; color: #352F38; line-height: 1.72; margin-bottom: 1.2rem; max-width: 900px; }
 
-        .page-subtitle {
-            font-size: 0.9rem;
-            color: #8c8eaf;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
+        /* LINKS */
+        a { color: #1F6B53; font-weight: 600; text-decoration: none; } a:hover { text-decoration: underline; }
 
-        .divider {
-            height: 1px;
-            background: #e6e6e6;
-            margin-bottom: 1.5rem;
-        }
+        /* COLUMNS */
+        .columns { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin: 2rem 0; }
+        .columns.two-col { grid-template-columns: repeat(2,1fr); }
+        .column { border-top: 3px solid #2D8C6F; padding-top: 1.2rem; }
+        .column h3 { font-size: 1.05rem; font-weight: 600; color: #2D8C6F; margin-bottom: 0.2rem; }
+        .column .col-subtitle { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6F6772; margin-bottom: 1rem; }
+        .column p { font-size: 0.85rem; color: #555; line-height: 1.55; }
 
-        .lede {
-            font-size: 0.95rem;
-            color: #333;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 900px;
-        }
+        /* ITEMS */
+        .item { margin-bottom: 1rem; }
+        .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.15rem; }
+        .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.35rem; flex-shrink: 0; }
+        .item-title span { font-size: 0.9rem; font-weight: 600; color: #050830; }
+        .item-desc { font-size: 0.82rem; color: #666; margin-left: 1rem; line-height: 1.5; }
 
-        /* ===== PRODUCT STAGES (Wedge -> Core -> Future) ===== */
-        .stages {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr auto 1fr;
-            gap: 0;
-            align-items: start;
-            margin-bottom: 2rem;
-        }
-
-        .stage-box {
-            background: #fafafc;
-            border: 1px solid #e6e6e6;
-            border-top: 3px solid #2D8C6F;
-            border-radius: 4px;
-            padding: 1.5rem;
-        }
-
+        /* STAGES */
+        .stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: start; margin-bottom: 2rem; }
+        .stage-box { background: #F5F2F2; border: 1px solid #E0D9D9; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.5rem; }
         .stage-box.augment { border-top-color: #2D648C; }
         .stage-box.amplify { border-top-color: #050830; }
+        .stage-box .stage-num, .stage-box .stage-sub { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; display: block; margin-bottom: 0.3rem; }
+        .stage-box.augment .stage-sub, .stage-box.augment .stage-num { color: #2D648C; }
+        .stage-box h3 { font-size: 1.1rem; font-weight: 800; color: #050830; letter-spacing: -0.3px; margin-bottom: 0.35rem; }
+        .stage-box .stage-body { font-size: 0.85rem; color: #555; line-height: 1.55; margin-bottom: 0.8rem; }
+        .stage-box .stage-tag { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.10em; text-transform: uppercase; color: #6F6772; }
+        .stage-box .stage-link { display: inline-block; margin-top: 0.8rem; font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.10em; text-transform: uppercase; color: #2D8C6F; }
+        .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #2D8C6F; font-weight: 700; padding: 0 0.5rem; margin-top: 3rem; }
 
-        .stage-box h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #050830;
-            margin-bottom: 0.3rem;
-        }
+        /* WITHIN-PAGE SECTIONS */
+        .section-break { height: 1px; background: #E0D9D9; margin: 3rem 0 2rem; }
+        .section-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.4rem; }
+        .section-title { font-size: 1.6rem; font-weight: 800; color: #050830; letter-spacing: -0.5px; margin-bottom: 0.3rem; }
+        .section-subtitle { font-size: 0.88rem; color: #6F6772; margin-bottom: 2rem; }
+        .evidence { font-size: 0.8rem; color: #6F6772; text-align: center; padding: 0.8rem 0; }
 
-        .stage-box .stage-sub {
-            font-size: 0.85rem;
-            color: #2D8C6F;
-            margin-bottom: 0.8rem;
-        }
+        /* CAROUSEL GALLERIES */
+        .carousel-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; max-width: 1100px; margin: 0 auto; padding: 2.5rem 3rem; }
+        .carousel-gallery.two-col { grid-template-columns: repeat(2,1fr); max-width: 820px; }
+        .carousel-img { width: 100%; aspect-ratio: 1/1; border-radius: 10px; object-fit: cover; display: block; box-shadow: 0 4px 20px rgba(5,8,48,0.10); }
+        a.carousel-link { display: block; } a.carousel-link:hover .carousel-img { opacity: 0.88; }
 
-        .stage-box .stage-body {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
+        /* CARD ELEMENTS */
+        .brief-card, .dashboard-card { background: #050830; color: #fff; border-radius: 4px; padding: 1.5rem; }
+        .brief-card .head, .dashboard-card .head { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.2rem; }
+        .brief-card .sub, .dashboard-card .sub { font-size: 0.78rem; font-style: italic; color: #9a9cb8; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .brief-row, .dash-row { display: grid; grid-template-columns: 80px 1fr; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.83rem; }
+        .dash-row { grid-template-columns: 100px 1fr; }
+        .brief-row:last-child, .dash-row:last-child { border-bottom: none; }
+        .brief-row .label, .dash-label { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; align-self: center; }
+        .brief-row .text, .dash-text { color: rgba(255,255,255,0.92); }
 
-        .stage-box .stage-tag {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: #8c8eaf;
-        }
+        /* HUMAN SPARK */
+        .spark-section { border-top: 1px solid #E0D9D9; padding-top: 1.5rem; margin-top: 1.5rem; }
+        .spark-title { font-size: 1rem; font-weight: 600; color: #050830; margin-bottom: 1rem; }
+        .qualities { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .quality { display: flex; align-items: center; gap: 0.4rem; }
+        .quality-dot { width: 8px; height: 8px; border-radius: 50%; background: #2D8C6F; flex-shrink: 0; }
+        .quality span { font-size: 0.9rem; font-weight: 600; color: #050830; }
 
-        .stage-box .stage-link {
-            display: inline-block;
-            margin-top: 0.8rem;
-            font-size: 0.82rem;
-            color: #2D8C6F;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .stage-box .stage-link:hover { text-decoration: underline; }
+        /* MISSION HERO */
+        .mission-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 2rem; }
+        .mission-video { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 6px; display: block; background: #050830; }
 
-        .arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #2D8C6F;
-            font-weight: 700;
-            padding: 0 0.5rem;
-            margin-top: 3rem;
-        }
+        /* FEATURE ROW */
+        .intro-row, .feature-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin: 2rem 0; }
+        .social-img { width: 100%; border-radius: 10px; box-shadow: 0 6px 32px rgba(5,8,48,0.14); display: block; }
+        .feature-list .item { margin-bottom: 1.2rem; }
+        .feature-list .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.2rem; }
+        .feature-list .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.4rem; flex-shrink: 0; }
+        .feature-list .item-title span { font-size: 0.95rem; font-weight: 600; color: #050830; }
+        .feature-list .item-desc { font-size: 0.85rem; color: #666; margin-left: 1rem; line-height: 1.55; }
 
-        /* ===== TWO COLUMNS (delivery models) ===== */
-        .section-break {
-            height: 1px;
-            background: #e6e6e6;
-            margin: 3rem 0 2rem;
-        }
+        /* JOIN SECTION */
+        .join-section { background: #F5F2F2; border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
+        .join-inner { max-width: 480px; margin: 0 auto; }
+        .join-eyebrow { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
+        .join-title { font-size: 1.3rem; font-weight: 800; color: #050830; margin-bottom: 0.5rem; letter-spacing: -0.3px; }
+        .join-sub { font-size: 0.88rem; color: #6F6772; margin-bottom: 1.4rem; line-height: 1.5; }
+        .join-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+        .join-input { flex: 1; padding: 0.65rem 1rem; border: 1px solid #E0D9D9; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: #333; outline: none; }
+        .join-input:focus { border-color: #2D8C6F; }
+        .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'League Spartan', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
+        .join-btn:hover { background: #236b55; }
+        .join-thanks { font-size: 0.88rem; color: #2D8C6F; font-weight: 600; margin-top: 0.6rem; }
 
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: #050830;
-            margin-bottom: 0.3rem;
-        }
+        /* PRESS */
+        .release { border: 1px solid #E0D9D9; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2.5rem; }
+        .embargo { display: inline-block; background: #E8F5EF; color: #050830; border: 1px solid #2D8C6F; border-radius: 3px; font-family: 'League Spartan', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.8rem; margin-bottom: 1.5rem; }
+        .release-headline { font-size: 1.7rem; font-weight: 800; color: #050830; line-height: 1.3; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
+        .release-standfirst { font-size: 1rem; color: #2D648C; line-height: 1.55; margin-bottom: 1.5rem; }
+        .release-meta { font-family: 'League Spartan', sans-serif; font-size: 0.75rem; color: #6F6772; letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .release p { font-size: 0.95rem; color: #333; line-height: 1.7; margin-bottom: 1.1rem; }
+        .release p strong { color: #050830; font-weight: 600; }
+        .pullquote { border-left: 3px solid #2D8C6F; background: #F5F2F2; padding: 1.2rem 1.4rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+        .pullquote p { font-size: 0.98rem; font-style: italic; color: #050830; margin-bottom: 0.6rem; line-height: 1.6; }
+        .pullquote .attrib { font-family: 'League Spartan', sans-serif; font-size: 0.78rem; font-weight: 600; font-style: normal; color: #6F6772; margin-bottom: 0; letter-spacing: 0.06em; }
+        .ends { text-align: center; font-family: 'League Spartan', sans-serif; font-weight: 600; color: #6F6772; letter-spacing: 0.2em; font-size: 0.8rem; margin: 1.5rem 0; }
+        .notes { border-top: 1px solid #E0D9D9; margin-top: 1.5rem; padding-top: 1.5rem; }
+        .notes h3 { font-family: 'League Spartan', sans-serif; font-size: 0.82rem; font-weight: 600; color: #050830; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.9rem; }
+        .notes .item { display: flex; gap: 0.5rem; margin-bottom: 0.7rem; }
+        .notes .item-bullet { color: #2D8C6F; font-size: 0.6rem; margin-top: 0.4rem; flex-shrink: 0; }
+        .notes .item p { font-size: 0.85rem; color: #555; margin-bottom: 0; line-height: 1.55; }
+        .contact-card { background: #050830; border-radius: 4px; padding: 1.6rem 1.8rem; margin-top: 1.5rem; }
+        .contact-card .label { font-family: 'League Spartan', sans-serif; font-size: 0.7rem; color: #2D8C6F; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; margin-bottom: 0.4rem; }
+        .contact-card .name { font-size: 1rem; color: #fff; font-weight: 600; margin-bottom: 0.2rem; }
+        .contact-card .detail { font-size: 0.88rem; color: #9a9cb8; margin-bottom: 0.1rem; }
+        .assets-note { font-size: 0.8rem; color: #6F6772; text-align: center; margin-top: 2rem; }
 
-        .section-subtitle {
-            font-size: 0.9rem;
-            color: #8c8eaf;
-            margin-bottom: 2rem;
-        }
+        /* FOOTER */
+        footer { border-top: 1px solid #E0D9D9; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { font-family: 'League Spartan', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2D8C6F; }
+        footer .right { color: #6F6772; }
 
-        .columns {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .column {
-            border-top: 3px solid #2D8C6F;
-            padding-top: 1.2rem;
-        }
-
-        .column h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2D8C6F;
-            margin-bottom: 0.2rem;
-        }
-
-        .column .col-subtitle {
-            font-size: 0.8rem;
-            color: #8c8eaf;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        .item {
-            margin-bottom: 1rem;
-        }
-
-        .item-title {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            margin-bottom: 0.15rem;
-        }
-
-        .item-bullet {
-            color: #2D8C6F;
-            font-size: 0.6rem;
-            margin-top: 0.35rem;
-            flex-shrink: 0;
-        }
-
-        .item-title span {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #050830;
-        }
-
-        .item-desc {
-            font-size: 0.82rem;
-            color: #666;
-            margin-left: 1rem;
-            line-height: 1.5;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            border-top: 1px solid #e6e6e6;
-            margin-top: 3rem;
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-        }
-
-        footer a {
-            color: #2D8C6F;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        footer .right {
-            color: #8c8eaf;
-        }
-
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             header { padding: 1rem 1.5rem; }
-            .page { padding: 2rem 1.5rem; }
-            .page-title { font-size: 1.6rem; }
-            .section-title { font-size: 1.4rem; }
-
-            .columns {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .stages {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .arrow {
-                margin-top: 0;
-                transform: rotate(90deg);
-                padding: 0.3rem;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-                padding: 1.5rem;
-            }
+            .hero-banner { padding: 1.6rem 1.5rem; } .hero-banner h2 { font-size: 1.6rem; }
+            .section-banner { padding: 1.4rem 1.5rem; } .section-banner h2 { font-size: 1.4rem; }
+            .page { padding: 2rem 1.5rem; } .page-title { font-size: 1.8rem; } .section-title { font-size: 1.3rem; }
+            .mission-hero, .intro-row, .feature-row { grid-template-columns: 1fr; gap: 1.5rem; }
+            .columns, .columns.two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+            .stages { grid-template-columns: 1fr; gap: 1rem; } .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
+            .carousel-gallery, .carousel-gallery.two-col { grid-template-columns: 1fr; padding: 1.5rem 1.5rem; }
+            .qualities { gap: 1rem; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+            .join-form { flex-direction: column; }
+            .release { padding: 1.6rem 1.3rem; }
         }
+
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
-        <span class="logo-text">
-            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
-        </span>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
         <a href="index.html" class="back-link">&larr; Home</a>
     </header>
-
-    <!-- STRAPLINE -->
-    <div class="strapline-strip">
-        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
-    </div>
-
-    <!-- PRODUCTS -->
+    <div class="hero-banner"><h2>Do some good with AI<span class="dot">.</span></h2><p class="hero-sub">quantumcolleagues.org &mdash; AI for good</p></div>
     <div class="page">
-        <h1 class="page-title">PRODUCTS</h1>
+        <p class="page-eyebrow">Products &amp; pricing</p>
+        <h1 class="page-title">AI colleagues for your business.</h1>
         <p class="page-subtitle">Three categories. One mission. Each earns the next.</p>
         <div class="divider"></div>
-
-        <p class="lede">
-            Off-the-shelf AI colleagues, sold direct and through accredited channel partners. Affordable, private, ready-to-use AI for SMEs and organisations ignored by traditional AI providers. Every sale generates funds supporting AI training, for every generation.
-        </p>
-
+        <p class="lede">Off-the-shelf AI colleagues, sold direct and through accredited channel partners. Affordable, private, ready-to-use AI for SMEs and organisations ignored by traditional AI providers. Every sale funds post-AI training for every generation.</p>
         <div class="stages">
             <div class="stage-box">
+                <span class="stage-sub">Founder Assist &mdash; Available now</span>
                 <h3>PROUST</h3>
-                <p class="stage-sub">Founder Assist &mdash; Available now</p>
                 <p class="stage-body">Inbox, calendar, morning brief. Proust remembers so you don&rsquo;t have to &mdash; founder-grade AI, set up in ninety seconds.</p>
                 <p class="stage-tag">Founders &middot; Exec leaders &middot; Fractional operators</p>
                 <a class="stage-link" href="proust.html">Explore Proust &rarr;</a>
             </div>
-
             <div class="arrow">&rarr;</div>
-
             <div class="stage-box augment">
+                <span class="stage-sub">SME Assist &mdash; Pilots Q3 2026</span>
                 <h3>ADMIN CORE</h3>
-                <p class="stage-sub">SME Assist &mdash; Pilots Q3 2026</p>
                 <p class="stage-body">HR, finance, contracts, compliance. The back-office crew every SME needs but can&rsquo;t afford to hire.</p>
                 <p class="stage-tag">SMEs &middot; Charities &middot; Social enterprises (5&ndash;50 staff)</p>
                 <a class="stage-link" href="admincore.html">Explore Admin Core &rarr;</a>
             </div>
-
             <div class="arrow">&rarr;</div>
-
             <div class="stage-box amplify">
+                <span class="stage-sub">QuantumColleagues &mdash; Launch TBC</span>
                 <h3>PROJECT MANAGER</h3>
-                <p class="stage-sub">QuantumColleagues &mdash; Launch TBC</p>
                 <p class="stage-body">Plans, tracks, reports, chases. Runs projects so your humans can run people.</p>
                 <p class="stage-tag">Delivery teams &middot; Programme managers &middot; Agencies</p>
             </div>
         </div>
+    </div>
 
-        <!-- HOW CLIENTS BUY -->
-        <div class="section-break"></div>
+    <!-- Admin Core carousels (folders 4 & 5) -->
+    <!-- Upload: images/carousels/admincore-onprem-s1.png  images/carousels/admincore-team-s1.png -->
+    <div class="carousel-gallery two-col">
+        <a href="admincore.html" class="carousel-link"><img src="images/carousels/Slide1.png" alt="Admin Core &mdash; on-premises AI back-office" class="carousel-img" loading="lazy"></a>
+        <a href="admincore.html" class="carousel-link"><img src="images/carousels/Slide2.png" alt="Admin Core &mdash; your AI team" class="carousel-img" loading="lazy"></a>
+    </div>
 
-        <h2 class="section-title">HOW CLIENTS BUY</h2>
-        <p class="section-subtitle">Three delivery models. Every product supports the one that fits your environment.</p>
-
-        <div class="columns" style="grid-template-columns: repeat(2, 1fr);">
+    <!-- DEPLOYMENT OPTIONS (navy) -->
+    <div class="section-banner navy">
+        <p class="eyebrow">Deployment options</p>
+        <h2>Two ways to have a QuantumColleagues agent working for you.</h2>
+        <p>Choose the one that fits &mdash; or talk to us and we&rsquo;ll recommend.</p>
+    </div>
+    <div class="page">
+        <div class="columns two-col">
             <div class="column">
                 <h3>Managed</h3>
                 <p class="col-subtitle">QC-hosted &middot; Monthly subscription</p>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Hosted, monitored, updated</span>
-                    </div>
-                    <p class="item-desc">QC manages the infrastructure. You get the agent without running a server.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Tiered by usage</span>
-                    </div>
-                    <p class="item-desc">For SMEs and non-profits wanting zero overhead.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Docker container, your inference</span>
-                    </div>
-                    <p class="item-desc">Bundled setup wizard. Your infrastructure, your data, your control.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Community tier available</span>
-                    </div>
-                    <p class="item-desc">For technical teams, charities, education, community groups.</p>
-                </div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Hosted, monitored, updated</span></div><p class="item-desc">QC manages the infrastructure. You get the agent without running a server.</p></div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Up and running in minutes</span></div><p class="item-desc">No hardware, no install &mdash; connect, configure, go. For SMEs and non-profits wanting zero overhead.</p></div>
             </div>
-
             <div class="column">
                 <h3>Appliance</h3>
                 <p class="col-subtitle">On-premise &middot; Hardware + retainer</p>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Pre-configured device</span>
-                    </div>
-                    <p class="item-desc">Everything runs on your network. Shipped, set up, supported.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>For regulated sectors</span>
-                    </div>
-                    <p class="item-desc">Data residency, GDPR, safeguarding &mdash; built-in by design.</p>
-                </div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Pre-configured device</span></div><p class="item-desc">Everything runs on your network. Shipped, set up, supported.</p></div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>For regulated sectors</span></div><p class="item-desc">Data residency, GDPR, safeguarding &mdash; built-in by design. Auditable by default.</p></div>
             </div>
         </div>
-
-        <!-- CHANNEL PARTNERS -->
-        <div class="section-break"></div>
-
-        <h2 class="section-title">CHANNEL PARTNERS</h2>
-        <p class="section-subtitle">Accredited consultancies and MSPs who resell and embed our agents.</p>
-
-        <p class="lede">
-            We work with consultancies and IT providers who deliver on our behalf &mdash; embedding Proust and Admin Core into their own client engagements. Channel-ready from day one. <a href="mission.html#contact" style="color:#2D8C6F;text-decoration:none;font-weight:500;">Get in touch</a> to apply.
-        </p>
     </div>
 
-    <!-- FOOTER -->
+    <!-- PARTNER WITH US (deep teal) -->
+    <div class="section-banner deep-teal">
+        <p class="eyebrow">Channel partners</p>
+        <h2>Partner with us.</h2>
+        <p>Accredited consultancies and MSPs who resell and embed our agents.</p>
+    </div>
+    <div class="page">
+        <p class="lede">We work with consultancies and IT providers who deliver on our behalf &mdash; embedding Proust and Admin Core into their own client engagements. Channel-ready from day one. <a href="mailto:jonathan@quantumcolleagues.org">Get in touch</a> to apply.</p>
+        <div class="columns">
+            <div class="column">
+                <h3>Resell</h3>
+                <p class="col-subtitle">White-label or co-branded</p>
+                <p>Add QC agents to your product portfolio. We supply, you deliver. Margin built in.</p>
+            </div>
+            <div class="column">
+                <h3>Embed</h3>
+                <p class="col-subtitle">Inside your client delivery</p>
+                <p>Run Proust or Admin Core as part of a wider digital transformation or AI enablement programme.</p>
+            </div>
+            <div class="column">
+                <h3>Refer</h3>
+                <p class="col-subtitle">Introductions welcome</p>
+                <p>Know a founder or SME who needs this? Make the introduction &mdash; we&rsquo;ll handle the rest.</p>
+            </div>
+        </div>
+    </div>
     <footer>
-        <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
-        <span class="right">quantumcolleagues.org</span>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="right">Quantum Colleagues Training CIC &mdash; <a href="index.html">quantumcolleagues.org</a></span>
     </footer>
-
-    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;">&copy; QuantumColleagues Ltd 2026</p>
 </body>
 </html>

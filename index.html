@@ -6,7 +6,7 @@
     <title>QuantumColleagues.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -23,10 +23,12 @@
             position: fixed;
             inset: 0;
             display: grid;
+            /* grid-template-columns set dynamically by JS so tiles stretch to fill full width */
             grid-auto-rows: 80px;
             gap: 2px;
             z-index: 0;
         }
+
         #mosaic .tile {
             background-color: #0d1240;
             background-size: cover;
@@ -57,27 +59,23 @@
 
         .container {
             text-align: center;
-            padding: 0;
+            padding: 3rem 3.5rem;
             max-width: 560px;
             background: rgba(255, 255, 255, 0.90);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 4px;
             box-shadow: 0 8px 40px rgba(5, 8, 48, 0.35);
-            overflow: hidden;
         }
 
-        .container-top {
-            padding: 3rem 3.5rem 2rem;
-        }
-
-        .logo { margin-bottom: 2rem; }
+        .logo { margin-bottom: 2.5rem; }
 
         .logo-text {
             font-size: 2.4rem;
             letter-spacing: -0.5px;
             color: #050830;
         }
+
         .logo-text .light { font-weight: 300; }
         .logo-text .bold  { font-weight: 700; }
         .logo-text .dot   { color: #2D8C6F; font-weight: 700; }
@@ -89,43 +87,29 @@
             margin: 0 auto 2rem;
         }
 
-        /* TWEAK 1: "Do some good with AI." → deep-blue banner strip */
-        .do-good-banner {
-            background: #2D648C;
-            padding: 1rem 3.5rem;
-            margin: 0;
-        }
-        .do-good-banner h1 {
+        h1 {
             font-size: 1.1rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -0.3px;
-        }
-        .do-good-banner h1 .dot { color: #7FE0C4; }
-
-        /* TWEAK 2: tagline → Poppins Bold charcoal; nav → League Spartan teal uppercase */
-        .tagline-text {
-            font-size: 0.95rem;
-            color: #34343C;
-            font-weight: 700;
-            line-height: 1.6;
-            padding: 1.6rem 3.5rem 0;
-        }
-
-        .nav-links {
-            padding: 1rem 3.5rem 2.5rem;
-        }
-        .nav-links a {
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 600;
-            font-size: 0.82rem;
-            letter-spacing: 0.12em;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: #9a9cb8;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .tagline a {
             color: #2D8C6F;
             text-decoration: none;
+            font-weight: 400;
         }
-        .nav-links a:hover { text-decoration: underline; }
-        .nav-sep { color: #2D8C6F; margin: 0 0.5rem; }
+
+        .tagline a:hover { text-decoration: underline; }
 
         .footer {
             position: fixed;
@@ -140,10 +124,8 @@
 
         @media (max-width: 480px) {
             .logo-text { font-size: 1.8rem; }
-            .container-top { padding: 2rem 1.75rem 1.5rem; }
-            .do-good-banner { padding: 0.9rem 1.75rem; }
-            .tagline-text { padding: 1.2rem 1.75rem 0; font-size: 0.88rem; }
-            .nav-links { padding: 0.8rem 1.75rem 2rem; }
+            h1 { font-size: 0.95rem; }
+            .container { padding: 2rem 1.75rem; }
         }
     </style>
 </head>
@@ -154,34 +136,26 @@
 
     <div class="stage">
         <div class="container">
-            <div class="container-top">
-                <div class="logo">
-                    <span class="logo-text">
-                        <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
-                    </span>
-                </div>
-                <div class="divider"></div>
+            <div class="logo">
+                <span class="logo-text">
+                    <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+                </span>
             </div>
 
-            <!-- TWEAK 1: deep-blue banner for "Do some good with AI." -->
-            <div class="do-good-banner">
-                <h1>Do some good with AI<span class="dot">.</span></h1>
-            </div>
+            <div class="divider"></div>
 
-            <!-- TWEAK 2: Poppins Bold charcoal tagline + League Spartan nav -->
-            <p class="tagline-text">Humans &amp; AI Agents working together. Post-AI Training for every generation.</p>
-            <div class="nav-links">
-                <a href="mission.html">Mission</a><span class="nav-sep">&middot;</span>
-                <a href="products.html">Products</a><span class="nav-sep">&middot;</span>
-                <a href="proust.html">Proust</a><span class="nav-sep">&middot;</span>
-                <a href="press.html">Press</a>
-            </div>
+            <h1>Do some good with AI.</h1>
+
+            <p class="tagline">
+                Humans &amp; AI Agents working together. Post-AI Training for every generation.<br><br>
+                <a href="mission.html">Mission</a> &middot; <a href="products.html">Products</a> &middot; <a href="proust.html">Proust</a> &middot; <a href="press.html">Press</a>
+            </p>
         </div>
     </div>
 
     <!-- Photos sourced via Unsplash (unsplash.com) under the Unsplash License -->
     <div class="footer">quantumcolleagues.org</div>
-    <div style="position:fixed;bottom:0.4rem;right:1rem;font-size:0.6rem;color:rgba(255,255,255,0.22);z-index:3;letter-spacing:0.03em;">&copy; QuantumColleagues Ltd 2026</div>
+<div style="position:fixed;bottom:0.4rem;right:1rem;font-size:0.6rem;color:rgba(255,255,255,0.22);z-index:3;letter-spacing:0.03em;">&copy; QuantumColleagues Ltd 2026</div>
 
     <script>
     (function () {
@@ -196,34 +170,49 @@
 
         var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
         var QUERIES = [
-            'elderly face candid','senior face','middle aged face','old man face',
-            'old woman face','black british person','asian british face','diverse face real'
+            'elderly face candid',
+            'senior face',
+            'middle aged face',
+            'old man face',
+            'old woman face',
+            'black british person',
+            'asian british face',
+            'diverse face real'
         ];
 
         var fetches = QUERIES.map(function (q) {
             var url = 'https://api.unsplash.com/search/photos'
                 + '?query=' + encodeURIComponent(q)
-                + '&per_page=15&content_filter=high&client_id=' + KEY;
-            return fetch(url).then(function (r) { return r.json(); })
+                + '&per_page=15'
+                + '&content_filter=high'
+                + '&client_id=' + KEY;
+            return fetch(url)
+                .then(function (r) { return r.json(); })
                 .then(function (data) {
-                    return (data.results || []).map(function (photo) {
-                        return photo.urls.raw + '?w=160&h=160&fit=crop&crop=faces&auto=format&q=80';
+                    var photos = data.results || [];
+                    return photos.map(function (photo) {
+                        return photo.urls.raw
+                            + '?w=160&h=160&fit=crop&crop=faces&auto=format&q=80';
                     });
-                }).catch(function () { return []; });
+                })
+                .catch(function () { return []; });
         });
 
         Promise.all(fetches).then(function (results) {
-            pool = [].concat.apply([], results).sort(function () { return Math.random() - 0.5; });
+            pool = [].concat.apply([], results)
+                     .sort(function () { return Math.random() - 0.5; });
             if (pool.length > 0 && !initialized) init();
         });
 
         var mosaic = document.getElementById('mosaic');
 
         function ensureTiles() {
-            var cols = Math.ceil(window.innerWidth / TILE_SIZE) + 2;
+            var cols = Math.ceil(window.innerWidth  / TILE_SIZE) + 2;
             var rows = Math.ceil(window.innerHeight / TILE_SIZE) + 2;
             var needed = cols * rows;
+
             mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+
             var toAdd = needed - tiles.length;
             for (var i = 0; i < toAdd; i++) {
                 var div = document.createElement('div');
@@ -254,8 +243,11 @@
 
         function startShifting() {
             function shift() {
-                var count = 2 + Math.floor(Math.random() * 2);
-                var picked = tiles.slice().sort(function () { return Math.random() - 0.5; }).slice(0, count);
+                var count  = 2 + Math.floor(Math.random() * 2);
+                var picked = tiles.slice()
+                    .sort(function () { return Math.random() - 0.5; })
+                    .slice(0, count);
+
                 picked.forEach(function (tile) {
                     tile.style.opacity = '0';
                     setTimeout(function () {
@@ -263,10 +255,12 @@
                         tile.style.opacity = '1';
                     }, FADE_MS + 50);
                 });
+
                 setTimeout(shift, SHIFT_BASE + Math.random() * SHIFT_JITTER);
             }
             shift();
         }
+
     })();
     </script>
 </body>

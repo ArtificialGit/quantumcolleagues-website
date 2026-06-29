@@ -377,6 +377,27 @@
                 padding: 1.5rem;
             }
         }
+    
+        /* ===== REDESIGN: sell / give / spark ===== */
+        .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--trafalgar); margin-bottom: 0.5rem; }
+        .sell-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-bottom: 1.2rem; }
+        .sell-item { background: #ffffff; border: 1px solid var(--warm-div); border-top: 3px solid var(--teal); border-radius: 4px; padding: 1.3rem; }
+        .sell-item h4 { font-size: 0.98rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; display: flex; gap: 0.45rem; align-items: flex-start; }
+        .sell-item h4 .b { color: var(--teal); font-size: 0.6rem; margin-top: 0.45rem; flex-shrink: 0; }
+        .sell-item p { font-size: 0.85rem; color: var(--dusk); line-height: 1.55; }
+        .link-arrow { display: inline-block; font-size: 0.88rem; color: var(--trafalgar); font-weight: 600; text-decoration: none; margin-top: 0.4rem; }
+        .link-arrow:hover { text-decoration: underline; }
+        .give { display: grid; grid-template-columns: 1fr 460px; gap: 2.6rem; align-items: center; }
+        .give .gcopy p { font-size: 0.95rem; color: var(--warm-ink); line-height: 1.7; margin-bottom: 1rem; }
+        .give .gcopy .big { font-size: 1.1rem; font-weight: 500; color: #050830; }
+        .who-row { display: flex; gap: 1.4rem; margin: 0.4rem 0 1rem; }
+        .who-row > div { flex: 1; border-left: 2px solid var(--teal-tint); padding-left: 0.8rem; }
+        .who-row h5 { font-size: 0.85rem; color: var(--trafalgar); font-weight: 600; margin-bottom: 0.15rem; }
+        .who-row p { font-size: 0.82rem; color: var(--dusk); margin: 0; }
+        .tree-card { background: #ffffff; border: 1px solid var(--warm-div); border-top: 3px solid var(--teal); border-radius: 8px; padding: 0.6rem; box-shadow: 0 8px 30px rgba(5,8,48,0.08); }
+        .tree-card video { width: 100%; display: block; border-radius: 4px; background: #ffffff; }
+        .tree-cap { font-size: 0.78rem; color: var(--dusk); text-align: center; margin-top: 0.5rem; font-style: italic; }
+        @media (max-width: 768px) { .sell-grid { grid-template-columns: 1fr; } .give { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -399,7 +420,7 @@
 
         <div class="mission-hero">
             <div>
-                <h1 class="page-title">MISSION STATEMENT</h1>
+                <h1 class="page-title">Our mission.</h1>
                 <p class="page-subtitle">We sell AI to business so we can teach it to everyone else.</p>
                 <div class="divider"></div>
                 <p class="mission-text">
@@ -415,204 +436,52 @@
 
         <div class="divider"></div>
 
-        <!-- THREE COLUMNS -->
-        <div class="columns">
-
-            <!-- Column 1: The Open Market -->
-            <div class="column">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M3.8 6.5 L20.2 6 L20.1 18.9 L3.7 19.2 L3.7 6.3 L5.5 6.2"/><path d="M3.8 10 L20 9.7"/><path d="M16.5 13.1 C17.4 13 18.1 13.7 18 14.6 C17.9 15.4 17.1 16 16.3 15.9 C15.6 15.8 15 15 15.1 14.3 C15.2 13.6 15.9 13.15 16.7 13.1" class="accent"/></svg>The Open Market</h3>
-                <p class="col-subtitle">The Revenue Model</p>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Off-the-shelf AI agents</span>
-                    </div>
-                    <p class="item-desc">Ready-to-run AI colleagues &mdash; downloadable or cloud-hosted, priced to use</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Strategy &amp; planning with expert guidance</span>
-                    </div>
-                    <p class="item-desc">Short, practical engagements to choose, shape and deploy AI with a human on hand</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Affordable access to high-end AI</span>
-                    </div>
-                    <p class="item-desc">The quality of insight usually reserved for the enterprise &mdash; priced for everyone else</p>
-                </div>
-            </div>
-
-            <!-- Column 2: Young People -->
-            <div class="column">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M3 9 L12 5 L21 9 L12 13 L3.1 9.1 L4.6 8.65"/><path d="M7 11 L7 15 C7 16.6 17 16.6 17 15 L17 11"/><path d="M21 9.1 L21 13.2" class="accent"/></svg>Young People</h3>
-                <p class="col-subtitle">Social Mission: Future-Proofing Careers</p>
-                <div class="photo-zone">[Photo: AI for young people &mdash; workshop scene]</div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>AI training &amp; education</span>
-                    </div>
-                    <p class="item-desc">Preparing young people for the future of work with practical AI skills</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Career protection</span>
-                    </div>
-                    <p class="item-desc">Helping the next generation protect themselves from the oncoming change in AI</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Inclusivity &amp; access</span>
-                    </div>
-                    <p class="item-desc">Fostering inclusivity in the tech world and giving everyone a foot in the door</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Building their future</span>
-                    </div>
-                    <p class="item-desc">Enabling young people to create something for themselves using new technology</p>
-                </div>
-            </div>
-
-            <!-- Column 3: Pre-Retirees -->
-            <div class="column">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M12 9.6 C11.2 8.6 9.4 8.7 9 10 C8.6 11.3 10.3 12.8 12 14.3 C13.7 12.8 15.4 11.3 15 10 C14.6 8.7 12.8 8.6 12 9.6" class="accent"/><path d="M5 14 L5 17 C5 18.6 6.4 19.1 8 19 L16 19 C17.6 19.1 19 18.6 19 17 L19 14"/></svg>Pre-Retirees &amp; Retirees</h3>
-                <p class="col-subtitle">Social Mission: Giving Back &amp; Building Anew</p>
-                <div class="photo-zone">[Photo: AI for later life &mdash; community session]</div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>AI upskilling (55-65+)</span>
-                    </div>
-                    <p class="item-desc">Learning how AI works and how it can open new post-retirement pathways</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Mentoring the young</span>
-                    </div>
-                    <p class="item-desc">Giving back by mentoring younger people into the workforce</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Purpose in retirement</span>
-                    </div>
-                    <p class="item-desc">Allowing the older age group to do something useful and meaningful</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span class="item-bullet">&#9632;</span>
-                        <span>Bridging generations</span>
-                    </div>
-                    <p class="item-desc">A framework where experience meets innovation for mutual benefit</p>
-                </div>
-            </div>
+        <!-- WHAT WE SELL -->
+        <p class="eyebrow">What we sell</p>
+        <h2 class="section-title">An open market for useful AI.</h2>
+        <p class="section-subtitle">Ready-to-run AI for businesses that need the capability without the headcount &mdash; the engine that funds everything below.</p>
+        <div class="sell-grid">
+            <div class="sell-item"><h4><span class="b">&#9632;</span><span>Off-the-shelf AI agents</span></h4><p>Ready-to-run AI colleagues &mdash; cloud-hosted or on-premises, priced to use.</p></div>
+            <div class="sell-item"><h4><span class="b">&#9632;</span><span>Strategy &amp; planning, with a human on hand</span></h4><p>Short, practical engagements to choose, shape and deploy AI &mdash; with expert guidance.</p></div>
+            <div class="sell-item"><h4><span class="b">&#9632;</span><span>High-end AI, priced for everyone</span></h4><p>The quality of insight usually reserved for the enterprise &mdash; made affordable.</p></div>
         </div>
+        <a class="link-arrow" href="products.html">See the products &mdash; Proust, Admin Core &amp; Project Manager &rarr;</a>
 
-        <!-- PRODUCT PORTFOLIO -->
+        <!-- WHAT WE GIVE -->
         <div class="section-break"></div>
-
-        <h2 class="section-title">OUR PRODUCTS</h2>
-        <p class="section-subtitle">Three categories. One mission. Each earns the next.</p>
-
-        <div class="stages">
-            <div class="stage-box">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M3.9 19 L20.2 18.7"/><path d="M7.4 18.9 C7.7 14.8 16.3 14.8 16.6 18.9"/><path d="M12 4.3 L12 6.9" class="accent"/><path d="M5.4 8 L7.2 9.7" class="accent"/><path d="M18.6 8.1 L16.8 9.6" class="accent"/></svg>PROUST</h3>
-                <p class="stage-sub">Founder Assist &mdash; Available now</p>
-                <p class="stage-body">Inbox, calendar, morning brief. Proust remembers so you don&rsquo;t have to &mdash; founder-grade AI, set up in ninety seconds.</p>
-                <p class="stage-tag">Founders &middot; Exec leaders &middot; Fractional operators</p>
+        <p class="eyebrow">What we give</p>
+        <h2 class="section-title">Every sale funds post-AI training.</h2>
+        <p class="section-subtitle">Free, for every generation &mdash; because we&rsquo;re a Community Interest Company. We sell AI to business and put what it earns into helping people navigate a post-AI world.</p>
+        <div class="give">
+            <div class="gcopy">
+                <p class="big">Career &amp; Beyond is the first of these &mdash; and it&rsquo;s free.</p>
+                <p>A map of work as a tree, not a ladder. Start where you are, follow a branch toward work that&rsquo;s growing, and take a real next step &mdash; across six durable, post-AI branches.</p>
+                <div class="who-row">
+                    <div><h5>Young people</h5><p>Finding a first foothold and a future-proof direction.</p></div>
+                    <div><h5>Later life (55&ndash;65+)</h5><p>Building something new, and mentoring the next generation.</p></div>
+                </div>
+                <a class="link-arrow" href="https://quantumcolleagues.org">Explore Career &amp; Beyond, free &rarr;</a>
             </div>
-
-            <div class="arrow">&rarr;</div>
-
-            <div class="stage-box augment">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M9 6.1 C10.7 6 12.1 7.3 12 9 C11.9 10.7 10.6 12.1 9 12 C7.4 11.9 6 10.6 6.1 9 C6.2 7.3 7.6 6.1 9.4 6"/><path d="M3.6 19 C3.7 14.9 14.3 14.9 14.4 19"/><path d="M16 6.4 C17.9 6.5 19 8.9 18 10.6"/><path d="M16.6 14 C19.1 14.5 20.6 16.8 20.5 19"/></svg>ADMIN CORE</h3>
-                <p class="stage-sub">SME Assist &mdash; Pilots Q3 2026</p>
-                <p class="stage-body">HR, finance, contracts, compliance. The back-office crew every SME needs but can&rsquo;t afford to hire.</p>
-                <p class="stage-tag">SMEs &middot; Charities &middot; Social enterprises</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-            <div class="stage-box amplify">
-                <h3><svg viewBox="0 0 24 24" class="ico"><path d="M5.2 4.6 L18.8 4.4 L19 20.9 L4.9 21 L5.1 4.4 L6.8 4.4"/><path d="M9 4.6 C9 2.9 15 2.9 15 4.6"/><path d="M8.6 11 L15.4 10.9"/><path d="M8.6 14.5 L13.4 14.4"/></svg>PROJECT MANAGER</h3>
-                <p class="stage-sub">QuantumColleagues &mdash; Launch TBC</p>
-                <p class="stage-body">Plans, tracks, reports, chases. Runs projects so your humans can run people.</p>
-                <p class="stage-tag">Delivery teams &middot; Programme managers &middot; Agencies</p>
-            </div>
-        </div>
-
-        <p class="evidence" style="margin-bottom: 2rem;">
-            Wedge &rarr; Core &rarr; Future. &nbsp;&nbsp; Proust is the wedge. Admin Core scales it. PM closes the loop.
-        </p>
-
-        <!-- OPERATING MODEL -->
-        <div class="section-break"></div>
-
-        <h2 class="section-title">THE AI-HUMAN OPERATING MODEL</h2>
-        <p class="section-subtitle">Neither alone is enough. Together, they&rsquo;re transformational.</p>
-
-        <div class="stages">
-            <div class="stage-box">
-                <h3>AUTOMATE</h3>
-                <p class="stage-sub">AI handles the routine</p>
-                <p class="stage-body">Repetitive tasks, data processing, pattern recognition, error detection</p>
-                <p class="stage-tag">Frees human capacity for what matters</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-            <div class="stage-box augment">
-                <h3>AUGMENT</h3>
-                <p class="stage-sub">AI enhances human decision-making</p>
-                <p class="stage-body">Real-time insights, predictive analytics, intelligent drafting</p>
-                <p class="stage-tag">Humans retain control, AI amplifies reach</p>
-            </div>
-
-            <div class="arrow">&rarr;</div>
-
-            <div class="stage-box amplify">
-                <h3>AMPLIFY</h3>
-                <p class="stage-sub">Small teams, massive impact</p>
-                <p class="stage-body">2-5 humans managing 50-100 AI agents</p>
-                <p class="stage-tag">The human spark scales without limits</p>
+            <div class="tree-card">
+                <video autoplay muted loop playsinline preload="auto">
+                    <source src="QC_CareerBeyond_Spin.mp4" type="video/mp4">
+                </video>
+                <p class="tree-cap">Career &amp; Beyond &mdash; one life, six post-AI branches</p>
             </div>
         </div>
 
         <!-- HUMAN SPARK -->
-        <div class="spark-section">
-            <p class="spark-title">The Human Spark &mdash; What AI Cannot Replace</p>
-
-            <div class="qualities">
-                <div class="quality"><div class="quality-dot"></div><span>Creativity</span></div>
-                <div class="quality"><div class="quality-dot"></div><span>Empathy</span></div>
-                <div class="quality"><div class="quality-dot"></div><span>Judgment</span></div>
-                <div class="quality"><div class="quality-dot"></div><span>Ethics</span></div>
-                <div class="quality"><div class="quality-dot"></div><span>Leadership</span></div>
-                <div class="quality"><div class="quality-dot"></div><span>Context</span></div>
-            </div>
-
-            <p class="evidence">
-                $2.9T economic value by 2030 (McKinsey) &nbsp;|&nbsp; 2x earnings for AI-human companies (BCG) &nbsp;|&nbsp; 30-50% faster processes (Accenture)
-            </p>
+        <div class="section-break"></div>
+        <p class="eyebrow">The human spark</p>
+        <h2 class="section-title">What AI cannot replace.</h2>
+        <p class="section-subtitle">AI takes the routine so people are freed for what only people can do &mdash; the qualities no machine carries.</p>
+        <div class="qualities">
+            <div class="quality"><div class="quality-dot"></div><span>Creativity</span></div>
+            <div class="quality"><div class="quality-dot"></div><span>Empathy</span></div>
+            <div class="quality"><div class="quality-dot"></div><span>Judgment</span></div>
+            <div class="quality"><div class="quality-dot"></div><span>Ethics</span></div>
+            <div class="quality"><div class="quality-dot"></div><span>Leadership</span></div>
+            <div class="quality"><div class="quality-dot"></div><span>Context</span></div>
         </div>
     </div>
 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources &mdash; QuantumColleagues.</title>
+    <meta name="description" content="Free guides and tools from QuantumColleagues &mdash; practical help for adopting AI, and for the people navigating the change. Because every sale funds post-AI training for everyone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            color: #050830;
+        }
+        .logo-text .light { font-weight: 300; }
+        .logo-text .bold { font-weight: 700; }
+        .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* ===== STRAPLINE ===== */
+        .strapline-strip {
+            background: #fafafc;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 0.7rem 1rem;
+            text-align: center;
+        }
+        .strapline-text {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: #6b6e8a;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+
+        /* ===== MAIN CONTENT ===== */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            color: #2D648C;
+            margin-bottom: 0.6rem;
+        }
+
+        .page-title {
+            font-size: 2.6rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-sub {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #2D8C6F;
+            letter-spacing: -0.3px;
+            margin-bottom: 1rem;
+        }
+
+        .lede {
+            font-size: 0.98rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 1.6rem;
+            max-width: 720px;
+        }
+
+        /* ===== DOWNLOAD CTA ===== */
+        .download-cta { margin-bottom: 0.5rem; }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: #2D8C6F;
+            color: #ffffff;
+            padding: 0.95rem 1.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            text-decoration: none;
+        }
+        .download-btn:hover { background: #256f58; }
+        .download-note {
+            font-size: 0.78rem;
+            color: #8c8eaf;
+            margin-top: 0.7rem;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-break {
+            height: 1px;
+            background: #e6e6e6;
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #050830;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #8c8eaf;
+            margin-bottom: 1.6rem;
+        }
+
+        .item { margin-bottom: 1.1rem; max-width: 760px; }
+
+        .item-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .item-bullet {
+            color: #2D8C6F;
+            font-size: 0.6rem;
+            margin-top: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        .item-title span {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #050830;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-left: 1rem;
+            line-height: 1.55;
+        }
+
+        /* ===== WHY CARD ===== */
+        .why-card {
+            background: #fafafc;
+            border: 1px solid #e6e6e6;
+            border-top: 3px solid #2D8C6F;
+            border-radius: 4px;
+            padding: 1.6rem 1.8rem;
+            max-width: 820px;
+        }
+        .why-card p {
+            font-size: 0.92rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+        .why-card p:last-child { margin-bottom: 0; }
+        .why-card .buyline { font-weight: 600; color: #050830; }
+
+        /* ===== CONTACT ===== */
+        .contact-line { font-size: 0.95rem; color: #333; }
+        .contact-line a { color: #1F6B53; font-weight: 600; text-decoration: none; }
+        .contact-line a:hover { text-decoration: underline; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid #e6e6e6;
+            margin-top: 3rem;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        footer a {
+            color: #2D8C6F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer .right { color: #8c8eaf; }
+
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .page { padding: 2rem 1.5rem; }
+            .page-title { font-size: 2rem; }
+            .hero-sub { font-size: 1.2rem; }
+            .section-title { font-size: 1.4rem; }
+            footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+    
+        /* ===== RESOURCE CARDS ===== */
+        .resource-grid { display: grid; grid-template-columns: minmax(0, 560px); gap: 1.6rem; margin-top: 0.5rem; }
+        .resource-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.6rem 1.7rem; display: flex; flex-direction: column; }
+        .resource-card .r-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; color: #2D648C; margin-bottom: 0.5rem; }
+        .resource-card h3 { font-size: 1.25rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; }
+        .resource-card p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 1.1rem; flex-grow: 1; }
+        .resource-card .r-link { font-size: 0.88rem; color: #2D8C6F; font-weight: 600; text-decoration: none; align-self: flex-start; }
+        .resource-card .r-link:hover { text-decoration: underline; }
+        .more-soon { font-size: 0.82rem; color: #8c8eaf; margin-top: 1.5rem; }
+        @media (max-width: 768px) { .resource-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <span class="logo-text">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <a href="index.html" class="back-link">&larr; Home</a>
+    </header>
+
+    <!-- STRAPLINE -->
+    <div class="strapline-strip">
+        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
+    </div>
+
+    <!-- RESOURCES -->
+    <div class="page">
+        <p class="eyebrow">FREE &middot; FOR EVERYONE</p>
+        <h1 class="page-title">Resources</h1>
+        <p class="lede">Free guides and tools we make and give away &mdash; practical help for adopting AI, and for the people navigating the change. It&rsquo;s how our mission shows up: every sale funds post-AI training for everyone.</p>
+
+        <div class="resource-grid">
+            <div class="resource-card">
+                <p class="r-tag">GUIDE &middot; FOR SMEs</p>
+                <h3>Adopting AI: first steps for SMEs</h3>
+                <p>A free, plain-English guide to using AI as support and extra capacity for your team &mdash; doing more with what you&rsquo;ve got, human and AI together.</p>
+                <a class="r-link" href="guide.html">Read it &amp; download the PDF &rarr;</a>
+            </div>
+        </div>
+        <p class="more-soon">More free guides and tools are on the way.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://quantumcolleagues.org">quantumcolleagues.org</a>
+        <span class="right"><a href="mission.html">Mission</a> &middot; <a href="products.html">Products</a></span>
+    </footer>
+
+</body>
+</html>

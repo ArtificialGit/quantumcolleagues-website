@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faces engine preview &mdash; QuantumColleagues&trade;</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#333;}
+header{padding:1.5rem 3rem;border-bottom:1px solid #e6e6e6;display:flex;justify-content:space-between;align-items:center;}
+.logo-text{font-size:1.4rem;color:#050830;}.logo-text .light{font-weight:300;}.logo-text .bold{font-weight:700;}.logo-text .dot{color:#2D8C6F;font-weight:700;}
+.strapline-strip{background:#fafafc;border-bottom:1px solid #e6e6e6;padding:0.7rem;text-align:center;}.strapline-text{font-size:0.78rem;color:#6b6e8a;letter-spacing:0.18em;text-transform:uppercase;}.strapline-text .dot{color:#2D8C6F;font-weight:700;}
+.hero{position:relative;height:460px;background:#050830;overflow:hidden;}
+.hero .overlay{position:absolute;inset:0;background:rgba(5,8,48,0.5);z-index:1;}
+.hero .card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;background:rgba(255,255,255,0.92);border-radius:6px;padding:2rem 3rem;text-align:center;box-shadow:0 10px 40px rgba(5,8,48,0.35);}
+.hero .card .lg{font-size:2rem;color:#050830;}.hero .card .lg .light{font-weight:300;}.hero .card .lg .bold{font-weight:700;}.hero .card .lg .dot{color:#2D8C6F;font-weight:700;}
+.hero .card .dv{width:56px;height:3px;background:#2D8C6F;margin:1rem auto;}
+.hero .card .tl{font-size:0.72rem;letter-spacing:0.15em;color:#6b6e8a;text-transform:uppercase;}
+.section{max-width:900px;margin:0 auto;padding:2.5rem 2rem;}
+.section h2{font-weight:300;color:#050830;font-size:1.4rem;margin-bottom:0.4rem;}.section p{color:#6b6e8a;font-size:0.9rem;}
+.faces-ribbon{position:relative;height:82px;overflow:hidden;background:#050830;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
+.faces-ribbon .rov{position:absolute;inset:0;background:rgba(5,8,48,0.22);z-index:1;pointer-events:none;}
+</style>
+</head>
+<body>
+<header><span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span><span style="font-size:0.8rem;color:#8c8eaf;">faces engine preview</span></header>
+<div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
+<div class="hero"><div id="mosaic" data-qc-faces data-tile="82" style="position:absolute;inset:0;z-index:0;"></div><div class="overlay"></div><div class="card"><div class="lg"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></div><div class="dv"></div><div class="tl">Do some good with AI.</div></div></div>
+<div class="section"><h2>Homepage mosaic above &middot; slim ribbon below</h2><p>Colour tiles fill first, faces land a beat later. One engine, two sizes, one cached pool of faces.</p></div>
+<div class="faces-ribbon"><div id="ribbonMosaic" data-qc-faces data-tile="82" style="position:absolute;inset:0;z-index:0;"></div><div class="rov"></div></div>
+<div class="section"><p style="margin-top:1rem;">&mdash; page content would continue here &mdash;</p></div>
+<script src="qc-faces.js"></script>
+</body>
+</html>

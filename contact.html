@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &mdash; QuantumColleagues&trade;</title>
+    <meta name="description" content="Get in touch with QuantumColleagues&trade; &mdash; email information@quantumcolleagues.org or send us a message.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #333333; line-height: 1.6; }
+        header { padding: 1.5rem 3rem; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; letter-spacing: -0.3px; color: #050830; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-size: 0.85rem; color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .strapline-strip { background: #fafafc; border-bottom: 1px solid #e6e6e6; padding: 0.7rem 1rem; text-align: center; }
+        .strapline-text { font-size: 0.78rem; color: #6b6e8a; letter-spacing: 0.18em; text-transform: uppercase; }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        .faces-hero { position: relative; height: 340px; overflow: hidden; background: #050830; }
+        #mosaic { position: absolute; inset: 0; display: grid; grid-auto-rows: 70px; gap: 2px; z-index: 0; }
+        #mosaic .tile { background-color: #0d1240; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.6s ease; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(5,8,48,0.62); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #7fd8bd; margin-bottom: 0.6rem; }
+        .hero-title { font-size: 2.6rem; font-weight: 300; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
+        .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.82); max-width: 560px; }
+        .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+        .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: start; }
+        .form-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2rem; }
+        .form-card h2 { font-size: 1.3rem; font-weight: 600; color: #050830; margin-bottom: 0.3rem; }
+        .form-card .card-sub { font-size: 0.88rem; color: #6b6e8a; margin-bottom: 1.5rem; }
+        .field { margin-bottom: 1.1rem; display: flex; flex-direction: column; }
+        .field label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6e8a; margin-bottom: 0.35rem; }
+        .field .req { color: #2D8C6F; }
+        .field input, .field textarea { font-family: inherit; font-size: 0.95rem; color: #333; padding: 0.72rem 0.85rem; border: 1px solid #d8d8e0; border-radius: 6px; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
+        .field textarea { resize: vertical; min-height: 120px; }
+        .field input::placeholder, .field textarea::placeholder { color: #b6b8c8; }
+        .field input:focus, .field textarea:focus { outline: none; border-color: #2D8C6F; box-shadow: 0 0 0 3px rgba(45,140,111,0.12); }
+        .submit-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D8C6F; color: #fff; border: none; cursor: pointer; font-family: inherit; padding: 0.85rem 1.6rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; }
+        .submit-btn:hover { background: #256f58; }
+        .form-note { font-size: 0.78rem; color: #8c8eaf; margin-top: 0.8rem; }
+        .form-error { color: #b3261e; font-size: 0.82rem; margin-top: 0.6rem; }
+        .info-col { display: flex; flex-direction: column; gap: 1.2rem; }
+        .info-box { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.4rem 1.5rem; }
+        .info-box .info-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.4rem; }
+        .info-box .info-main { font-size: 0.98rem; color: #050830; font-weight: 600; word-break: break-word; }
+        .info-box .info-main a { color: #1F6B53; text-decoration: none; }
+        .info-box .info-main a:hover { text-decoration: underline; }
+        .info-box p.small { font-size: 0.85rem; color: #555; line-height: 1.55; margin-top: 0.3rem; font-weight: 400; }
+        .info-box a.inline { color: #1F6B53; font-weight: 600; text-decoration: none; }
+        footer { border-top: 1px solid #e6e6e6; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        footer .right { color: #8c8eaf; }
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .faces-hero { height: 260px; }
+            .hero-title { font-size: 2rem; }
+            .page { padding: 2rem 1.5rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <a href="index.html" class="back-link">&larr; Home</a>
+    </header>
+    <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
+
+    <div class="faces-hero">
+        <div id="mosaic"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Contact</p>
+            <h1 class="hero-title">Get in touch</h1>
+            <p class="hero-sub">Whether you&rsquo;re a business owner, a partner, or just curious about the mission &mdash; we&rsquo;d love to hear from you.</p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="contact-grid">
+            <div class="form-card">
+                <h2>Send us a message</h2>
+                <p class="card-sub">Fill this in and it&rsquo;ll open in your own email app, ready to send to us.</p>
+                <form id="contactForm" novalidate>
+                    <div class="field"><label for="cf-name">Name <span class="req">*</span></label><input type="text" id="cf-name" autocomplete="name" placeholder="Your name" required></div>
+                    <div class="field"><label for="cf-email">Email <span class="req">*</span></label><input type="email" id="cf-email" autocomplete="email" placeholder="you@company.com" required></div>
+                    <div class="field"><label for="cf-msg">Message <span class="req">*</span></label><textarea id="cf-msg" placeholder="How can we help?" required></textarea></div>
+                    <button type="submit" class="submit-btn">Open in email &rarr;</button>
+                    <p class="form-error" id="cf-error" hidden></p>
+                    <p class="form-note">This opens your own email app with the message ready to send &mdash; nothing is stored on our side.</p>
+                </form>
+            </div>
+            <div class="info-col">
+                <div class="info-box">
+                    <p class="info-label">Email us directly</p>
+                    <p class="info-main"><a href="mailto:information@quantumcolleagues.org">information@quantumcolleagues.org</a></p>
+                    <p class="small">We read everything and reply personally.</p>
+                </div>
+                <div class="info-box">
+                    <p class="info-label">Founding circle</p>
+                    <p class="small">Business owner keen to co-test Proust? See the <a class="inline" href="proust.html">Proust page</a> for the founders&rsquo; invitation.</p>
+                </div>
+                <div class="info-box">
+                    <p class="info-label">Press &amp; media</p>
+                    <p class="small">Journalists can find releases and assets on the <a class="inline" href="press.html">Press page</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="right"><a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="mission.html">Mission</a> &nbsp;&middot;&nbsp; <a href="press.html">Press</a></span>
+    </footer>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034)</p>
+
+    <script>
+    (function () {
+        var form = document.getElementById('contactForm');
+        var nameEl = document.getElementById('cf-name');
+        var emailEl = document.getElementById('cf-email');
+        var msgEl = document.getElementById('cf-msg');
+        var errEl = document.getElementById('cf-error');
+        var NL = String.fromCharCode(10);
+        function validEmail(s) { var at = s.indexOf('@'); var dot = s.lastIndexOf('.'); return at > 0 && dot > at + 1 && dot < s.length - 1; }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); errEl.hidden = true;
+            var nm = (nameEl.value || '').trim();
+            var em = (emailEl.value || '').trim();
+            var mg = (msgEl.value || '').trim();
+            if (!nm || !em || !mg) { errEl.textContent = 'Please fill in your name, email and message.'; errEl.hidden = false; return; }
+            if (!validEmail(em)) { errEl.textContent = 'Please enter a valid email address.'; errEl.hidden = false; emailEl.focus(); return; }
+            var subject = 'Website enquiry from ' + nm;
+            var body = 'Name: ' + nm + NL + 'Email: ' + em + NL + NL + mg;
+            window.location.href = 'mailto:information@quantumcolleagues.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+
+        var TILE = 72, FADE = 600, SHIFT_BASE = 1600, SHIFT_JITTER = 900;
+        var pool = [], tiles = [], initialized = false;
+        var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
+        var QUERIES = ['elderly face candid','senior face','middle aged face','old man face','old woman face','black british person','asian british face','diverse face real'];
+        var mosaic = document.getElementById('mosaic');
+        function ensureTiles() {
+            var rect = mosaic.getBoundingClientRect();
+            var cols = Math.ceil(rect.width / TILE) + 1;
+            var rows = Math.ceil(rect.height / TILE) + 1;
+            var needed = cols * rows;
+            mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+            var toAdd = needed - tiles.length;
+            for (var i = 0; i < toAdd; i++) {
+                var d = document.createElement('div'); d.className = 'tile'; mosaic.appendChild(d); tiles.push(d);
+                if (pool.length > 0) { d.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')'; d.style.opacity = '1'; }
+            }
+        }
+        var fetches = QUERIES.map(function (q) {
+            var url = 'https://api.unsplash.com/search/photos?query=' + encodeURIComponent(q) + '&per_page=15&content_filter=high&client_id=' + KEY;
+            return fetch(url).then(function (r) { return r.json(); }).then(function (data) { var ph = data.results || []; return ph.map(function (p) { return p.urls.raw + '?w=150&h=150&fit=crop&crop=faces&auto=format&q=80'; }); }).catch(function () { return []; });
+        });
+        Promise.all(fetches).then(function (res) { pool = [].concat.apply([], res).sort(function () { return Math.random() - 0.5; }); if (pool.length > 0 && !initialized) init(); });
+        ensureTiles(); window.addEventListener('resize', ensureTiles);
+        function init() {
+            initialized = true;
+            var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
+            order.forEach(function (t, i) { setTimeout(function () { t.style.backgroundImage = 'url(' + pool[i % pool.length] + ')'; t.style.opacity = '1'; }, i * 6); });
+            setTimeout(startShift, tiles.length * 6 + 1200);
+        }
+        function startShift() {
+            function shift() {
+                var count = 2 + Math.floor(Math.random() * 2);
+                var picked = tiles.slice().sort(function () { return Math.random() - 0.5; }).slice(0, count);
+                picked.forEach(function (t) { t.style.opacity = '0'; setTimeout(function () { t.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')'; t.style.opacity = '1'; }, FADE + 50); });
+                setTimeout(shift, SHIFT_BASE + Math.random() * SHIFT_JITTER);
+            }
+            shift();
+        }
+    })();
+    </script>
+</body>
+</html>

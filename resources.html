@@ -247,7 +247,7 @@
     <!-- STRAPLINE -->
     <div class="strapline-strip">
         <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
-    </div><div class="faces-ribbon"><div id="ribbonMosaic"></div><div class="ribbon-overlay"></div></div>
+    </div><div class="faces-ribbon"><div id="ribbonMosaic" data-qc-faces data-tile="82"></div><div class="ribbon-overlay"></div></div>
 
     <!-- RESOURCES -->
     <div class="page">
@@ -275,4 +275,4 @@
 
 
 
-<script>(function(){var TILE=82,FADE=600,SB=1800,SJ=1000,CK="qcFaces_v2",MAXAGE=604800000;var KEY="Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4";var Q=["elderly face candid","senior face","black woman smiling portrait","asian man smiling portrait","young adult smiling portrait","happy senior citizen portrait"];var m=document.getElementById("ribbonMosaic");if(!m)return;var pool=[],tiles=[];function pick(){return pool[Math.floor(Math.random()*pool.length)];}function ensure(){var r=m.getBoundingClientRect();var cols=Math.ceil(r.width/TILE)+1;m.style.gridTemplateColumns="repeat("+cols+",1fr)";while(tiles.length<cols){var d=document.createElement("div");d.className="rt";m.appendChild(d);tiles.push(d);if(pool.length){d.style.backgroundImage="url("+pick()+")";(function(el){requestAnimationFrame(function(){el.style.opacity="1";});})(d);}}}function paint(){tiles.forEach(function(t){t.style.backgroundImage="url("+pick()+")";(function(el){requestAnimationFrame(function(){el.style.opacity="1";});})(t);});}function shift(){if(pool.length){var t=tiles[Math.floor(Math.random()*tiles.length)];if(t){t.style.opacity="0";setTimeout(function(){t.style.backgroundImage="url("+pick()+")";t.style.opacity="1";},FADE+40);}}setTimeout(shift,SB+Math.random()*SJ);}function ready(f){pool=f.slice().sort(function(){return Math.random()-0.5;});paint();setTimeout(shift,1600);}ensure();window.addEventListener("resize",ensure);var cached=null;try{var raw=localStorage.getItem(CK);if(raw){var o=JSON.parse(raw);if(o&&o.t&&(Date.now()-o.t)<MAXAGE&&o.f&&o.f.length>8)cached=o.f;}}catch(e){}if(cached){ready(cached);}else{Promise.all(Q.map(function(q){return fetch("https://api.unsplash.com/search/photos?query="+encodeURIComponent(q)+"&per_page=12&content_filter=high&client_id="+KEY).then(function(r){return r.json();}).then(function(d){return (d.results||[]).map(function(p){return p.urls.raw+"?w=170&h=170&fit=crop&crop=faces&auto=format&q=80";});}).catch(function(){return[];});})).then(function(res){var f=[].concat.apply([],res);f=f.filter(function(v,i,a){return a.indexOf(v)===i;});if(f.length){try{localStorage.setItem(CK,JSON.stringify({t:Date.now(),f:f}));}catch(e){}ready(f);}});}})();</script></body></html>
+<script src="qc-faces.js"></script></body></html>

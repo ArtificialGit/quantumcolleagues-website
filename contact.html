@@ -72,7 +72,7 @@
     <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
 
     <div class="faces-hero">
-        <div id="mosaic"></div>
+        <div id="mosaic" data-qc-faces data-tile="82"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-eyebrow">Contact</p>
@@ -119,66 +119,7 @@
     </footer>
     <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034)</p>
 
-    <script>
-    (function () {
-        var form = document.getElementById('contactForm');
-        var nameEl = document.getElementById('cf-name');
-        var emailEl = document.getElementById('cf-email');
-        var msgEl = document.getElementById('cf-msg');
-        var errEl = document.getElementById('cf-error');
-        var NL = String.fromCharCode(10);
-        function validEmail(s) { var at = s.indexOf('@'); var dot = s.lastIndexOf('.'); return at > 0 && dot > at + 1 && dot < s.length - 1; }
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); errEl.hidden = true;
-            var nm = (nameEl.value || '').trim();
-            var em = (emailEl.value || '').trim();
-            var mg = (msgEl.value || '').trim();
-            if (!nm || !em || !mg) { errEl.textContent = 'Please fill in your name, email and message.'; errEl.hidden = false; return; }
-            if (!validEmail(em)) { errEl.textContent = 'Please enter a valid email address.'; errEl.hidden = false; emailEl.focus(); return; }
-            var subject = 'Website enquiry from ' + nm;
-            var body = 'Name: ' + nm + NL + 'Email: ' + em + NL + NL + mg;
-            window.location.href = 'mailto:information@quantumcolleagues.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        });
-
-        var TILE = 72, FADE = 600, SHIFT_BASE = 1600, SHIFT_JITTER = 900;
-        var pool = [], tiles = [], initialized = false;
-        var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
-        var QUERIES = ['elderly face candid','senior face','middle aged face','old man face','old woman face','black woman smiling portrait','asian man smiling portrait','happy senior citizen portrait'];
-        var mosaic = document.getElementById('mosaic');
-        function ensureTiles() {
-            var rect = mosaic.getBoundingClientRect();
-            var cols = Math.ceil(rect.width / TILE) + 1;
-            var rows = Math.ceil(rect.height / TILE) + 1;
-            var needed = cols * rows;
-            mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
-            var toAdd = needed - tiles.length;
-            for (var i = 0; i < toAdd; i++) {
-                var d = document.createElement('div'); d.className = 'tile'; mosaic.appendChild(d); tiles.push(d);
-                if (pool.length > 0) { d.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')'; d.style.opacity = '1'; }
-            }
-        }
-        var fetches = QUERIES.map(function (q) {
-            var url = 'https://api.unsplash.com/search/photos?query=' + encodeURIComponent(q) + '&per_page=15&content_filter=high&client_id=' + KEY;
-            return fetch(url).then(function (r) { return r.json(); }).then(function (data) { var ph = data.results || []; return ph.map(function (p) { return p.urls.raw + '?w=150&h=150&fit=crop&crop=faces&auto=format&q=80'; }); }).catch(function () { return []; });
-        });
-        Promise.all(fetches).then(function (res) { pool = [].concat.apply([], res).sort(function () { return Math.random() - 0.5; }); if (pool.length > 0 && !initialized) init(); });
-        ensureTiles(); window.addEventListener('resize', ensureTiles);
-        function init() {
-            initialized = true;
-            var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
-            order.forEach(function (t, i) { setTimeout(function () { t.style.backgroundImage = 'url(' + pool[i % pool.length] + ')'; t.style.opacity = '1'; }, i * 6); });
-            setTimeout(startShift, tiles.length * 6 + 1200);
-        }
-        function startShift() {
-            function shift() {
-                var count = 2 + Math.floor(Math.random() * 2);
-                var picked = tiles.slice().sort(function () { return Math.random() - 0.5; }).slice(0, count);
-                picked.forEach(function (t) { t.style.opacity = '0'; setTimeout(function () { t.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')'; t.style.opacity = '1'; }, FADE + 50); });
-                setTimeout(shift, SHIFT_BASE + Math.random() * SHIFT_JITTER);
-            }
-            shift();
-        }
-    })();
-    </script>
+    <script>(function(){var f=document.getElementById("contactForm");if(!f)return;var ne=document.getElementById("cf-name"),ee=document.getElementById("cf-email"),me=document.getElementById("cf-msg"),er=document.getElementById("cf-error"),NL=String.fromCharCode(10);function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}f.addEventListener("submit",function(e){e.preventDefault();er.hidden=true;var n=(ne.value||"").trim(),em=(ee.value||"").trim(),mg=(me.value||"").trim();if(!n||!em||!mg){er.textContent="Please fill in your name, email and message.";er.hidden=false;return;}if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;ee.focus();return;}var sub="Website enquiry from "+n,bd="Name: "+n+NL+"Email: "+em+NL+NL+mg;window.location.href="mailto:information@quantumcolleagues.org?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(bd);});})();</script>
+<script src="qc-faces.js"></script>
 </body>
 </html>

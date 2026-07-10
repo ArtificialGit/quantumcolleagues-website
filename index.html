@@ -131,7 +131,7 @@
 </head>
 <body>
 
-    <div id="mosaic"></div>
+    <div id="mosaic" data-qc-faces data-tile="82"></div>
     <div id="overlay"></div>
 
     <div class="stage">
@@ -157,111 +157,6 @@
     <div class="footer">quantumcolleagues.org</div>
 <div style="position:fixed;bottom:0.4rem;right:1rem;font-size:0.6rem;color:rgba(255,255,255,0.22);z-index:3;letter-spacing:0.03em;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359</div>
 
-    <script>
-    (function () {
-        var TILE_SIZE    = 82;
-        var SHIFT_BASE   = 1400;
-        var SHIFT_JITTER = 800;
-        var FADE_MS      = 600;
-
-        var pool = [];
-        var tiles = [];
-        var initialized = false;
-
-        var KEY = 'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4';
-        var QUERIES = [
-            'elderly face candid',
-            'senior face',
-            'middle aged face',
-            'old man face',
-            'old woman face',
-            'black woman smiling portrait',
-            'asian man smiling portrait',
-            'happy senior citizen portrait'
-        ];
-
-        var fetches = QUERIES.map(function (q) {
-            var url = 'https://api.unsplash.com/search/photos'
-                + '?query=' + encodeURIComponent(q)
-                + '&per_page=15'
-                + '&content_filter=high'
-                + '&client_id=' + KEY;
-            return fetch(url)
-                .then(function (r) { return r.json(); })
-                .then(function (data) {
-                    var photos = data.results || [];
-                    return photos.map(function (photo) {
-                        return photo.urls.raw
-                            + '?w=160&h=160&fit=crop&crop=faces&auto=format&q=80';
-                    });
-                })
-                .catch(function () { return []; });
-        });
-
-        Promise.all(fetches).then(function (results) {
-            pool = [].concat.apply([], results)
-                     .sort(function () { return Math.random() - 0.5; });
-            if (pool.length > 0 && !initialized) init();
-        });
-
-        var mosaic = document.getElementById('mosaic');
-
-        function ensureTiles() {
-            var cols = Math.ceil(window.innerWidth  / TILE_SIZE) + 2;
-            var rows = Math.ceil(window.innerHeight / TILE_SIZE) + 2;
-            var needed = cols * rows;
-
-            mosaic.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
-
-            var toAdd = needed - tiles.length;
-            for (var i = 0; i < toAdd; i++) {
-                var div = document.createElement('div');
-                div.className = 'tile';
-                mosaic.appendChild(div);
-                tiles.push(div);
-                if (pool.length > 0) {
-                    div.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')';
-                    div.style.opacity = '1';
-                }
-            }
-        }
-
-        ensureTiles();
-        window.addEventListener('resize', ensureTiles);
-
-        function init() {
-            initialized = true;
-            var order = tiles.slice().sort(function () { return Math.random() - 0.5; });
-            order.forEach(function (tile, i) {
-                setTimeout(function () {
-                    tile.style.backgroundImage = 'url(' + pool[i % pool.length] + ')';
-                    tile.style.opacity = '1';
-                }, i * 4);
-            });
-            setTimeout(startShifting, tiles.length * 4 + 1000);
-        }
-
-        function startShifting() {
-            function shift() {
-                var count  = 2 + Math.floor(Math.random() * 2);
-                var picked = tiles.slice()
-                    .sort(function () { return Math.random() - 0.5; })
-                    .slice(0, count);
-
-                picked.forEach(function (tile) {
-                    tile.style.opacity = '0';
-                    setTimeout(function () {
-                        tile.style.backgroundImage = 'url(' + pool[Math.floor(Math.random() * pool.length)] + ')';
-                        tile.style.opacity = '1';
-                    }, FADE_MS + 50);
-                });
-
-                setTimeout(shift, SHIFT_BASE + Math.random() * SHIFT_JITTER);
-            }
-            shift();
-        }
-
-    })();
-    </script>
+    <script src="qc-faces.js"></script>
 </body>
 </html>

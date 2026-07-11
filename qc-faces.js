@@ -1,13 +1,12 @@
-/* QuantumColleagues shared faces engine. Mounts any element with [data-qc-faces].
-   Two-layer load: brand-colour tiles fill fast, faces fade in on top. Fetch once + cache. */
+/* QuantumColleagues faces engine — PEXELS variant (preview). Mounts [data-qc-faces]. */
 (function(){
   var CFG={
-    key:'Z6ZRySOZMoCnXJ-wFM8yAGUhEG_6bOpGO9CW5htqSS4',
-    cacheKey:'qcFaces_v3',
+    key:'GhhdBKKzQf8PVUiLtVnZbSktDSzrFTZraHDFfNepamJERSYpyVvxsHCy',
+    cacheKey:'qcFacesPexels_v1',
     cacheAgeMs:604800000,
-    queries:['elderly woman smiling portrait','elderly man smiling portrait','grandmother portrait','grandfather face','young woman smiling face','young man smiling face','black woman smiling portrait','black man smiling portrait','asian woman smiling portrait','asian man smiling portrait','middle aged woman portrait','middle aged man portrait','happy senior citizen portrait','young adult smiling portrait','south asian person portrait','older couple smiling'],
+    queries:['elderly woman smiling portrait','elderly man smiling portrait','grandmother portrait','grandfather face','young woman smiling face','young man smiling face','black woman smiling portrait','black man smiling portrait','asian woman smiling portrait','asian man smiling portrait','middle aged woman portrait','middle aged man portrait','happy senior citizen portrait','young adult smiling portrait','south asian person portrait','older person smiling face'],
     perPage:30,
-    imgParams:'?w=170&h=170&fit=crop&crop=faces&auto=format&q=80',
+    imgParams:'?auto=compress&cs=tinysrgb&fit=crop&w=220&h=220',
     tile:82,
     dark:['#050830','#0a0f38','#0d1240','#12194f','#141c52','#1C3E5E','#22305f','#2b3566','#2D648C','#274f7a','#2D8C6F','#256f58','#1F6B53','#164a3a','#3a4a7a'],
     light:['#6B6E8A','#E8F5EF','#c9e8dd','#8fbfae'],
@@ -18,7 +17,7 @@
   function loadPool(){
     if(poolPromise) return poolPromise;
     try{ var raw=localStorage.getItem(CFG.cacheKey); if(raw){ var o=JSON.parse(raw); if(o&&o.t&&(Date.now()-o.t)<CFG.cacheAgeMs&&o.f&&o.f.length>40){ poolPromise=Promise.resolve(o.f); return poolPromise; } } }catch(e){}
-    poolPromise=Promise.all(CFG.queries.map(function(q){ return fetch('https://api.unsplash.com/search/photos?query='+encodeURIComponent(q)+'&per_page='+CFG.perPage+'&content_filter=high&client_id='+CFG.key).then(function(r){return r.json();}).then(function(d){return (d.results||[]).map(function(p){return p.urls.raw+CFG.imgParams;});}).catch(function(){return[];}); })).then(function(res){ var f=[].concat.apply([],res); f=f.filter(function(v,i,a){return a.indexOf(v)===i;}); if(f.length){ try{ localStorage.setItem(CFG.cacheKey,JSON.stringify({t:Date.now(),f:f})); }catch(e){} } return f; });
+    poolPromise=Promise.all(CFG.queries.map(function(q){ return fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent(q)+'&per_page='+CFG.perPage+'&orientation=portrait',{headers:{Authorization:CFG.key}}).then(function(r){return r.json();}).then(function(d){return (d.photos||[]).map(function(p){return p.src.original+CFG.imgParams;});}).catch(function(){return[];}); })).then(function(res){ var f=[].concat.apply([],res); f=f.filter(function(v,i,a){return a.indexOf(v)===i;}); if(f.length){ try{ localStorage.setItem(CFG.cacheKey,JSON.stringify({t:Date.now(),f:f})); }catch(e){} } return f; });
     return poolPromise;
   }
   function mount(el){

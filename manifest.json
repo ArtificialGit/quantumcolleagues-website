@@ -1,0 +1,23 @@
+{
+ "name": "QuantumColleagues \u2014 Career and Beyond",
+ "short_name": "Career & Beyond",
+ "start_url": "./career-beyond.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#050830",
+ "description": "Your next move, in work or beyond it. Free, for every generation.",
+ "icons": [
+  {
+   "src": "cb-icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "cb-icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

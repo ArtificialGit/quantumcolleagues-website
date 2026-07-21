@@ -1,4 +1,4 @@
-const CACHE="career-beyond-v4.9.0";
+const CACHE="career-beyond-v5.0.0";
 const ASSETS=["./career-beyond.html","./qc_logo_topbar.png","./qc_logo_navy.png","./manifest.json","./cb-icon-192.png","./cb-icon-512.png"];
 self.addEventListener("install",e=>{ e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())); });
 self.addEventListener("activate",e=>{ e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())); });

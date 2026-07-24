@@ -182,6 +182,7 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5re
 <button class="join-btn" type="submit">Apply to co-test</button>
 </form>
 <p class="join-thanks" id="joinThanks" style="display:none;">Thanks &mdash; we&rsquo;ll be in touch directly.</p>
+<p class="join-error" id="joinError" hidden style="font-size:0.85rem;color:#ffb3b3;margin-top:0.6rem;"></p>
 <p style="font-size:0.78rem;color:#aaa;margin-top:0.8rem;">Founders only. We won&rsquo;t add you to a list without asking first.</p>
 </div>
 </div>
@@ -190,7 +191,38 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5re
 <span class="right">Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="press.html">Press</a></span>
 <small style="font-size:0.72rem;color:#aaa;display:block;text-align:right;margin-top:0.4rem;">Proust technology licensed from <a href="https://deliverchangegrow.co.uk" style="color:#aaa;">Deliver.Change.Grow Ltd</a></small>
 </footer><!-- brand-refresh 2026-06-10 -->
-<script>function handleJoin(e){e.preventDefault();document.getElementById('coFoundForm').style.display='none';document.getElementById('joinThanks').style.display='block';}</script>
+<script>
+(function(){
+var PORTAL='147863903';
+var FORM_GUID='4f765d73-e3ee-4776-ab46-f78df30e2354';
+var ENDPOINT='https://api-eu1.hsforms.com/submissions/v3/integration/submit/'+PORTAL+'/'+FORM_GUID;
+var form=document.getElementById('coFoundForm');
+var emailEl=document.getElementById('joinEmail');
+var thanksEl=document.getElementById('joinThanks');
+var errEl=document.getElementById('joinError');
+var btn=form?form.querySelector('button[type=submit]'):null;
+var BTN_LABEL=btn?btn.innerHTML:'';
+function validEmail(s){var at=s.indexOf('@'),dot=s.lastIndexOf('.');return at>0&&dot>at+1&&dot<s.length-1;}
+function succeed(){form.style.display='none';thanksEl.style.display='block';}
+function fail(){
+  btn.disabled=false;btn.innerHTML=BTN_LABEL;
+  errEl.innerHTML='Sorry, that did not go through. Please email <a href="mailto:information@quantumcolleagues.org?subject=Proust%20co-test%20application" style="color:inherit;">information@quantumcolleagues.org</a> instead.';
+  errEl.hidden=false;
+}
+window.handleJoin=function(e){
+  e.preventDefault();
+  errEl.hidden=true;
+  var email=(emailEl.value||'').trim();
+  if(!validEmail(email)){errEl.textContent='Please enter a valid email address.';errEl.hidden=false;emailEl.focus();return;}
+  btn.disabled=true;btn.innerHTML='Sending&hellip;';
+  fetch(ENDPOINT,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({fields:[{name:'email',value:email}],context:{pageUri:'https://quantumcolleagues.org/proust.html',pageName:'Proust co-test application'}})
+  }).then(function(res){if(res.ok){succeed();}else{fail();}}).catch(function(){fail();});
+};
+})();
+</script>
 <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a></p>
     <script src="qc-faces.js"></script>
 </body>

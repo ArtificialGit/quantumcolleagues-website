@@ -101,15 +101,19 @@
         <div class="contact-grid">
             <div class="form-card">
                 <h2>Send us a message</h2>
-                <p class="card-sub">Fill this in and it&rsquo;ll open in your own email app, ready to send to us.</p>
+                <p class="card-sub">Fill this in and it comes straight to our inbox.</p>
                 <form id="contactForm" novalidate>
                     <div class="field"><label for="cf-name">Name <span class="req">*</span></label><input type="text" id="cf-name" autocomplete="name" placeholder="Your name" required></div>
                     <div class="field"><label for="cf-email">Email <span class="req">*</span></label><input type="email" id="cf-email" autocomplete="email" placeholder="you@company.com" required></div>
                     <div class="field"><label for="cf-msg">Message <span class="req">*</span></label><textarea id="cf-msg" placeholder="How can we help?" required></textarea></div>
-                    <button type="submit" class="submit-btn">Open in email &rarr;</button>
+                    <button type="submit" class="submit-btn">Send message &rarr;</button>
                     <p class="form-error" id="cf-error" hidden></p>
-                    <p class="form-note">This opens your own email app with the message ready to send &mdash; nothing is stored on our side.</p>
+                    <p class="form-note">Your message goes straight to us. We reply personally, usually the same day.</p>
                 </form>
+                <div id="cf-success" hidden>
+                    <p style="font-weight:600;color:#2D8C6F;margin:0 0 6px;">&#10003;&nbsp; Message sent</p>
+                    <p class="card-sub" style="margin:0;">Thanks &mdash; it&rsquo;s on its way to us. We reply personally, usually the same day.</p>
+                </div>
             </div>
             <div class="info-col">
                 <div class="info-box">
@@ -135,7 +139,7 @@
     </footer>
     <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a></p>
 
-    <script>(function(){var f=document.getElementById("contactForm");if(!f)return;var ne=document.getElementById("cf-name"),ee=document.getElementById("cf-email"),me=document.getElementById("cf-msg"),er=document.getElementById("cf-error"),NL=String.fromCharCode(10);function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}f.addEventListener("submit",function(e){e.preventDefault();er.hidden=true;var n=(ne.value||"").trim(),em=(ee.value||"").trim(),mg=(me.value||"").trim();if(!n||!em||!mg){er.textContent="Please fill in your name, email and message.";er.hidden=false;return;}if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;ee.focus();return;}var sub="Website enquiry from "+n,bd="Name: "+n+NL+"Email: "+em+NL+NL+mg;window.location.href="mailto:information@quantumcolleagues.org?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(bd);});})();</script>
+    <script>(function(){var f=document.getElementById("contactForm");if(!f)return;var ne=document.getElementById("cf-name"),ee=document.getElementById("cf-email"),me=document.getElementById("cf-msg"),er=document.getElementById("cf-error"),ok=document.getElementById("cf-success"),bt=f.querySelector("button[type=submit]"),BL=bt.innerHTML,NL=String.fromCharCode(10),EP="https://formsubmit.co/ajax/information@quantumcolleagues.org";function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}function fail(n,em,mg){bt.disabled=false;bt.innerHTML=BL;var sub="Website enquiry from "+n,bd="Name: "+n+NL+"Email: "+em+NL+NL+mg;er.innerHTML='Sorry, that did not go through. Please <a href="mailto:information@quantumcolleagues.org?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(bd)+'">email us directly</a> instead.';er.hidden=false;}f.addEventListener("submit",function(e){e.preventDefault();er.hidden=true;var n=(ne.value||"").trim(),em=(ee.value||"").trim(),mg=(me.value||"").trim();if(!n||!em||!mg){er.textContent="Please fill in your name, email and message.";er.hidden=false;return;}if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;ee.focus();return;}bt.disabled=true;bt.innerHTML="Sending&hellip;";fetch(EP,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({name:n,email:em,message:mg,_subject:"Website enquiry from "+n,_replyto:em,_template:"table"})}).then(function(r){return r.json();}).then(function(d){if(String(d.success)==="true"){f.hidden=true;ok.hidden=false;}else{fail(n,em,mg);}}).catch(function(){fail(n,em,mg);});});})();</script>
 <script src="qc-faces.js"></script>
 </body>
 </html>

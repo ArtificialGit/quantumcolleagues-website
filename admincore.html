@@ -328,6 +328,7 @@
                 <button class="join-btn" type="submit">Register interest</button>
             </form>
             <p class="join-thanks" id="pilotThanks" style="display:none;">Thanks — we’ll be in touch when pilots open.</p>
+            <p id="pilotError" hidden style="font-size:0.85rem;color:#b3261e;margin-top:0.6rem;"></p>
             <p style="font-size:0.78rem;color:#aaa;margin-top:0.8rem;">We won’t add you to a list without asking first.</p>
         </div>
     </div>
@@ -342,11 +343,35 @@
     <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">© QuantumColleagues Ltd 2026 · Company No. 17219359 · 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a></p><!-- brand-refresh 2026-06-10 -->
 
     <script>
-    function handlePilot(e) {
-        e.preventDefault();
-        document.getElementById('pilotForm').style.display = 'none';
-        document.getElementById('pilotThanks').style.display = 'block';
+    (function(){
+    var EP='https://formsubmit.co/ajax/information@quantumcolleagues.org';
+    var form=document.getElementById('pilotForm');
+    var emailEl=document.getElementById('pilotEmail');
+    var thanksEl=document.getElementById('pilotThanks');
+    var errEl=document.getElementById('pilotError');
+    var btn=form?form.querySelector('button[type=submit]'):null;
+    var BTN_LABEL=btn?btn.innerHTML:'';
+    function succeed(){form.style.display='none';thanksEl.style.display='block';errEl.hidden=true;}
+    function fail(){
+        btn.disabled=false;btn.innerHTML=BTN_LABEL;
+        errEl.innerHTML='Sorry, that did not go through. Please email <a href="mailto:information@quantumcolleagues.org?subject=Admin%20Core%20pilot%20interest" style="color:inherit;">information@quantumcolleagues.org</a> instead.';
+        errEl.hidden=false;
     }
+    window.handlePilot=function(e){
+        e.preventDefault();
+        errEl.hidden=true;
+        var email=(emailEl.value||'').trim();
+        if(!email){emailEl.focus();return;}
+        btn.disabled=true;btn.innerHTML='Sending&hellip;';
+        fetch(EP,{
+            method:'POST',
+            headers:{'Content-Type':'application/json','Accept':'application/json'},
+            body:JSON.stringify({email:email,_subject:'Admin Core pilot interest',_replyto:email,_template:'table'})
+        }).then(function(r){return r.json();})
+          .then(function(d){if(String(d.success)==='true'){succeed();}else{fail();}})
+          .catch(function(){fail();});
+    };
+    })();
     </script>
 
 

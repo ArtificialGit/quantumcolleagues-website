@@ -352,6 +352,9 @@
 
     <script>
     (function () {
+        /* Primary path: email to information@ via FormSubmit. HubSpot POST kept as
+           best-effort background CRM capture — the email is the system of record. */
+        var MAIL_EP = 'https://formsubmit.co/ajax/information@quantumcolleagues.org';
         var PORTAL = '147863903';
         var FORM_GUID = '4f765d73-e3ee-4776-ab46-f78df30e2354';
         var ENDPOINT = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/' + PORTAL + '/' + FORM_GUID;
@@ -384,11 +387,24 @@
             btn.disabled = true; btn.innerHTML = 'Sending&hellip;';
             var fields = [{ name: 'email', value: email }];
             if (first) { fields.push({ name: 'firstname', value: first }); }
-            fetch(ENDPOINT, {
+            function crmCapture() { /* best-effort; failures deliberately ignored */
+                try {
+                    fetch(ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ fields: fields, context: { pageUri: 'https://quantumcolleagues.org/guide.html', pageName: 'Adopting AI: first steps for SMEs' } })
+                    }).catch(function () {});
+                } catch (err) {}
+            }
+            var payload = { email: email, _subject: 'Guide download: Adopting AI, first steps for SMEs', _replyto: email, _template: 'table' };
+            if (first) { payload.name = first; }
+            fetch(MAIL_EP, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ fields: fields, context: { pageUri: 'https://quantumcolleagues.org/guide.html', pageName: 'Adopting AI: first steps for SMEs' } })
-            }).then(function (res) { if (res.ok) { succeed(); } else { fail(); } }).catch(function () { fail(); });
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function (res) { return res.json(); })
+              .then(function (d) { if (String(d.success) === 'true') { crmCapture(); succeed(); } else { fail(); } })
+              .catch(function () { fail(); });
         });
     })();
     </script>

@@ -73,8 +73,12 @@
         <input id="wp-org" type="text" autocomplete="organization" placeholder="Your company">
         <button type="submit">Send me the white paper</button>
         <p class="fine" id="wp-error" hidden style="color:#b3261e"></p>
-        <p class="fine">This opens your own email app with the request ready to send. We reply personally with the paper, usually the same day. Nothing is stored on our side until you send it.</p>
+        <p class="fine">Your request comes straight to us. We reply personally with the paper, usually the same day.</p>
       </form>
+      <div id="wp-success" hidden>
+        <p style="font-weight:600;color:#2D8C6F;margin:0 0 6px;">&#10003;&nbsp; Request received</p>
+        <p class="fine" style="margin:0;">Thanks &mdash; we reply personally with the paper, usually the same day.</p>
+      </div>
     </div>
   </div>
 
@@ -89,18 +93,35 @@
   var f=document.getElementById("wpForm"); if(!f) return;
   var n=document.getElementById("wp-name"), e=document.getElementById("wp-email"),
       o=document.getElementById("wp-org"), er=document.getElementById("wp-error"),
-      NL=String.fromCharCode(10);
+      ok=document.getElementById("wp-success"),
+      bt=f.querySelector("button[type=submit]"), BL=bt.innerHTML,
+      NL=String.fromCharCode(10),
+      EP="https://formsubmit.co/ajax/information@quantumcolleagues.org";
   function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}
+  function fail(nm,em,og){
+    bt.disabled=false; bt.innerHTML=BL;
+    var sub="White paper request: Gated Autonomy",
+        bd="Please send me the Gated Autonomy white paper."+NL+NL+
+           "Name: "+nm+NL+"Email: "+em+(og?NL+"Company: "+og:"");
+    er.innerHTML='Sorry, that did not go through. Please <a href="mailto:information@quantumcolleagues.org?subject='+
+      encodeURIComponent(sub)+'&body='+encodeURIComponent(bd)+'" style="color:inherit;">email us directly</a> instead.';
+    er.hidden=false;
+  }
   f.addEventListener("submit",function(ev){
     ev.preventDefault(); er.hidden=true;
     var nm=(n.value||"").trim(), em=(e.value||"").trim(), og=(o.value||"").trim();
     if(!nm||!em){er.textContent="Please fill in your name and email.";er.hidden=false;return;}
     if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;e.focus();return;}
-    var sub="White paper request: Gated Autonomy",
-        bd="Please send me the Gated Autonomy white paper."+NL+NL+
-           "Name: "+nm+NL+"Email: "+em+(og?NL+"Company: "+og:"");
-    window.location.href="mailto:information@quantumcolleagues.org?subject="+
-      encodeURIComponent(sub)+"&body="+encodeURIComponent(bd);
+    bt.disabled=true; bt.innerHTML="Sending&hellip;";
+    fetch(EP,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({name:nm,email:em,company:og||undefined,
+        message:"Please send me the Gated Autonomy white paper.",
+        _subject:"White paper request: Gated Autonomy",_replyto:em,_template:"table"})
+    }).then(function(r){return r.json();})
+      .then(function(d){if(String(d.success)==="true"){f.style.display="none";ok.hidden=false;}else{fail(nm,em,og);}})
+      .catch(function(){fail(nm,em,og);});
   });
 })();
 </script>

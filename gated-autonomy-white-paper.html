@@ -96,7 +96,19 @@
       ok=document.getElementById("wp-success"),
       bt=f.querySelector("button[type=submit]"), BL=bt.innerHTML,
       NL=String.fromCharCode(10),
-      EP="https://formsubmit.co/ajax/information@quantumcolleagues.org";
+      EP="https://formsubmit.co/ajax/information@quantumcolleagues.org",
+      HP="https://api-eu1.hsforms.com/submissions/v3/integration/submit/147863903/4f765d73-e3ee-4776-ab46-f78df30e2354";
+  function crm(nm,em,og){/* best-effort CRM capture; email is the system of record */
+    try{
+      var fs=[{name:"email",value:em}],sp=nm.split(/\s+/);
+      if(sp[0]){fs.push({name:"firstname",value:sp[0]});}
+      if(sp.length>1){fs.push({name:"lastname",value:sp.slice(1).join(" ")});}
+      if(og){fs.push({name:"company",value:og});}
+      fetch(HP,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({fields:fs,context:{pageUri:"https://quantumcolleagues.org/gated-autonomy-white-paper.html",pageName:"Gated Autonomy white paper request"}})
+      }).catch(function(){});
+    }catch(x){}
+  }
   function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}
   function fail(nm,em,og){
     bt.disabled=false; bt.innerHTML=BL;
@@ -120,7 +132,7 @@
         message:"Please send me the Gated Autonomy white paper.",
         _subject:"White paper request: Gated Autonomy",_replyto:em,_template:"table"})
     }).then(function(r){return r.json();})
-      .then(function(d){if(String(d.success)==="true"){f.style.display="none";ok.hidden=false;}else{fail(nm,em,og);}})
+      .then(function(d){if(String(d.success)==="true"){crm(nm,em,og);f.style.display="none";ok.hidden=false;}else{fail(nm,em,og);}})
       .catch(function(){fail(nm,em,og);});
   });
 })();

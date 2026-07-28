@@ -345,6 +345,7 @@
     <script>
     (function(){
     var EP='https://formsubmit.co/ajax/information@quantumcolleagues.org';
+    var HP='https://api-eu1.hsforms.com/submissions/v3/integration/submit/147863903/4f765d73-e3ee-4776-ab46-f78df30e2354';
     var form=document.getElementById('pilotForm');
     var emailEl=document.getElementById('pilotEmail');
     var thanksEl=document.getElementById('pilotThanks');
@@ -352,6 +353,13 @@
     var btn=form?form.querySelector('button[type=submit]'):null;
     var BTN_LABEL=btn?btn.innerHTML:'';
     function succeed(){form.style.display='none';thanksEl.style.display='block';errEl.hidden=true;}
+    function crm(email){/* best-effort CRM capture; email is the system of record */
+        try{
+            fetch(HP,{method:'POST',headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({fields:[{name:'email',value:email}],context:{pageUri:'https://quantumcolleagues.org/admincore.html',pageName:'Admin Core pilot interest'}})
+            }).catch(function(){});
+        }catch(x){}
+    }
     function fail(){
         btn.disabled=false;btn.innerHTML=BTN_LABEL;
         errEl.innerHTML='Sorry, that did not go through. Please email <a href="mailto:information@quantumcolleagues.org?subject=Admin%20Core%20pilot%20interest" style="color:inherit;">information@quantumcolleagues.org</a> instead.';
@@ -368,7 +376,7 @@
             headers:{'Content-Type':'application/json','Accept':'application/json'},
             body:JSON.stringify({email:email,_subject:'Admin Core pilot interest',_replyto:email,_template:'table'})
         }).then(function(r){return r.json();})
-          .then(function(d){if(String(d.success)==='true'){succeed();}else{fail();}})
+          .then(function(d){if(String(d.success)==='true'){crm(email);succeed();}else{fail();}})
           .catch(function(){fail();});
     };
     })();

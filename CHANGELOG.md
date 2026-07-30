@@ -54,6 +54,20 @@ Branch `feature/admin-core-model`, off `dev`. Not promoted. Not deployed.
    The `HOW IT DEPLOYS` steps still describe the Appliance journey only. They are
    now labelled as such rather than rewritten.
 
+### Changed on Jonathan's ruling, 29 July 2026, before promotion
+
+The sign-up block still carried the stale pilots claim in other words. It said the
+product was being piloted "before wider release" and that there was "No cost to
+pilot". Both contradict Admin Core being live with clients, and the free offer
+contradicts the record, which says the founder cohort rate is paid and has never
+been given a figure. Replaced with copy that says the product is running with
+clients, makes no price claim and makes no free claim. The button reads "Get in
+touch" and the confirmation no longer refers to pilots opening.
+
+The form's `_subject` is left as "Admin Core pilot interest" deliberately. Jonathan
+triages the information@ inbox on that string and changing it would break what he
+already recognises. It is internal and never seen by a visitor.
+
 ### Changed, not asked for, and why
 
 - **A static poster below 820px.** The brief said the file switches its own layout

@@ -8,6 +8,64 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-07-30 — Remove the Pexels API key from the browser
+
+Branch `feature/pexels-key-removal`, off `dev`.
+
+### The problem
+
+`qc-faces.js` held a live Pexels API key in plain text. It was committed in
+`ddd0168` and loaded by ten pages. Rotating it would not have fixed anything: the
+script runs in the visitor's browser, the browser has to send the key to Pexels
+itself, so any key in that file is readable from the network tab whether or not it
+sits in the repository. A replacement key would have been public the day it shipped.
+
+Quota at the time of the change was 25,000 requests a month with 24,955 unused, so
+nothing had been abused. The exposure was the allowance and the account, not data.
+
+### The fix
+
+The API call is gone from the browser. The pool of 449 photographs was captured once
+from the same sixteen queries the engine used to run, and is now held in the file as
+a compact list. Photographs are still served from the Pexels CDN exactly as before
+and the "Photos: Pexels" credit is untouched.
+
+Encoding: a bare number means `/photos/<n>/pexels-photo-<n>.jpeg`, a string of the
+form `<n>.png` means the same path with that extension, and a string containing a
+slash is a literal path after `/photos/`. Reconstruction was checked against the
+captured set and rebuilds all 449 URLs exactly, none missing and none extra.
+
+`localStorage` caching went with it, because there is nothing left to cache.
+
+### What changed for a visitor
+
+Sixteen API calls per page became zero. The mosaic behaves identically: same tile
+size, same brand colours, same fade in, same shuffle. The file grew from 4,484 to
+8,162 bytes, which is a fair trade for removing sixteen network round trips on every
+page load.
+
+### Verified
+
+All ten pages that load the script were rendered before and after in headless
+Chromium. Before: 16 calls to `api.pexels.com` per page. After: none, and every tile
+receives an image. The one console error present is a blocked
+`fonts.googleapis.com` request, which appears identically before and after and is an
+artefact of the build environment.
+
+`images.pexels.com` is not reachable from the build container's browser, so the
+faces could not be seen there. The URL list was therefore proved on a real network
+instead: forty entries drawn at random from the pool, rebuilt with the same function
+the shipped file uses, all forty loaded at 220x220.
+
+### Still to do, and it is Jonathan's
+
+The old key is still valid until he revokes it in his Pexels account. Nothing breaks
+when he does, because the site no longer calls the API. The key also remains in git
+history at `ddd0168`; once revoked that is a dead string and rewriting the history of
+a public repository is not worth the disruption.
+
+---
+
 ## 2026-07-29 — Admin Core page, operating model visual and three stale claims
 
 Branch `feature/admin-core-model`, off `dev`. Not promoted. Not deployed.

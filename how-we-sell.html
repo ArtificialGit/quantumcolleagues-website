@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How we sell &mdash; QuantumColleagues&trade;</title>
+    <meta name="description" content="QuantumColleagues&trade; grows through people, not advertising budgets. How we sell, the rules our associates sign up to, and how to join us.">
+    <link rel="canonical" href="https://quantumcolleagues.org/how-we-sell.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #333333; line-height: 1.6; }
+        header { padding: 1.5rem 3rem; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; letter-spacing: -0.3px; color: #050830; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-size: 0.85rem; color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .strapline-strip { background: #fafafc; border-bottom: 1px solid #e6e6e6; padding: 0.7rem 1rem; text-align: center; }
+        .strapline-text { font-size: 0.78rem; color: #6b6e8a; letter-spacing: 0.18em; text-transform: uppercase; }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        .faces-hero { position: relative; height: 340px; overflow: hidden; background: #050830; }
+        #mosaic { position: absolute; inset: 0; display: grid; grid-auto-rows: 70px; gap: 2px; z-index: 0; }
+        #mosaic .tile { background-color: #0d1240; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.6s ease; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(5,8,48,0.62); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #7fd8bd; margin-bottom: 0.6rem; }
+        .hero-title { font-size: 2.6rem; font-weight: 300; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
+        .hero-title .dot { color: #2D8C6F; font-weight: 600; }
+        .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.82); max-width: 560px; }
+        .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+        .kick { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { font-size: 1.5rem; font-weight: 600; color: #050830; margin-bottom: 0.8rem; letter-spacing: -0.3px; }
+        .section p { margin-bottom: 0.9rem; font-size: 0.95rem; color: #444; max-width: 72ch; }
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-top: 1.2rem; }
+        .rule-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.3rem 1.4rem; }
+        .rule-card h3 { font-size: 0.95rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; }
+        .rule-card p { font-size: 0.88rem; color: #555; margin: 0; }
+        .mission-box { background: #050830; color: rgba(255,255,255,0.88); border-radius: 4px; padding: 1.4rem 1.6rem; margin-top: 1.4rem; font-size: 0.92rem; }
+        .mission-box strong { color: #7fd8bd; font-weight: 600; }
+        .form-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2rem; margin-top: 1.4rem; max-width: 620px; }
+        .field { margin-bottom: 1.1rem; display: flex; flex-direction: column; }
+        .field label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6e8a; margin-bottom: 0.35rem; }
+        .field .req { color: #2D8C6F; }
+        .field input, .field textarea { font-family: inherit; font-size: 0.95rem; color: #333; padding: 0.72rem 0.85rem; border: 1px solid #d8d8e0; border-radius: 6px; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
+        .field textarea { resize: vertical; min-height: 120px; }
+        .field input::placeholder, .field textarea::placeholder { color: #b6b8c8; }
+        .field input:focus, .field textarea:focus { outline: none; border-color: #2D8C6F; box-shadow: 0 0 0 3px rgba(45,140,111,0.12); }
+        .submit-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D8C6F; color: #fff; border: none; cursor: pointer; font-family: inherit; padding: 0.85rem 1.6rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; }
+        .submit-btn:hover { background: #256f58; }
+        .form-note { font-size: 0.78rem; color: #8c8eaf; margin-top: 0.8rem; }
+        .form-error { color: #b3261e; font-size: 0.82rem; margin-top: 0.6rem; }
+        footer { border-top: 1px solid #e6e6e6; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        footer .right { color: #8c8eaf; }
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .faces-hero { height: 260px; }
+            .hero-title { font-size: 2rem; }
+            .page { padding: 2rem 1.5rem; }
+            .rules-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuantumColleagues">
+<meta property="og:url" content="https://quantumcolleagues.org/how-we-sell.html">
+<meta property="og:title" content="How we sell &mdash; QuantumColleagues&trade;">
+<meta property="og:description" content="We grow through people, not advertising budgets. How we sell, the rules our associates sign up to, and how to join us.">
+<meta property="og:image" content="https://quantumcolleagues.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="QuantumColleagues - do some good with AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How we sell &mdash; QuantumColleagues&trade;">
+<meta name="twitter:description" content="We grow through people, not advertising budgets. How we sell, the rules our associates sign up to, and how to join us.">
+<meta name="twitter:image" content="https://quantumcolleagues.org/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <a href="index.html" class="back-link">&larr; Home</a>
+    </header>
+    <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
+
+    <div class="faces-hero">
+        <div id="mosaic" data-qc-faces data-tile="82"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">How we sell</p>
+            <h1 class="hero-title">Sold by people who believe in it<span class="dot">.</span></h1>
+            <p class="hero-sub">We do not buy our way into your inbox. We grow through people, and we think that is the only honest way to sell what we make.</p>
+        </div>
+    </div>
+
+    <div class="page">
+
+        <div class="section">
+            <p class="kick">The philosophy</p>
+            <h2>Why we sell through a network, not an advertising budget</h2>
+            <p>QuantumColleagues sells AI products to SMEs, charities and social enterprises, and a share of every pound we earn funds free post-AI training for every generation. That model only works if the selling is as honest as the mission. So we choose people over reach. Our products are introduced by people who know the business, understand the mission, and put their own name next to ours when they open a door.</p>
+            <p>An introduction is a different thing from an advert. An advert interrupts you. An introduction comes from someone who thought of you specifically, and who answers for the recommendation afterwards. We think owners of small organisations deserve the second kind, and we have built our whole sales approach around it.</p>
+            <p>Our associates are self-employed and openly commission based. We say that plainly because it is a feature, not a secret. Nobody in our network earns anything unless a client chooses us, stays with us, and pays for something that genuinely works. That puts every incentive on the right side of the table: our people do well only when our clients do.</p>
+        </div>
+
+        <div class="section">
+            <p class="kick">The rules</p>
+            <h2>What every person selling for us signs up to</h2>
+            <div class="rules-grid">
+                <div class="rule-card"><h3>Support, not substitution</h3><p>Our AI gives a human team extra capacity, and we don&rsquo;t replace people.</p></div>
+                <div class="rule-card"><h3>No sales pressure, ever</h3><p>If we genuinely can&rsquo;t help a client, we won&rsquo;t pretend we can or try to.</p></div>
+                <div class="rule-card"><h3>Compliance matters</h3><p>Our customers&rsquo; compliance is as important to us as our own.</p></div>
+                <div class="rule-card"><h3>The company answers for everything</h3><p>Associates open doors; price, delivery and contract terms are agreed only with the company itself, so what the customer is promised is what they get.</p></div>
+            </div>
+            <div class="mission-box"><strong>Why it matters.</strong> Every sale funds real training hours for young people and people in later life. That promise is written into our constitution, not our marketing, and it walks into every room our network opens.</div>
+        </div>
+
+        <div class="section">
+            <p class="kick">Join us</p>
+            <h2>Become a Sales Associate</h2>
+            <p>We are looking for a small number of self-employed associates to introduce Admin Core, our back office crew of AI colleagues, to SME owners of five to fifty staff. We will be straight with you: the company is young, the role is commission only, and there is no salary behind it. What there is: a product that is live with clients, proper written terms before you start, our materials and our support behind every conversation, and a share of the fees from every client you bring in.</p>
+            <p>If that sounds like your kind of work, tell us about yourself below. We reply personally, and if it looks like a fit we will talk it through and put the full terms in front of you as a written appointment document. Nothing is signed on a web page.</p>
+
+            <div class="form-card">
+                <form id="wsForm" novalidate>
+                    <div class="field"><label for="ws-name">Name <span class="req">*</span></label><input type="text" id="ws-name" autocomplete="name" placeholder="Your name" required></div>
+                    <div class="field"><label for="ws-email">Email <span class="req">*</span></label><input type="email" id="ws-email" autocomplete="email" placeholder="you@example.com" required></div>
+                    <div class="field"><label for="ws-li">LinkedIn profile (optional)</label><input type="url" id="ws-li" placeholder="https://www.linkedin.com/in/..."></div>
+                    <div class="field"><label for="ws-msg">Why this role suits you <span class="req">*</span></label><textarea id="ws-msg" placeholder="A few sentences is plenty." required></textarea></div>
+                    <button type="submit" class="submit-btn">Send application &rarr;</button>
+                    <p class="form-error" id="ws-error" hidden></p>
+                    <p class="form-note">Your application goes straight to our inbox and a person reads it.</p>
+                </form>
+                <div id="ws-success" hidden>
+                    <p style="font-weight:600;color:#2D8C6F;margin:0 0 6px;">&#10003;&nbsp; Application sent</p>
+                    <p style="font-size:0.88rem;color:#6b6e8a;margin:0;">Thanks &mdash; it&rsquo;s on its way to us. We reply personally, usually the same day.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="right"><a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="mission.html">Mission</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></span>
+    </footer>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a></p>
+
+    <script>(function(){var f=document.getElementById("wsForm");if(!f)return;var ne=document.getElementById("ws-name"),ee=document.getElementById("ws-email"),le=document.getElementById("ws-li"),me=document.getElementById("ws-msg"),er=document.getElementById("ws-error"),ok=document.getElementById("ws-success"),bt=f.querySelector("button[type=submit]"),BL=bt.innerHTML,NL=String.fromCharCode(10),EP="https://formsubmit.co/ajax/information@quantumcolleagues.org",HP="https://api-eu1.hsforms.com/submissions/v3/integration/submit/147863903/4f765d73-e3ee-4776-ab46-f78df30e2354";function crm(n,em){/* best-effort CRM capture; email is the system of record */try{var fs=[{name:"email",value:em}],sp=n.split(/\s+/);if(sp[0]){fs.push({name:"firstname",value:sp[0]});}if(sp.length>1){fs.push({name:"lastname",value:sp.slice(1).join(" ")});}fetch(HP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({fields:fs,context:{pageUri:"https://quantumcolleagues.org/how-we-sell.html",pageName:"Sales Associate application"}})}).catch(function(){});}catch(x){}}function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}function fail(n,em,li,mg){bt.disabled=false;bt.innerHTML=BL;var sub="Sales Associate application from "+n,bd="Name: "+n+NL+"Email: "+em+NL+"LinkedIn: "+(li||"not given")+NL+NL+mg;er.innerHTML='Sorry, that did not go through. Please <a href="mailto:information@quantumcolleagues.org?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(bd)+'">email us directly</a> instead.';er.hidden=false;}f.addEventListener("submit",function(e){e.preventDefault();er.hidden=true;var n=(ne.value||"").trim(),em=(ee.value||"").trim(),li=(le.value||"").trim(),mg=(me.value||"").trim();if(!n||!em||!mg){er.textContent="Please fill in your name, email and a few words about yourself.";er.hidden=false;return;}if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;ee.focus();return;}bt.disabled=true;bt.innerHTML="Sending&hellip;";fetch(EP,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({name:n,email:em,linkedin:li||"not given",message:mg,_subject:"Sales Associate application from "+n,_replyto:em,_template:"table"})}).then(function(r){return r.json();}).then(function(d){if(String(d.success)==="true"){crm(n,em);f.hidden=true;ok.hidden=false;}else{fail(n,em,li,mg);}}).catch(function(){fail(n,em,li,mg);});});})();</script>
+<script src="qc-faces.js"></script>
+</body>
+</html>

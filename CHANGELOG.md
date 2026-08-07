@@ -8,6 +8,53 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-08-07 — Privacy Policy page, footer links and form notices
+
+Branch `feature/privacy-policy`, off `dev`.
+
+### Why
+
+A LinkedIn lead gen form for Admin Core cannot pass LinkedIn review without a
+privacy policy URL that resolves to a real policy document. The site had none.
+`proust-privacy.html` covers Proust only and says so.
+
+### What changed
+
+- **`privacy.html` added.** The company-wide UK GDPR privacy policy. It reuses the
+  `proust-privacy.html` template unchanged, so there is no new CSS and no new asset.
+  Every processor named in it was read out of this repository rather than assumed:
+  HubSpot on the EU endpoint (portal 147863903), `formsubmit.co`, Microsoft 365,
+  LinkedIn, GitHub Pages and Google Fonts. The no-cookie claim was verified by
+  grep: no analytics, no tag manager, no advertising pixel anywhere in the repo.
+  Career & Beyond's `localStorage` use is disclosed as on-device only.
+- **Footer link on 14 pages.** ` · Privacy` appended to the legal line that every
+  page already carries. The main menu is deliberately untouched, per Jonathan.
+- **Notice under the submit button on 6 form pages:** contact, guide, admincore,
+  how-we-grow, proust, gated-autonomy-white-paper. This is the placement that
+  matters, because it sits where the person actually hands data over.
+- **`sitemap.xml`** now lists `privacy.html`.
+
+### Deliberately not claimed
+
+No ICO registration claim, because registration has been outstanding since
+11 June 2026. No named security control such as multi-factor authentication,
+because credential rotation is still open on the Planner. Both to be added once
+true.
+
+### Verification
+
+All 15 changed pages rendered in headless Chromium. Every page carries the
+footer link, the six form pages carry two links each, zero JavaScript errors,
+`sitemap.xml` parses as valid XML.
+
+### Open for Jonathan
+
+`formsubmit.co` is a third-party US relay receiving name, email and message on
+four forms that already post to HubSpot. It is disclosed in the policy. Removing
+it is the cleaner answer.
+
+---
+
 ## 2026-07-30 — Remove the Pexels API key from the browser
 
 Branch `feature/pexels-key-removal`, off `dev`.

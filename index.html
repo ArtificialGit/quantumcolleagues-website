@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://quantumcolleagues.org/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=League+Spartan:wght@500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -16,7 +16,11 @@
             background-color: #050830;
             color: #050830;
             min-height: 100vh;
-            overflow: hidden;
+            /* Was overflow:hidden, which clipped the card on short viewports such
+               as a phone held sideways and left the links unreachable. The mosaic
+               is position:fixed, so letting the page scroll vertically costs
+               nothing and only happens when the card genuinely does not fit. */
+            overflow-x: hidden;
         }
 
         /* ââ Mosaic grid ââ */
@@ -88,29 +92,87 @@
             margin: 0 auto 2rem;
         }
 
+        /* The strapline is the signature line, so it carries weight and the teal
+           full stop the wordmark uses. Sentence case, because that is the casing
+           the brand specifies and the uppercase transform was overriding it. */
         h1 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #6b6e8a;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #34343C;
+            letter-spacing: -0.4px;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
         }
+
+        h1 .dot { color: #2D8C6F; }
 
         .tagline {
             font-size: 0.95rem;
             color: #9a9cb8;
             font-weight: 300;
             line-height: 1.6;
+            margin-bottom: 1.6rem;
         }
 
-        .tagline a {
-            color: #2D8C6F;
+        /* Menu. Was a run of links inside the tagline paragraph separated by
+           middle dots. Now two real navs: three quiet links, then three
+           destinations a visitor can go and use. */
+        .qc-nav {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+            gap: 0 1.6rem; row-gap: 0.6rem; margin: 0 auto;
+        }
+
+        .qc-nav a, .qc-pills a {
+            font-family: 'League Spartan', 'Poppins', sans-serif;
+            text-transform: uppercase;
             text-decoration: none;
-            font-weight: 400;
+            white-space: nowrap;
         }
 
-        .tagline a:hover { text-decoration: underline; }
+        /* Trafalgar rather than dusk. The card is 90% white over a navy body, so
+           it composites to #e6e6ea, and dusk #6F6772 lands on 4.37:1 there, just
+           under AA. Trafalgar clears it at 8.88:1 and still reads quiet next to
+           the heavier pills below. */
+        .qc-nav a {
+            font-weight: 500; font-size: 0.76rem; letter-spacing: 0.13em;
+            color: #1C3E5E; padding: 0.3rem 0;
+        }
+
+        .qc-nav a:hover, .qc-nav a:focus-visible { color: #1F6B53; }
+
+        .qc-pills {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 0.55rem; margin-top: 1.1rem;
+        }
+
+        .qc-pills a {
+            font-weight: 600; font-size: 0.72rem; letter-spacing: 0.11em;
+            padding: 0.58rem 0.9rem; border-radius: 3px;
+            border: 1px solid rgba(31, 107, 83, 0.45);
+            background: transparent; color: #1F6B53;
+            transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, opacity 0.22s ease;
+        }
+
+        /* Only the one you are on stays lit. The other two step back. */
+        .qc-pills:hover a, .qc-pills:focus-within a { opacity: 0.42; }
+
+        .qc-pills a:hover, .qc-pills a:focus-visible {
+            opacity: 1; background: #1F6B53; color: #fff; border-color: #1F6B53;
+        }
+
+        .qc-pills a:focus-visible { outline: 2px solid #2D8C6F; outline-offset: 3px; }
+
+        /* There is no hover on a touch screen, so the pills would sit faint and
+           never light up. Give them the pale fill instead so they still read as
+           buttons. Nothing changes on a desktop. */
+        @media (hover: none) {
+            .qc-pills a { background: #E4F0EB; border-color: rgba(45, 140, 111, 0.42); opacity: 1; }
+            .qc-pills:hover a { opacity: 1; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .qc-pills a { transition: none; }
+        }
 
         .footer {
             position: fixed;
@@ -125,8 +187,21 @@
 
         @media (max-width: 480px) {
             .logo-text { font-size: 1.8rem; }
-            h1 { font-size: 0.95rem; }
-            .container { padding: 2rem 1.75rem; }
+            h1 { font-size: 1.4rem; }
+            .container { padding: 2rem 1.5rem; }
+            .qc-nav { gap: 0 1.1rem; }
+            .qc-pills a { font-size: 0.68rem; padding: 0.52rem 0.75rem; letter-spacing: 0.09em; }
+        }
+
+        /* Short viewports, such as a phone held sideways. Tighten rather than let
+           the card run past the bottom of the screen. */
+        @media (max-height: 720px) {
+            .logo { margin-bottom: 1.6rem; }
+            .divider { margin-bottom: 1.3rem; }
+            h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+            .tagline { margin-bottom: 1.1rem; }
+            .container { padding: 2rem 3rem; }
+            .qc-pills { margin-top: 0.85rem; }
         }
     </style>
 <meta property="og:type" content="website">
@@ -160,12 +235,19 @@
 
             <div class="divider"></div>
 
-            <h1>Do some good with AI.</h1>
+            <h1>Do some good with AI<span class="dot">.</span></h1>
 
             <p class="tagline">
-                Building AI and agents for UK enterprise. Enabling the Human-AI operating model. Providing free post-AI training for every generation.<br><br>
-                <a href="mission.html">Mission</a> &middot; <a href="products.html">Products</a> &middot; <a href="career-beyond.html">Career &amp; Beyond</a> &middot; <a href="resources.html">Resources</a> &middot; <a href="press.html">Press</a> &middot; <a href="contact.html">Contact</a>
+                Building AI and agents for UK enterprise. Enabling the Human-AI operating model. Providing free post-AI training for every generation.
             </p>
+
+            <nav class="qc-nav" aria-label="About QuantumColleagues">
+                <a href="mission.html">Mission</a><a href="press.html">Press</a><a href="contact.html">Contact</a>
+            </nav>
+
+            <nav class="qc-pills" aria-label="Products and apps">
+                <a href="products.html">Products</a><a href="resources.html">Resource &amp; Apps</a><a href="career-beyond.html">Career &amp; Beyond</a>
+            </nav>
         </div>
     </div>
 

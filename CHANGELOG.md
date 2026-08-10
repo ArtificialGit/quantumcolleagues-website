@@ -8,6 +8,95 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-08-10 — Homepage strapline and menu
+
+Branch `feature/home-nav-strapline`. Homepage only: `index.html` is the one page
+carrying the six-link row, so nothing else needed touching. Branched off `main`
+rather than `dev`, because `dev` was two commits behind at the time; merging this
+back through `dev` re-syncs it.
+
+### The strapline
+
+Was Poppins 400 at 1.1rem in `#6b6e8a`, uppercased by CSS. Now Poppins 700 at
+1.8rem in charcoal `#34343C`, sentence case, with the full stop in teal exactly as
+the wordmark does it.
+
+The casing matters beyond the weight. The brand note says the strapline is
+"Do some good with AI." with that exact casing. The HTML already said it that way
+and the CSS then uppercased it, so the rendered page had never shown the strapline
+as written. Charcoal is the colour the palette already nominates for the bold
+tagline, so nothing here is invented.
+
+### The menu
+
+Was six links inside the tagline paragraph separated by literal `&middot;`
+characters, which is why Contact orphaned onto its own line. Now two real `<nav>`
+elements with `aria-label`s:
+
+- **Quiet row:** Mission, Press, Contact. League Spartan 500, small uppercase,
+  Trafalgar `#1C3E5E`.
+- **Pills:** Products, Resource & Apps, Career & Beyond. League Spartan 600 in
+  deep teal outlines. Hovering or tab-focusing one fills it solid deep teal with
+  white text while the other two drop to 42% opacity, so only the one you are on
+  is lit.
+
+`Resources` is relabelled `Resource & Apps` in the menu. The href is unchanged and
+`resources.html` itself is untouched.
+
+League Spartan 500 and 600 added to the font request. It is named in the brand note
+as the face for navigation and links and had never been loaded on any page.
+
+### Two things fixed that were not asked for
+
+**The card was clipped on short viewports.** `body` had `overflow: hidden` while
+the card is centred in a `min-height: 100vh` stage. On a phone held sideways,
+844x390, the card ran 66px past the bottom of the screen on `main` with no way to
+scroll to it, so the links were unreachable. Changed to `overflow-x: hidden`. The
+mosaic is `position: fixed`, so vertical scrolling costs nothing and only happens
+when the card genuinely does not fit. Verified: the foot of the card is reachable
+at 844x390 and nothing scrolls on any viewport that already fitted.
+
+**A contrast regression I introduced and then caught.** The quiet links were first
+set in dusk `#6F6772`. The card is `rgba(255,255,255,0.90)` over a navy body, so it
+composites to `#e6e6ea`, where dusk measures 4.37:1 and fails AA. Lighthouse
+accessibility dropped from 100 to 94. Moved to Trafalgar `#1C3E5E` at 8.88:1 and
+the score returned to 100. Recorded because the intuition was wrong: the worst case
+for dark text on a translucent card is the darkest blend, not the lightest.
+
+### Contrast against the composited card
+
+| | ratio | |
+|---|---|---|
+| Strapline, was `#6b6e8a` | 4.0 to 4.85 by tile | borderline, failed on darker tiles |
+| Strapline, now charcoal `#34343C` | 9.91 | pass |
+| Old link colour `#2D8C6F` | 3.57 | failed |
+| Quiet links, Trafalgar `#1C3E5E` | 8.88 | pass |
+| Pill ink, deep teal `#1F6B53` | 5.13 | pass |
+| White on a filled pill | 6.39 | pass |
+
+### Verifier
+
+`home_checks.mjs`, written before the build. 24 checks, all passing: real `<nav>`
+elements, no middle dots, League Spartan requested and applied, strapline case,
+weight, colour and teal full stop, pill order and hrefs, hover lights one and dims
+the other two, real Tab-key focus does the same and draws a focus ring, touch
+fallback fills the pills where there is no hover, reduced motion drops the
+transition, and the card is reachable at six viewport sizes from 1440x900 down to
+844x390.
+
+### Lighthouse, desktop
+
+Performance 90 to 90. Accessibility 100 to 100. Best practices 96 to 96. SEO 100 to
+100. Page weight 17 KiB to 26 KiB, which is the League Spartan request.
+
+### Noted, not fixed
+
+The tagline paragraph is `#9a9cb8`, roughly 2.3:1 against the card. axe does not
+flag it and it is outside this change, but it is the weakest text on the page and
+deserves a decision of its own.
+
+---
+
 ## 2026-08-07 — Privacy Policy page, footer links and form notices
 
 Branch `feature/privacy-policy`, off `dev`.

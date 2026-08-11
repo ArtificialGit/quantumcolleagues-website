@@ -155,6 +155,18 @@
             .join-input, .join-btn { width: 100%; }
             footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
         }
+    
+        /* ===== MOVED FROM PRODUCTS: pilot terms + pricing ===== */
+        .btn { display:inline-block; padding:0.68rem 1.5rem; border-radius:4px; font-size:0.88rem; font-weight:600; text-decoration:none; }
+        .btn-primary { background: var(--teal); color:#ffffff; }
+        .btn-primary:hover { background:#236b55; }
+        .pilot-box { background:#ffffff; border:1px solid var(--warm-div); border-top:3px solid var(--trafalgar); border-radius:4px; padding:1.8rem; margin-bottom:2rem; }
+        .pilot-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; margin-bottom:1.5rem; }
+        .pitem h4 { font-size:0.95rem; font-weight:600; color:#050830; margin-bottom:0.35rem; display:flex; gap:0.45rem; align-items:flex-start; }
+        .pitem h4 .b { color:var(--teal); font-size:0.6rem; margin-top:0.45rem; flex-shrink:0; }
+        .pitem p { font-size:0.84rem; color:var(--dusk); line-height:1.55; }
+        .price-note { font-size:0.84rem; color:var(--warm-ink); background:var(--teal-tint); border-radius:4px; padding:0.9rem 1.2rem; margin-top:0.5rem; }
+        @media (max-width: 768px) { .pilot-grid { grid-template-columns: 1fr; } }
     </style>
 <style>.faces-ribbon{position:relative;height:82px;overflow:hidden;background:#050830;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}#ribbonMosaic{position:absolute;inset:0;display:grid;grid-auto-rows:82px;gap:2px;}#ribbonMosaic .rt{background-color:#0d1240;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease;}.ribbon-overlay{position:absolute;inset:0;background:rgba(5,8,48,0.22);pointer-events:none;}</style><meta property="og:image" content="https://quantumcolleagues.org/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -349,6 +361,30 @@
             </div>
         </div>
 
+        <!-- HOW PRICING WORKS (moved from products) -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">HOW PRICING WORKS</h2>
+        <p class="section-subtitle">No enterprise opacity. This is the shape of every QuantumColleagues™ price.</p>
+        <div class="columns">
+            <div class="column" style="border-top-color: var(--teal);">
+                <h3>Managed</h3>
+                <p class="col-subtitle">One predictable monthly subscription</p>
+                <div class="item"><p class="item-desc">The agent, the hosting, the monitoring and the updates in a single monthly price. No hardware to buy and nothing to maintain.</p></div>
+            </div>
+            <div class="column" style="border-top-color: var(--trafalgar);">
+                <h3>Appliance</h3>
+                <p class="col-subtitle">Hardware plus a support retainer</p>
+                <div class="item"><p class="item-desc">A one-off cost for the pre-configured device, then a retainer covering support and updates. Everything runs on your premises.</p></div>
+            </div>
+            <div class="column" style="border-top-color: #050830;">
+                <h3>Pilots</h3>
+                <p class="col-subtitle">Reduced founder-cohort rate</p>
+                <div class="item"><p class="item-desc">Admin Core Q3 pilots run at a reduced rate with success criteria agreed before we start — see the pilot terms below.</p></div>
+            </div>
+        </div>
+        <p class="price-note">Exact figures depend on the size of your organisation and how you deploy. You get them on the discovery call, in writing, with nothing hidden.</p>
+
         <!-- WHO IT'S FOR -->
         <div class="section-break"></div>
 
@@ -395,6 +431,20 @@
                 <p class="col-subtitle">Introductions welcome</p>
                 <p>Know an organisation that needs this? Make the introduction — we’ll handle the rest.</p>
             </div>
+        </div>
+
+        <!-- ADMIN CORE Q3 FOUNDER PILOTS (moved from products) -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">ADMIN CORE — Q3 FOUNDER PILOTS</h2>
+        <p class="section-subtitle">A small number of pilot places for UK SMEs, charities and social enterprises. Open now.</p>
+        <div class="pilot-box">
+            <div class="pilot-grid">
+                <div class="pitem"><h4><span class="b">■</span><span>A reduced founder-cohort rate</span></h4><p>Pilot organisations join at a reduced rate — not free, because the work is real on both sides and the results have to matter.</p></div>
+                <div class="pitem"><h4><span class="b">■</span><span>Success criteria agreed up front</span></h4><p>Before anything is installed, we agree simple pass-or-fail criteria together — so you know exactly what the pilot has to prove, and so do we.</p></div>
+                <div class="pitem"><h4><span class="b">■</span><span>Limited places, founder-level attention</span></h4><p>We run a small number of concurrent pilots so each one gets direct attention from the founder, not a support queue.</p></div>
+            </div>
+            <a class="btn btn-primary" href="#pilot">Apply for a pilot place →</a>
         </div>
 
     </div><!-- end .page -->

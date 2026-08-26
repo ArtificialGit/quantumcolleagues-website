@@ -8,6 +8,48 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-08-26, later — Preferred Source made prominent, with Google's own badge
+
+Branch `feature/google-preferred-source-prominent` off `dev`. Jonathan's ruling on the
+first cut: "hardly up there in lights", then "Prominent and with a Google element visible
+... I don't want to break the design anywhere."
+
+### The Press page strip
+
+A `follow-google` band sits at the top of the Press page, above the first release, in the
+same construction as the existing media contact card: Trafalgar ground, 4px radius, teal
+on dark eyebrow reading "Preferred source", white Poppins 700 heading "Follow us on
+Google." with the teal full stop, one line of copy, and Google's official
+"Add as a preferred source on Google" badge on the right as the link. On phones the band
+stacks and the badge drops under the copy. Hover and keyboard focus put a teal ring round
+the badge.
+
+The badge is Google's own artwork from the official asset pack
+(`google_preferred_source_badge_all_languages.zip`, English, light theme, 2x), committed
+as `google-preferred-source-badge@2x.png` and drawn at 169 CSS pixels wide, so it is crisp
+on retina screens. It replaces the plain text line that sat at the very foot of the page
+this morning, which is removed.
+
+### Why the static badge and not Google's JavaScript button
+
+Google offers a script (`publisher.js`) that renders a live button. It was tried and
+rejected for this site: the sandbox used to build and verify pages cannot reach
+news.google.com, so the button could not be rendered or screenshotted before going live,
+and a band that depends on a third party script to look right is exactly the kind of
+thing that breaks a design silently. The official badge is a normal image with a normal
+link, it renders identically everywhere, and Google's documentation lists it as a
+supported route.
+
+### The footer line, every page
+
+Every page carrying the company number footer line gains "Follow on Google" after
+"Privacy" (after "Photos: Pexels" on `privacy.html`, which has no Privacy link), fifteen
+pages, inserted by script so nothing was retyped. `career-beyond.html` has no such footer
+and is untouched.
+
+Verifier: `qcweb-preferred-source-verify.py`, now 18 checks, seen RED 9/18 before the
+change.
+
 ## 2026-08-26 — Google Preferred Source link on the Press page
 
 Branch `feature/google-preferred-source` off `dev`, after `dev` was fast-forwarded to

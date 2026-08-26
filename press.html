@@ -67,12 +67,20 @@
         .contact-card .name { font-size: 1rem; color: #fff; font-weight: 600; margin-bottom: 0.2rem; }
         .contact-card .detail { font-size: 0.88rem; color: #9a9cb8; margin-bottom: 0.1rem; }
         .contact-card a { color: var(--teal-on-dark); text-decoration: none; }
+        .follow-google { background: var(--trafalgar); border-radius: 4px; padding: 1.6rem 1.8rem; margin: 0 0 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+        .follow-google .label { font-size: 0.7rem; color: var(--teal-on-dark); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 0.4rem; }
+        .follow-google h2 { font-size: 1.25rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 0.3rem; }
+        .follow-google h2 .dot { color: var(--teal-on-dark); }
+        .follow-google p { font-size: 0.88rem; color: #c9cbdc; line-height: 1.5; margin: 0; }
+        .follow-google .badge { flex-shrink: 0; display: block; line-height: 0; }
+        .follow-google .badge img { width: 169px; height: auto; display: block; border-radius: 4px; }
+        .follow-google .badge:hover img, .follow-google .badge:focus-visible img { box-shadow: 0 0 0 3px var(--teal-on-dark); }
         .assets-note { font-size: 0.8rem; color: var(--dusk); text-align: center; margin-top: 2rem; }
         .assets-note a { color: var(--trafalgar); text-decoration: none; font-weight: 500; }
         footer { border-top: 1px solid var(--warm-div); margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
         footer a { color: var(--trafalgar); text-decoration: none; font-weight: 500; }
         footer .right { color: var(--dusk); }
-        @media (max-width: 768px) { header { padding: 1rem 1.5rem; } .page { padding: 2rem 1.2rem; } .release { padding: 1.6rem 1.3rem; } footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; } }
+        @media (max-width: 768px) { header { padding: 1rem 1.5rem; } .page { padding: 2rem 1.2rem; } .release { padding: 1.6rem 1.3rem; } footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; } .follow-google { flex-direction: column; align-items: flex-start; padding: 1.4rem 1.3rem; } }
     .faces-ribbon{position:relative;height:82px;overflow:hidden;background:#050830;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}#ribbonMosaic{position:absolute;inset:0;display:grid;grid-auto-rows:82px;gap:2px;}#ribbonMosaic .rt{background-color:#0d1240;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease;}.ribbon-overlay{position:absolute;inset:0;background:rgba(5,8,48,0.22);pointer-events:none;}
     </style>
 <meta property="og:image" content="https://quantumcolleagues.org/og-image.jpg">
@@ -96,6 +104,14 @@
     <div class="page">
         <h1 class="page-title">PRESS</h1>
         <p class="page-subtitle">News and media information from QuantumColleagues&trade;</p>
+        <div class="follow-google">
+            <div>
+                <p class="label">Preferred source</p>
+                <h2>Follow us on Google<span class="dot">.</span></h2>
+                <p>Add QuantumColleagues&trade; as a preferred source, and our releases will show up more often in your Google Search results.</p>
+            </div>
+            <a class="badge" href="https://www.google.com/preferences/source?q=quantumcolleagues.org"><img src="google-preferred-source-badge@2x.png" alt="Add as a preferred source on Google" width="676" height="213"></a>
+        </div>
         <div class="divider"></div><div class="release" id="career-and-beyond"><span class="embargo">For immediate release &middot; 21 July 2026</span><h2 class="release-headline">QuantumColleagues launches Career &amp; Beyond &mdash; a free career change tool for every generation</h2><p class="release-standfirst">The UK AI-for-good company releases its first free give back: a web app that maps working life as a tree, starting from the skills people already have. No sign up, no cost, on any phone.</p><p class="release-meta">For immediate release &nbsp;&middot;&nbsp; 21 July 2026 &nbsp;&middot;&nbsp; Northamptonshire, UK</p><p>AI is reshaping the jobs millions of people do today. Retail, admin, driving, call centre work and bookkeeping are all being redrawn, yet most careers advice still assumes a ladder: climb it or fall behind. <strong>QuantumColleagues&trade;</strong>, the Northamptonshire AI company built to give back, has launched a free tool that assumes a tree instead.</p><p><strong>Career &amp; Beyond</strong> maps working life as seven growing branches and starts from the skills a person already has. Someone who reads a room well in retail sees how that same skill anchors care and support work. Someone who runs a back office sees how, with AI handling the routine, they could run one for a whole business, or their own. Each move comes with real jobs, real pay and real first steps that can be taken this week. One branch, Beyond, covers life outside work altogether, because a life is bigger than a job.</p><p>The tool is free for every generation, from fifteen to eighty five. There is no sign up, no account and no data collected. It works on any phone and keeps working offline.</p><p>Career &amp; Beyond is the company&rsquo;s first free give back, funded by its commercial work. Businesses buy QuantumColleagues&rsquo; AI products, and that revenue funds post-AI training for everyone &mdash; a commitment protected by an asset-locked Community Interest Company that owns half the trading business.</p><div class="pullquote"><p>&ldquo;Career &amp; Beyond is the first thing we have shipped that costs the person using it nothing. That matters to us. We sell AI to businesses precisely so we can build things like this. Your life was never a ladder. It&rsquo;s a tree, and it&rsquo;s ready to grow.&rdquo;</p><p class="attrib">&mdash; Jonathan Clark, Founder, QuantumColleagues&trade;</p></div><p>Career &amp; Beyond is available now at <a href="career-beyond.html" style="color: var(--trafalgar);text-decoration:none;font-weight:500;">quantumcolleagues.org/career-beyond</a>.</p><p class="ends">ENDS</p><div class="notes"><h3>Notes to editors</h3><div class="item"><span class="item-bullet">&#9632;</span><p><strong>About Career &amp; Beyond.</strong> A free web application mapping working life as seven branches, built around 75 real UK jobs with official ONS pay figures and practical first steps. No sign up, free, works offline on any phone.</p></div><div class="item"><span class="item-bullet">&#9632;</span><p><strong>Interviews and assets.</strong> Jonathan Clark is available for interview. A 35-second launch film, app screenshots and a logo pack are available on request.</p></div></div></div>
         <div class="release">
             <span class="embargo">For immediate release &middot; 4 June 2026</span>
@@ -127,13 +143,12 @@
             </div>
         </div>
         <p class="assets-note">Journalists: for interviews, imagery or a Proust demo, email <a href="mailto:jonathan@quantumcolleagues.org">jonathan@quantumcolleagues.org</a>.</p>
-        <p class="assets-note">Readers: <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org">add QuantumColleagues as a preferred source on Google</a>, and our releases will show up more often in your Search results.</p>
     </div>
     <footer>
         <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
         <span class="right">Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a></span>
     </footer><!-- brand-refresh 2026-06-10 -->
-    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="privacy.html" style="color:inherit;">Privacy</a></p>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></p>
     <script src="qc-faces.js"></script>
 </body>
   </html>

@@ -35,13 +35,27 @@ Press page only. The homepage card is deliberately left alone.
 the media contact email link had been invisible. Now `var(--teal-on-dark)`, the token
 the card already uses for its label.
 
-### Not fixed, flagged for Jonathan
+### June launch release wording, fixed on Jonathan's "fix"
 
-The June launch release on this page still says "AI training" twice and "sells AI"
-once, against the standing post-AI training and buy side rules. It is an issued release
-with a citable address, so rewording it is his call, not a drive-by edit.
+The June launch release on this page said "AI training" three times (the headline, the
+standfirst and the first paragraph; the earlier entry above miscounted it as twice, and the
+verifier caught the third) and "sells AI" once, against the standing post-AI training and
+buy side rules. It was flagged rather than edited because it is an issued release with a
+citable address, and Jonathan ruled "fix" on 26 August. The headline now reads "funding
+post-AI training for every generation", the standfirst opens "Businesses buy AI from QuantumColleagues, and the
+revenue funds post-AI training", and the first body paragraph reads "Businesses buy AI
+tools from QuantumColleagues, and the company channels what it earns into post-AI
+training". Nothing else in either release moved.
 
-Verifier: `qcweb-preferred-source-verify.py`, 9 checks, seen RED 6/9 before the change.
+Left alone, deliberately: the two pull quotes attributed to Jonathan ("We sell AI to
+businesses precisely so we can build things like this" and "we sell genuinely useful AI
+to businesses"), because they are his words in quotation marks and rewording a quotation
+is his call; and the site-wide meta and Open Graph description ("We sell AI to business so
+we can teach it to everyone else"), which is shared across pages and wants one sweep, not
+a one-page edit.
+
+Verifier: `qcweb-preferred-source-verify.py`, now 12 checks. Seen RED 6/9 before the
+link, and RED 3/12 before the wording fix.
 
 ## 2026-08-10 — Homepage strapline and menu
 

@@ -8,6 +8,41 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-08-26 — Google Preferred Source link on the Press page
+
+Branch `feature/google-preferred-source` off `dev`, after `dev` was fast-forwarded to
+`main` (it had fallen six commits behind). `press.html` and this file only.
+
+### The link
+
+Google's Preferred Sources lets a reader pin a site so it shows more often in Top
+Stories, AI Overviews and AI Mode. quantumcolleagues.org is already listed in Google's
+source preferences tool, confirmed by Jonathan on 26 August, so the link works today.
+
+Implemented as a plain text link to the Google deeplink
+`https://www.google.com/preferences/source?q=quantumcolleagues.org`, in a second
+`assets-note` paragraph under the media contact card. Google's own JavaScript button
+(`publisher.js`) was considered and rejected: it adds a third party script to the site
+for no gain over the plain link, and the plain link keeps house styling. Google's
+documentation says neither route is required to appear as a preferred source, and there
+is no Search Console step.
+
+Press page only. The homepage card is deliberately left alone.
+
+### One thing fixed that was not asked for
+
+`.contact-card a` was `var(--trafalgar)`, navy, on a `var(--trafalgar)` navy card, so
+the media contact email link had been invisible. Now `var(--teal-on-dark)`, the token
+the card already uses for its label.
+
+### Not fixed, flagged for Jonathan
+
+The June launch release on this page still says "AI training" twice and "sells AI"
+once, against the standing post-AI training and buy side rules. It is an issued release
+with a citable address, so rewording it is his call, not a drive-by edit.
+
+Verifier: `qcweb-preferred-source-verify.py`, 9 checks, seen RED 6/9 before the change.
+
 ## 2026-08-10 — Homepage strapline and menu
 
 Branch `feature/home-nav-strapline`. Homepage only: `index.html` is the one page

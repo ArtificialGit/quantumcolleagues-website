@@ -8,6 +8,34 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-08-28: Proust page refresh, independent-assistant framing and beach hero
+
+Jonathan asked for a Proust page that is more fun, reads clearly as an independent
+assistant with its own identity, uses less technical language, and stops claiming
+Google Workspace. Deployed through the GitHub web UI in Chrome, because the cloud
+sandbox git proxy does not authorise this repo for direct push or API.
+
+### proust.html, rewritten
+- New hero: the beach image from the June "Proust (Beach)" Instagram carousel
+  (Slide 1), with the carousel dots and the URL watermark stripped, saved as
+  `proust-beach-hero.webp` (760px). It carries the baked line "Switch off. It won't."
+- Independence band "Not a mail app. A proper assistant." rebuilt as live text from
+  carousel Slide 2, with own-name and own-mailbox wording, and Todoist added.
+- New "Connects to what you already use" row: Google, Microsoft, Todoist.
+- Removed the "Works with Google Workspace" section and the "runs inside your tenant"
+  framing. Cut the jargon (OAuth, scopes, agent memory, "channel-ready").
+- Privacy kept honest and per model: Managed is processed in QC's own private UK or
+  EU environment, Appliance never leaves your site. "Auditable by design", no ISO
+  conformity claim. No blanket "data never leaves your organisation".
+- Founding circle form, the faces ribbon, the footer and the form script are unchanged.
+- Title and meta reworded to the new positioning. No em dashes in the new copy.
+
+### New asset
+- `proust-beach-hero.webp`, cleaned from carousel Slide 1. `Post2_Proust_1080x1080.png`
+  is no longer referenced, and is left in the repo.
+
+---
+
 ## 2026-08-26, later — Preferred Source made prominent, with Google's own badge
 
 Branch `feature/google-preferred-source-prominent` off `dev`. Jonathan's ruling on the

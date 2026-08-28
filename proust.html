@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proust — AI Executive Assistant — QuantumColleagues&trade;</title>
-    <meta name="description" content="Proust is your AI executive assistant — inbox triage, calendar context, and a daily brief, set up in 90 seconds. Founder-grade AI for good, by QuantumColleagues&trade;">
+<title>Proust &middot; Your own AI assistant &middot; QuantumColleagues&trade;</title>
+    <meta name="description" content="Proust is an AI assistant of its own, with its own mailbox. It connects to your Google or Microsoft email, your calendar and Todoist, triages your inbox and briefs you every morning. Founder Assist by QuantumColleagues&trade;.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="QuantumColleagues&trade;">
-    <meta property="og:title" content="Proust — AI Executive Assistant — QuantumColleagues&trade;">
-    <meta property="og:description" content="Proust is your AI executive assistant — inbox triage, calendar context, and a daily brief, set up in 90 seconds. Founder-grade AI for good, by QuantumColleagues&trade;">
+    <meta property="og:title" content="Proust &middot; Your own AI assistant &middot; QuantumColleagues&trade;">
+    <meta property="og:description" content="An AI assistant of its own. It connects to your Google or Microsoft email, your calendar and Todoist, then keeps your inbox and diary moving while you get on with the work only you can do.">
     <meta property="og:url" content="https://quantumcolleagues.org/proust.html">
 <link rel="canonical" href="https://quantumcolleagues.org/proust.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +31,6 @@
         }
         svg.ico { width: 1.1em; height: 1.1em; fill: none; stroke: var(--trafalgar); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.2em; margin-right: 0.4em; flex-shrink: 0; }
         svg.ico .accent { stroke: var(--teal); }
-        .photo-zone { background: var(--stone); border: 2px dashed var(--warm-div); border-radius: 10px; padding: 1.5rem 1rem; text-align: center; font-size: 0.75rem; font-style: italic; color: var(--dusk); display: flex; align-items: center; justify-content: center; min-height: 80px; margin-bottom: 1rem; }
-        .photo-zone--duotone { background: rgba(5,8,48,0.85); color: rgba(255,255,255,0.35); border-color: rgba(255,255,255,0.12); }
 
 body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--paper); color: var(--warm-ink); line-height: 1.6; }
 header { padding: 1.5rem 3rem; border-bottom: 1px solid var(--warm-div); display: flex; align-items: center; justify-content: space-between; }
@@ -44,12 +42,38 @@ header { padding: 1.5rem 3rem; border-bottom: 1px solid var(--warm-div); display
 .strapline-text { font-size: 0.78rem; font-weight: 400; color: var(--dusk); letter-spacing: 0.18em; text-transform: uppercase; }
 strapline-text .dot { color: #2D8C6F; font-weight: 700; }
 .page { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
-.page-title { font-size: 2.2rem; font-weight: 300; color: #050830; margin-bottom: 0.3rem; letter-spacing: -0.5px; }
-.page-subtitle { font-size: 0.9rem; color: var(--dusk); font-weight: 400; margin-bottom: 1.5rem; }
 .divider { height: 1px; background: var(--warm-div); margin-bottom: 1.5rem; }
 .lede { font-size: 0.95rem; color: var(--warm-ink); line-height: 1.7; margin-bottom: 2rem; max-width: 900px; }
-.intro-row { display: grid; grid-template-columns: 1fr 360px; gap: 3rem; align-items: start; margin-bottom: 2rem; }
-.social-img { width: 100%; border-radius: 8px; box-shadow: 0 6px 32px rgba(5,8,48,0.14); display: block; }
+
+/* --- hero --- */
+.hero { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 3.2rem; align-items: center; margin: 1rem 0 1rem; }
+.hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+.hero h1 { font-size: 2.7rem; line-height: 1.1; letter-spacing: -1px; color: #050830; margin-bottom: 1.1rem; font-weight: 300; }
+.hero h1 b { font-weight: 700; }
+.hero h1 .dot { color: var(--teal); }
+.hero-sub { font-size: 1rem; color: var(--warm-ink); line-height: 1.65; margin-bottom: 1.6rem; max-width: 520px; }
+.hero-cta { display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.9rem; }
+.btn { display: inline-block; padding: 0.72rem 1.5rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent; font-family: 'Poppins', sans-serif; }
+.btn-primary { background: var(--teal); color: #fff; } .btn-primary:hover { background: #236b55; }
+.btn-ghost { background: transparent; color: var(--trafalgar); border-color: var(--warm-div); } .btn-ghost:hover { border-color: var(--trafalgar); }
+.hero-note { font-size: 0.8rem; color: var(--dusk); }
+.hero-img { width: 100%; border-radius: 14px; box-shadow: 0 22px 60px rgba(5,8,48,0.30); display: block; }
+
+/* --- navy band --- */
+.band { border-radius: 6px; padding: 3rem 2.6rem; margin: 2.6rem 0; }
+.band--navy { background: var(--navy); color: #fff; }
+.band-rule { width: 64px; height: 3px; background: var(--teal); border-radius: 2px; margin-bottom: 1.2rem; }
+.band-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-on-dark); margin-bottom: 1.1rem; }
+.band h2 { font-size: 2.2rem; line-height: 1.14; font-weight: 700; color: #fff; margin-bottom: 1.1rem; letter-spacing: -0.5px; }
+.band h2 .u { color: var(--teal-on-dark); border-bottom: 4px solid var(--teal-on-dark); padding-bottom: 1px; }
+.band p { font-size: 0.98rem; line-height: 1.72; color: rgba(255,255,255,0.9); max-width: 780px; }
+.band--navy a { color: var(--teal-on-dark); font-weight: 500; }
+
+.section-break { height: 1px; background: var(--warm-div); margin: 3rem 0 2rem; }
+.section-title { font-size: 1.8rem; font-weight: 300; color: #050830; margin-bottom: 0.3rem; }
+.section-subtitle { font-size: 0.9rem; color: var(--dusk); margin-bottom: 2rem; }
+
+/* --- features + brief --- */
 .feature-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin: 2rem 0; }
 .feature-list .item { margin-bottom: 1.2rem; }
 .feature-list .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.2rem; }
@@ -63,9 +87,16 @@ strapline-text .dot { color: #2D8C6F; font-weight: 700; }
 .brief-row:last-child { border-bottom: none; }
 .brief-row .label { color: var(--teal-on-dark); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; align-self: center; }
 .brief-row .text { color: rgba(255,255,255,0.92); }
-.section-break { height: 1px; background: var(--warm-div); margin: 3rem 0 2rem; }
-.section-title { font-size: 1.8rem; font-weight: 300; color: #050830; margin-bottom: 0.3rem; }
-.section-subtitle { font-size: 0.9rem; color: var(--dusk); margin-bottom: 2rem; }
+.brief-caption { font-size: 0.82rem; color: var(--dusk); margin-top: 0.8rem; line-height: 1.5; }
+
+/* --- connectors --- */
+.connect-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.connect-card { background: #fff; border: 1px solid var(--warm-div); border-top: 3px solid var(--teal); border-radius: 8px; padding: 1.5rem; }
+.connect-logo { width: 40px; height: 40px; margin-bottom: 0.9rem; display: block; }
+.connect-card h3 { font-size: 1rem; font-weight: 600; color: #050830; margin-bottom: 0.3rem; }
+.connect-card p { font-size: 0.84rem; color: var(--dusk); line-height: 1.55; }
+
+/* --- onboarding stages --- */
 .stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: start; margin-bottom: 2rem; }
 .stage-box { background: #ffffff; border: 1px solid var(--warm-div); border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.5rem; }
 .stage-box h3 { font-size: 1rem; font-weight: 700; color: #050830; margin-bottom: 0.3rem; }
@@ -73,14 +104,18 @@ strapline-text .dot { color: #2D8C6F; font-weight: 700; }
 .stage-box .stage-body { font-size: 0.85rem; color: var(--dusk); line-height: 1.55; margin-bottom: 0.6rem; }
 .stage-box .stage-tag { font-size: 0.78rem; font-weight: 600; color: var(--dusk); }
 .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--trafalgar); font-weight: 700; padding: 0 0.5rem; margin-top: 3rem; }
+
+/* --- columns --- */
 .columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2rem 0; }
 .column { border-top: 3px solid #2D8C6F; padding-top: 1.2rem; }
 .column h3 { font-size: 1.1rem; font-weight: 600; color: var(--trafalgar); margin-bottom: 0.2rem; }
 .column .col-subtitle { font-size: 0.8rem; color: var(--dusk); font-weight: 400; margin-bottom: 1rem; }
 .column p { font-size: 0.85rem; color: var(--dusk); line-height: 1.55; }
+
+/* --- join --- */
 .join-section { background: var(--stone); border-top: 3px solid #2D8C6F; padding: 3rem 2rem; text-align: center; }
 .join-inner { max-width: 480px; margin: 0 auto; }
-.join-title { font-size: 1.3rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; }
+.join-title { font-size: 1.4rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; }
 .join-sub { font-size: 0.88rem; color: var(--dusk); margin-bottom: 1.4rem; line-height: 1.5; }
 .join-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
 .join-input { flex: 1; padding: 0.65rem 1rem; border: 1px solid var(--warm-div); border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: var(--warm-ink); outline: none; }
@@ -88,13 +123,28 @@ strapline-text .dot { color: #2D8C6F; font-weight: 700; }
 .join-btn { padding: 0.65rem 1.4rem; background: #2D8C6F; color: #fff; border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .join-btn:hover { background: #236b55; }
 .join-thanks { font-size: 0.88rem; color: var(--trafalgar); font-weight: 500; margin-top: 0.6rem; }
+
+/* --- mission close --- */
+.mission-band { background: var(--navy); color: #fff; border-radius: 6px; padding: 2.2rem 2.6rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.mission-band .m-title { font-size: 1.4rem; font-weight: 700; }
+.mission-band .m-title .dot { color: var(--teal-on-dark); }
+.mission-band p { font-size: 0.9rem; color: rgba(255,255,255,0.85); max-width: 580px; margin-top: 0.35rem; }
+.mission-band a { color: var(--teal-on-dark); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.mission-band a:hover { text-decoration: underline; }
+
 footer { border-top: 1px solid var(--warm-div); margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
 footer a { color: var(--trafalgar); text-decoration: none; font-weight: 500; }
 footer .right { color: var(--dusk); }
+
 @media (max-width: 768px) {
-header { padding: 1rem 1.5rem; } .page { padding: 2rem 1.5rem; } .page-title { font-size: 1.6rem; } .section-title { font-size: 1.4rem; }
-.intro-row { grid-template-columns: 1fr; } .feature-row { grid-template-columns: 1fr; } .columns { grid-template-columns: 1fr; gap: 1.5rem; }
+header { padding: 1rem 1.5rem; flex-wrap: wrap; row-gap: 0.5rem; } .page { padding: 2rem 1.5rem; } .section-title { font-size: 1.4rem; }
+.hero { grid-template-columns: 1fr; gap: 1.6rem; } .hero h1 { font-size: 2rem; }
+.band { padding: 2rem 1.4rem; } .band h2 { font-size: 1.6rem; }
+.feature-row { grid-template-columns: 1fr; } .columns { grid-template-columns: 1fr; gap: 1.5rem; }
+.connect-row { grid-template-columns: 1fr; }
 .stages { grid-template-columns: 1fr; gap: 1rem; } .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
+.join-form { flex-direction: column; } .join-btn { width: 100%; }
+.mission-band { padding: 1.6rem 1.4rem; }
 footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
 }
 .faces-ribbon{position:relative;height:82px;overflow:hidden;background:#050830;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}#ribbonMosaic{position:absolute;inset:0;display:grid;grid-auto-rows:82px;gap:2px;}#ribbonMosaic .rt{background-color:#0d1240;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease;}.ribbon-overlay{position:absolute;inset:0;background:rgba(5,8,48,0.22);pointer-events:none;}
@@ -104,8 +154,8 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5re
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="QuantumColleagues - do some good with AI">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Proust — AI Executive Assistant — QuantumColleagues&trade;">
-<meta name="twitter:description" content="Proust is your AI executive assistant — inbox triage, calendar context, and a daily brief, set up in 90 seconds. Founder-grade AI for good, by QuantumColleagues&trade;">
+<meta name="twitter:title" content="Proust &middot; Your own AI assistant &middot; QuantumColleagues&trade;">
+<meta name="twitter:description" content="An AI assistant of its own. It connects to your Google or Microsoft email, your calendar and Todoist, then keeps your inbox and diary moving while you get on.">
 <meta name="twitter:image" content="https://quantumcolleagues.org/og-image.jpg">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -115,87 +165,150 @@ footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5re
 <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
     <div class="faces-ribbon"><div id="ribbonMosaic" data-qc-faces data-tile="82"></div><div class="ribbon-overlay"></div></div>
 <div class="page">
-<h1 class="page-title">PROUST</h1>
-<p class="page-subtitle">Founder Assist &mdash; Available now</p>
-<div class="divider"></div>
-<p class="lede">Proust reads your email, manages your calendar, and briefs you every morning &mdash; so you lead, not triage. Set up in ninety seconds. Private by design: Proust works with Microsoft 365 and Google Workspace. Inference is processed in QC&rsquo;s private EU/UK environment (Managed) or on your own hardware (Appliance) &mdash; your data stays in your control.</p>
 
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<p class="hero-eyebrow">Proust &middot; Founder Assist</p>
+<h1>Proust runs the admin.<br><b>You run the business<span class="dot">.</span></b></h1>
+<p class="hero-sub">Proust is an AI assistant of its own, with its own name and its own mailbox. Connect it to your Google or Microsoft account, your calendar and Todoist, and it keeps your inbox, your diary and your follow-ups moving while you get on with the work only you can do.</p>
+<div class="hero-cta">
+<a href="#co-found" class="btn btn-primary">Join the founding circle</a>
+<a href="#how" class="btn btn-ghost">See how it works</a>
+</div>
+<p class="hero-note">Founding circle open. Five spots, no cost, founders only.</p>
+</div>
+<div class="hero-img-wrap">
+<img src="proust-beach-hero.webp" alt="Proust running on a laptop on a beach, under the line: switch off, it won't." class="hero-img">
+</div>
+</section>
+
+<!-- INDEPENDENCE BAND -->
+<section class="band band--navy">
+<div class="band-rule"></div>
+<p class="band-eyebrow">Proust &middot; Founder Assist</p>
+<h2>Not a mail app.<br>A proper <span class="u">assistant.</span></h2>
+<p>Proust is not a plugin bolted onto your inbox. It is an assistant of its own, with its own name and its own mailbox. You connect it to your Google or Microsoft account, and to Todoist, the way you would hand a new assistant a login. Then it gets on with the work between your check-ins. It minds your inbox, sorts your diary and briefs you each morning on what actually needs you. Quietly, without being asked. Its own emails, like your welcome note and your daily brief, come from Proust, and never from you.</p>
+</section>
+
+<!-- WHAT PROUST DOES -->
+<div class="section-break" id="how"></div>
+<h2 class="section-title">WHAT PROUST DOES</h2>
+<p class="section-subtitle">Five jobs, off your plate, from day one.</p>
 <div class="feature-row">
-
 <div class="feature-list">
-<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M4.8 6.2 L19.3 5.7 L19.2 18.9 L4.7 19.2 L4.7 6 L6.5 5.95"/><path d="M4.7 12.9 L8.1 13 L9.8 15.9 L14.2 15.8 L15.9 12.8 L19.2 12.95"/></svg>Reads your inbox</span></div><p class="item-desc">Prioritises, drafts, and routes. Surfaces the three things you actually need to do today.</p></div>
-<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M4.8 6.6 L19.3 6.1 L19.2 19.5 L4.7 19.1 L4.8 6.4 L6.5 6.3"/><path d="M4.9 10 L19.1 9.7"/><path d="M8 3.1 L8.1 7"/><path d="M16 3 L15.9 6.9"/></svg>Manages your calendar</span></div><p class="item-desc">Schedules, briefs, and chases. Owns your diary so you don&rsquo;t have to &mdash; and reschedules without losing context.</p></div>
-<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M3.9 19 L20.2 18.7"/><path d="M7.4 18.9 C7.7 14.8 16.3 14.8 16.6 18.9"/><path d="M12 4.3 L12 6.9" class="accent"/><path d="M5.4 8 L7.2 9.7" class="accent"/><path d="M18.6 8.1 L16.8 9.6" class="accent"/></svg>Briefs you every morning</span></div><p class="item-desc">Every day at 8 am: what&rsquo;s urgent, what&rsquo;s on, who needs you. Read it in sixty seconds with your first coffee.</p></div>
-<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 4 C16.5 3.9 20.1 7.5 20 12 C19.9 16.5 16.4 20.1 12 20 C7.6 19.9 3.9 16.4 4 12 C4.1 7.7 7.6 4.1 11.8 4 L12.6 4.02"/><path d="M12 7.6 L12.1 12.2 L15.2 13.9"/></svg>Remembers across sessions</span></div><p class="item-desc">Names, decisions, drafts, follow-ups. Never asks the same question twice.</p></div>
-<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 3.2 L19 6 C19.2 10.6 18.4 14.5 12 20.8 C5.6 14.5 4.8 10.6 5 6 L12 3.2"/><path d="M8.9 12 L11.1 14.2 L15.3 9.8" class="accent"/></svg>Stays in your tenant</span></div><p class="item-desc">Runs inside your Microsoft 365 or Google Workspace. Private by design, audited by default.</p></div>
+<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M4.8 6.2 L19.3 5.7 L19.2 18.9 L4.7 19.2 L4.7 6 L6.5 5.95"/><path d="M4.7 12.9 L8.1 13 L9.8 15.9 L14.2 15.8 L15.9 12.8 L19.2 12.95"/></svg>Reads your inbox</span></div><p class="item-desc">It triages, drafts and files. Each morning you get the three things that truly need you, not the ninety that do not.</p></div>
+<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M4.8 6.6 L19.3 6.1 L19.2 19.5 L4.7 19.1 L4.8 6.4 L6.5 6.3"/><path d="M4.9 10 L19.1 9.7"/><path d="M8 3.1 L8.1 7"/><path d="M16 3 L15.9 6.9"/></svg>Runs your diary</span></div><p class="item-desc">It books, moves and chases meetings, and it keeps the context when something has to shift.</p></div>
+<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M9 6.5 L20 6.4"/><path d="M9 12 L20 11.9"/><path d="M9 17.5 L20 17.4"/><path d="M4 6 L5.2 7.2 L7 5" class="accent"/><path d="M4 11.5 L5.2 12.7 L7 10.5" class="accent"/><path d="M4 17 L5.2 18.2 L7 16" class="accent"/></svg>Keeps your list moving</span></div><p class="item-desc">Your Todoist stays in step with your inbox and your diary, so nothing you meant to do quietly slips.</p></div>
+<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M3.9 19 L20.2 18.7"/><path d="M7.4 18.9 C7.7 14.8 16.3 14.8 16.6 18.9"/><path d="M12 4.3 L12 6.9" class="accent"/><path d="M5.4 8 L7.2 9.7" class="accent"/><path d="M18.6 8.1 L16.8 9.6" class="accent"/></svg>Briefs you every morning</span></div><p class="item-desc">Every day at 8, a sixty second read with your first coffee. What is urgent, what is on, who needs you.</p></div>
+<div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 4 C16.5 3.9 20.1 7.5 20 12 C19.9 16.5 16.4 20.1 12 20 C7.6 19.9 3.9 16.4 4 12 C4.1 7.7 7.6 4.1 11.8 4 L12.6 4.02"/><path d="M12 7.6 L12.1 12.2 L15.2 13.9"/></svg>Remembers everything</span></div><p class="item-desc">Names, decisions, drafts, the thing you asked for last Tuesday. It never asks you the same question twice.</p></div>
 </div>
-<img src="Post2_Proust_1080x1080.png" alt="Proust" class="social-img">
-</div>
-
-<div class="section-break"></div>
-<h2 class="section-title">MORNING BRIEF</h2>
-<p class="section-subtitle">Every morning at 8am &mdash; a 60-second read with your first coffee.</p>
-<div class="brief-card" style="max-width:560px;">
-
+<div>
+<div class="brief-card">
 <div class="head">PROUST &middot; MORNING BRIEF &middot; 08:00</div>
 <div class="sub">Tuesday &middot; 6 priorities &middot; 3 meetings &middot; 2 awaiting reply</div>
-<div class="brief-row"><div class="label">PRIORITY</div><div class="text">Reply to client proposal by midday</div></div>
-<div class="brief-row"><div class="label">ACTION</div><div class="text">Reschedule 1:1 &mdash; clash with leadership offsite</div></div>
-<div class="brief-row"><div class="label">ACTION</div><div class="text">Send contract to legal team (drafted)</div></div>
-<div class="brief-row"><div class="label">REMINDER</div><div class="text">Quarterly board prep &mdash; 2 days out</div></div>
-<div class="brief-row"><div class="label">TRACKED</div><div class="text">New hire offer accepted &mdash; added to onboarding</div></div>
+<div class="brief-row"><div class="label">PRIORITY</div><div class="text">Reply to the client proposal by midday</div></div>
+<div class="brief-row"><div class="label">ACTION</div><div class="text">Move your 1:1. It clashes with the leadership offsite</div></div>
+<div class="brief-row"><div class="label">ACTION</div><div class="text">Send the contract to legal. Draft is ready for you</div></div>
+<div class="brief-row"><div class="label">REMINDER</div><div class="text">Board prep, 2 days out</div></div>
+<div class="brief-row"><div class="label">TRACKED</div><div class="text">New hire said yes. Added to onboarding</div></div>
+</div>
+<p class="brief-caption">Every morning at 8. A sixty second read with your first coffee, so you start the day already ahead of it.</p>
+</div>
 </div>
 
+<!-- CONNECTS TO -->
 <div class="section-break"></div>
-<h2 class="section-title">CUSTOMER ONBOARDING</h2>
-<p class="section-subtitle">Three screens. Under ninety seconds. No download, no install.</p>
+<h2 class="section-title">CONNECTS TO WHAT YOU ALREADY USE</h2>
+<p class="section-subtitle">No new app to learn. Proust plugs into the tools you already run your day on.</p>
+<div class="connect-row">
+<div class="connect-card">
+<svg class="connect-logo" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+<h3>Google</h3>
+<p>Proust reads and triages your Gmail, and reads your Google Calendar for context. Personal or business accounts.</p>
+</div>
+<div class="connect-card">
+<svg class="connect-logo" viewBox="0 0 48 48"><rect x="4" y="4" width="18" height="18" fill="#F25022"/><rect x="26" y="4" width="18" height="18" fill="#7FBA00"/><rect x="4" y="26" width="18" height="18" fill="#00A4EF"/><rect x="26" y="26" width="18" height="18" fill="#FFB900"/></svg>
+<h3>Microsoft</h3>
+<p>The same across Outlook and your Microsoft calendar. Your mail, your diary, your rules. Personal or business accounts.</p>
+</div>
+<div class="connect-card">
+<svg class="connect-logo" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#E44332"/><g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M13 18l3.2 3 6.8-5.6"/><line x1="27" y1="16.5" x2="34" y2="16.5"/><path d="M13 27l3.2 3 6.8-5.6"/><line x1="27" y1="25.5" x2="34" y2="25.5"/><path d="M13 36l3.2 3 6.8-5.6"/><line x1="27" y1="34.5" x2="34" y2="34.5"/></g></svg>
+<h3>Todoist</h3>
+<p>Your task list stays in step with your inbox and your diary, so nothing you meant to do gets dropped.</p>
+</div>
+</div>
+
+<!-- GETTING STARTED -->
+<div class="section-break"></div>
+<h2 class="section-title">UP AND RUNNING IN NINETY SECONDS</h2>
+<p class="section-subtitle">Three screens. No download, and nothing to install.</p>
 <div class="stages">
-<div class="stage-box"><p class="stage-num">STEP 01</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M12 14 L12 18"/><path d="M8 7.5 L8 10.5 C8 14.5 16 14.5 16 10.5 L16 7.5"/><path d="M9 3.6 L9 7.5"/><path d="M15 3.6 L15 7.5"/><path d="M9.5 21 L14.5 21" class="accent"/></svg>CONNECT</h3><p class="stage-body">One-click OAuth consent for Microsoft 365 or Google Workspace. You see the exact scopes before you approve. Nothing is stored outside your control.</p><p class="stage-tag">Auto-advances to Step 02</p></div>
+<div class="stage-box"><p class="stage-num">STEP 01</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M12 14 L12 18"/><path d="M8 7.5 L8 10.5 C8 14.5 16 14.5 16 10.5 L16 7.5"/><path d="M9 3.6 L9 7.5"/><path d="M15 3.6 L15 7.5"/><path d="M9.5 21 L14.5 21" class="accent"/></svg>CONNECT</h3><p class="stage-body">Sign in with Google or Microsoft. You see exactly what Proust can look at before you say yes, and you can take that access back whenever you like.</p><p class="stage-tag">Then straight to Step 02</p></div>
 <div class="arrow">&rarr;</div>
-<div class="stage-box"><p class="stage-num">STEP 02</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M5 9 L11 8.95"/><path d="M15 9 L19 8.95"/><path d="M13 7 C14.1 7 15 7.9 15 9 C15 10.1 14.1 11 13 11 C11.9 11 11 10.1 11 9 C11 7.9 11.9 7 13.1 7"/><path d="M5 15 L9 14.95"/><path d="M13 15 L19 14.95"/><path d="M11 13 C12.1 13 13 13.9 13 15 C13 16.1 12.1 17 11 17 C9.9 17 9 16.1 9 15 C9 13.9 9.9 13 11.1 13" class="accent"/></svg>CONFIGURE</h3><p class="stage-body">Display name, job title, organisation. Pre-filled from M365. Tone, working hours, timezone &mdash; written to agent memory, not config.</p><p class="stage-tag">Only one required field</p></div>
+<div class="stage-box"><p class="stage-num">STEP 02</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M5 9 L11 8.95"/><path d="M15 9 L19 8.95"/><path d="M13 7 C14.1 7 15 7.9 15 9 C15 10.1 14.1 11 13 11 C11.9 11 11 10.1 11 9 C11 7.9 11.9 7 13.1 7"/><path d="M5 15 L9 14.95"/><path d="M13 15 L19 14.95"/><path d="M11 13 C12.1 13 13 13.9 13 15 C13 16.1 12.1 17 11 17 C9.9 17 9 16.1 9 15 C9 13.9 9.9 13 11.1 13" class="accent"/></svg>TELL IT ABOUT YOU</h3><p class="stage-body">Your name, your hours, and how you like things done. Only one field is required. Proust learns the rest as it goes.</p><p class="stage-tag">One required field</p></div>
 <div class="arrow">&rarr;</div>
-<div class="stage-box"><p class="stage-num">STEP 03</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M12 4 C16.4 3.9 20.1 7.6 20 12 C19.9 16.4 16.4 20.1 12 20 C7.6 19.9 3.9 16.4 4 12 C4.1 7.7 7.6 4.1 11.8 4 L12.6 4.02"/><path d="M8.5 12.2 L11 14.6 L15.6 9.6" class="accent"/></svg>READY</h3><p class="stage-body">Confirmation, agent intro, immediate CTA: &ldquo;What&rsquo;s on today?&rdquo; &mdash; no tour. First morning brief arrives tomorrow at 8 am.</p><p class="stage-tag">Live by tomorrow morning</p></div>
+<div class="stage-box"><p class="stage-num">STEP 03</p><h3><svg viewBox="0 0 24 24" class="ico"><path d="M12 4 C16.4 3.9 20.1 7.6 20 12 C19.9 16.4 16.4 20.1 12 20 C7.6 19.9 3.9 16.4 4 12 C4.1 7.7 7.6 4.1 11.8 4 L12.6 4.02"/><path d="M8.5 12.2 L11 14.6 L15.6 9.6" class="accent"/></svg>YOU'RE OFF</h3><p class="stage-body">A quick hello from Proust, then it starts work. Your first morning brief lands tomorrow at 8. No tour, no manual.</p><p class="stage-tag">Live by tomorrow morning</p></div>
 </div>
+
+<!-- YOUR DATA -->
 <div class="section-break"></div>
-<h2 class="section-title">WORKS WITH GOOGLE WORKSPACE</h2>
-<p class="section-subtitle">Microsoft 365 and Google Workspace are both supported.</p>
-<p class="lede">With your permission, Proust reads your Gmail inbox to triage it, prepares draft replies in your Drafts folder for your approval, and marks mail it has handled as read. It reads your Google Calendar for meeting context and your morning brief. Proust prepares work for you to approve: it does not send email to other people as you, and it cannot delete your mail. Its own messages, such as your welcome note and daily brief, come from Proust&rsquo;s own mailbox, not from your account. You can review Proust&rsquo;s access, and revoke it at any time, at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="color:var(--trafalgar);font-weight:500;">myaccount.google.com/permissions</a>. Full detail is in the <a href="proust-privacy.html" style="color:var(--trafalgar);font-weight:500;">privacy policy</a>.</p>
+<h2 class="section-title">YOUR DATA, YOUR CALL</h2>
+<p class="lede">You are always in charge. Proust prepares work for you to approve. It does not send email to other people as you, and it cannot delete your mail. You can see everything it has access to, and take that access away, at any time. On the Managed plan your email is handled in QuantumColleagues&rsquo; own private environment in the UK or EU. On the Appliance, Proust runs on your own hardware and your data never leaves your site. Either way, it is auditable by design. The full detail sits in the <a href="proust-privacy.html" style="color:var(--trafalgar);font-weight:500;">privacy policy</a>.</p>
+
+<!-- TWO WAYS -->
 <div class="section-break"></div>
-<h2 class="section-title">TWO WAYS TO DEPLOY</h2>
-<p class="section-subtitle">Both models work with Microsoft 365 and Google Workspace.</p>
+<h2 class="section-title">TWO WAYS TO HAVE PROUST</h2>
+<p class="section-subtitle">Both work with Google and Microsoft.</p>
 <div class="columns" style="grid-template-columns: 1fr 1fr;">
-<div class="column"><h3>Managed</h3><p class="col-subtitle">QC-hosted &middot; Monthly subscription</p><p>We run it. You use it. Nothing to install or maintain &mdash; live inside your M365 tenant from day one.</p></div>
-<div class="column"><h3>Appliance</h3><p class="col-subtitle">On-premise hardware &middot; Retainer</p><p>Proust on your hardware, inside your network. For organisations where data must stay on site.</p></div>
+<div class="column"><h3>Managed</h3><p class="col-subtitle">We host it &middot; Monthly</p><p>We host it, you use it. Nothing to install and nothing to maintain. Proust is up and working within a day.</p></div>
+<div class="column"><h3>Appliance</h3><p class="col-subtitle">Your own hardware &middot; Retainer</p><p>For teams whose data has to stay on site. Proust runs on a box that is yours, inside your own network.</p></div>
 </div>
+
+<!-- PARTNERS -->
 <div class="section-break"></div>
-<h2 class="section-title">ACCREDITED PARTNERS</h2>
-<p class="section-subtitle">Consultancies and MSPs who resell and embed Proust into client delivery. Channel-ready from day one.</p>
+<h2 class="section-title">FOR PARTNERS</h2>
+<p class="section-subtitle">Consultancies and IT partners who resell Proust or build it into what they deliver.</p>
 <div class="columns">
-<div class="column"><h3>Resell</h3><p class="col-subtitle">White-label or co-branded</p><p>Add Proust to your product portfolio. We supply, you deliver. Margin built in.</p></div>
-<div class="column"><h3>Embed</h3><p class="col-subtitle">Inside your client delivery</p><p>Run Proust as part of a wider digital transformation or AI enablement programme.</p></div>
-<div class="column"><h3>Refer</h3><p class="col-subtitle">Introductions welcome</p><p>Know a founder who needs this? Make the introduction &mdash; we&rsquo;ll handle the rest.</p></div>
+<div class="column"><h3>Resell</h3><p class="col-subtitle">White label or co-branded</p><p>Add Proust to your line-up. We supply, you deliver, and the margin is built in.</p></div>
+<div class="column"><h3>Embed</h3><p class="col-subtitle">Inside your delivery</p><p>Run Proust as part of a wider AI or digital programme for your clients.</p></div>
+<div class="column"><h3>Refer</h3><p class="col-subtitle">Introductions welcome</p><p>Know a founder who needs this? Make the introduction, and we will take it from there.</p></div>
 </div>
 </div>
+
+<!-- FOUNDING CIRCLE -->
 <div class="join-section" id="co-found">
 <div class="join-inner">
-<p style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;color:var(--teal);text-transform:uppercase;margin-bottom:0.5rem;">Founding circle &mdash; invitation only</p>
-<h2 class="join-title">Co-test Proust with us.</h2>
-<p class="join-sub">We&rsquo;re looking for a small group of founders to help shape Proust before wider release. You get early access, direct input into the product, and a line to the builder. We get real-world feedback from people who actually run companies.<br><br>Five spots. No cost. You just need to use it and tell us what you think.</p>
+<p style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;color:var(--teal);text-transform:uppercase;margin-bottom:0.5rem;">Founding circle &middot; invitation only</p>
+<h2 class="join-title">Take Proust for a spin.</h2>
+<p class="join-sub">We are letting a small group of founders in early, to shape Proust before we open it wider. You get first use, a direct line to the person building it, and a real say in where it goes. We get the honest verdict of people who actually run companies.<br><br>Five spots. No cost. You use it, and you tell us the truth.</p>
 <form class="join-form" id="coFoundForm" onsubmit="handleJoin(event)">
 <input class="join-input" type="email" id="joinEmail" placeholder="your@email.com" required autocomplete="email">
-<button class="join-btn" type="submit">Apply to co-test</button>
-      <p style="font-size:0.72rem;line-height:1.5;color:#8a8a8a;margin-top:0.75rem;text-align:center;">We use your details only to reply to you. Read our <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+<button class="join-btn" type="submit">Put my name down</button>
 </form>
-<p class="join-thanks" id="joinThanks" style="display:none;">Thanks &mdash; we&rsquo;ll be in touch directly.</p>
+<p style="font-size:0.72rem;line-height:1.5;color:#8a8a8a;margin-top:0.75rem;text-align:center;">We use your details only to reply to you. Read our <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+<p class="join-thanks" id="joinThanks" style="display:none;">Thanks. We will be in touch directly.</p>
 <p class="join-error" id="joinError" hidden style="font-size:0.85rem;color:#ffb3b3;margin-top:0.6rem;"></p>
 <p style="font-size:0.78rem;color:#aaa;margin-top:0.8rem;">Founders only. We won&rsquo;t add you to a list without asking first.</p>
 </div>
 </div>
+
+<!-- MISSION CLOSE -->
+<div class="page" style="padding-top:0;padding-bottom:0;">
+<div class="mission-band">
+<div>
+<div class="m-title">Tech that gives back<span class="dot">.</span></div>
+<p>Businesses buy Proust, and what they spend funds free post-AI training for people of every generation. That is the whole idea.</p>
+</div>
+<a href="mission.html">Our mission &rarr;</a>
+</div>
+</div>
+
 <footer>
 <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
 <span class="right">Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="press.html">Press</a> &nbsp;&middot;&nbsp; <a href="proust-privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="mailto:support@quantumcolleagues.org">support@quantumcolleagues.org</a></span>
 <small style="font-size:0.72rem;color:#aaa;display:block;text-align:right;margin-top:0.4rem;">Proust technology licensed from <a href="https://deliverchangegrow.co.uk" style="color:#aaa;">Deliver.Change.Grow Ltd</a></small>
-</footer><!-- brand-refresh 2026-06-10 -->
+</footer><!-- brand-refresh 2026-08-28 -->
 <script>
 (function(){
 /* Primary path: email to information@ via FormSubmit. HubSpot POST kept as

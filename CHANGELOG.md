@@ -8,6 +8,17 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-04: Career & Beyond v5.16.1, hotfix for the Ask row regression in v5.16.0
+
+Deployed on Jonathan's explicit go. One CSS rule in career-beyond.html, sw.js to
+career-beyond-v5.16.1.
+
+- v5.16.0 let the Ask input shrink (min-width:0) but the base .btn rule is width:100%,
+  so inside the flex row the button took the whole row and the input collapsed to a
+  sliver at every width. Fix: `.askrow .btn{width:auto;flex:0 0 auto;...}` so the
+  button sizes to its label. Verified in real Chromium at 360, 390 and 1280px: input at
+  least 150px wide, button inside the viewport. 237,269 bytes gzipped.
+
 ## 2026-09-03: Career & Beyond v5.16.0, Human-Essential learning path completed, focus picker, two phone layout fixes
 
 Deployed on Jonathan's explicit instruction ("Deploy all of this, or promote then deploy"),

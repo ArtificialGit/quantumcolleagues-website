@@ -8,6 +8,24 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-03: Career & Beyond v5.16.0, Human-Essential learning path completed, focus picker, two phone layout fixes
+
+Deployed on Jonathan's explicit instruction ("Deploy all of this, or promote then deploy"),
+committed on dev and fast-forwarded to main.
+
+### career-beyond.html (v5.16.0) and sw.js (career-beyond-v5.16.0)
+- Learning layer: LEARN_DATA.human goes from 36 to 58 packs, so every one of the 12
+  Human-Essential roles has a full learn / practise / check path. 22 new packs, every
+  source real, free, UK and fetched on 3 Sept 2026.
+- Learn screen: "Show the skills for" focus picker, one chip per complete specialism
+  plus "All of this branch". Hidden on branches with one complete specialism.
+- Live bug fix: the two-column "Where are you now" grid overflowed phones, clipping the
+  right-hand column of cluster cards since v5.6.1. minmax(0,1fr) tracks and 80px compact
+  avatar padding.
+- Live bug fix: at 360px the Ask button sat off the right edge. min-width:0 on the input.
+- 237,239 bytes gzipped against the 256,000 budget. Verifiers, logs and screenshots in
+  the org OneDrive under Career Tree App\build_records\v5.16.0_staged.
+
 ## 2026-08-28: Proust page refresh, independent-assistant framing and beach hero
 
 Jonathan asked for a Proust page that is more fun, reads clearly as an independent

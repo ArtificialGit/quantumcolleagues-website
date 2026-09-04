@@ -8,6 +8,19 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-04: Career & Beyond v5.20.0, the front door
+
+Deployed on Jonathan's explicit "Push 20.0". career-beyond.html and sw.js (career-beyond-v5.20.0).
+
+- Step one of the simplification for people with little patience and for the over 50s. The
+  home screen is now the title, one line, three big choices (Find my next job, Life beyond
+  work, What skills have I got?) and a quiet Ask the tree link, with the choices above the
+  tree picture so they are on the first phone screen. Ten buttons become four, 213 readable
+  words become 118. Nothing is removed from the app: every old home destination is in the
+  Tree menu, which gains the seven quick questions.
+- Verifiers and before/after screenshots in the org OneDrive under
+  Career Tree App\build_records\v5.20.0_staged. 225,720 bytes gzipped.
+
 ## 2026-09-04: Career & Beyond v5.17.0, v5.18.0 and v5.19.0 deployed together
 
 Deployed on Jonathan's explicit "Push". Five files: career-beyond.html, sw.js

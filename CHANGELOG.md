@@ -8,6 +8,22 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-04: Career & Beyond v5.17.0, v5.18.0 and v5.19.0 deployed together
+
+Deployed on Jonathan's explicit "Push". Five files: career-beyond.html, sw.js
+(career-beyond-v5.19.0), cb-faces.webp, cb-grain.png (new), CHANGELOG.md.
+
+- v5.17.0: Skilled Hands learning path completed, 28 -> 50 packs, all 15 roles across five
+  specialisms; the focus picker now appears on that path.
+- v5.18.0: Creative & Cultural learning path, the whole branch, 47 packs, 12 roles, four
+  specialisms. Three of six branches now have complete paths.
+- v5.19.0: weight pass. The faces band and the paper grain texture leave the HTML as
+  cb-faces.webp and cb-grain.png, both cached by the service worker. Home screen verified
+  pixel-identical in Chromium. Bundle 246,173 -> 225,850 bytes gzipped.
+- Every learning source fetched and confirmed on 4 Sept 2026; verifiers, logs and screenshots
+  in the org OneDrive under Career Tree App\build_records\v5.17.0_staged, v5.18.0_staged and
+  v5.19.0_staged.
+
 ## 2026-09-04: Career & Beyond v5.16.1, hotfix for the Ask row regression in v5.16.0
 
 Deployed on Jonathan's explicit go. One CSS rule in career-beyond.html, sw.js to

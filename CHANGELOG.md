@@ -37,11 +37,15 @@ RED 37/42 for those reasons, so the checks are live. GREEN 42/42 on the final tr
 - Meta: title "AI Advisory for SMEs and regulated businesses", plain description,
   Service JSON-LD. No em dashes, no ISO claim, no client named.
 
-### advisory-tile.png, new
-- 1080x1080 in the Project Manager tile construction: navy ground, teal glyph tile with
-  a three node route, "Advisory", QUANTUMCOLLEAGUES eyebrow, "You own the capability,
-  not a contract.", "Map · Build together · Hand over", strapline, footer. Built in
-  the session with Poppins from Google Fonts; badge reads "Available now".
+### advisory-tile.png, new (second cut, same day)
+- First cut was a flat navy tile in the Project Manager construction. Jonathan ruled
+  "use one of the photos from the LinkedIn carousel, preferably from the first page
+  rather than that advisory blue tile. I like the little green logo." Second cut is
+  the Human Strand construction: the page 1 carousel photograph (Pexels 3184291,
+  fauxels) graded into navy from the foot, wordmark top left, the teal route glyph
+  kept beside "Advisory", "You own the capability, not a contract.", "Map · Build
+  together · Hand over", thin orange rule, "Do some good with AI." and the URL in the
+  footer, "Photo: Pexels" credit. 1080x1080 PNG, built in the session with Poppins.
 
 ### products.html
 - Page title "PRODUCTS & SERVICES", subtitle "Three product categories and one

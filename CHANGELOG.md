@@ -8,6 +8,27 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-07, later: products page shuffle, Advisory in the top row, Project Manager below
+
+Jonathan: "Why don't we shuffle this so Services are on the top line too and PM is on
+the next level down (as it's not available yet)?" Agreed, and it also brings Admin Core
+to the front, which the earlier entry had flagged.
+
+### products.html
+- Top row is now Admin Core, Proust, Advisory in the three stage construction with the
+  arrows kept. The Services section is gone.
+- New IN DEVELOPMENT section after the row, subtitle "The next colleague is being built
+  now.", carrying the Project Manager tile in the single tile row.
+- Subtitle now "Two products and one advisory service, available now. One mission. Each
+  earns the next."
+
+### Verifier
+- `/opt/qcai/scripts/website/verify_advisory.py` re-ruled: Admin Core first, Advisory in
+  the top row before Project Manager, Project Manager under the IN DEVELOPMENT heading.
+  Seen RED 41/44 against the previous dev tree, GREEN 44/44 on this one.
+
+---
+
 ## 2026-09-07: Advisory service page, Products & Services rename
 
 Branch `feature/advisory` off `dev` (dev first fast-forwarded to main `aaed67b`, ten

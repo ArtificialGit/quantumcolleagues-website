@@ -8,6 +8,65 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-07: Advisory service page, Products & Services rename
+
+Branch `feature/advisory` off `dev` (dev first fast-forwarded to main `aaed67b`, ten
+Career & Beyond commits that had gone to main through the GitHub web UI). Spec:
+`claude/ADVISORY_PRODUCT_SPEC.md` in the business project. Jonathan's rulings in
+session: Advisory tile last, after Project Manager; the nav item becomes "Products &
+Services" site wide with `products.html` keeping its address; no price on the page,
+"talk to us" only. Verifier written first and seen RED 7/40 before any edit:
+`/opt/qcai/scripts/website/verify_advisory.py`, logs in `test_results/` beside it.
+Mutation run (bare "AI training" inserted, nav label reverted, tile link broken) went
+RED 37/42 for those reasons, so the checks are live. GREEN 42/42 on the final tree.
+
+### advisory.html, new
+- Built on the `admincore.html` construction: header with a "Products & Services"
+  back link, strapline, faces ribbon, Trafalgar and teal, Poppins.
+- Eyebrow "AI Advisory", headline "We build your capability, not your dependency.",
+  standfirst from the spec. Sections: What you get (the four approved bullets, tile
+  alongside), How an engagement runs (Map, Build together, Hand over, closing on "The
+  best AI advisers work themselves out of a job."), Who it is for (SMEs, regulated
+  businesses, hedged as "designed to support what your sector's regulator expects", no
+  regulator named), Why we do this (buy side model, post-AI training, link to
+  mission.html).
+- Enquiry form: name, email, message, FormSubmit relay to
+  information@quantumcolleagues.org, subject "Advisory enquiry from {name}", no
+  HubSpot capture and no tracking. Same success and failure handling as the Admin Core
+  form.
+- Meta: title "AI Advisory for SMEs and regulated businesses", plain description,
+  Service JSON-LD. No em dashes, no ISO claim, no client named.
+
+### advisory-tile.png, new
+- 1080x1080 in the Project Manager tile construction: navy ground, teal glyph tile with
+  a three node route, "Advisory", QUANTUMCOLLEAGUES eyebrow, "You own the capability,
+  not a contract.", "Map · Build together · Hand over", strapline, footer. Built in
+  the session with Poppins from Google Fonts; badge reads "Available now".
+
+### products.html
+- Page title "PRODUCTS & SERVICES", subtitle "Three product categories and one
+  advisory service. One mission. Each earns the next."
+- New SERVICES section after the three product stages and before Partner With Us,
+  carrying the Advisory tile in the stage-box construction with a teal top rule and
+  "Explore Advisory" link. Two CSS rules added for the single tile row.
+- Title, Open Graph and Twitter titles and the shared description reworded to cover
+  products and services; Advisory Service added to the JSON-LD graph.
+- The lede read "funds supporting AI training"; that is the banned phrase and it now
+  reads "funds that support free post-AI training". Pre-existing, fixed in passing.
+- Not changed, flagged for Jonathan: Proust still sits before Admin Core in the stage
+  row, against the standing "Admin Core first" rule. Reordering the tiles was not
+  asked for.
+
+### index.html, guide.html, resources.html, admincore.html, proust.html, mission.html
+- Every label on a link to `products.html` now reads "Products & Services" (nav pills
+  on the home page, the Mission · Products footers on the guide and resources pages,
+  the back links on the Admin Core and Proust pages, and the two mission page links).
+
+### sitemap.xml
+- `advisory.html` added after `products.html`.
+
+---
+
 ## 2026-09-04: Career & Beyond v5.20.0, the front door
 
 Deployed on Jonathan's explicit "Push 20.0". career-beyond.html and sw.js (career-beyond-v5.20.0).

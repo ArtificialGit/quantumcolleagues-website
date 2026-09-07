@@ -8,6 +8,30 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-07, evening: QC phone number on the site
+
+Jonathan's go, 7 September, after the CircleLoop number +44 333 880 0712 went live for
+QuantumColleagues. Verifier written first and seen RED 21/41 before any edit:
+`/opt/qcai/scripts/website/verify_phone.py`, logs in `test_results/` beside it. GREEN
+41/41 after; `verify_advisory.py` re-run GREEN so nothing regressed.
+
+### contact.html
+- New "Call us" info box under "Email us directly", tel: link to +443338800712, display
+  form 0333 880 0712, note that a message is returned the same day.
+- Meta, Open Graph and Twitter descriptions now mention the number.
+
+### All 16 pages with the company small print
+- The small print line carries "Tel 0333 880 0712" as a tel: link after the company
+  number. Both separator forms (`&middot;` and the literal middle dot on
+  proust-privacy.html) handled.
+
+### index.html
+- Organization JSON-LD (#org) carries `telephone` "+44 333 880 0712".
+
+Not deployed. Awaiting Jonathan's go to promote.
+
+---
+
 ## 2026-09-07, later: products page shuffle, Advisory in the top row, Project Manager below
 
 Jonathan: "Why don't we shuffle this so Services are on the top line too and PM is on

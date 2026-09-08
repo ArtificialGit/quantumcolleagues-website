@@ -1,3 +1,8 @@
+## 2026-09-08 [C] Thoughts blog launched
+- New /thoughts/ section: index plus first article, "You don't need to burn cloud tokens on every job." (AI Thoughts for SMEs No. 1).
+- Added Thoughts to the homepage About-nav between Mission and Press; appended to footer link rows site-wide for reach.
+- sitemap.xml updated. House rules held: buy-side, post-AI training wording, no ISO claim, company numbers only, no residential address.
+
 # CHANGELOG — quantumcolleagues-website
 
 Newest first. One entry per change, written when the change is made.

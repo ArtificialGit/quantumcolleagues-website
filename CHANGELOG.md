@@ -28,7 +28,10 @@ QuantumColleagues. Verifier written first and seen RED 21/41 before any edit:
 ### index.html
 - Organization JSON-LD (#org) carries `telephone` "+44 333 880 0712".
 
-Not deployed. Awaiting Jonathan's go to promote.
+Promoted to main on Jonathan's go ("Promote"), 8 September 2026, 11:25 UK: dev fast-forwarded to
+main at 59b237c, both verifiers green immediately before, live page checked after (tel link on
+contact.html, telephone in the homepage JSON-LD). Note: this repo has no promote.sh; the
+fast-forward with the verifier gate is the route this repo has always used. PD5 gap logged.
 
 ---
 

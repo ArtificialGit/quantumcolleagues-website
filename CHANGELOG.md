@@ -1,3 +1,7 @@
+## 2026-09-11 [C] Pilot copy: Q3 -> 2026 Pilot spaces open
+- Replaced the stale "Q3 pilot places open" wording with "2026 Pilot spaces open" across mission.html, products.html and admincore.html: the two product chips, the Admin Core pilots section heading, the JSON-LD Service description, the descriptive lines, and the two apply buttons ("Apply for a 2026 Pilot space").
+- All remaining "Q3" pilot framing removed. #pilot anchors/ids and chip CSS classes unchanged. Buy-side and post-AI wording untouched.
+
 ## 2026-09-08 [C] Thoughts blog launched
 - New /thoughts/ section: index plus first article, "You don't need to burn cloud tokens on every job." (AI Thoughts for SMEs No. 1).
 - Added Thoughts to the homepage About-nav between Mission and Press; appended to footer link rows site-wide for reach.

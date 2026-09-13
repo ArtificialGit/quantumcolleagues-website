@@ -1,3 +1,8 @@
+## 2026-09-13 Career & Beyond v5.23.1 — touch taps on the tree front door
+- On a phone, taps only registered within ~40 units of the thin drawn branch line, so tapping a branch's name pill did nothing, and the mouse-vs-touch detection on the tap was unreliable. Fixed.
+- Every branch now carries a full-width invisible tap target, and a tap is matched to the branch actually touched (label, line or leaf) rather than by distance to the line. First tap on a phone selects and names the branch, a second tap opens it, and tapping a different branch re-selects. Desktop mouse behaviour is unchanged.
+- Commit 08b9d5b, sw cache career-beyond-v5.23.1, 232,946 bytes gzipped. Verified RED on v5.23.0 and GREEN on the fix in real Chromium (five touch checks added) and live on the phone-width site; smoke and axe clean.
+
 ## 2026-09-13 Career & Beyond v5.23.0 — the living tree front door
 - The home screen becomes the tree. Eight named, touch-responsive branches replace the picture-plus-three-buttons front door: a draw-on entrance, a name in a pill at each tip, and until the first touch the tree lights each branch in turn to show what a touch does. Near a branch it fills with colour and says what the work is; a click opens it, and on a phone the first tap names it and the second opens it.
 - The tree is now the front door. One "Not sure? Find my next job" button sits beneath it (the guided path), with the skills finder and Ask the tree as quiet links. Life beyond work is the top branch, so it is no longer a separate button.

@@ -1,3 +1,14 @@
+## 2026-09-13 Career & Beyond v5.23.0 — the living tree front door
+- The home screen becomes the tree. Eight named, touch-responsive branches replace the picture-plus-three-buttons front door: a draw-on entrance, a name in a pill at each tip, and until the first touch the tree lights each branch in turn to show what a touch does. Near a branch it fills with colour and says what the work is; a click opens it, and on a phone the first tap names it and the second opens it.
+- The tree is now the front door. One "Not sure? Find my next job" button sits beneath it (the guided path), with the skills finder and Ask the tree as quiet links. Life beyond work is the top branch, so it is no longer a separate button.
+- Keyboard: each branch is a focusable button (focus lights it, Enter opens). Reduced motion shows the finished tree at once. Dark theme unchanged. The tree breathes on the compositor and runs no per-frame JavaScript once settled; the old 6.2s hero timeline and leaf-drop loop are gone.
+- Nothing else in the app changes. Bundle career-beyond.html, sw cache career-beyond-v5.23.0, 232,844 bytes gzipped, commit ed59298. Verified in real Chromium desktop and mobile (36 checks) and live in Chrome; the guided path and every earlier screen re-checked; smoke and axe clean.
+
+## 2026-09-08 Career & Beyond v5.22.0 + v5.22.1 — the Engineers branch, the guided path, and a count fix (logged after the fact)
+- v5.22.0 (commit c7cacc9) shipped two things together. The guided path (v5.21.0): "Find my next job" asks one question per screen with big buttons, the full screens kept behind quiet "More" links, and the role dossier collapsed to job, pay and next step with a "See the whole job" expander. And the eighth branch, Engineers, with Family 1 (mechanical, electrical and manufacturing): nine roles, honest technician-up ladders, pay from the National Careers Service, a readiness graph and a See-it-done video each. The whole tree was redrawn for eight branches.
+- v5.22.1 (commit 692cd78) fixed home-screen counts the new branch had made stale.
+- These two releases went live in September but were not recorded here at the time; logged now for the record.
+
 ## 2026-09-11 [C] Pilot copy: Q3 -> 2026 Pilot spaces open
 - Replaced the stale "Q3 pilot places open" wording with "2026 Pilot spaces open" across mission.html, products.html and admincore.html: the two product chips, the Admin Core pilots section heading, the JSON-LD Service description, the descriptive lines, and the two apply buttons ("Apply for a 2026 Pilot space").
 - All remaining "Q3" pilot framing removed. #pilot anchors/ids and chip CSS classes unchanged. Buy-side and post-AI wording untouched.

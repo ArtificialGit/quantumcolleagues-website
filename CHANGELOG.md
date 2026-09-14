@@ -17,6 +17,38 @@ here. Everything before this date has to be read out of `git log`.
 
 ---
 
+## 2026-09-14: Thoughts, "People decide. Agent colleagues do the work." (Carousel 14a)
+
+Branch `feature/thought-people-decide` off dev. Jonathan's ask on 14 September: add
+Carousel 14a to the weekly blog using the PDF, with his post text. Verifier written first
+and seen RED 5/23 before any edit: `/opt/qcai/scripts/website/verify_thought_pd.py`, logs
+in `test_results/` beside it. GREEN 23/23 after.
+
+### thoughts/people-decide.html, new
+- Built on the `dont-burn-cloud-tokens.html` construction. The navy thought card is
+  replaced by the Carousel 14a group card as the hero image (nine faces, Human Strand
+  scheme), then his post text in the article body, then pages 2 and 3 of the carousel
+  side by side and a link to the three page PDF. Close band and footer unchanged.
+- Text is his 14 September post with three touches: the brand spelt QuantumColleagues,
+  "amplifying outputs" read as "amplifying the outputs", and one sentence added after the
+  threshold model paragraph, "Anything with real world consequences stops with a named
+  person, and their decision is logged against them." (the card's own line). The LinkedIn
+  hashtags are left off, per the standing rule that hashtags are not coded into the site.
+  "Get in touch" links to contact.html.
+- Meta and Open Graph describe the piece; og:image is the group card.
+
+### thoughts/ assets, new
+- `people-decide-card.jpg`, `people-decide-page2.jpg`, `people-decide-page3.jpg` (900px
+  web copies of the carousel pages) and `QC_PeopleDecide_LinkedIn_3pp.pdf`.
+
+### thoughts/index.html
+- New item at the top of the list, label "Safe and responsible AI", dated 14 September.
+
+### sitemap.xml
+- `thoughts/people-decide.html` added; `thoughts/` lastmod moved to 2026-09-14.
+
+---
+
 ## 2026-09-07, evening: QC phone number on the site
 
 Jonathan's go, 7 September, after the CircleLoop number +44 333 880 0712 went live for

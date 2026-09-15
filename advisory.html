@@ -66,6 +66,10 @@
         .stage-box .stage-tag { font-size: 0.78rem; font-weight: 600; color: var(--dusk); }
         .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--trafalgar); font-weight: 700; padding: 0 0.5rem; margin-top: 3rem; }
         .close-line { font-size: 1.05rem; font-weight: 500; color: #050830; margin-top: 0.5rem; }
+        /* ===== THREE WAYS TO START ===== */
+        .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .offer-cta { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; font-weight: 600; color: var(--teal); text-decoration: none; }
+        .offer-cta:hover { text-decoration: underline; }
         /* ===== WHO IT IS FOR ===== */
         .columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0; }
         .column { border-top: 3px solid var(--trafalgar); padding-top: 1.2rem; }
@@ -100,6 +104,7 @@
             .feature-row { grid-template-columns: 1fr; }
             .columns { grid-template-columns: 1fr; gap: 1.5rem; }
             .stages { grid-template-columns: 1fr; gap: 1rem; }
+            .offers { grid-template-columns: 1fr; gap: 1rem; }
             .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
             footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
         }
@@ -202,6 +207,36 @@
         </div>
 
         <p class="close-line">The best AI advisers work themselves out of a job.</p>
+
+        <!-- THREE WAYS TO START -->
+        <div class="section-break"></div>
+
+        <h2 class="section-title">THREE WAYS TO START</h2>
+        <p class="section-subtitle">Fixed scope, fixed price, and you keep everything we produce.</p>
+
+        <div class="offers">
+            <div class="stage-box">
+                <p class="stage-num">GET STARTED</p>
+                <h3>AI Adoption Kick-start</h3>
+                <p class="stage-body">Find out where AI actually belongs in your business, and leave with a plan to put it there. Over two days we look at what you do and find where AI genuinely helps. The Accelerate workshop reviews your current AI direction, looks at how well your technology set-up supports it, and maps how to take AI across the organisation using our proprietary methodology, focused on the areas that matter most to you. You leave with priorities, a sequence and a clear first move.</p>
+                <p class="stage-tag">Two days, including the Accelerate workshop</p>
+                <a class="offer-cta" href="#enquire">Talk to us &rarr;</a>
+            </div>
+            <div class="stage-box">
+                <p class="stage-num">GOVERNANCE</p>
+                <h3>AI Implementation and Governance Review</h3>
+                <p class="stage-body">You are using AI somewhere. Can you show who signed it off? In one day we review how your organisation uses AI and digital tools and tell you what to fix first. You get a findings note listing every tool in use, what it touches and who signs off, a prioritised action list that is small enough to actually do, and an evidence map so nothing is rebuilt in a hurry when your regulator or a client asks. It is auditable by design, and written for owners and managers.</p>
+                <p class="stage-tag">One day</p>
+                <a class="offer-cta" href="#enquire">Talk to us &rarr;</a>
+            </div>
+            <div class="stage-box">
+                <p class="stage-num">CARE SECTOR</p>
+                <h3>AI Implementation and Governance Review (Care Sector)</h3>
+                <p class="stage-body">When the inspector asks how your AI is governed, have the answer ready. This is the care sector edition of our governance review, with the extra depth a regulated care setting needs and the evidence an inspector looks for. It supports the CQC Regulation 17 conversation on good governance and accurate records. You get the same findings note, action list and evidence map, mapped to the questions a registered manager gets asked. It is not an audit, and it makes no claim on your behalf. It gives you the evidence to make your own case.</p>
+                <p class="stage-tag">Two days</p>
+                <a class="offer-cta" href="#enquire">Talk to us &rarr;</a>
+            </div>
+        </div>
 
         <!-- WHO IT IS FOR -->
         <div class="section-break"></div>

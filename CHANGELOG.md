@@ -1,3 +1,9 @@
+## 2026-09-15 [C] Advisory: three fixed-scope offers under Advisory
+- New "THREE WAYS TO START" section on advisory.html between "How an engagement runs" and "Who it is for": AI Adoption Kick-start (two days, including the Accelerate workshop), AI Implementation and Governance Review (one day), and AI Implementation and Governance Review (Care Sector) (two days). Each card links to the enquiry form. No price on the page, "Talk to us" only, per the standing rule.
+- Additive CSS only: a three-up .offers grid reusing the existing .stage-box card, collapsing to one column at the phone breakpoint, and an .offer-cta link style. No existing rule changed.
+- Copy rules held: no internal codename ("our proprietary methodology"), general offers say "your regulator" and "auditable by design", no ISO 42001 claim, no em dashes. The care offer names CQC in the hedged form "supports the CQC Regulation 17 conversation" only; ruled by Jonathan 2026-09-15, and the 7 September "no CQC on advisory" check in verify_advisory.py is replaced by a hedged-form-only check, seen RED against "CQC approved".
+- Verifiers on the Spark: verify_advisory_offers.py written first, RED 9/20 on the untouched page, GREEN 20/20 after; verify_advisory.py GREEN 44/44. Logs in /opt/qcai/scripts/website/test_results/.
+
 ## 2026-09-13 Career & Beyond v5.23.1 — touch taps on the tree front door
 - On a phone, taps only registered within ~40 units of the thin drawn branch line, so tapping a branch's name pill did nothing, and the mouse-vs-touch detection on the tap was unreliable. Fixed.
 - Every branch now carries a full-width invisible tap target, and a tap is matched to the branch actually touched (label, line or leaf) rather than by distance to the line. First tap on a phone selects and names the branch, a second tap opens it, and tapping a different branch re-selects. Desktop mouse behaviour is unchanged.

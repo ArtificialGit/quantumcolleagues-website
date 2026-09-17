@@ -1,3 +1,8 @@
+## 2026-09-17 [C] Human-AI Operating Model page: OECD quote lifted to a bold band under the diagram
+- The OECD callout moved from its lower position (after the threshold model) to a bold navy band sitting directly under the loop and above the three layers, so the global-standard quote is high on the page and hard to miss. White quote on navy, teal eyebrow "The global standard for human-AI working", the OECD/LEGAL/0449 reference and the 47-government line beneath, closing on "people decide".
+- The "human determination, a human in the loop" aside was trimmed from the band to keep it punchy at the top; it stays in the white paper. The verbatim OECD quote and the formal reference are unchanged.
+- "What this makes possible" is unchanged. No copy elsewhere changed. Verifier 43/43, house rules held.
+
 ## 2026-09-17 [C] Human-AI Operating Model page: human-centred strand and OECD anchor
 - Lede extended to name amplification and the organisation gaining capacity without headcount, so the page opens on people and the business, not on the control mechanism alone.
 - New "Grounded in the global standard" callout quotes the OECD Recommendation on Artificial Intelligence (OECD/LEGAL/0449) verbatim on capacity for human agency and oversight, attributed with the formal reference, the 2019 adoption and 2024 update, and the 47-government adherence, and closes on "people decide".

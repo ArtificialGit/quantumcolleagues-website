@@ -86,10 +86,12 @@
         .ac-block h2 { font-size: 1rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; line-height: 1.4; }
         .ac-block p { font-size: 0.9rem; color: var(--warm-ink); line-height: 1.65; }
         /* ===== OECD CALLOUT ===== */
-        .oecd-quote { background: var(--traf-tint); border-left: 4px solid var(--trafalgar); border-radius: 4px; padding: 1.5rem 1.8rem; max-width: 900px; margin: 0 0 1rem; }
-        .oecd-quote p.q { font-size: 1.02rem; line-height: 1.7; color: #050830; font-weight: 500; margin-bottom: 0.8rem; }
-        .oecd-quote p.c { font-size: 0.8rem; color: var(--dusk); line-height: 1.55; }
-        .oecd-quote p.c strong { color: var(--trafalgar); font-weight: 600; }
+        .oecd-band { background: var(--navy); border-radius: 6px; padding: 2rem 2.2rem; margin: 0 0 2.5rem; box-shadow: 0 6px 32px rgba(5,8,48,0.14); }
+        .oecd-band .oecd-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-on-dark); margin-bottom: 0.9rem; }
+        .oecd-band .oecd-q { font-size: 1.22rem; line-height: 1.6; color: #ffffff; font-weight: 400; margin-bottom: 1rem; }
+        .oecd-band .oecd-src { font-size: 0.82rem; line-height: 1.6; color: #B7BFD6; }
+        .oecd-band .oecd-src strong { color: #ffffff; font-weight: 600; }
+        @media (max-width: 768px) { .oecd-band { padding: 1.5rem 1.4rem; } .oecd-band .oecd-q { font-size: 1.08rem; } }
         /* ===== ENQUIRY ===== */
         .join-section { background: var(--stone); border-top: 3px solid var(--trafalgar); padding: 3rem 2rem; text-align: center; }
         .join-inner { max-width: 520px; margin: 0 auto; }
@@ -162,6 +164,12 @@
             </video>
         </div>
 
+        <div class="oecd-band">
+            <p class="oecd-eyebrow">The global standard for human-AI working</p>
+            <p class="oecd-q">"AI actors should implement mechanisms and safeguards, such as capacity for human agency and oversight, including to address risks arising from uses outside of intended purpose, intentional misuse, or unintentional misuse in a manner appropriate to the context and consistent with the state of the art."</p>
+            <p class="oecd-src"><strong>OECD, Recommendation of the Council on Artificial Intelligence (OECD/LEGAL/0449)</strong>, adopted 2019, updated 2024, and adhered to by 47 governments including the United Kingdom. We put it in three words: people decide.</p>
+        </div>
+
         <div class="ac-blocks">
             <div class="ac-block" style="border-top-color:#E8630A;">
                 <h2>01 Your people</h2>
@@ -209,14 +217,6 @@
                 <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Where the data lives</span></div>
                     <div class="item-desc">Managed means the colleagues run in our private inference environment, hosted in the UK or the EU. Appliance means the whole system runs on hardware inside your own building, so your data never leaves your network. Both carry the same gate, thresholds and log.</div></div>
             </div>
-        </div>
-
-        <div class="section-break"></div>
-        <h2 class="section-title">Grounded in the global standard</h2>
-        <p class="section-subtitle">The most widely adopted AI standard in the world asks for exactly this.</p>
-        <div class="oecd-quote">
-            <p class="q">"AI actors should implement mechanisms and safeguards, such as capacity for human agency and oversight, including to address risks arising from uses outside of intended purpose, intentional misuse, or unintentional misuse in a manner appropriate to the context and consistent with the state of the art."</p>
-            <p class="c"><strong>OECD, Recommendation of the Council on Artificial Intelligence (OECD/LEGAL/0449)</strong>, adopted 2019 and updated 2024, now adhered to by 47 governments including the United Kingdom. The same principle names human determination, a human in the loop, as one of those safeguards. We put it in three words: people decide.</p>
         </div>
 
         <div class="section-break"></div>

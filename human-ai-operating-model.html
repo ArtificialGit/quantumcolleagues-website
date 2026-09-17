@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Human-AI Operating Model | People decide. AI colleagues do the work. | QuantumColleagues™</title>
+    <meta name="description" content="How a business puts AI colleagues to work in its back office while its own people stay in the driving seat. The Human-AI operating model, in plain English, with the white paper to request.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="QuantumColleagues™">
+    <meta property="og:title" content="The Human-AI Operating Model | QuantumColleagues™">
+    <meta property="og:description" content="People decide. AI colleagues do the work. How a business puts AI colleagues to work in its back office while its own people stay in the driving seat, with the white paper to request.">
+    <meta property="og:url" content="https://quantumcolleagues.org/human-ai-operating-model.html">
+    <link rel="canonical" href="https://quantumcolleagues.org/human-ai-operating-model.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy:         #050830;
+            --trafalgar:    #1C3E5E;
+            --teal:         #2D8C6F;
+            --paper:        #F5F2F2;
+            --stone:        #ECE7E6;
+            --warm-div:     #E0D9D9;
+            --dusk:         #6F6772;
+            --warm-ink:     #352F38;
+            --teal-tint:    #E4F0EB;
+            --traf-tint:    #E2E8EF;
+            --teal-on-dark: #8FC9B4;
+        }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--paper); color: var(--warm-ink); line-height: 1.6; }
+        header { padding: 1.5rem 3rem; border-bottom: 1px solid var(--warm-div); display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; letter-spacing: -0.3px; color: #050830; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-size: 0.85rem; color: var(--trafalgar); text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .strapline-strip { background: var(--stone); border-bottom: 1px solid var(--warm-div); padding: 0.7rem 1rem; text-align: center; }
+        .strapline-text { font-size: 0.78rem; font-weight: 400; color: var(--dusk); letter-spacing: 0.18em; text-transform: uppercase; }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        .page { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+        .page-title { font-size: 2.2rem; font-weight: 300; color: #050830; margin-bottom: 0.3rem; letter-spacing: -0.5px; }
+        .divider { height: 1px; background: var(--warm-div); margin-bottom: 1.5rem; }
+        .lede { font-size: 0.95rem; color: var(--warm-ink); line-height: 1.7; margin-bottom: 2rem; max-width: 900px; }
+        .ac-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
+        .ac-cta { margin-bottom: 0.5rem; }
+        .ac-cta a { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--trafalgar); text-decoration: none; border-bottom: 2px solid var(--teal); padding-bottom: 0.2rem; }
+        .ac-cta a:hover { color: #163248; }
+        /* ===== WHAT YOU GET: bullets + tile ===== */
+        .feature-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin: 2rem 0; }
+        .feature-list .item { margin-bottom: 1.2rem; }
+        .feature-list .item-title { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.2rem; }
+        .feature-list .item-bullet { color: var(--trafalgar); font-size: 0.6rem; margin-top: 0.4rem; flex-shrink: 0; }
+        .feature-list .item-title span { font-size: 0.95rem; font-weight: 600; color: #050830; }
+        .feature-list .item-desc { font-size: 0.85rem; color: var(--dusk); margin-left: 1rem; line-height: 1.55; }
+        .social-img { width: 100%; border-radius: 12px; box-shadow: 0 6px 32px rgba(5,8,48,0.14); display: block; }
+        .section-break { height: 1px; background: var(--warm-div); margin: 3rem 0 2rem; }
+        .section-title { font-size: 1.8rem; font-weight: 300; color: #050830; margin-bottom: 0.3rem; }
+        .section-subtitle { font-size: 0.9rem; color: var(--dusk); margin-bottom: 2rem; }
+        /* ===== HOW AN ENGAGEMENT RUNS ===== */
+        .stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: start; margin-bottom: 2rem; }
+        .stage-box { background: #ffffff; border: 1px solid var(--warm-div); border-top: 3px solid var(--trafalgar); border-radius: 4px; padding: 1.5rem; }
+        .stage-box h3 { font-size: 1rem; font-weight: 700; color: #050830; margin-bottom: 0.3rem; }
+        .stage-box .stage-num { font-size: 0.75rem; color: var(--trafalgar); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+        .stage-box .stage-body { font-size: 0.85rem; color: var(--dusk); line-height: 1.55; margin-bottom: 0.6rem; }
+        .stage-box .stage-tag { font-size: 0.78rem; font-weight: 600; color: var(--dusk); }
+        .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--trafalgar); font-weight: 700; padding: 0 0.5rem; margin-top: 3rem; }
+        .close-line { font-size: 1.05rem; font-weight: 500; color: #050830; margin-top: 0.5rem; }
+        /* ===== THREE WAYS TO START ===== */
+        .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .offer-cta { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; font-weight: 600; color: var(--teal); text-decoration: none; }
+        .offer-cta:hover { text-decoration: underline; }
+        /* ===== WHO IT IS FOR ===== */
+        .columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0; }
+        .column { border-top: 3px solid var(--trafalgar); padding-top: 1.2rem; }
+        .column h3 { font-size: 1.1rem; font-weight: 600; color: var(--trafalgar); margin-bottom: 0.2rem; }
+        .column .col-subtitle { font-size: 0.8rem; color: var(--dusk); font-weight: 400; margin-bottom: 1rem; }
+        .column p { font-size: 0.85rem; color: var(--dusk); line-height: 1.55; }
+        /* ===== THE MODEL ===== */
+        .model-box { background: var(--teal-tint); border-radius: 4px; padding: 1.4rem 1.6rem; max-width: 900px; font-size: 0.92rem; line-height: 1.7; }
+        .model-box a { color: var(--teal); font-weight: 600; text-decoration: none; }
+        .model-box a:hover { text-decoration: underline; }
+        /* ===== THE MODEL (video) AND THREE BLOCKS ===== */
+        .ac-model { margin: 0 0 2.5rem; border-radius: 4px; overflow: hidden; }
+        .ac-blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .ac-block { border-top: 3px solid var(--teal); padding-top: 1rem; }
+        .ac-block h2 { font-size: 1rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; line-height: 1.4; }
+        .ac-block p { font-size: 0.9rem; color: var(--warm-ink); line-height: 1.65; }
+        /* ===== ENQUIRY ===== */
+        .join-section { background: var(--stone); border-top: 3px solid var(--trafalgar); padding: 3rem 2rem; text-align: center; }
+        .join-inner { max-width: 520px; margin: 0 auto; }
+        .join-title { font-size: 1.3rem; font-weight: 600; color: #050830; margin-bottom: 0.5rem; }
+        .join-sub { font-size: 0.88rem; color: var(--dusk); margin-bottom: 1.4rem; line-height: 1.5; }
+        .join-form { display: flex; flex-direction: column; gap: 0.6rem; max-width: 460px; margin: 0 auto; }
+        .join-input { width: 100%; padding: 0.65rem 1rem; border: 1px solid var(--warm-div); border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; color: var(--warm-ink); outline: none; background: #fff; }
+        .join-input:focus { border-color: var(--trafalgar); }
+        textarea.join-input { min-height: 110px; resize: vertical; }
+        .join-btn { padding: 0.65rem 1.4rem; background: var(--trafalgar); color: #fff; border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+        .join-btn:hover { background: #163248; }
+        .join-thanks { font-size: 0.88rem; color: var(--trafalgar); font-weight: 500; margin-top: 0.6rem; }
+        /* ===== FOOTER ===== */
+        footer { border-top: 1px solid var(--warm-div); margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { color: var(--trafalgar); text-decoration: none; font-weight: 500; }
+        footer .right { color: var(--dusk); }
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .page { padding: 2rem 1.5rem; }
+            .page-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.4rem; }
+            .feature-row { grid-template-columns: 1fr; }
+            .ac-blocks { grid-template-columns: 1fr; gap: 1.5rem; }
+            .columns { grid-template-columns: 1fr; gap: 1.5rem; }
+            .stages { grid-template-columns: 1fr; gap: 1rem; }
+            .offers { grid-template-columns: 1fr; gap: 1rem; }
+            .arrow { margin-top: 0; transform: rotate(90deg); padding: 0.3rem; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+<style>.faces-ribbon{position:relative;height:82px;overflow:hidden;background:#050830;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}#ribbonMosaic{position:absolute;inset:0;display:grid;grid-auto-rows:82px;gap:2px;}#ribbonMosaic .rt{background-color:#0d1240;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease;}.ribbon-overlay{position:absolute;inset:0;background:rgba(5,8,48,0.22);pointer-events:none;}</style><meta property="og:image" content="https://quantumcolleagues.org/QC_OperatingModel_Exploded_Faces_Poster.jpg">
+<meta property="og:image:width" content="1120">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Human-AI operating model: your people, the approval gate, AI colleagues">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Human-AI Operating Model | QuantumColleagues™">
+<meta name="twitter:description" content="People decide. AI colleagues do the work. How a business puts AI colleagues to work in its back office while its own people stay in the driving seat.">
+<meta name="twitter:image" content="https://quantumcolleagues.org/QC_OperatingModel_Exploded_Faces_Poster.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <span class="logo-text">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <a href="mission.html" class="back-link">&larr; Mission</a>
+    </header>
+
+    <!-- STRAPLINE -->
+    <div class="strapline-strip">
+        <span class="strapline-text">Do some good with AI<span class="dot">.</span></span>
+    </div><div class="faces-ribbon"><div id="ribbonMosaic" data-qc-faces data-tile="82"></div><div class="ribbon-overlay"></div></div>
+
+    <!-- ADVISORY -->
+    <div class="page">
+        <p class="ac-eyebrow">The Human-AI operating model</p>
+        <h1 class="page-title">People decide. AI colleagues do the work.</h1>
+        <div class="divider"></div>
+
+        <p class="lede">
+            We designed our human-AI operating model to ensure that people are in the driving seat and their work is amplified, not replaced. Here is the whole idea in one moving picture, the plain English behind it, and a white paper you can request.
+        </p>
+
+        <div class="ac-model" style="background:#fff;border:1px solid var(--warm-div);">
+            <video class="ac-model-frame" style="aspect-ratio:16/9;width:100%;max-width:100%;height:auto;display:block;" autoplay muted loop playsinline poster="QC_OperatingModel_Exploded_Faces_Poster.jpg">
+                <source src="QC_OperatingModel_Exploded_Faces_web.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="ac-blocks">
+            <div class="ac-block" style="border-top-color:#E8630A;">
+                <h2>01 Your people</h2>
+                <p>Named, accountable, and still in charge. Anything with consequence comes to a person, and the record shows who. Deciding is a lighter job than doing, so their time goes on judgement.</p>
+            </div>
+            <div class="ac-block" style="border-top-color:#2D648C;">
+                <h2>02 The approval gate</h2>
+                <p>A rule, not a person: anything with consequence stops here. It is written down before go live, agreed with the people who sit at it, and it is not a setting the AI can change. No colleague holds the send button.</p>
+            </div>
+            <div class="ac-block">
+                <h2>03 AI colleagues</h2>
+                <p>One coordinated set of agents. They read, sort, draft, look things up in your own policies and answer with citations, keep the log, and produce the daily report. They prepare and they never decide.</p>
+            </div>
+        </div>
+
+        <div class="section-break"></div>
+        <h2 class="section-title">The consequence test</h2>
+        <p class="section-subtitle">How you decide what crosses the gate.</p>
+        <p class="lede">Ask one question of each kind of work: if this went wrong, who would have to put it right, and could they? If the honest answer is a person, a customer or a regulator, it stops at the gate. If the colleague would simply do it again correctly, it stays below.</p>
+        <div class="feature-row">
+            <div class="feature-list">
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Stays below the gate</span></div>
+                    <div class="item-desc">Sorting and filing the inbox. Drafting routine replies with the sources attached. Answering internal questions from your own policies, with citations. Keeping the log and producing the daily report. The reminders and chasers the business has agreed.</div></div>
+            </div>
+            <div class="feature-list">
+                <div class="item"><div class="item-title"><span class="item-bullet" style="color:#E8630A;">&#9632;</span><span>Stops at the gate</span></div>
+                    <div class="item-desc">Anything sent to a customer, a family, a supplier or a regulator. A change to a client, resident or employee record. Anything contractual, financial or a statutory notification. Anything that touches a regulated decision in your sector. A complaint, a disciplinary, or anything a person would want to see first.</div></div>
+            </div>
+        </div>
+
+        <div class="section-break"></div>
+        <h2 class="section-title">The threshold model</h2>
+        <p class="section-subtitle">What each colleague may and may not do on its own.</p>
+        <div class="feature-row">
+            <div>
+                <p class="lede" style="margin-bottom:1rem;">For every kind of work a colleague handles, its permissions are written down in plain English before it goes live, agreed with the business, held outside the model, and enforced by the platform on every action. A prompt that says "be careful" is not a control, because a control only counts if it holds without the AI's cooperation.</p>
+                <p class="lede" style="margin-bottom:1rem;">A colleague starts cautious. As it proves itself, the business can widen what it does alone. If it gets something wrong in a way the system can verify, its permission for that kind of work narrows at once and a person is told. Widening it again is a human decision, never an automatic one.</p>
+                <p class="lede">Every action is logged with what it did, why, what it relied on, and who approved it. That is what we mean by auditable by design. The design is built to support what your sector's regulator expects, rather than to claim compliance on your behalf.</p>
+            </div>
+            <div class="feature-list">
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Four questions, answered before go live</span></div>
+                    <div class="item-desc">Who decides. What needs a decision. Who is accountable. What gets written down. If a provider cannot answer all four for your business in plain English, the operating model is not there yet, whatever the product can do.</div></div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Named accountability</span></div>
+                    <div class="item-desc">An AI colleague cannot be accountable. Before go live the business names, in writing, who owns the system, who runs it day to day, who is responsible for the technical side, and who reviews it against the rules of the sector.</div></div>
+                <div class="item"><div class="item-title"><span class="item-bullet">&#9632;</span><span>Where the data lives</span></div>
+                    <div class="item-desc">Managed means the colleagues run in our private inference environment, hosted in the UK or the EU. Appliance means the whole system runs on hardware inside your own building, so your data never leaves your network. Both carry the same gate, thresholds and log.</div></div>
+            </div>
+        </div>
+
+        <div class="section-break"></div>
+        <h2 class="section-title">The white paper</h2>
+        <p class="section-subtitle">Ten pages. The model, the consequence test, a week in the back office, how to get started, and ten questions to ask anyone offering you AI for your business.</p>
+        <div class="feature-row">
+            <div>
+                <img class="social-img" src="QC_HumanAI_OperatingModel_WhitePaper_Cover.jpg" alt="The Human-AI Operating Model, a QuantumColleagues white paper">
+            </div>
+            <div>
+                <p class="lede" style="margin-bottom:1rem;">Leave your name and email and we will send it to you. We use your details only to send the paper and to reply if you write back.</p>
+                <form class="join-form" id="wpForm" novalidate>
+                    <input class="join-input" type="text" id="wp-name" placeholder="Your name" required autocomplete="name">
+                    <input class="join-input" type="email" id="wp-email" placeholder="your@email.com" required autocomplete="email">
+                    <input class="join-input" type="text" id="wp-org" placeholder="Your company (optional)" autocomplete="organization">
+                    <button class="join-btn" type="submit">Send me the white paper</button>
+                    <p style="font-size:0.72rem;line-height:1.5;color:#8a8a8a;margin-top:0.3rem;text-align:center;">We use your details only to send the paper and to reply to you. Read our <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+                    <p id="wp-error" hidden style="color:#b3261e;font-size:0.85rem;"></p>
+                    <p style="font-size:0.8rem;color:#6F6772;margin-top:0.5rem;">Your request comes straight to us. We reply personally with the paper, usually the same day.</p>
+                </form>
+                <div id="wp-success" hidden style="padding:1rem 0;">
+                    <p style="font-weight:600;color:#2D8C6F;margin:0 0 6px;">&#10003;&nbsp; Request received</p>
+                    <p style="font-size:0.85rem;color:#6F6772;margin:0;">Thank you. We reply personally with the paper, usually the same day.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-break"></div>
+        <h2 class="section-title">Why we do it this way</h2>
+        <p class="lede">QuantumColleagues is half owned by an asset locked community interest company. SMEs and regulated businesses buy our AI products and advisory services, and the profits then fund free post-AI training and career planning for people from every walk of life. So when we say people decide, we mean it twice over. <a href="mission.html" style="color: var(--teal); font-weight: 600; text-decoration: none;">Read the mission &rarr;</a> &nbsp; <a href="admincore.html" style="color: var(--trafalgar); font-weight: 600; text-decoration: none;">Admin Core, this model as a product &rarr;</a> &nbsp; <a href="advisory.html" style="color: var(--trafalgar); font-weight: 600; text-decoration: none;">Advisory, learn to run it yourselves &rarr;</a></p>
+    </div>
+
+    <footer>
+        <span class="logo-text" style="font-size:1rem;">
+            <span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span>
+        </span>
+        <span class="right">Quantum Colleagues Training Community Interest Company. <a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="/thoughts/">Thoughts</a></span>
+    </footer>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">© QuantumColleagues Ltd 2026 · Company No. 17219359 · <a href="tel:+443338800712" style="color:inherit;text-decoration:none;">Tel 0333 880 0712</a> · 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></p>
+
+    <script>
+(function(){
+  var f=document.getElementById("wpForm"); if(!f) return;
+  var n=document.getElementById("wp-name"), e=document.getElementById("wp-email"),
+      o=document.getElementById("wp-org"), er=document.getElementById("wp-error"),
+      ok=document.getElementById("wp-success"),
+      bt=f.querySelector("button[type=submit]"), BL=bt.innerHTML,
+      NL=String.fromCharCode(10),
+      EP="https://formsubmit.co/ajax/information@quantumcolleagues.org",
+      HP="https://api-eu1.hsforms.com/submissions/v3/integration/submit/147863903/4f765d73-e3ee-4776-ab46-f78df30e2354";
+  function crm(nm,em,og){/* best-effort CRM capture; email is the system of record */
+    try{
+      var fs=[{name:"email",value:em}],sp=nm.split(/\s+/);
+      if(sp[0]){fs.push({name:"firstname",value:sp[0]});}
+      if(sp.length>1){fs.push({name:"lastname",value:sp.slice(1).join(" ")});}
+      if(og){fs.push({name:"company",value:og});}
+      fetch(HP,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({fields:fs,context:{pageUri:"https://quantumcolleagues.org/human-ai-operating-model.html",pageName:"Human-AI Operating Model white paper request"}})
+      }).catch(function(){});
+    }catch(x){}
+  }
+  function ve(s){var at=s.indexOf("@"),d=s.lastIndexOf(".");return at>0&&d>at+1&&d<s.length-1;}
+  function fail(nm,em,og){
+    bt.disabled=false; bt.innerHTML=BL;
+    var sub="White paper request: Human-AI Operating Model",
+        bd="Please send me the Human-AI Operating Model white paper."+NL+NL+"Name: "+nm+NL+"Email: "+em+(og?NL+"Company: "+og:"");
+    er.innerHTML='Sorry, that did not go through. Please <a href="mailto:information@quantumcolleagues.org?subject='+
+      encodeURIComponent(sub)+'&body='+encodeURIComponent(bd)+'" style="color:inherit;">email us directly</a> instead.';
+    er.hidden=false;
+  }
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault(); er.hidden=true;
+    var nm=(n.value||"").trim(), em=(e.value||"").trim(), og=(o.value||"").trim();
+    if(!nm||!em){er.textContent="Please fill in your name and email.";er.hidden=false;return;}
+    if(!ve(em)){er.textContent="Please enter a valid email address.";er.hidden=false;e.focus();return;}
+    bt.disabled=true; bt.innerHTML="Sending&hellip;";
+    fetch(EP,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({name:nm,email:em,company:og||undefined,
+        message:"Please send me the Human-AI Operating Model white paper.",
+        _subject:"White paper request: Human-AI Operating Model",_replyto:em,_template:"table"})
+    }).then(function(r){return r.json();})
+      .then(function(j){ if(j&&(j.success===true||j.success==="true")){ crm(nm,em,og); f.hidden=true; ok.hidden=false; } else { fail(nm,em,og); } })
+      .catch(function(){ fail(nm,em,og); });
+  });
+})();
+</script>
+<script src="qc-faces.js"></script></body></html>

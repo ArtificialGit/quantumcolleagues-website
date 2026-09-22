@@ -1,3 +1,9 @@
+## 2026-09-22 [C] Thoughts: First steps (Carousel 15, five pages)
+- New thoughts/first-steps.html on the people-decide construction: cover card as hero, the three rules as short paragraphs, pages 2 to 5 in a grid, the five page PDF link, the free guide (guide.html) as the one call to action, close band unchanged. Listed first on thoughts/index.html under "Getting started", added to sitemap.xml (thoughts/ lastmod 2026-09-22).
+- Assets: first-steps-cover.jpg, first-steps-page2.jpg to page5.jpg (900px), QC_FirstSteps_LinkedIn_5pp.pdf. Cover photograph Pexels 17006770. Carousel rebuilt 21 September to the five page shape after Jonathan's feedback (one idea per page, one call to action); the same set is filed in OneDrive folder 15.
+- Copy rules held: buy side, post-AI training, no sell family words, no hashtags, no em dashes, no ISO claim, QuantumColleagues spelling, Pexels credit in the footer.
+- Verifier on the Spark: /opt/qcai/scripts/website/verify_thought_fs.py written first (PD18), RED 6/28 on the untouched dev checkout 22 September 08:31 BST, GREEN after the build (log in test_results/).
+
 ## 2026-09-17 [C] Human-AI Operating Model page: OECD quote lifted to a bold band under the diagram
 - The OECD callout moved from its lower position (after the threshold model) to a bold navy band sitting directly under the loop and above the three layers, so the global-standard quote is high on the page and hard to miss. White quote on navy, teal eyebrow "The global standard for human-AI working", the OECD/LEGAL/0449 reference and the 47-government line beneath, closing on "people decide".
 - The "human determination, a human in the loop" aside was trimmed from the band to keep it punchy at the top; it stays in the white paper. The verbatim OECD quote and the formal reference are unchanged.

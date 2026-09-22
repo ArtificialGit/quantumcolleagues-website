@@ -1,3 +1,8 @@
+## 2026-09-22 [C] Resources: paid pack brought to the House Style; ISO wording ruled
+- Paid Practitioner packs section moved onto the QC palette: orange (#E8630A) removed; eyebrow and card top border now deep blue #2D648C, so paid packs read as a separate shelf from the teal free cards; Buy button on deep teal #1F6B53 (white on flat teal is only 4.1:1, per House Style v2).
+- ISO ruling by Jonathan 2026-09-22: QC describes its own system as "auditable by design, built using the ISO 42001 framework", never "aligned", "conformant" or "built to the standard". A product that teaches ISO 42001 may name the standard factually. Card copy updated to match.
+- Verifier verify_resources_paid.py extended with seven House Style and wording checks: RED 14/19 before the fix, GREEN 19/19 after; mutations (orange back on the button; old claim restored) both seen RED.
+
 ## 2026-09-22 [C] Resources: paid Practitioner packs section (ISO 42001 pack live)
 - New "Practitioner packs" section on resources.html, below the free grid, kept visually distinct (orange accent) so paid packs are never mixed into the "FREE, FOR EVERYONE" grid.
 - One card live: ISO 42001 Starter Pack, GBP 395, Buy button to its live Stripe payment link. Delivery stated honestly as "by email within one working day" (fulfilment is manual for now). Claim hedged: "not certification and it does not make you certified".

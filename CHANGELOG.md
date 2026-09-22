@@ -1,3 +1,9 @@
+## 2026-09-22 [C] Paid packs moved from Resources to Products & Services
+- Ruled by Jonathan 2026-09-22: Resources is free resources and apps only; anything paid lives under Products & Services.
+- resources.html restored exactly to its free-only state (a5175b2): the Practitioner packs section and its CSS removed.
+- products.html gains a PRACTITIONER PACKS section after the available products and before IN DEVELOPMENT: ISO 42001 Starter Pack, GBP 395, "a practical guide, and fourteen templates each with a prompt to drive it", buy button to the live Stripe link, delivery stated as by email within one working day. Built from the page's own stage-box card; deep blue #2D648C top border marks the pack shelf, buy button deep teal #1F6B53. Page subtitle now counts the pack. CASA runbook still not sold (no deliverable).
+- Verifier verify_products_packs.py covers both pages: RED 11/26 before, GREEN 26/26 after; mutations (paid card back on Resources, Advisory link broken, orange button) each seen RED. verify_resources_paid.py retired as superseded.
+
 ## 2026-09-22 [C] Resources: paid pack brought to the House Style; ISO wording ruled
 - Paid Practitioner packs section moved onto the QC palette: orange (#E8630A) removed; eyebrow and card top border now deep blue #2D648C, so paid packs read as a separate shelf from the teal free cards; Buy button on deep teal #1F6B53 (white on flat teal is only 4.1:1, per House Style v2).
 - ISO ruling by Jonathan 2026-09-22: QC describes its own system as "auditable by design, built using the ISO 42001 framework", never "aligned", "conformant" or "built to the standard". A product that teaches ISO 42001 may name the standard factually. Card copy updated to match.

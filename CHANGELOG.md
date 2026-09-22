@@ -1,3 +1,7 @@
+## 2026-09-22 [C] Mission: Admin Core first, live with clients
+- mission.html "What we sell": Admin Core now leads with the chip "Live with clients" (was second, "2026 Pilot spaces open"); Proust second, "Available now". Two standing rulings applied on the way: the "5–50 staff" band is gone from the Admin Core line (4 August, no size limit in copy) and Proust reads "private inside your own email services" rather than Microsoft 365 alone (9 July). Jonathan: "Yes, go ahead."
+- verify_seo_products.py gains three checks (order, no pilot chip or staff band, Proust wording): RED 36/39 before, GREEN 39/39 after.
+
 ## 2026-09-22 [C] Social Enterprise badge moved to the top of Mission, and onto the landing card
 - mission.html: the Certified Social Enterprise block now sits at the top of the page under the faces ribbon, above the mission hero, rather than at the foot; the badge loads eagerly. index.html: a compact badge (44px roundel, "Certified Social Enterprise", member number) under the pills on the landing card, linking to our SEUK directory entry. Ruled by Jonathan 22 September ("move that badge to the top of the mission page, or even the landing page").
 - Verifiers unchanged and GREEN: verify_seo_products.py 36/36, verify_thought_fs.py 28/28.

@@ -1,3 +1,10 @@
+## 2026-09-22 [C] Resources: paid Practitioner packs section (ISO 42001 pack live)
+- New "Practitioner packs" section on resources.html, below the free grid, kept visually distinct (orange accent) so paid packs are never mixed into the "FREE, FOR EVERYONE" grid.
+- One card live: ISO 42001 Starter Pack, GBP 395, Buy button to its live Stripe payment link. Delivery stated honestly as "by email within one working day" (fulfilment is manual for now). Claim hedged: "not certification and it does not make you certified".
+- CASA runbook deliberately NOT added: no sanitised customer deliverable exists yet, so no Buy button until it does (integrity, PD17). Foreshadowed in the "more on the way" line only.
+- Free resource grid untouched. Additive CSS only.
+- Verifier verify_resources_paid.py written first, RED 5/12 on the untouched page, GREEN 12/12 after; scoped to the paid section; mutation (ISO link swapped for CASA) seen RED. Logs in /opt/qcai/scripts/website/test_results/.
+
 ## 2026-09-22 [C] Mission: Admin Core first, live with clients
 - mission.html "What we sell": Admin Core now leads with the chip "Live with clients" (was second, "2026 Pilot spaces open"); Proust second, "Available now". Two standing rulings applied on the way: the "5–50 staff" band is gone from the Admin Core line (4 August, no size limit in copy) and Proust reads "private inside your own email services" rather than Microsoft 365 alone (9 July). Jonathan: "Yes, go ahead."
 - verify_seo_products.py gains three checks (order, no pilot chip or staff band, Proust wording): RED 36/39 before, GREEN 39/39 after.

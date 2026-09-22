@@ -1,3 +1,6 @@
+## 2026-09-22 [C] Social Enterprise UK badge links to our directory entry
+- mission.html: the Certified Social Enterprise badge now links to our entry in the SEUK directory (directory.socialenterprise.org.uk/s/detail/001PK00000vVIZJYA4) rather than the SEUK homepage. index.html: the same URL added to the Organization sameAs list. Verifier verify_seo_products.py extended with two checks, RED 34/36 before, GREEN 36/36 after.
+
 ## 2026-09-22 [C] Search: the site now says what we do, products first
 - Cause found on the report from Jonathan that Google and AI answer engines describe us as "AI training": the homepage carried no product names in its text, the Organization record described us as building AI "to fund free training", the CIC record said "free AI and career training" (bare phrase), and Mission and Press carried "sell AI to business" in their descriptions and copy.
 - index.html: title and description now lead with AI colleagues for UK business, Admin Core, Proust and Advisory, and the buy side line. Strapline reworded to name and link the three products (supersedes the June strapline). Organization JSON-LD: products first description, slogan, knowsAbout, and hasOfferCatalog with Admin Core, Proust and Advisory linking their pages. CIC JSON-LD says post-AI training and career planning, funded by businesses buying the products.

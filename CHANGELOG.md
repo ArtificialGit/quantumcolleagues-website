@@ -1,3 +1,7 @@
+## 2026-09-22 [C] Social Enterprise badge moved to the top of Mission, and onto the landing card
+- mission.html: the Certified Social Enterprise block now sits at the top of the page under the faces ribbon, above the mission hero, rather than at the foot; the badge loads eagerly. index.html: a compact badge (44px roundel, "Certified Social Enterprise", member number) under the pills on the landing card, linking to our SEUK directory entry. Ruled by Jonathan 22 September ("move that badge to the top of the mission page, or even the landing page").
+- Verifiers unchanged and GREEN: verify_seo_products.py 36/36, verify_thought_fs.py 28/28.
+
 ## 2026-09-22 [C] Social Enterprise UK badge links to our directory entry
 - mission.html: the Certified Social Enterprise badge now links to our entry in the SEUK directory (directory.socialenterprise.org.uk/s/detail/001PK00000vVIZJYA4) rather than the SEUK homepage. index.html: the same URL added to the Organization sameAs list. Verifier verify_seo_products.py extended with two checks, RED 34/36 before, GREEN 36/36 after.
 

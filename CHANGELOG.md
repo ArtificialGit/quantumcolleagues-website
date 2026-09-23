@@ -1,3 +1,8 @@
+## 2026-09-22 [C] Products: pack buy button moved to Payhip for instant delivery
+- The ISO 42001 Starter Pack button now points at Payhip (https://payhip.com/b/pwmy3), which takes payment through QC's own Stripe account and delivers the download instantly. Product page checked: correct title, GBP 395, the final four-file zip (234 KB, matching the build).
+- Delivery line changed from "delivered by email within one working day" to "instant download after payment". The direct Stripe payment link is removed from the site; it had no delivery path.
+- Verifier verify_products_packs.py now expects the Payhip link and the instant-download line, and fails if the Stripe link returns: RED 24/27 before, GREEN 27/27 after; mutation (Stripe link restored) seen RED.
+
 ## 2026-09-22 [C] Paid packs moved from Resources to Products & Services
 - Ruled by Jonathan 2026-09-22: Resources is free resources and apps only; anything paid lives under Products & Services.
 - resources.html restored exactly to its free-only state (a5175b2): the Practitioner packs section and its CSS removed.

@@ -1,3 +1,7 @@
+## 2026-09-23 [C] Impact: the ledger shows the one real figure, 2,105 Career & Beyond users
+- impact.html: the four zero metrics (people trained, hours, partnerships, reinvested) and their Year-1 goal bars are replaced by a single metric, 2,105 people have used Career & Beyond, figure in the HTML so it reads without script; the count-up keeps working. Note rewritten (no "start at zero", no "pilots from Q3 2026"). Last updated 23 September 2026. Proust line moved to "your own email services" (9 July ruling). Jonathan: "remove the Ledger from impact.html or just replace it with 2105 users on Career & Beyond".
+- Verifier /opt/qcai/scripts/website/verify_impact.py written first, RED 2/9 on dev, GREEN 9/9 after.
+
 ## 2026-09-23 [C] Products: pack joins the main row (four up), responsive grid, accessibility pass
 - Asked by Jonathan 23 Sep: on desktop the pack sat in its own section about a screen and a half down (rendered at 1440px, heading at y=1338), below a row of three that read as complete. It is now the fourth card in the main row: Admin Core, Proust, Advisory, ISO 42001 Starter Pack. The separate PRACTITIONER PACKS section is removed.
 - New tile iso42001-pack-tile.jpg (1080px, House Style v2), generated on the Spark by /opt/qcai/scripts/website/make_pack_tile.py so it can be rebuilt.

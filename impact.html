@@ -82,6 +82,7 @@
         .ledger-note { font-size: 0.85rem; color: #6b6e8a; margin-bottom: 1.4rem; max-width: 760px; }
         .ledger-note b { color: #050830; font-weight: 600; }
         .ledger { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+        .ledger-one { grid-template-columns: minmax(0, 420px); }
         .metric { border: 1px solid #e6e6e6; border-radius: 4px; padding: 1.4rem; }
         .metric .num { font-size: 2.4rem; font-weight: 700; color: #050830; line-height: 1.05; }
         .metric .of { font-size: 0.8rem; color: #8c8eaf; margin-bottom: 0.2rem; }
@@ -187,37 +188,19 @@
         <p class="section-kicker">The ledger</p>
         <h2 class="section-title">The count, in the open.</h2>
         <p class="ledger-note">
-            We start the count at <b>zero</b> &mdash; on purpose. Every figure here is one you can check.
-            The live count begins with our first customer (pilots from Q3 2026); the goals shown are our
-            Year-1 targets from the QuantumColleagues Impact Measurement Framework.
+            One real figure today, and it is one you can check: the number of people who have used
+            <b>Career &amp; Beyond</b>, our free careers tool, since it launched in July 2026. Training and
+            funding figures join it as the first cohorts run; nothing goes on this page before it has happened.
         </p>
-        <div class="ledger">
+        <div class="ledger ledger-one">
             <div class="metric">
-                <div class="num" data-key="people">0</div>
-                <div class="of">of <span data-goal="people">500</span></div>
-                <div class="label">People trained</div>
-                <div class="bar"><span data-fill="people"></span></div>
-            </div>
-            <div class="metric">
-                <div class="num" data-key="hours">0</div>
-                <div class="of">of <span data-goal="hours">2,000</span></div>
-                <div class="label">Training hours delivered</div>
-                <div class="bar"><span data-fill="hours"></span></div>
-            </div>
-            <div class="metric">
-                <div class="num" data-key="partnerships">0</div>
-                <div class="of">of <span data-goal="partnerships">75</span></div>
-                <div class="label">Mentoring partnerships</div>
-                <div class="bar"><span data-fill="partnerships"></span></div>
-            </div>
-            <div class="metric">
-                <div class="num" data-key="reinvested" data-money="1">&pound;0</div>
-                <div class="of">of <span data-goal="reinvested">&pound;100,000</span></div>
-                <div class="label">Reinvested in the mission</div>
-                <div class="bar"><span data-fill="reinvested"></span></div>
+                <div class="num" data-key="users">2,105</div>
+                <div class="of">people</div>
+                <div class="label">have used Career &amp; Beyond</div>
+                <div class="bar"><span data-fill="users"></span></div>
             </div>
         </div>
-        <p class="updated">Last updated <span id="updated">25 June 2026</span>.</p>
+        <p class="updated">Last updated <span id="updated">23 September 2026</span>.</p>
 
         <!-- VERIFY -->
         <p class="section-kicker">Don&rsquo;t take our word for it</p>
@@ -243,7 +226,7 @@
         <!-- CTA -->
         <div class="cta">
             <h3>Want your spend to do two jobs?</h3>
-            <p>Proust is the founder&rsquo;s assistant that runs inside your Microsoft 365 &mdash; and every subscription feeds the ledger above.</p>
+            <p>Proust is the founder&rsquo;s assistant that runs inside your own email services &mdash; and every subscription feeds the ledger above.</p>
             <a class="btn" href="proust.html">Meet Proust</a>
             <a class="alt" href="proust.html#co-found">Join the founding circle &rarr;</a>
         </div>
@@ -264,9 +247,9 @@
     // goals:     Year-1 targets from the Impact Measurement Framework.
     // ─────────────────────────────────────────────────────────────────────
     const LEDGER = {
-        updated: "25 June 2026",
-        delivered: { people: 0,   hours: 0,    partnerships: 0,  reinvested: 0 },
-        goals:     { people: 500, hours: 2000, partnerships: 75, reinvested: 100000 }
+        updated: "23 September 2026",
+        delivered: { users: 2105 },
+        goals:     { users: 2105 }
     };
 
     (function () {

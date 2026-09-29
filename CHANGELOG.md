@@ -1,3 +1,10 @@
+## 2026-09-29 [C] Admin Core tile replaced: no ISO alignment claim, no rotas, no orange
+- The Admin Core tile (products.html card, and the same image inline as base64 on admincore.html) said "Every action fully auditable, and aligned with ISO 42001", listed Rotas, carried an em dash and an orange glow. That breaks the 22 Sep ruling (QC says "auditable by design, built using the ISO 42001 framework", never "aligned"), the 24 Jun rotas ruling and the no-orange rule. Jonathan asked for it fixed on 29 Sep.
+- New admin-core-tile.jpg, 1080x1080, House Style v2, built by /opt/qcai/scripts/website/make_admin_core_tile.py to match the ISO pack tile: "The AI back office crew", "Admin Core.", "People decide. AI colleagues do the work.", "Every action is auditable by design.", HR, Finance, Correspondence, Compliance, Dashboards. No ISO line at all, no on-premises-only claim.
+- admincore.html now shows the file instead of the 19 KB inline copy; alt texts rewritten without dashes.
+- Verifier /opt/qcai/scripts/website/verify_admin_core_tile.py (OCR, hash, orange check) written first, RED 6/12 on dev, GREEN 12/12 after; mutation (old tile and old page restored) RED 6/12. verify_products_packs.py still GREEN 41/41.
+- dev was fast-forwarded to main first: two Career & Beyond commits (ec3acd9, 2fbc7f0) had gone straight to main.
+
 ## 2026-09-29 Career & Beyond v5.23.2 — GoatCounter, the real service worker and embedded fonts restored
 - GoatCounter had recorded nothing since 27 August. The cause was the v5.9.0 deploy (commit 1655145, 27 Aug 18:04 UK): it was rebuilt straight from the master, which never held three production steps that v5.8.0 carried, and every release since shipped without them.
 - Restored, exactly as v5.8.0 shipped them: the GoatCounter loader (analytics count again), the real sw.js registration (new visitors since 27 Aug had no offline support because a dev stub browsers refuse shipped instead), and five embedded Poppins weights (the app had been fetching fonts from Google on every visit, against the nothing-collected promise).

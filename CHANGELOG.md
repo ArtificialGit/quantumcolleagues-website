@@ -1,3 +1,9 @@
+## 2026-09-29 [C] Admin Core tile: June artwork restored, wording fixed only
+- Jonathan on the c80522e tile: "What's wrong with the orange glow and the dash? Now it just looks like ms clipart". The June artwork (Post9_AdminCore_Hero_1080x1080.png) is back at full 1080, orange glow kept by his ruling as an exception to the 22 Sep no-orange rule.
+- Only the body and module lines change: "Run it on your own hardware so your data stays local, or let us manage it for you. Every action is auditable by design." and "Dashboards, Finance, Administration / Correspondence, HR, Recruitment". Gone: "aligned with ISO 42001", rotas, the dash, and the on-premises-only body claim. Headline "Your on-premises AI admin team." is unchanged from June.
+- Method recorded in /opt/qcai/scripts/website/fix_admin_core_tile_june_art.py (inpaint and reset). File carried in by the standing upload route (R-2026-09-22-01), sha256 2c31e30c.
+- verify_admin_core_tile.py: orange check withdrawn by that ruling; new checks for 1080 size and no "infrastructure" claim. GREEN 13/13; mutation (June original restored) RED.
+
 ## 2026-09-29 [C] Admin Core tile replaced: no ISO alignment claim, no rotas, no orange
 - The Admin Core tile (products.html card, and the same image inline as base64 on admincore.html) said "Every action fully auditable, and aligned with ISO 42001", listed Rotas, carried an em dash and an orange glow. That breaks the 22 Sep ruling (QC says "auditable by design, built using the ISO 42001 framework", never "aligned"), the 24 Jun rotas ruling and the no-orange rule. Jonathan asked for it fixed on 29 Sep.
 - New admin-core-tile.jpg, 1080x1080, House Style v2, built by /opt/qcai/scripts/website/make_admin_core_tile.py to match the ISO pack tile: "The AI back office crew", "Admin Core.", "People decide. AI colleagues do the work.", "Every action is auditable by design.", HR, Finance, Correspondence, Compliance, Dashboards. No ISO line at all, no on-premises-only claim.

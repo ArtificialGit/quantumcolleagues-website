@@ -1,3 +1,9 @@
+## 2026-09-29 Career & Beyond v5.23.2 — GoatCounter, the real service worker and embedded fonts restored
+- GoatCounter had recorded nothing since 27 August. The cause was the v5.9.0 deploy (commit 1655145, 27 Aug 18:04 UK): it was rebuilt straight from the master, which never held three production steps that v5.8.0 carried, and every release since shipped without them.
+- Restored, exactly as v5.8.0 shipped them: the GoatCounter loader (analytics count again), the real sw.js registration (new visitors since 27 Aug had no offline support because a dev stub browsers refuse shipped instead), and five embedded Poppins weights (the app had been fetching fonts from Google on every visit, against the nothing-collected promise).
+- All three now live in the master, not a deploy step, so a plain rebuild cannot drop them again. New verifier verify_v5232_prod.js checks them statically and live: GREEN on v5.8.0, RED 9 on v5.23.1, GREEN on this build. Full regression, smoke and axe clean.
+- Commit ec3acd9, sw cache career-beyond-v5.23.2, 269,561 bytes gzipped (the fonts account for the rise). Verified live: GoatCounter counting again, no Google Fonts request, embedded fonts loaded, sw.js registered. GoatCounter holds no record from 28 Aug to 29 Sept; that gap cannot be recovered.
+
 ## 2026-09-29 [C] Thoughts: National Care Service post published as a thought
 - New thoughts/national-care-service.html from Jonathan's LinkedIn post of 29 Sep, in the QC voice: "PM" written out as Prime Minister, "actual patient care" made "actual care" and "the people it looks after", "a care provider teams' week" made "a care provider's week", hashtags dropped, Admin Core and the mailbox linked. Photo thoughts/national-care-service.jpg (Pexels 24122399, 1200x675, no words) carried in by the standing upload route (R-2026-09-22-01).
 - thoughts/index.html lists it first under Social care; sitemap.xml adds the page and bumps thoughts/ to 2026-09-29.

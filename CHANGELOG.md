@@ -1,3 +1,11 @@
+## 2026-09-29 [C] SEO batch 1: titles, descriptions and sitemap for search
+- Search Console (domain property, read 29 Sep): 6 pages indexed, 86 discovered but not indexed. Sitemap read today, 100 URLs. Jonathan: "I wish to marginally compromise linguistic quality for SEO", then "build".
+- Titles cut to 60 characters or fewer with no em dash, keyword first: index, mission, products, human-ai-operating-model, thoughts/first-steps, thoughts/national-care-service, impact, admincore (separator only). Titles are keyword fragments by his ruling; descriptions stay full sentences.
+- Descriptions cut to 160 characters or fewer: index, mission, products, proust, human-ai-operating-model, thoughts/first-steps, thoughts/national-care-service, impact. Homepage still names Admin Core, Proust and Advisory (22 Sep rule). Proust description drops Todoist to fit.
+- sitemap.xml adds gated-autonomy.html (live, getting impressions, never listed), lastmod 2026-09-07.
+- Social card tags (og, twitter) left unchanged on purpose. Homepage static text (S5) held for Jonathan: it changes the one-screen landing design.
+- Verifier /opt/qcai/scripts/website/verify_seo_batch1.py written first (html.parser, companion assertions), RED 80/103 on the branch base, GREEN 103/103 after. Mutations seen RED: sitemap entry removed, old title, long description, noindex, bare "AI training", Proust before Admin Core.
+- verify_thought_fs.py "article title set" moved to the new First Steps title by this ruling; RED on the old title. verify_seo_products.py GREEN 39/39.
 ## 2026-09-29 [C] Advisory: AI First Steps offer for micro and small businesses
 - Jonathan asked to link Instagram to the advisory page and carry the new pico offer there. New section id="first-steps" sits above THREE WAYS TO START, so the bio link https://quantumcolleagues.org/advisory.html#first-steps lands on it.
 - Offer as ruled on 29 Sep: one two-hour session, in person or on video, £149 one off, no contract and no monthly fee. Hook leads with their problem (too much admin, not enough hours). Learning and training charities get the session free. Button goes to #enquire until the Stripe Payment Link exists (payment route ruled Stripe, 29 Sep).

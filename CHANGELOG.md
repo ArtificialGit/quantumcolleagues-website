@@ -1,3 +1,8 @@
+## 2026-09-29 [C] Thoughts: National Care Service post published as a thought
+- New thoughts/national-care-service.html from Jonathan's LinkedIn post of 29 Sep, in the QC voice: "PM" written out as Prime Minister, "actual patient care" made "actual care" and "the people it looks after", "a care provider teams' week" made "a care provider's week", hashtags dropped, Admin Core and the mailbox linked. Photo thoughts/national-care-service.jpg (Pexels 24122399, 1200x675, no words) carried in by the standing upload route (R-2026-09-22-01).
+- thoughts/index.html lists it first under Social care; sitemap.xml adds the page and bumps thoughts/ to 2026-09-29.
+- Verifier /opt/qcai/scripts/website/verify_thought_ncs.py written first, RED 13/34 on dev, GREEN 34/34 after.
+
 ## 2026-09-23 [C] Impact: closing call to action leads with Admin Core
 - impact.html foot: "Meet Admin Core" is the button, Proust the quiet second link; the line now says Admin Core is live with clients and every contract feeds the ledger. Jonathan: "Yes to Admin Core". verify_impact.py gains the ordering check, GREEN 10/10.
 

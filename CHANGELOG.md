@@ -1,3 +1,8 @@
+## 2026-09-29 [C] Advisory: AI First Steps offer for micro and small businesses
+- Jonathan asked to link Instagram to the advisory page and carry the new pico offer there. New section id="first-steps" sits above THREE WAYS TO START, so the bio link https://quantumcolleagues.org/advisory.html#first-steps lands on it.
+- Offer as ruled on 29 Sep: one two-hour session, in person or on video, £149 one off, no contract and no monthly fee. Hook leads with their problem (too much admin, not enough hours). Learning and training charities get the session free. Button goes to #enquire until the Stripe Payment Link exists (payment route ruled Stripe, 29 Sep).
+- Verifier /opt/qcai/scripts/website/verify_first_steps.py written first, RED 4/13 on dev, GREEN 13/13 after. The ordering check first matched a CSS comment and was fixed to match the section heading. Mutation (£149 a month added) RED 11/13. verify_advisory_offers.py GREEN 20/20 and verify_advisory.py GREEN 44/44.
+
 ## 2026-09-29 [C] Admin Core tile: June artwork restored, wording fixed only
 - Jonathan on the c80522e tile: "What's wrong with the orange glow and the dash? Now it just looks like ms clipart". The June artwork (Post9_AdminCore_Hero_1080x1080.png) is back at full 1080, orange glow kept by his ruling as an exception to the 22 Sep no-orange rule.
 - Only the body and module lines change: "Run it on your own hardware so your data stays local, or let us manage it for you. Every action is auditable by design." and "Dashboards, Finance, Administration / Correspondence, HR, Recruitment". Gone: "aligned with ISO 42001", rotas, the dash, and the on-premises-only body claim. Headline "Your on-premises AI admin team." is unchanged from June.

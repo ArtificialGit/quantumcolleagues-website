@@ -1,3 +1,8 @@
+## 2026-09-30 [C] Landing page: CE badge made compact (132px smart badge removed)
+- Jonathan on the live 132px smart badge: "That has just completely ruined my landing page. Revert or find a way to shrink the CE logo. In fact just put a smaller version of it in if that won't work."
+- The registry iframe cannot shrink cleanly (fixed 132px frame with its own padding and BM tick), so it is removed. In its place: a compact badge styled like the SEUK one (se-mini), the official Certified mark (ce-badge.png, taken unmodified from the registry, transparent padding trimmed, 110x132 for 3x sharpness) at 44px high, text "Cyber Essentials certified / IASME certificate. Select to verify.", linked to the live registry record.
+- Verifier verify_ce_badge.py v2 written first, RED 5/15 on dev, GREEN 15/15 after. Full website sweep GREEN.
+
 ## 2026-09-30 [C] Landing page: Cyber Essentials smart badge next to the SEUK badge
 - QuantumColleagues Ltd is Cyber Essentials certified (v3.3, whole organisation, certificate ca91350c-7794-435e-bffc-05f62d934634, issued 30 Sep 2026, recertification due 30 Sep 2027, Certification Body FIG Group). Jonathan, 30 Sep: "Can we get the image on our landing page now please", then "Shouldn't we use the website smart badge I gave you the URL for?"
 - index.html: the SEUK badge and the IASME/Blockmark live smart badge now sit in one centred badge row (.badge-row), SEUK first. The iframe is the embed code as supplied (132x132, transparent, tooltip bottom, lazy), with a title added for screen readers. SEUK markup unchanged; its top margin moves to the row.

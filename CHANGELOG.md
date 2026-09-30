@@ -1,3 +1,11 @@
+## 2026-09-30 [C] Proust: project reports added to proust.html and the Proust privacy policy
+- Jonathan, 30 Sep: "I also want the proust page on the website updated to reflect our new functionality."
+- proust.html: a sixth job, Reports on your projects (plan from mail copied or forwarded to Proust, weekly report, slipped and undated work, monthly roadmap, PRINCE2, APM or Scrum terms, switched on by the founder). Hero, independence band, subtitle, Google card (built-in planner, no extra Google access), Microsoft card (Planner board read only, never changed) and Your data (built only from mail sent to Proust, report to you alone) updated. Meta description now names the weekly project report (134 characters).
+- proust-privacy.html: new Project reports section (off until switched on; plan only from Proust's own mailbox, never the rest of the inbox; Tasks.Read read only for Planner; no extra Google access; report to the founder alone; same retention). Effective date moved to 30 September 2026.
+- Claims held to what quantum QE-134 builds (master 8587ea7). Chasing, approvals, Planner writes and the status board are not built and are not claimed. "Founder Assist+" not used until the PLATFORM naming map carries it.
+- HOLD: merge to main waits for the QE-134 deploy to the Droplet and for Tasks.Read on the Proust Azure app, so the page never runs ahead of the product.
+- Verifier /opt/qcai/scripts/website/verify_proust_pm.py written first, RED 9/32 on dev, GREEN 32/32 after. Mutations RED: a chasing claim (30/32); a Planner write claim with the old effective date (29/32). Edit script add_proust_pm.py (exact single matches or it writes nothing). verify_seo_batch1.py 103/103, verify_seo_products.py 39/39, verify_phone.py 43/43 still GREEN.
+
 ## 2026-09-29 [C] SEO batch 1: titles, descriptions and sitemap for search
 - Search Console (domain property, read 29 Sep): 6 pages indexed, 86 discovered but not indexed. Sitemap read today, 100 URLs. Jonathan: "I wish to marginally compromise linguistic quality for SEO", then "build".
 - Titles cut to 60 characters or fewer with no em dash, keyword first: index, mission, products, human-ai-operating-model, thoughts/first-steps, thoughts/national-care-service, impact, admincore (separator only). Titles are keyword fragments by his ruling; descriptions stay full sentences.

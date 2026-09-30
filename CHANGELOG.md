@@ -1,3 +1,8 @@
+## 2026-09-30 [C] Landing page: trust box bottom left (CE logo and SEUK badge), card restored
+- Jonathan: "put them both in a grey overlay box bottom left away from the main logo and menu square. Design first." Two designs rendered (A: in-card row, B: trust box). His choice: "Make B happen. I like."
+- The badge row leaves the card, so the card is back to its pre-30 Sep layout. A grey trust box (rgba(236,237,242,0.9), 10px radius, soft shadow) is fixed bottom left on wide screens and sits in flow under the card below 760px. It holds the Cyber Essentials Certified logo only (no text, 44px, aria-label, links to the live IASME registry record) and then the SEUK badge, unchanged.
+- Verifier verify_ce_badge.py v3 written first, RED 4/17 on dev, GREEN 17/17 after. Full website sweep GREEN (15 suites).
+
 ## 2026-09-30 [C] Landing page: CE badge made compact (132px smart badge removed)
 - Jonathan on the live 132px smart badge: "That has just completely ruined my landing page. Revert or find a way to shrink the CE logo. In fact just put a smaller version of it in if that won't work."
 - The registry iframe cannot shrink cleanly (fixed 132px frame with its own padding and BM tick), so it is removed. In its place: a compact badge styled like the SEUK one (se-mini), the official Certified mark (ce-badge.png, taken unmodified from the registry, transparent padding trimmed, 110x132 for 3x sharpness) at 44px high, text "Cyber Essentials certified / IASME certificate. Select to verify.", linked to the live registry record.

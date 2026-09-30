@@ -1,3 +1,9 @@
+## 2026-09-30 [C] Landing page: Cyber Essentials smart badge next to the SEUK badge
+- QuantumColleagues Ltd is Cyber Essentials certified (v3.3, whole organisation, certificate ca91350c-7794-435e-bffc-05f62d934634, issued 30 Sep 2026, recertification due 30 Sep 2027, Certification Body FIG Group). Jonathan, 30 Sep: "Can we get the image on our landing page now please", then "Shouldn't we use the website smart badge I gave you the URL for?"
+- index.html: the SEUK badge and the IASME/Blockmark live smart badge now sit in one centred badge row (.badge-row), SEUK first. The iframe is the embed code as supplied (132x132, transparent, tooltip bottom, lazy), with a title added for screen readers. SEUK markup unchanged; its top margin moves to the row.
+- The badge is live: the registry shows the certificate state, so a lapse shows there. Take the badge down if the certificate lapses. It certifies the company, not QCAI, Admin Core, Proust or client systems.
+- Verifier /opt/qcai/scripts/website/verify_ce_badge.py written first, RED 2/12 on dev, GREEN 12/12 after. Mutation (theme changed) RED 11/12. Full website verifier sweep GREEN (15 suites).
+
 ## 2026-09-30 [C] Proust: project reports added to proust.html and the Proust privacy policy
 - Jonathan, 30 Sep: "I also want the proust page on the website updated to reflect our new functionality."
 - proust.html: a sixth job, Reports on your projects (plan from mail copied or forwarded to Proust, weekly report, slipped and undated work, monthly roadmap, PRINCE2, APM or Scrum terms, switched on by the founder). Hero, independence band, subtitle, Google card (built-in planner, no extra Google access), Microsoft card (Planner board read only, never changed) and Your data (built only from mail sent to Proust, report to you alone) updated. Meta description now names the weekly project report (134 characters).

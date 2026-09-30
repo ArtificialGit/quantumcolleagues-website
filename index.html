@@ -118,6 +118,10 @@
         .se-mini img { flex:0 0 auto; border-radius:50%; }
         .se-mini span { text-align:left; }
         .se-mini:hover b { color:#1F6B53; }
+        /* Badge row: SEUK badge, then the live Cyber Essentials smart badge from the IASME registry. */
+        .badge-row { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:0.6rem 1.4rem; margin-top:1.3rem; }
+        .badge-row .se-mini { margin-top:0; }
+        .badge-row iframe { flex:0 0 auto; }
         .tagline a { color: #2D8C6F; font-weight: 500; text-decoration: none; }
         .tagline a:hover, .tagline a:focus-visible { text-decoration: underline; }
 
@@ -255,7 +259,7 @@
             <nav class="qc-pills" aria-label="Products and apps">
                 <a href="products.html">Products &amp; Services</a><a href="resources.html">Resource &amp; Apps</a><a href="career-beyond.html">Career &amp; Beyond</a>
             </nav>
-            <a class="se-mini" href="https://directory.socialenterprise.org.uk/s/detail/001PK00000vVIZJYA4" target="_blank" rel="noopener"><img src="seuk-badge.png" alt="Certified Social Enterprise, Business for Good, Social Enterprise UK" width="44" height="44"><span><b>Certified Social Enterprise</b><br>Recognised by Social Enterprise UK. Member no. 18075.</span></a>
+            <div class="badge-row"><a class="se-mini" href="https://directory.socialenterprise.org.uk/s/detail/001PK00000vVIZJYA4" target="_blank" rel="noopener"><img src="seuk-badge.png" alt="Certified Social Enterprise, Business for Good, Social Enterprise UK" width="44" height="44"><span><b>Certified Social Enterprise</b><br>Recognised by Social Enterprise UK. Member no. 18075.</span></a><iframe title="QuantumColleagues Ltd is Cyber Essentials certified: verify the certificate" src="https://registry.blockmarktech.com/certificates/ca91350c-7794-435e-bffc-05f62d934634/widget/?tooltip_position=bottom&amp;theme=transparent" style="border:none;height:132px;width:132px;" loading="lazy"></iframe></div>
         </div>
     </div>
 

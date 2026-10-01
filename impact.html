@@ -12,8 +12,9 @@
     <!--
       ───────────────────────────────────────────────────────────────────────
       LIVE LEDGER DATA  —  edit the numbers in the <script> block at the foot of
-      this file (const LEDGER) as real impact lands, then redeploy. The figures
-      default to zero ON PURPOSE: the count starts with our first customer.
+      this file (const LEDGER) as real impact lands, then redeploy. The Career &
+      Beyond count is live: it reads GoatCounter's public total on load and never
+      shows less than the recorded floor (1,685, GoatCounter's total to 27 Aug 2026).
       Year-1 goals are taken from the QuantumColleagues Impact Measurement
       Framework. The sample/template rows in that workbook are NOT published here.
       ───────────────────────────────────────────────────────────────────────
@@ -188,19 +189,21 @@
         <p class="section-kicker">The ledger</p>
         <h2 class="section-title">The count, in the open.</h2>
         <p class="ledger-note">
-            One real figure today, and it is one you can check: the number of people who have used
-            <b>Career &amp; Beyond</b>, our free careers tool, since it launched in July 2026. Training and
-            funding figures join it as the first cohorts run; nothing goes on this page before it has happened.
+            One real figure today, and it is one you can check: the number of visitors to
+            <b>Career &amp; Beyond</b>, our free careers tool, since it launched in July 2026. GoatCounter counts it
+            live, with no cookies and no personal data. A fault stopped the count from 28 August to
+            29 September 2026, so the true figure is higher than this one. Training and funding figures join it
+            as the first cohorts run; nothing goes on this page before it has happened.
         </p>
         <div class="ledger ledger-one">
             <div class="metric">
-                <div class="num" data-key="users">2,105</div>
-                <div class="of">people</div>
+                <div class="num" data-key="users">1,685</div>
+                <div class="of">visitors</div>
                 <div class="label">have used Career &amp; Beyond</div>
                 <div class="bar"><span data-fill="users"></span></div>
             </div>
         </div>
-        <p class="updated">Last updated <span id="updated">23 September 2026</span>.</p>
+        <p class="updated"><span id="updated">Counted live by GoatCounter</span>. <a href="https://quantumcolleagues.goatcounter.com/counter/TOTAL.json" target="_blank" rel="noopener">Check the raw count</a>.</p>
 
         <!-- VERIFY -->
         <p class="section-kicker">Don&rsquo;t take our word for it</p>
@@ -247,9 +250,12 @@
     // goals:     Year-1 targets from the Impact Measurement Framework.
     // ─────────────────────────────────────────────────────────────────────
     const LEDGER = {
-        updated: "23 September 2026",
-        delivered: { users: 2105 },
-        goals:     { users: 2105 }
+        updated: "Counted live by GoatCounter",
+        delivered: { users: 1685 },
+        goals:     { users: 1685 },
+        // users is read live from GoatCounter's public total. floor is GoatCounter's own total before
+        // the 28 Aug to 29 Sep 2026 outage; the page never shows less than it, even if the fetch fails.
+        live: { users: { url: "https://quantumcolleagues.goatcounter.com/counter/TOTAL.json", floor: 1685, timeoutMs: 6000 } }
     };
 
     (function () {
@@ -267,8 +273,34 @@
             el.textContent = fmt(LEDGER.goals[k], money);
         });
 
+        var ran = false;
+        function show(k, n) {
+            LEDGER.delivered[k] = n; LEDGER.goals[k] = Math.max(LEDGER.goals[k] || 0, n);
+            if (!ran) return;  // run() will animate to it
+            var el = document.querySelector('[data-key="' + k + '"]');
+            if (el) el.textContent = fmt(n, el.hasAttribute('data-money'));
+        }
+
+        // live figures: fetch, parse "1 687" style counts, never go below the floor
+        Object.keys(LEDGER.live || {}).forEach(function (k) {
+            var src = LEDGER.live[k];
+            LEDGER.delivered[k] = src.floor;
+            if (!window.fetch) return;
+            var ctl = window.AbortController ? new AbortController() : null;
+            var timer = ctl ? setTimeout(function () { ctl.abort(); }, src.timeoutMs) : null;
+            fetch(src.url, ctl ? { signal: ctl.signal, credentials: 'omit' } : { credentials: 'omit' })
+                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .then(function (j) {
+                    var n = parseInt(String(j && j.count).replace(/[^0-9]/g, ''), 10);
+                    if (isFinite(n) && n > src.floor) show(k, n);
+                })
+                .catch(function (e) { if (window.console) console.warn('Live count unavailable, showing the floor:', e && e.message); })
+                .then(function () { if (timer) clearTimeout(timer); });
+        });
+
         // animated delivered counters + bars
         function run() {
+            ran = true;
             document.querySelectorAll('[data-key]').forEach(function (el) {
                 var k = el.getAttribute('data-key');
                 var money = el.hasAttribute('data-money');
@@ -277,7 +309,7 @@
                 var dur = 1200, t0 = performance.now();
                 function step(now) {
                     var p = Math.min((now - t0) / dur, 1);
-                    el.textContent = fmt(target * p, money);
+                    el.textContent = fmt((LEDGER.delivered[k] || 0) * p, money);
                     if (p < 1) requestAnimationFrame(step);
                 }
                 requestAnimationFrame(step);

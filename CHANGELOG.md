@@ -1,3 +1,9 @@
+## 2026-10-01 [C] Landing page: simpler tagline, two main buttons above the menu
+- Jonathan, 1 Oct: tagline becomes "Automation and agent colleagues for UK SMEs, using secure and local AI." then "Our work funds free post-AI training for every generation." Two main buttons only, "Products and Services" and "Free Resources & Apps" (same links as before), above Mission, Thoughts, Press and Contact.
+- The Career & Beyond button leaves the landing page by his ruling; the app stays reachable from resources.html and mission.html.
+- Title, meta description and og:description are unchanged, so they still name Admin Core, Proust and Advisory for search.
+- Verifier verify_landing_simplify.py written first, RED 4/13 on dev, GREEN 13/13 after. Two older checks moved by this ruling (they encoded the 22 Sep homepage wording): verify_seo_products.py no longer needs the product names or "buy" in visible text (now checks UK SMEs and post-AI training; RED on the old page), and verify_advisory.py expects "Products and Services" on index.html. Backups in test_results. Full website sweep GREEN (17 suites).
+
 ## 2026-09-30 [C] Landing page: trust box bottom left (CE logo and SEUK badge), card restored
 - Jonathan: "put them both in a grey overlay box bottom left away from the main logo and menu square. Design first." Two designs rendered (A: in-card row, B: trust box). His choice: "Make B happen. I like."
 - The badge row leaves the card, so the card is back to its pre-30 Sep layout. A grey trust box (rgba(236,237,242,0.9), 10px radius, soft shadow) is fixed bottom left on wide screens and sits in flow under the card below 760px. It holds the Cyber Essentials Certified logo only (no text, 44px, aria-label, links to the live IASME registry record) and then the SEUK badge, unchanged.

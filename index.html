@@ -130,8 +130,8 @@
         .tagline a:hover, .tagline a:focus-visible { text-decoration: underline; }
 
         /* Menu. Was a run of links inside the tagline paragraph separated by
-           middle dots. Now two real navs: three quiet links, then three
-           destinations a visitor can go and use. */
+           middle dots. Now two real navs: the two main buttons first (1 Oct 2026),
+           then four quiet links. */
         .qc-nav {
             display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
             gap: 0 1.6rem; row-gap: 0.6rem; margin: 0 auto;
@@ -157,7 +157,7 @@
 
         .qc-pills {
             display: flex; flex-wrap: wrap; justify-content: center;
-            gap: 0.55rem; margin-top: 1.1rem;
+            gap: 0.55rem; margin-bottom: 1.1rem;
         }
 
         .qc-pills a {
@@ -168,7 +168,7 @@
             transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, opacity 0.22s ease;
         }
 
-        /* Only the one you are on stays lit. The other two step back. */
+        /* Only the one you are on stays lit. The other steps back. */
         .qc-pills:hover a, .qc-pills:focus-within a { opacity: 0.42; }
 
         .qc-pills a:hover, .qc-pills a:focus-visible {
@@ -216,7 +216,7 @@
             h1 { font-size: 1.5rem; margin-bottom: 1rem; }
             .tagline { margin-bottom: 1.1rem; }
             .container { padding: 2rem 3rem; }
-            .qc-pills { margin-top: 0.85rem; }
+            .qc-pills { margin-bottom: 0.85rem; }
         }
     </style>
 <meta property="og:type" content="website">
@@ -253,15 +253,16 @@
             <h1>Do some good with AI<span class="dot">.</span></h1>
 
             <p class="tagline">
-                AI colleagues for UK business: <a href="admincore.html">Admin Core</a>, <a href="proust.html">Proust</a> and <a href="advisory.html">Advisory</a>. Enabling the Human-AI operating model. Businesses buy our AI, and that funds free post-AI training for every generation.
+                Automation and agent colleagues for UK SMEs, using secure and local AI.<br>
+                Our work funds free post-AI training for every generation.
             </p>
+
+            <nav class="qc-pills" aria-label="Products and free resources">
+                <a href="products.html">Products and Services</a><a href="resources.html">Free Resources &amp; Apps</a>
+            </nav>
 
             <nav class="qc-nav" aria-label="About QuantumColleagues">
                 <a href="mission.html">Mission</a><a href="thoughts/">Thoughts</a><a href="press.html">Press</a><a href="contact.html">Contact</a>
-            </nav>
-
-            <nav class="qc-pills" aria-label="Products and apps">
-                <a href="products.html">Products &amp; Services</a><a href="resources.html">Resource &amp; Apps</a><a href="career-beyond.html">Career &amp; Beyond</a>
             </nav>
             
         </div>

@@ -1,3 +1,9 @@
+## 2026-10-01 [C] Impact: live GoatCounter count from 1,685; Privacy: GoatCounter disclosed
+- Jonathan, 29 Sep: "As long as whatever recount we start starts from 1685, I'm fine." Then "Deploy." 1,685 is GoatCounter's own all time total to 27 Aug 2026; an earlier note of 685 was a misreading of GoatCounter's space separated thousands.
+- impact.html reads the public GoatCounter total (counter/TOTAL.json, no cookies) on load and never shows less than the 1,685 floor, even if the fetch fails or is slow. It replaces the unlogged 2,105, labels the figure visitors, states the 28 Aug to 29 Sep 2026 gap, and links the raw count. Animation reads the live figure each frame so a late count is not overwritten.
+- privacy.html names GoatCounter and what it records, drops "collects nothing at all", and explains the impact page read counts nothing. Effective date 29 September 2026.
+- Rebased on c6c7bc5 (SEO title change kept). Verifiers written first: verify_impact_counter.js RED 14 on live, GREEN 32/32; verify_privacy_goatcounter.js RED 5, GREEN 6/6. Post deploy, real network: live page shows 1,701, matching GoatCounter, at 1280px and 390px; privacy disclosure live. Commit b1e49d7.
+
 ## 2026-10-01 [C] Resources: a Pexels photo on every card
 - Jonathan, 1 Oct: "Can we put pexel pics next to every item on the resources page?" Design rendered and shown; his answer: "Go".
 - Each of the five cards carries one photo, hotlinked from images.pexels.com in the same way as qc-faces.js: career guides 8613089 (teacher reading with children), Career & Beyond 3823488 (older man and young woman at a laptop), SME guide 6347919 (small business owner at her laptop), Gated Autonomy 277574 (padlock), Human-AI operating model 3184339 (team meeting). Alt text on each, lazy loaded. Footer already credits Pexels.

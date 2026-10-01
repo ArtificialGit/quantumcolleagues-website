@@ -225,7 +225,11 @@
     
         /* ===== RESOURCE CARDS ===== */
         .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem; margin-top: 0.5rem; max-width: 860px; }
-        .resource-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.6rem 1.7rem; display: flex; flex-direction: column; }
+        .resource-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 0; display: flex; flex-direction: row; overflow: hidden; }
+        /* Pexels photo on each card (1 Oct 2026): left third on desktop, banner on phones. */
+        .resource-card .r-pic { flex: 0 0 34%; width: 34%; height: auto; min-height: 100%; object-fit: cover; display: block; }
+        .resource-card .r-body { padding: 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
+        @media (max-width: 480px) { .resource-card { flex-direction: column; } .resource-card .r-pic { width: 100%; flex-basis: auto; height: 160px; min-height: 0; object-position: center 25%; } .resource-card .r-pic-low { object-position: center 62%; } }
         .resource-card .r-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; color: #2D648C; margin-bottom: 0.5rem; }
         .resource-card h3 { font-size: 1.25rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; }
         .resource-card p { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 1.1rem; flex-grow: 1; }
@@ -273,34 +277,49 @@
 
         <div class="resource-grid">
             <div class="resource-card">
+                <img class="r-pic" src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=320&amp;h=480" alt="A teacher reading with young children in a classroom" width="160" height="240" loading="lazy">
+                <div class="r-body">
                 <p class="r-tag">GUIDES · 78 REAL JOBS</p>
                 <h3>Career guides</h3>
                 <p>A free, honest guide to each of the 78 jobs in Career &amp; Beyond: what the day is like, what you need to start, official pay, and how AI is changing it. Every guide links into the app.</p>
                 <a class="r-link" href="careers/">Browse the career guides →</a>
             </div>
+            </div>
             <div class="resource-card">
+                <img class="r-pic" src="https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=320&amp;h=480" alt="An older man and a young woman working together on a laptop" width="160" height="240" loading="lazy">
+                <div class="r-body">
                 <p class="r-tag">APP · FOR EVERY GENERATION</p>
                 <h3>Career &amp; Beyond</h3>
                 <p>A free careers app that maps work as a tree, not a ladder. Start where you are, see how AI is changing each job, and take honest next steps — 75 real UK jobs, real pay figures, nothing captured. Works on any phone; add it to your home screen.</p>
                 <a class="r-link" href="career-beyond.html">Open Career &amp; Beyond →</a>
             </div>
+            </div>
             <div class="resource-card">
+                <img class="r-pic r-pic-low" src="https://images.pexels.com/photos/6347919/pexels-photo-6347919.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=320&amp;h=480" alt="A small business owner working at her laptop" width="160" height="240" loading="lazy">
+                <div class="r-body">
                 <p class="r-tag">GUIDE · FOR SMEs</p>
                 <h3>Adopting AI: first steps for SMEs</h3>
                 <p>A free, plain-English guide to using AI as support and extra capacity for your team — doing more with what you’ve got, human and AI together.</p>
                 <a class="r-link" href="guide.html">Read it &amp; download the PDF →</a>
             </div>
+            </div>
             <div class="resource-card">
+                <img class="r-pic" src="https://images.pexels.com/photos/277574/pexels-photo-277574.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=320&amp;h=480" alt="A padlock on a wooden door" width="160" height="240" loading="lazy">
+                <div class="r-body">
                 <p class="r-tag">METHOD · HOW WE DELIVER AI</p>
                 <h3>Gated Autonomy</h3>
                 <p>The method behind our AI colleagues: the AI works freely, and every boundary that matters is a hard gate it cannot talk its way through. Read it in full, or get the free white paper.</p>
                 <a class="r-link" href="gated-autonomy.html">Read the method →</a>
             </div>
+            </div>
             <div class="resource-card">
+                <img class="r-pic" src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=320&amp;h=480" alt="A team meeting around a table with laptops" width="160" height="240" loading="lazy">
+                <div class="r-body">
                 <p class="r-tag">WHITE PAPER · HOW WE RUN AI</p>
                 <h3>The Human-AI operating model</h3>
                 <p>People decide. AI colleagues do the work. The three layer model we run in real back offices, in one moving picture, with a ten page white paper to request.</p>
                 <a class="r-link" href="human-ai-operating-model.html">See the model and get the paper →</a>
+            </div>
             </div>
         </div>
         <p class="more-soon">More free guides and tools are on the way.</p>

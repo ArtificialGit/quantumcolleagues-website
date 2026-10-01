@@ -1,3 +1,9 @@
+## 2026-10-01 [C] Resources: a Pexels photo on every card
+- Jonathan, 1 Oct: "Can we put pexel pics next to every item on the resources page?" Design rendered and shown; his answer: "Go".
+- Each of the five cards carries one photo, hotlinked from images.pexels.com in the same way as qc-faces.js: career guides 8613089 (teacher reading with children), Career & Beyond 3823488 (older man and young woman at a laptop), SME guide 6347919 (small business owner at her laptop), Gated Autonomy 277574 (padlock), Human-AI operating model 3184339 (team meeting). Alt text on each, lazy loaded. Footer already credits Pexels.
+- Layout: photo fills the left third of the card on desktop; on phones (480px and under) it becomes a 160px banner with the crop raised so faces stay in frame (the SME photo uses a lower crop, r-pic-low, so her face stays in view). Card text and links unchanged, now inside .r-body.
+- Verifier verify_resources_pics.py written first, RED 2/35 on dev, GREEN 35/35 after. Full website sweep GREEN (18 suites).
+
 ## 2026-10-01 [C] Landing page: simpler tagline, two main buttons above the menu
 - Jonathan, 1 Oct: tagline becomes "Automation and agent colleagues for UK SMEs, using secure and local AI." then "Our work funds free post-AI training for every generation." Two main buttons only, "Products and Services" and "Free Resources & Apps" (same links as before), above Mission, Thoughts, Press and Contact.
 - The Career & Beyond button leaves the landing page by his ruling; the app stays reachable from resources.html and mission.html.

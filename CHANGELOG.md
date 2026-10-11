@@ -1,3 +1,8 @@
+## 2026-10-11 [C] Android: assetlinks.json for the Career & Beyond Play app
+- Jonathan, 11 Oct: "Deploy." Career & Beyond is in Google Play review as a Trusted Web Activity (package org.quantumcolleagues.careerbeyond, QuantumColleagues developer account). Without this file Android shows a Chrome address bar over the app; with it the app opens full screen.
+- New file /.well-known/assetlinks.json (served because .nojekyll is present). It names the package and two SHA-256 keys: Google Play app signing B6:F1:...:70:8A (read from Play Console, App signing, 11 Oct) for Play installs, and the upload key 1F:9D:...:39:DD for the test APK. No other file changes.
+- Verifier /opt/qcai/scripts/website/verify_assetlinks.py written first: RED 4 fails on live (404), GREEN 5/5 on the branch. Live check after promote below.
+
 ## 2026-10-09 [C] Homepage: machine-readable AI and Northamptonshire signals for directory and portal classifiers
 - Jonathan, 9 Oct: the homepage needs the exact phrases Artificial Intelligence, AI Strategy, Machine Learning and AI Deployment in headings, meta description and body, plus Schema.org that places QC in Northamptonshire. His answer to the proposed change set: "Yes, go."
 - index.html: a new "What we do" section (h2 plus three h3s) sits below the fold, outside the landing card, so the 1 Oct card, tagline and buttons are untouched. It follows the trust box in the source so phones keep the badges under the card, and z-index 4 lifts it over the fixed trust box on desktop while scrolling. Copy is buy side, names Admin Core before Proust, says post-AI training, makes no CQC claim and does not name DCG. ML claim held to "we prefer local models, run on our hardware or on yours".

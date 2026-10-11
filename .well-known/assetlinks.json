@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.quantumcolleagues.careerbeyond",
+      "sha256_cert_fingerprints": [
+        "B6:F1:54:5E:A0:BE:C8:F0:01:34:CF:4A:37:97:B2:82:11:8B:CF:0D:09:E6:A9:84:9F:F7:81:9B:FB:F5:70:8A",
+        "1F:9D:78:74:9B:B1:57:AE:C0:0F:8D:A3:59:EB:2C:87:CD:6A:51:69:F8:73:A8:BA:09:4E:63:D5:D1:2E:39:DD"
+      ]
+    }
+  }
+]

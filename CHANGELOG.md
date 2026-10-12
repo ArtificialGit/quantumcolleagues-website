@@ -1,4 +1,5 @@
 ## 2026-10-12 [C] Thoughts: "Transformation using AI: Rule Zero" (LinkedIn article of 10 Oct)
+- Jonathan, 12 Oct, on the draft: "Can you replace Mr Old, with Mr Young?" Both mentions changed; the verifier now expects Mr Young and fails on any Mr Old (RED 43/45 before the edit). Then: "And put live."
 - Jonathan, 12 Oct: "I put this article on Linkedin at the weekend and it would be good if it could be added to Thoughts on our website."
 - New page thoughts/rule-zero.html, built from the National Care Service post by add_thought_rz.py (exact single matches or it writes nothing). Text is Jonathan's LinkedIn article verbatim, three rules as a numbered list with the rule names in bold, dated 10 October 2026, marked "First published on LinkedIn". Photo: cottonbro studio on Pexels (thoughts/rule-zero.jpg), credited under the image and in the footer. The file is the one Jonathan attached (1280x719, 128,434 bytes, sha256 633052c8...0046c), moved via the Spark upload server. The first paragraph is plain body text, because the article has no standfirst.
 - thoughts/index.html lists it first; sitemap.xml adds it and moves the Thoughts index lastmod to 2026-10-10.

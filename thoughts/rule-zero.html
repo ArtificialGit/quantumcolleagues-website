@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation using AI: Rule Zero | QuantumColleagues™</title>
+    <meta name="description" content="Before any AI or agent use case, write down your constraints: law, GDPR, audit, regulators, customers and staff. Rule Zero, and the tale of the lamp.">
+    <link rel="canonical" href="https://quantumcolleagues.org/thoughts/rule-zero.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #333333; line-height: 1.6; }
+        header { padding: 1.5rem 3rem; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; letter-spacing: -0.3px; color: #050830; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-size: 0.85rem; color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .strapline-strip { background: #fafafc; border-bottom: 1px solid #e6e6e6; padding: 0.7rem 1rem; text-align: center; }
+        .strapline-text { font-size: 0.78rem; color: #6b6e8a; letter-spacing: 0.18em; text-transform: uppercase; }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        .faces-hero { position: relative; height: 340px; overflow: hidden; background: #050830; }
+        #mosaic { position: absolute; inset: 0; display: grid; grid-auto-rows: 70px; gap: 2px; z-index: 0; }
+        #mosaic .tile { background-color: #0d1240; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.6s ease; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(5,8,48,0.62); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #7fd8bd; margin-bottom: 0.6rem; }
+        .hero-title { font-size: 2.6rem; font-weight: 300; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
+        .hero-title .dot { color: #2D8C6F; font-weight: 600; }
+        .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.82); max-width: 560px; }
+        .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+        .kick { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { font-size: 1.5rem; font-weight: 600; color: #050830; margin-bottom: 0.8rem; letter-spacing: -0.3px; }
+        .section p { margin-bottom: 0.9rem; font-size: 0.95rem; color: #444; max-width: 72ch; }
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-top: 1.2rem; }
+        .rule-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.3rem 1.4rem; }
+        .rule-card h3 { font-size: 0.95rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; }
+        .rule-card p { font-size: 0.88rem; color: #555; margin: 0; }
+        .mission-box { background: #050830; color: rgba(255,255,255,0.88); border-radius: 4px; padding: 1.4rem 1.6rem; margin-top: 1.4rem; font-size: 0.92rem; }
+        .mission-box strong { color: #7fd8bd; font-weight: 600; }
+        .form-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2rem; margin-top: 1.4rem; max-width: 620px; }
+        .field { margin-bottom: 1.1rem; display: flex; flex-direction: column; }
+        .field label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6e8a; margin-bottom: 0.35rem; }
+        .field .req { color: #2D8C6F; }
+        .field input, .field textarea { font-family: inherit; font-size: 0.95rem; color: #333; padding: 0.72rem 0.85rem; border: 1px solid #d8d8e0; border-radius: 6px; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
+        .field textarea { resize: vertical; min-height: 120px; }
+        .field input::placeholder, .field textarea::placeholder { color: #b6b8c8; }
+        .field input:focus, .field textarea:focus { outline: none; border-color: #2D8C6F; box-shadow: 0 0 0 3px rgba(45,140,111,0.12); }
+        .submit-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D8C6F; color: #fff; border: none; cursor: pointer; font-family: inherit; padding: 0.85rem 1.6rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; }
+        .submit-btn:hover { background: #256f58; }
+        .form-note { font-size: 0.78rem; color: #8c8eaf; margin-top: 0.8rem; }
+        .form-error { color: #b3261e; font-size: 0.82rem; margin-top: 0.6rem; }
+        footer { border-top: 1px solid #e6e6e6; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        footer .right { color: #8c8eaf; }
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .faces-hero { height: 260px; }
+            .hero-title { font-size: 2rem; }
+            .page { padding: 2rem 1.5rem; }
+            .rules-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+<style>.hero-card{display:block;width:100%;border-radius:6px;margin-bottom:1.8rem;box-shadow:0 6px 28px rgba(5,8,48,.14)}.art-body a.in{color:#1F6B53;font-weight:600;text-decoration:none}.hero-fig{margin:0 0 1.8rem}.hero-fig .hero-card{margin-bottom:.45rem}.hero-fig figcaption{font-size:.72rem;color:#8c8eaf;text-align:center}.rz-rules{margin:0 0 1rem 1.3rem;max-width:66ch}.rz-rules li{font-size:1.02rem;color:#2c2c33;margin-bottom:.7rem;padding-left:.3rem}.rz-rules b{color:#050830}</style>
+<style>
+/* --- thoughts section --- */
+.thoughts-intro{max-width:72ch;margin-bottom:1.6rem;font-size:0.98rem;color:#444}
+.t-list{display:grid;gap:1.2rem;margin-top:1rem}
+.t-item{background:#fafafc;border:1px solid #e6e6e6;border-top:3px solid #2D8C6F;border-radius:4px;padding:1.5rem 1.6rem;display:block;text-decoration:none;color:inherit;transition:box-shadow .15s ease,transform .15s ease}
+.t-item:hover{box-shadow:0 6px 22px rgba(5,8,48,.10);transform:translateY(-1px)}
+.t-meta{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8c8eaf;margin-bottom:.6rem;display:flex;gap:1rem;flex-wrap:wrap}
+.t-item h3{font-size:1.3rem;font-weight:700;color:#050830;line-height:1.28;margin-bottom:.5rem;letter-spacing:-.2px}
+.t-item p{font-size:.95rem;color:#555;margin:0}
+.t-item .go{display:inline-block;margin-top:1rem;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1F6B53}
+.t-more{margin-top:2rem;font-size:.9rem;color:#6b6e8a}
+.t-more a{color:#1F6B53;font-weight:600;text-decoration:none}
+.art-wrap{max-width:720px;margin:0 auto;padding:2.6rem 2rem 1rem}
+.crumb{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8c8eaf;margin-bottom:1.6rem}
+.crumb a{color:#1F6B53;text-decoration:none}
+.thought-card{background:#050830;border-radius:6px;padding:2.6rem 2.4rem;margin-bottom:1.8rem}
+.thought-card .tc-eyebrow{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:#E8630A;margin-bottom:1.1rem}
+.thought-card .tc-head{font-weight:800;color:#fff;font-size:2.1rem;line-height:1.14;letter-spacing:-.4px}
+.thought-card .tc-head .k{color:#E8630A}
+.thought-card .tc-foot{margin-top:1.4rem;font-size:.8rem;color:rgba(255,255,255,.72)}
+.thought-card .tc-foot .dot{color:#7FE0C4;font-weight:700}
+.art-h{font-size:1.7rem;font-weight:700;color:#050830;line-height:1.18;margin-bottom:.4rem;letter-spacing:-.3px}
+.art-meta{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8c8eaf;margin-bottom:1.4rem}
+.art-body p{font-size:1.02rem;color:#2c2c33;margin-bottom:1rem;max-width:66ch}
+.art-body p.dek{font-size:1.16rem;color:#34343C;font-weight:500}
+.close-band{background:#2D648C;color:#fff;padding:1.7rem 2rem;margin-top:2rem}
+.close-band .cb-in{max-width:720px;margin:0 auto}
+.close-band b{font-weight:700}
+.close-band .strap{font-weight:700;font-size:1.2rem;margin-top:.4rem}
+.close-band .dot{color:#7FE0C4}
+@media(max-width:768px){.thought-card{padding:2rem 1.5rem}.thought-card .tc-head{font-size:1.7rem}.art-wrap{padding:2rem 1.5rem}}
+</style>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuantumColleagues">
+<meta property="og:url" content="https://quantumcolleagues.org/thoughts/rule-zero.html">
+<meta property="og:title" content="Transformation using AI: Rule Zero &mdash; QuantumColleagues&trade;">
+<meta property="og:description" content="A school woodwork lamp, three rules for transformation with AI, and Rule Zero: write down your constraints before you go anywhere near a use case.">
+<meta property="og:image" content="https://quantumcolleagues.org/thoughts/rule-zero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Transformation using AI: Rule Zero &mdash; QuantumColleagues&trade;">
+<meta name="twitter:description" content="A school woodwork lamp, three rules for transformation with AI, and Rule Zero: write down your constraints before you go anywhere near a use case.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <a href="/thoughts/" class="back-link">&larr; Thoughts</a>
+    </header>
+    <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
+
+    <div class="art-wrap">
+        <p class="crumb"><a href="/thoughts/">Thoughts</a> / Rule Zero</p>
+
+        <figure class="hero-fig"><img class="hero-card" src="/thoughts/rule-zero.jpg" alt="A red anglepoise desk lamp lighting a half built wooden box on a bench in a dim woodwork shop."><figcaption>Photo: cottonbro studio, Pexels</figcaption></figure>
+
+        <h1 class="art-h">Transformation using AI: Rule Zero</h1>
+        <p class="art-meta">Transformation &middot; 10 October 2026 &middot; First published on LinkedIn</p>
+
+        <div class="art-body">
+            <p>Cast your mind or imagination back to the 1980s. For two hours a week, under the careful eye of Mr Old, the 1987 Kingsway Craft Design and Technology class stood in a wood and metal work lab, trying their hand at industrial style creativity. Mr Old taught us, against the odds, to try to plan out our work and come up with lots of design ideas for our work before we started drilling, cutting, sawing or in my case heating and bending. I spent a whole weekend proudly designing endless variations of a plastic table lamp, sketched out on A4 in pencil and carefully shaded. The number of variations seemed to me to be the important thing, and a little nervously on Monday morning I pushed these toward the teacher, hoping to get more than dry Northern wit back.</p>
+            <p>Surprisingly, I did ok and his one comment was that I should spend a bit more time thinking on the constraints of the job. My plan was to make a plastic table lamp that would cling to the edge of a desk and arc overhead with a simple 50w bulb to light up the work area – not a lot of thought had gone into the constraints here as he’d suggested; where the cable was going to go, how I’d fuse together the three major parts, how the bulb would fit in, whether a 50w bulb would melt it all over again.</p>
+            <p>I could go on. The constraints were where I should have started.</p>
+            <p>Nearly four decades later, we read a lot of conversation today around starting new initiatives especially those that might involve AI or agents. Thankfully we’ve rapidly moved away from the brief period where everything had to be a clever, monetised acronym (think about those terrible prompt frameworks in late 2025) and now people are taking the time to consider just how to approach real work and change using these new technologies.</p>
+            <p>The approach for our client work at QuantumColleagues is built around three simple rules:</p>
+            <ol class="rz-rules">
+                <li><b>Start small (obviously).</b> Iterative development, growing on small successes is a far less risky transformation approach than planning for a big weekend release in 12 months’ time.</li>
+                <li><b>Choose trusted over clever:</b> using new tools like AI we can generate apps, systems, designs, processes and whatever else more quickly than ever before and very often we run toward the newest, most clever idea first. It’s what's called shiny kit syndrome and it leaves you staring at a new app but not quite sure if you should use it in anger or production. Choose trusted first; go for the design, data and outcome you can rely on, and build on that iteratively.</li>
+                <li><b>Evidence beats gut feel.</b> A CEO might want to launch that new agent service at the weekend but if testing, data and evidence says it’s not quite right or to go in a different direction, then trust it and those impatient OKRs can wait.</li>
+            </ol>
+            <p>There is, however, a Rule Zero. Any organisation, especially one that’s about to start working with AI, operates under constraints: don’t break the law, think about GDPR, look at your audit requirements, think about your certification, think about your customers and think about your staff. The list goes on and in regulated environments, which is where QuantumColleagues often puts our advisory services and agent solutions to work, national regulators impose their own constraints related to assessment, audit, accuracy of systems, processes and data. Whether it be the CQC, the PRA, FCA or other there are strict constraints you should consider before you go anywhere near a use case. This is only going to get more complicated, as providers of AI services may start to be expected to be certified e.g. ISO/IEC 42001 and eventually observe national AI legislation, and the ethical constraints of using AI start to come under closer scrutiny.</p>
+            <p>None of this need be a problem, and in fact it’s a good filter for your first use cases as there’s no point in chasing any of those unless you’ve written down your constraints first. If you’re spending money on “discovery” then it’s all the better if you write them down for yourself rather than have a consultant tell you what they are. So, before you tie yourself to those 2027 OKRs and start assembling a plan and team, have a think about the tale of the lamp and you might save yourself a lot of time.</p>
+        </div>
+    </div>
+
+    <div class="close-band">
+        <div class="cb-in">
+            <div>Businesses buy our AI, and that funds free <b>post-AI training</b> for every generation.</div>
+            <div class="strap">Do some good with AI<span class="dot">.</span></div>
+        </div>
+    </div>
+    <footer>
+        <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="right"><a href="/index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="/thoughts/">Thoughts</a> &nbsp;&middot;&nbsp; <a href="/mission.html">Mission</a></span>
+    </footer>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; <a href="tel:+443338800712" style="color:inherit;text-decoration:none;">Tel 0333 880 0712</a> &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="/privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></p>
+
+    <script src="/qc-faces.js"></script>
+</body>
+</html>

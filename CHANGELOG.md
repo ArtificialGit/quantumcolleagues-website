@@ -1,3 +1,11 @@
+## 2026-10-12 [C] Thoughts: "Transformation using AI: Rule Zero" (LinkedIn article of 10 Oct)
+- Jonathan, 12 Oct: "I put this article on Linkedin at the weekend and it would be good if it could be added to Thoughts on our website."
+- New page thoughts/rule-zero.html, built from the National Care Service post by add_thought_rz.py (exact single matches or it writes nothing). Text is Jonathan's LinkedIn article verbatim, three rules as a numbered list with the rule names in bold, dated 10 October 2026, marked "First published on LinkedIn". Photo: cottonbro studio on Pexels (thoughts/rule-zero.jpg), credited under the image and in the footer. The file is the one Jonathan attached (1280x719, 128,434 bytes, sha256 633052c8...0046c), moved via the Spark upload server. The first paragraph is plain body text, because the article has no standfirst.
+- thoughts/index.html lists it first; sitemap.xml adds it and moves the Thoughts index lastmod to 2026-10-10.
+- Verifier verify_thought_rz.py written first, RED 9/44 on dev. One verifier phrase was wrong ("write down your constraints first"; the article says "written down"), corrected in the verifier, not the article.
+- verify_thought_ncs.py: its check pinned the Thoughts index lastmod to 2026-09-29, which every newer thought must move. Relaxed to "on or after 2026-09-29" (backup in test_results). GREEN on clean dev and on the branch; RED on a mutant dated 2026-09-01.
+- Website sweep: every suite GREEN or unchanged from clean dev. verify_assetlinks.py takes a file, not the site folder; verify_impact.py is RED 7/10 on clean dev too (superseded by verify_impact_counter.js).
+
 ## 2026-10-11 [C] Android: assetlinks.json for the Career & Beyond Play app
 - Jonathan, 11 Oct: "Deploy." Career & Beyond is in Google Play review as a Trusted Web Activity (package org.quantumcolleagues.careerbeyond, QuantumColleagues developer account). Without this file Android shows a Chrome address bar over the app; with it the app opens full screen.
 - New file /.well-known/assetlinks.json (served because .nojekyll is present). It names the package and two SHA-256 keys: Google Play app signing B6:F1:...:70:8A (read from Play Console, App signing, 11 Oct) for Play installs, and the upload key 1F:9D:...:39:DD for the test APK. No other file changes.

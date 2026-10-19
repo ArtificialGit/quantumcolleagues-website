@@ -1,3 +1,12 @@
+## 2026-10-19 [C] Thoughts: "Capacity that gives back" (LinkedIn post of 19 Oct) with the carousel 21 video
+- Jonathan, 19 Oct: "the latest post - Capacity that gives back - should be our latest \"thoughts\" page on the website including the video."
+- New page thoughts/capacity-that-gives-back.html, built from rule-zero.html by add_thought_ctgb.py (exact single matches or it writes nothing). Text is Jonathan's post verbatim with two edits for him to confirm: "Co-pilot" written as Copilot, and the third paragraph ended at "(obviously not forgetting Rule Zero)" because the pasted text stops mid sentence at "before in". Rule Zero links to its thought; "hybrid AI operating models" links to human-ai-operating-model.html. Dated 19 October 2026, marked "First published on LinkedIn".
+- Video: the 12s silent loop from carousel 21 (QC_CapacityThatGivesBack_12s.mp4, H.264 1080 square) remuxed with faststart, no re-encode (657,400 bytes, sha256 ed562b63...4b29af). Poster and og:image: QC_CapacityThatGivesBack_1080.jpg scaled to 1080 (96,147 bytes, sha256 22289802...42393e). Web copies kept in the carousel folder under Website\. Autoplay, muted, loop, playsinline, poster, image fallback inside the video, aria-label, and a script pauses it under prefers-reduced-motion. "Photos: Pexels" under the video for the two faces.
+- Binaries went up through the GitHub upload page on dev in Jonathan's Chrome (109bb8c). The Spark upload endpoint (R-2026-09-22-01) does not accept .mp4 and was not reachable from this session.
+- thoughts/index.html lists it first; sitemap.xml adds it and moves the Thoughts index lastmod to 2026-10-19.
+- Verifier verify_thought_ctgb.py written first, RED 11/60 on clean dev f8f3c0e, GREEN 60/60 after. Mutation (muted removed from the video tag) RED.
+- verify_thought_rz.py pinned the Thoughts index lastmod to 2026-10-10, which every newer thought must move. Relaxed to "on or after 2026-10-10" (backup in test_results). GREEN on this branch; RED on a mutant dated 2026-10-01. The other thought suites and verify_thoughts.py stay GREEN.
+
 ## 2026-10-12 [C] Thoughts: "Transformation using AI: Rule Zero" (LinkedIn article of 10 Oct)
 - Jonathan, 12 Oct, on the draft: "Can you replace Mr Old, with Mr Young?" Both mentions changed; the verifier now expects Mr Young and fails on any Mr Old (RED 43/45 before the edit). Then: "And put live."
 - Jonathan, 12 Oct: "I put this article on Linkedin at the weekend and it would be good if it could be added to Thoughts on our website."

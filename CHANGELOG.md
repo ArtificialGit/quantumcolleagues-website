@@ -1,3 +1,10 @@
+## 2026-10-21 [C] Home page: headline "Secure, Sovereign AI for SMEs."; "Do some good with AI." kept as the strapline
+- Jonathan, 21 Oct: "I think this change should be reflected on our website landing page", after the new LinkedIn banner, then "Sentence case is fine. Go". This lifts the home page freeze of 19 Oct for this one change only.
+- index.html: the h1 "Do some good with AI." becomes "Secure, Sovereign AI for SMEs." (Jonathan's wording and casing, teal dot kept). "Do some good with AI." stays on the card in sentence case as a new strapline line under the h1 (p.strap, Poppins 600, teal #2D8C6F). One CSS rule added. The tagline, buttons, menu, trust box, What we do section, title, meta, OG and Twitter tags and JSON-LD (slogan "Do some good with AI.") are unchanged. og:image alt is unchanged because og-image.jpg itself is unchanged.
+- Made by fix_hero_sovereign.py (exact single matches or it writes nothing). Verifier verify_hero_sovereign.py written first, RED 12/18 on dev 9c5fb99, GREEN 18/18 after; mutation (one byte added to index.html) RED.
+- The home page freeze guard in verify_carousel_refresh.py, verify_team_compact.py and verify_proust_tenant.py now reverses this exact change and still requires byte equality with origin/main (shared helper home_guard.py; backups in test_results). All three GREEN; the same mutation turns all three RED. verify_landing_simplify.py GREEN 13/13.
+- OPEN for Jonathan before promotion: "Sovereign" is a strong claim. What we do says "We prefer local models, run on our hardware or on yours", and the house rule hedges locality to the Appliance option. Confirm every delivery model keeps client data under UK control, or the headline needs a hedge.
+
 ## 2026-10-21 [C] Products: Meet the team band shrunk to one compact row
 - Jonathan, 21 Oct: "Can we shrink the Team boulevard at the top of the Products and Services page."
 - The nine tiles lose their card boxes and sit in one row of nine on desktop (five columns on tablets, three on phones). Characters at 56px instead of 72px; name, role and product in smaller type. Words, links, alt text and order unchanged. Product card strips unchanged.

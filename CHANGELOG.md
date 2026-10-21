@@ -1,3 +1,8 @@
+## 2026-10-21 [C] Products: Meet the team band shrunk to one compact row
+- Jonathan, 21 Oct: "Can we shrink the Team boulevard at the top of the Products and Services page."
+- The nine tiles lose their card boxes and sit in one row of nine on desktop (five columns on tablets, three on phones). Characters at 56px instead of 72px; name, role and product in smaller type. Words, links, alt text and order unchanged. Product card strips unchanged.
+- Made by fix_team_compact.py (exact single matches or it writes nothing). Verifier verify_team_compact.py written first, RED 4/10 on dev 4374d48, GREEN 10/10 after. verify_carousel_refresh.py and verify_products_packs.py stay GREEN. Home page unchanged.
+
 ## 2026-10-20 [C] Products: Proust "inside your tenant", not "Microsoft 365"
 - Jonathan, 20 Oct: "2 needs to be inside your tenant, and doesn't need Admin Core. Ditto 3". The pilot wording (his item 1) stays as it is; the Admin Core JSON-LD (including "rotas") is left unchanged.
 - products.html JSON-LD: Proust "Runs inside your Microsoft 365 tenant." becomes "Runs inside your tenant."

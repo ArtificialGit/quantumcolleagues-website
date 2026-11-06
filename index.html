@@ -127,6 +127,19 @@
             backdrop-filter:blur(6px); }
         .trust-box .se-mini { margin-top:0; }
         @media (max-width:760px) { .trust-box { position:static; margin:1rem auto 3rem; width:max-content; max-width:calc(100% - 2rem); } }
+        /* Latest thought (6 Nov 2026). A micro advert for the newest Thought, fixed at the right
+           above the copyright line on wide screens and in flow under it on narrower ones. The script at the foot
+           of the page keeps it in step with the first card on /thoughts/. */
+        .latest-thought { position:fixed; right:1rem; bottom:3.2rem; z-index:3; display:flex; align-items:center; gap:0.8rem;
+            max-width:30rem; background:rgba(236,237,242,0.9); border-radius:10px; padding:0.55rem 1rem 0.55rem 0.6rem;
+            box-shadow:0 4px 18px rgba(5,8,48,0.25); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+            text-decoration:none; color:#6b6e8a; font-size:0.72rem; line-height:1.35; }
+        .latest-thought img { flex:0 0 auto; width:44px; height:44px; border-radius:8px; object-fit:cover; display:block; }
+        .latest-thought .lt-label { display:block; font-size:0.62rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#1F6B53; }
+        .latest-thought .lt-title { display:block; color:#050830; font-weight:600; font-size:0.8rem; }
+        .latest-thought .lt-go { display:block; }
+        .latest-thought:hover .lt-title { color:#1F6B53; }
+        @media (max-width:1100px), (max-height:700px) { .latest-thought { position:static; margin:0 auto 2rem; width:max-content; max-width:calc(100% - 2rem); } }
         /* What we do (9 Oct 2026). Sits below the fold, outside the landing card, so the
            1 Oct card stays as designed. z-index 4 lifts it over the fixed trust box
            while scrolling; it follows the trust box in the source so phones keep the badges under the card. It gives directory and portal classifiers plain
@@ -286,6 +299,7 @@
     </div>
 
     <div class="trust-box"><a class="ce-logo" href="https://registry.blockmarktech.com/certificates/ca91350c-7794-435e-bffc-05f62d934634/" target="_blank" rel="noopener" aria-label="Cyber Essentials certified: verify our certificate"><img src="ce-badge.png" alt="Cyber Essentials Certified" width="37" height="44"></a><a class="se-mini" href="https://directory.socialenterprise.org.uk/s/detail/001PK00000vVIZJYA4" target="_blank" rel="noopener"><img src="seuk-badge.png" alt="Certified Social Enterprise, Business for Good, Social Enterprise UK" width="44" height="44"><span><b>Certified Social Enterprise</b><br>Recognised by Social Enterprise UK. Member no. 18075.</span></a></div>
+    <a class="latest-thought" href="/thoughts/airr-isambard-ai.html"><img src="/thoughts/airr-isambard-ai-card.jpg" alt="" width="44" height="44"><span><span class="lt-label">Latest thought</span><b class="lt-title">We&rsquo;ve been awarded 10,000 GPU hours on Isambard-AI</b><span class="lt-go">Read the thought &rarr;</span></span></a>
     <section class="what-we-do" aria-labelledby="wwd-title">
         <h2 id="wwd-title">Artificial Intelligence for UK SMEs, from Northamptonshire</h2>
         <p class="lead">QuantumColleagues is an Artificial Intelligence company based in Northamptonshire. We put AI colleagues to work in the back office of UK SMEs, charities and regulated businesses, and a named person still decides anything with real world consequences.</p>
@@ -301,6 +315,7 @@
     <div class="footer">quantumcolleagues.org</div>
 <div style="position:fixed;bottom:0.4rem;right:1rem;font-size:0.6rem;color:rgba(255,255,255,0.22);z-index:3;letter-spacing:0.03em;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; <a href="tel:+443338800712" style="color:inherit;text-decoration:none;">Tel 0333 880 0712</a> &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></div>
 
+<script>/* latest thought sync */(function(){var a=document.querySelector('.latest-thought');if(!a||!window.fetch||!window.DOMParser)return;fetch('/thoughts/',{credentials:'same-origin'}).then(function(r){return r.ok?r.text():null}).then(function(x){if(!x)return;var c=new DOMParser().parseFromString(x,'text/html').querySelector('a.t-item');if(!c)return;var t=c.querySelector('h3'),im=c.querySelector('img.t-thumb'),v=c.querySelector('video.t-thumb'),src=im?im.getAttribute('src'):(v?v.getAttribute('poster'):null);if(!t)return;a.setAttribute('href',c.getAttribute('href'));a.querySelector('.lt-title').textContent=t.textContent.trim();if(src)a.querySelector('img').setAttribute('src',src);}).catch(function(){});})();</script>
     <script src="qc-faces.js"></script>
 </body>
 </html>

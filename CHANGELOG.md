@@ -1,3 +1,10 @@
+## 2026-11-06 [C] Home: latest thought advert; Thoughts: AIRR; Press: 3 Sep note fixed
+- New Thought /thoughts/airr-isambard-ai.html ("We've been awarded 10,000 GPU hours on Isambard-AI"), first card on /thoughts/, sitemap entry, hero and card images through the upload route.
+- index.html: a "Latest thought" micro advert, fixed at the right above the copyright line on wide screens and in flow under the trust box on narrow or short screens. A small script keeps it in step with the first card on /thoughts/, so later Thoughts need no edit to the home page. Jonathan ruled this change on 6 Nov.
+- press.html: the 3 Sep "About QuantumColleagues" note no longer calls QuantumColleagues Ltd a community interest company. It now says the CIC owns half of it.
+- Verifier: scripts/website/verify_latest_thought_airr.py, 41/41 GREEN, mutations caught. home_guard.py now strips the ruled advert and accepts byte equality with main (the hero is on main). verify_carousel_refresh, verify_hero_sovereign, verify_thought_dwtt and verify_press_airr updated to match; backups in test_results.
+- Render check: test_results/latest_thought_render_*.log.
+
 ## 2026-11-06 [C] Press: AIRR award release (Isambard-AI, 10,000 GPU hours)
 - Jonathan, 6 Nov: "Let's put the AIRR post on our website?" The 3 Nov AIRR announcement becomes the newest release on press.html, id airr-isambard-ai, in the existing release format, dated 6 November 2026. Source: project doc claude/HANDOVER_AIRR_NOV2026.md.
 - Content: 10,000 GPU hours on Isambard-AI through the AIRR Rapid Access route; synthetic care data only; the National Care Service context; compute only, valued at £23,500, no cash. Notes to editors carry Isambard-AI's required acknowledgement statement word for word and the McIntosh-Smith, Alam and Woods (2024) citation with its DOI, both from docs.isambard.ac.uk/acknowledge/ as read on 3 Nov. No client named. No em dashes, so the attribution line has no leading dash, unlike older releases.

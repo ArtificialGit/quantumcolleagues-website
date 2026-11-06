@@ -1,3 +1,10 @@
+## 2026-11-06 [C] Career & Beyond v5.25.1: Find a Job links go to DWP Work Hub search
+- Found by hand in Chrome on 6 Nov: findajob.dwp.gov.uk/search now redirects to the DWP Work Hub home page (www.jobs.service.gov.uk/) and drops the search words. So the Find a Job link on all 87 roles and the Second Start part time link landed on a home page. Reed, Adzuna, Indeed and the Midlife MOT all worked in the same check.
+- Both links now use Work Hub's own search, www.jobs.service.gov.uk/jobs/search with keywords and location. By hand that returned "36 IT support jobs in Northampton" and "3,852 part time jobs in UK". The label still reads "Find a Job (DWP)". sw.js cache career-beyond-v5.25.1.
+- This bundle is built from the unminified master for the first time since v5.24.0 (the v5.25.0 master was rebuilt on 6 Nov). The minifier canonicalises six hand-spliced regions from 30 Oct: four CSS selector lists sorted, two JS strings requoted. No behaviour change.
+- Verifier verify_v5251_findajob.js written first: RED 3 on live de7e1bc, GREEN on master and bundle (87 roles discovered, 174 cases). Mutation RED. verify_cb_v5251.py (verify_cb_v5250 with the new host and sw version) 30/30. verify_v5250_menu17.js 109/109 (verify_v5240 with the menu at 17 since Second Start). verify_v5232_prod.js 11/11. Gzip 273,393 bytes at level 9. Records on OneDrive in build_records/v5.25.1_staged.
+- Jonathan, 6 Nov 16:35: "release v5.25.1".
+
 ## 2026-11-06 [C] Home: latest thought advert; Thoughts: AIRR; Press: 3 Sep note fixed
 - New Thought /thoughts/airr-isambard-ai.html ("We've been awarded 10,000 GPU hours on Isambard-AI"), first card on /thoughts/, sitemap entry, hero and card images through the upload route.
 - index.html: a "Latest thought" micro advert, fixed at the right above the copyright line on wide screens and in flow under the trust box on narrow or short screens. A small script keeps it in step with the first card on /thoughts/, so later Thoughts need no edit to the home page. Jonathan ruled this change on 6 Nov.

@@ -1,3 +1,7 @@
+## 2026-11-06 [C] Home: latest thought advert level with the trust box
+- index.html: Jonathan asked at 16:49 UK for the advert to align vertically with the Certified Social Enterprise box. It now sits at bottom 1.4rem, the same as the trust box, so the two boxes share top and bottom edges (render check at 1440, 1280 and 1120 wide: identical top and bottom, no overlap with the domain or copyright lines, title on one line).
+- verify_latest_thought_airr.py requires the advert's bottom to equal the trust box's, RED 40/41 before, GREEN 41/41 after, and a 1.6rem mutation goes RED. Its do-no-harm baseline is pinned to de7e1bc, the main before the AIRR release went live. verify_press_airr is pinned the same way. home_guard.py and verify_hero_sovereign.py strip the advert from main as well, because main has carried it since d18573d.
+
 ## 2026-11-06 [C] Press: AIRR pull quote approved by Jonathan, and promotion
 - press.html: Jonathan approved the pull quote at 16:43 UK and added a closing sentence: "If firms want to be part of that at an early stage to take advantage of the insight it will bring, now is the time to get involved." verify_press_airr gains the check, RED 28/29 before, GREEN 29/29 after.
 - Jonathan's rulings, 6 Nov 16:43: the 3 Sep opening line ("A Northamptonshire community interest company has launched a free careers app") stays, because Career & Beyond belongs to the CIC; the 6 November dates stand; "Promote".

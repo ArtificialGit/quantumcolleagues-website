@@ -1,3 +1,11 @@
+## 2026-11-06 [C] Career & Beyond v5.25.3: Work Hub label, start tile titles below the face; resources.html guide count
+- Jonathan's rulings, 6 Nov 16:35: "Rename" (the Find a Job label), titles below the face, and the resources wording "as you recommend". He said "Release v5.25.3 now" at about 17:50.
+- The job link label is now "Work Hub (DWP)", the name DWP uses for the service since Find a Job moved. Second Start's link is "Part time jobs on Work Hub (DWP)". The URLs are unchanged from v5.25.1.
+- Start tiles: the space kept for the face is a full row, not a float, so every title sits below the face instead of splitting round it with a gap (left open at v5.24.0). Branch and job cards are unchanged.
+- resources.html: "A free, honest guide to each of the 78 jobs in Career & Beyond" becomes "a guide to 78 of the 87 jobs". The app has 87 roles and careers/ holds 78 guides. The nine missing guides are for later.
+- sw.js cache career-beyond-v5.25.3.
+- Verifiers written first. verify_v5253.js: RED 10 on v5.25.2, GREEN 45/45 on master and bundle. Its first draft passed on v5.25.2 (it only counted title lines that overlapped the face sideways) and was fixed before any GREEN run. verify_resources_count.js: RED 2 on main, GREEN after (78 guides and 87 roles counted at run time). No regression: verify_cb_v5253 30/30, menu17 109/109, verify_v5252_fold GREEN with Simple off and on, verify_v5251_findajob GREEN, verify_v5232_prod 11/11. Records on OneDrive in build_records/v5.25.3_staged.
+
 ## 2026-11-06 [C] Career & Beyond v5.25.2: the front door's main button stays on the first screen of a phone
 - Jonathan, 6 Nov 16:35: "Fix and promote". Measured on live: "Not sure? Find my next job" sat below the first screen at 390x844 (bottom 880), 360x740 and 375x667, and in Simple mode at all four phone sizes tested (up to 412x915).
 - Fix: on screens up to 600px wide, if the button would fall below the first screen, it moves above the tree (fitHero, re-run when the tree redraws, on resize, when Simple mode changes and when the fonts load). The tree keeps its full size. Wide screens are unchanged. sw.js cache career-beyond-v5.25.2.

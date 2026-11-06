@@ -1,3 +1,9 @@
+## 2026-11-06 [C] Press: AIRR pull quote approved by Jonathan, and promotion
+- press.html: Jonathan approved the pull quote at 16:43 UK and added a closing sentence: "If firms want to be part of that at an early stage to take advantage of the insight it will bring, now is the time to get involved." verify_press_airr gains the check, RED 28/29 before, GREEN 29/29 after.
+- Jonathan's rulings, 6 Nov 16:43: the 3 Sep opening line ("A Northamptonshire community interest company has launched a free careers app") stays, because Career & Beyond belongs to the CIC; the 6 November dates stand; "Promote".
+- Verifier sweep before promotion: 31 suites. All AIRR, Thoughts and home suites are GREEN. verify_advisory (Admin Core tile order), verify_assetlinks (needs a live URL) and verify_impact (users figure) fail identically on main, so they are not regressions. verify_cb_v5250 is superseded by v5.25.1 (verify_cb_v5251, run by its own session, 30/30). verify_resources_paid is superseded.
+- The promotion carries 846bf91 (Career & Beyond v5.25.1), which Jonathan released at 16:35 in another session.
+
 ## 2026-11-06 [C] Career & Beyond v5.25.1: Find a Job links go to DWP Work Hub search
 - Found by hand in Chrome on 6 Nov: findajob.dwp.gov.uk/search now redirects to the DWP Work Hub home page (www.jobs.service.gov.uk/) and drops the search words. So the Find a Job link on all 87 roles and the Second Start part time link landed on a home page. Reed, Adzuna, Indeed and the Midlife MOT all worked in the same check.
 - Both links now use Work Hub's own search, www.jobs.service.gov.uk/jobs/search with keywords and location. By hand that returned "36 IT support jobs in Northampton" and "3,852 part time jobs in UK". The label still reads "Find a Job (DWP)". sw.js cache career-beyond-v5.25.1.

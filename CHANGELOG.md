@@ -1,3 +1,10 @@
+## 2026-11-08 [C] Career & Beyond: the nine Engineers career guides; buy-side footer on all guides
+- Jonathan, 8 Nov 22:42 UK: "Yes" to writing the nine missing guides, then "Publish" at 23:02 UK.
+- careers/: nine new guides (mechanical engineering technician, engineering maintenance technician, mechanical engineer, electrical engineering technician, electrical engineer, electronics engineer, quality control officer, manufacturing systems engineer, metrologist), in the same layout as the other 78. Entry routes and tasks from the National Careers Service job profiles; pay from ONS ASHE 2022 via LMI for All (SOC 2020 3113, 5223, 2122, 3112, 2123, 2124, 3115, 2125, 5224). Every one of the 87 jobs now has a guide.
+- All 78 older guides: the footer said "We sell AI services to businesses"; it now says "Businesses buy AI products from us, and that funds free post-AI training and tools like this." 17 titles now use "an" before a vowel.
+- careers/index.html gains an Engineers group and says 87 jobs. sitemap.xml lists the nine pages. resources.html says "every one of the 87 jobs".
+- Verifier verify_cb_guides87.py written first: RED 18 on 264a0b0, GREEN 165/165 after. verify_eng_deeplinks.js: each new guide's app link opens its role in v5.26.2, 9/9.
+
 ## 2026-11-08 [C] Thoughts: "Rules it cannot bend" (AI Thoughts for SMEs No. 6) with its 10s loop
 - Jonathan, 8 Nov: "Let's make our Carousel about LLMS being probabilistic a Thought on our website", then "It's already a post on Linkedin. I want it to be a Thought on our website". Asked about the video, he chose "Yes, add the video".
 - New page thoughts/rules-it-cannot-bend.html, built by add_thought_ribe.py from the capacity-that-gives-back video page. The body is the QuantumColleagues company page post of 2 November 2026, word for word, without the hashtags. The heading is the card's headline. The meta line reads AI Thoughts for SMEs, 2 November 2026, First published on LinkedIn. Admin Core links to /admincore.html and "talk to us" links to /contact.html. og:title and twitter:title use a bar, not a dash.

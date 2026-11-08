@@ -1,3 +1,8 @@
+## 2026-11-08 [C] Advisory: AI First Steps promises advice, not a working tool
+- Jonathan, 8 Nov: "For advisory it's clearly not a working tool so align the website with Payhip and make it compelling wording."
+- advisory.html #first-steps: the lede ends "find the jobs AI can safely take on, and show you exactly where to start. You leave knowing what to do on Monday morning." (was "and set up the first one with you"). The walk-away list swaps "one tool set up and working" for "straight answers on cost, data and safety for each one". Price, button and charity line are unchanged.
+- verify_first_steps.py gains three checks written first (no promise to set up a tool; the three jobs; cost, data and safety): RED 17/19 before, GREEN 19/19 after. verify_advisory.py 44/44 and verify_advisory_offers.py 20/20. verify_advisory_consultancy.py is 14/15 only because its own scope check compares the whole tree with main, and dev also carries 4c85cc6 (Career & Beyond v5.26.2) from another session; its page checks all pass.
+
 ## 2026-11-08 [C] Career & Beyond v5.26.1 and v5.26.2, and the privacy page (DPIA actions A1 and A2)
 - Jonathan, 8 Nov 15:05 UK: "release v5.26.2" - "Yes", and "publish the privacy page" - "yes". He also ruled that QuantumColleagues Ltd is the controller.
 - v5.26.1: My CV and My jobs join Simple mode's short menu, which rises from 8 to 10 items. verify_v5261_simplemenu RED 4 on v5.26.0, GREEN 28/28.

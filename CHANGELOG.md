@@ -1,3 +1,9 @@
+## 2026-11-08 [C] Advisory: AI First Steps is bookable and paid on Payhip, at £249
+- Jonathan, 8 Nov: "I want to have a monetizable link to Advisory on our website", then "Price AI First Steps at £249" (was £149).
+- Payhip: a coaching product, AI First Steps (https://payhip.com/b/MzpvE), one-time £249 through QC's Stripe account, with a short intake form (name and business, jobs to help with) before payment. The £149 plan was deleted before any sale.
+- advisory.html #first-steps: the price reads £249. "Book your session" now links to the Payhip page, with an aria-label naming the price. The charity line gains "Ask us here", which goes to the enquiry form, so learning and training charities still get the session free without paying. Nothing else on the page changes.
+- Verifier verify_first_steps.py updated first: RED 12/16 on e1b479f, GREEN 16/16 after. A mutation that restores the old #enquire button goes RED 15/16. No regression: verify_advisory.py 44/44, verify_advisory_offers.py 20/20, verify_advisory_consultancy.py 15/15.
+
 ## 2026-11-08 [C] Advisory: the page says AI consultancy
 - Jonathan, 8 Nov: use the word consultancy on the Advisory page. No key page used it before. He chose this at 14:47 UK.
 - advisory.html: the title, og:title and twitter:title change from "AI Advisory for SMEs and regulated businesses | QuantumColleagues™" to "AI consultancy for UK SMEs | QuantumColleagues™" (47 characters). The lede's third sentence now reads "We offer both, as an AI consultancy that works inside your back office with your own people." The meta description, the H1, the structured data and the rest of the page are unchanged.

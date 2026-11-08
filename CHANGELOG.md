@@ -1,3 +1,11 @@
+## 2026-11-08 [C] Career & Beyond v5.26.1 and v5.26.2, and the privacy page (DPIA actions A1 and A2)
+- Jonathan, 8 Nov 15:05 UK: "release v5.26.2" - "Yes", and "publish the privacy page" - "yes". He also ruled that QuantumColleagues Ltd is the controller.
+- v5.26.1: My CV and My jobs join Simple mode's short menu, which rises from 8 to 10 items. verify_v5261_simplemenu RED 4 on v5.26.0, GREEN 28/28.
+- v5.26.2 (DPIA A1): My CV and My jobs show "Where to keep it". "Keep it on this device until I delete it" is the default. "This visit only" keeps the CV and the jobs in sessionStorage, so the browser wipes them when it closes, and never writes them to localStorage. Notes on a shared or public computer and on locking a phone. About you says a full home address is not needed. sw.js cache career-beyond-v5.26.2.
+- Verifier verify_v5262_shared.js written first: real taps and typing, served on 127.0.0.1 so that a closed browser can be tested. RED 6 on v5.26.1, GREEN 18/18 on master and bundle. Regressions GREEN: menu19 109, simplemenu, findajob, prod, v5260 38 and 24, fold both halves, verify_cb_v5262 30/30, standalone and v5253 (each RED once on timing, GREEN on rerun, shown in the build note).
+- privacy.html (DPIA A2): a Career & Beyond section (device storage, My CV, My jobs, "This visit only", shared computers, job-site searches, GoatCounter hosting and legal basis, under 18s, raising a concern), GoatCounter added to suppliers, effective date 8 November 2026. verify_privacy_cb.py RED 19 on live, GREEN 36/36.
+- Bundle sha256 bb07d838..., privacy.html e0576e24..., both applied as patches with base and result hashes checked.
+
 ## 2026-11-08 [C] Advisory: AI First Steps is bookable and paid on Payhip, at £249
 - Jonathan, 8 Nov: "I want to have a monetizable link to Advisory on our website", then "Price AI First Steps at £249" (was £149).
 - Payhip: a coaching product, AI First Steps (https://payhip.com/b/MzpvE), one-time £249 through QC's Stripe account, with a short intake form (name and business, jobs to help with) before payment. The £149 plan was deleted before any sale.

@@ -1,3 +1,10 @@
+## 2026-11-12 [C] Resources: the AI Playbook for Care Operators, gated download page (Lane 1 Stage 4)
+- Jonathan, 12 Nov 21:46 UK: "Go on all", which covered the Playbook download page offered at 20:02. The 9 November ruling made the Playbook the Stage 4 follow up and the gated download that feeds HubSpot.
+- New page care-playbook.html, built by add_care_playbook.py from guide.html's chrome and form pattern: the ten plays listed, the one rule, the vendor questions and the first thirty days, then the same gate as Adopting AI (FormSubmit to information@ as the system of record, subject "Playbook download", best effort HubSpot capture of email and first name on the guide form), then the PDF download. No price, hedged Regulation wording, exact ISO 42001 wording, no em dashes.
+- resources.html: a card after the scorecard. sitemap.xml: the page with today's lastmod. The page also points at the scorecard.
+- guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf (444 KB) is NOT in this commit. It goes up by the GitHub upload page when Jonathan is signed in to GitHub in Chrome; the file is in OneDrive Sales\Business Acquisition 2026. Until then the page's download would 404, so this entry must not be promoted to main.
+- Verifier verify_care_playbook.py written first: RED 7/24 on 689fa9a; after the build every check passes except "the Playbook PDF is present in guides/", which goes GREEN when the PDF lands.
+
 ## 2026-11-12 [C] Products & Services: the Advisory box links to the Safe AI Readiness Scorecard
 - Jonathan, 12 Nov 19:38 UK: "I think it leads to a product so it might be on both?" The scorecard stays on Resources (it is free) and now also sits on Products & Services, as a second line under Explore Advisory in the Advisory box, because it leads to the Review. No new tile, no price, no "diagnostic".
 - verify_scorecard.py gained two checks for the Products & Services link: RED 46/47 before, GREEN 47/47 after.

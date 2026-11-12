@@ -1,3 +1,7 @@
+## 2026-11-12 [C] Products & Services: the Advisory box links to the Safe AI Readiness Scorecard
+- Jonathan, 12 Nov 19:38 UK: "I think it leads to a product so it might be on both?" The scorecard stays on Resources (it is free) and now also sits on Products & Services, as a second line under Explore Advisory in the Advisory box, because it leads to the Review. No new tile, no price, no "diagnostic".
+- verify_scorecard.py gained two checks for the Products & Services link: RED 46/47 before, GREEN 47/47 after.
+
 ## 2026-11-12 [C] Resources: the Safe AI Readiness Scorecard (Lane 2 of the acquisition funnel)
 - Jonathan, 12 Nov 14:39 UK: "Don't wait for me on anything you have to build or enhance." Spec: project doc claude/LANE2_SCORECARD_SPEC_NOV2026.md.
 - New page scorecard.html, built by add_scorecard.py from guide.html's chrome. Ten questions in three pillars (Data, Control, People), four answers each scored 0 to 3, pillars scaled to ten, three tiers (Exposed 0 to 10, Managed 11 to 20, Ready 21 to 30), a weakest pillar flag at 3 or below, and three next steps from a fixed list of nine. The result renders in the page before any email is asked for; the only network calls sit inside the gate's submit handler. The gate sends the result to information@ by FormSubmit (subject carries tier, total and weakest pillar) with best effort HubSpot capture of email and first name on the existing guide form, then downloads the care or general edition of the two page briefing by organisation type.

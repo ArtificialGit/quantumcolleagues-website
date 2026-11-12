@@ -1,3 +1,12 @@
+## 2026-11-12 [C] Resources: the Safe AI Readiness Scorecard (Lane 2 of the acquisition funnel)
+- Jonathan, 12 Nov 14:39 UK: "Don't wait for me on anything you have to build or enhance." Spec: project doc claude/LANE2_SCORECARD_SPEC_NOV2026.md.
+- New page scorecard.html, built by add_scorecard.py from guide.html's chrome. Ten questions in three pillars (Data, Control, People), four answers each scored 0 to 3, pillars scaled to ten, three tiers (Exposed 0 to 10, Managed 11 to 20, Ready 21 to 30), a weakest pillar flag at 3 or below, and three next steps from a fixed list of nine. The result renders in the page before any email is asked for; the only network calls sit inside the gate's submit handler. The gate sends the result to information@ by FormSubmit (subject carries tier, total and weakest pillar) with best effort HubSpot capture of email and first name on the existing guide form, then downloads the care or general edition of the two page briefing by organisation type.
+- No price, no Review by name, no "diagnostic", no "compliant" or "certified"; the ISO 42001 wording is exact and Cyber Essentials is stated for the whole organisation.
+- resources.html: a card after Adopting AI. sitemap.xml: the page with today's lastmod.
+- guides/: the two briefing PDFs (care edition 12 Nov, general edition with the price removed 12 Nov) go up by the GitHub upload page, as binaries do.
+- Verifier verify_scorecard.py written first: RED 6/25 on d880faa. Scoring is checked by running the page's own qc-score script under node against five fixtures.
+- Follow ups for Jonathan: a HubSpot form with tier, total and weakest pillar as fields (the guide form carries email and first name only); the day seven email to the Ready tier by hand or by workflow.
+
 ## 2026-11-08 [C] Career & Beyond: the nine Engineers career guides; buy-side footer on all guides
 - Jonathan, 8 Nov 22:42 UK: "Yes" to writing the nine missing guides, then "Publish" at 23:02 UK.
 - careers/: nine new guides (mechanical engineering technician, engineering maintenance technician, mechanical engineer, electrical engineering technician, electrical engineer, electronics engineer, quality control officer, manufacturing systems engineer, metrologist), in the same layout as the other 78. Entry routes and tasks from the National Careers Service job profiles; pay from ONS ASHE 2022 via LMI for All (SOC 2020 3113, 5223, 2122, 3112, 2123, 2124, 3115, 2125, 5224). Every one of the 87 jobs now has a guide.

@@ -4,6 +4,9 @@
 - 34 plainly worded skills added where a branch had nothing (Using AI for everyday tasks, Writing clear instructions for AI, Using simple automation tools, Adjusting AI tool settings, Knowing AI risks and limits, Checking and analysing AI output); 7 existing skills that already covered a benchmark skill widened to their whole branch. Each carries an aib tag with its benchmark ids. Learning packs added for the new skills in the three learning branches. Skills 315 -> 349. sw.js cache career-beyond-v5.27.0.
 - Built on the live v5.26.4 master. Verifier verify_v5270.js written first: RED 3 on v5.26.4, GREEN 10/10 on master and bundle; no learning focus option lost. Regressions GREEN (shared, simplemenu, findajob, prod, v5260, fold, standalone, v5253, menu19 legs, verify_cb 30/30, the v5.26.4 logo checks 90/91 with the one release-specific "undo to v5.26.2" check expected to differ).
 
+## 2026-11-15 [C] Care Playbook page back on dev, sixth time
+- The page, its Resources card and its sitemap line return after the sixth park, so main carries the Thought hub alone. build_thought_hub.py ran again, so llms.txt lists the Playbook on dev. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
+
 ## 2026-11-15 [C] Thought hub live (feed, Article markup, llms.txt, "here first"): Care Playbook page parked for the promotion
 - Jonathan, 15 Nov 21:54 UK: "Put live what you can". Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (the reverse of 004b6f1), so changes 2 to 4 of the Thought hub go live without the Playbook. build_thought_hub.py ran again after the park, so llms.txt does not list the Playbook. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
 - Change 1, counting visits to the Thoughts, is not in this promotion. It waits for the second GoatCounter site.

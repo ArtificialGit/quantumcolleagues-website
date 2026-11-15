@@ -1,3 +1,7 @@
+## 2026-11-15 [C] Thought contact line live: Care Playbook page parked for the promotion
+- Jonathan, 15 Nov 19:24 UK: "Promote". Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (reverting 422fc4f), so the contact line on every Thought goes live alone. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
+- Against main 573fe16 this commit changes only the nine Thoughts and this file. verify_thought_cta.py and verify_thoughts.py are GREEN on this tree.
+
 ## 2026-11-15 [C] Contact line on every Thought (on dev, not live)
 - Jonathan, 15 Nov 18:11 UK: every Thought must give the reader a way to connect with us, worded "If you'd like to talk to us about this, then please contact us here or email us directly at information@quantumcolleagues.org", with "here" linking /contact.html and the address a mailto link.
 - All nine Thoughts now carry the line straight after the article body, in a light box with a teal top rule (p.talk-cta, plus one small style block per page). The post text is unchanged, so the five Thoughts that already end with their own invitation keep it.

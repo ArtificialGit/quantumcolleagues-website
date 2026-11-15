@@ -1,3 +1,12 @@
+## 2026-11-15 [C] Career & Beyond logo on the Resources and Mission pages
+- Jonathan, 15 Nov 12:05 UK: "Is it on the website?" No page showed the branching & yet. Only the app icons and the link preview card carried it.
+- New cb-logo-light.svg at the site root: the light logo with the lettering in outlines, 5.4 KB.
+- resources.html: the Career & Beyond card's heading is now the logo, and its copy says 87 real UK jobs instead of 75. The em dash in that line went with the change.
+- mission.html: the logo now sits above "Career & Beyond is the first of these".
+- Verifier verify_cb_logo_pages.py written first: RED 16/28 on 0bb3920. It includes a headless Chromium check at 390 and 1280 px (cbtools/logo_layout.js).
+- The app page header (career-beyond.html) still shows the QuantumColleagues logo. That change goes through the OneDrive master.
+- Promotion waits for Jonathan's go. Dev also holds the Care Playbook page, which still waits for its PDF.
+
 ## 2026-11-15 [C] Care Playbook page back on dev
 - The page from 0c8970e returns unchanged after the park, so main carries the Career & Beyond logo alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

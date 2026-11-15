@@ -1,3 +1,13 @@
+## 2026-11-15 [C] Career & Beyond v5.26.3: the branching & logo on the site
+- Jonathan, 15 Nov 11:10 UK: "I like the branching Ampersand", which picks the recommended direction on the Career & Beyond logo board. At 11:16 UK he said: "Let's activate this everywhere".
+- cb-icon-192.png and cb-icon-512.png, the app's manifest icons ("any maskable"), now carry the branching & on full bleed navy. Before, they held the QuantumColleagues wordmark on white. The artwork stays inside the maskable safe zone (0.35 of the width, against 0.40).
+- cb-social-1200x630.png, the og:image of career-beyond.html, now shows the new logo and the app icon. Its job count moves from 75 to 87, the count the app holds since 8 Nov.
+- sw.js CACHE moves to career-beyond-v5.26.3, so installed copies fetch the new files. career-beyond.html and manifest.json do not change.
+- The three PNGs were rendered on the Spark from the SVG masters with Playwright Chromium, with Poppins loaded (/tmp/cb_logo_render). The masters are in project doc claude/CB_LOGO_NOV2026.md and in the logo pack career-beyond-logo-2026-11-15.zip.
+- Verifier verify_cb_icons_v5263.py written first: RED 19/34 on 0c8970e, GREEN 34/34 after. Mutation (the old 512 icon put back) RED.
+- Still to do for "everywhere": the Google Play listing icon (Play Console needs the QuantumColleagues developer account signed in), Android 1.0.3 so the phone icon changes (needs the upload key), and the app's own header, which still shows the QuantumColleagues logo (needs the OneDrive master).
+- Promotion waits for Jonathan's go. Dev also holds 0c8970e (the Care Playbook page), and its PDF is not yet in guides/.
+
 ## 2026-11-12 [C] Resources: the AI Playbook for Care Operators, gated download page (Lane 1 Stage 4)
 - Jonathan, 12 Nov 21:46 UK: "Go on all", which covered the Playbook download page offered at 20:02. The 9 November ruling made the Playbook the Stage 4 follow up and the gated download that feeds HubSpot.
 - New page care-playbook.html, built by add_care_playbook.py from guide.html's chrome and form pattern: the ten plays listed, the one rule, the vendor questions and the first thirty days, then the same gate as Adopting AI (FormSubmit to information@ as the system of record, subject "Playbook download", best effort HubSpot capture of email and first name on the guide form), then the PDF download. No price, hedged Regulation wording, exact ISO 42001 wording, no em dashes.

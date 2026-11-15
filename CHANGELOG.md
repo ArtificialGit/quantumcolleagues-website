@@ -1,3 +1,11 @@
+## 2026-11-15 [C] Contact line on every free resource (on dev, not live)
+- Jonathan, 15 Nov 19:35 UK: the free resources get the same contact line as the Thoughts, and he approved the promotion in advance.
+- The five pages that the Resources cards link (scorecard, guide, care-playbook, gated-autonomy and human-ai-operating-model) now end with the line, just before the footer. add_resource_cta.py makes the edit and takes the line and its style from add_thought_cta.py, so the resources and the Thoughts always match.
+- Career & Beyond (career-beyond.html and careers/) is left out. The app stands alone (6 Nov ruling), and its readers look for work, so the line is not for them.
+- Each page keeps its own closing line (for example "Questions about your result? Get in touch."), as the Thoughts did, so the new line sits under it.
+- Verifier verify_resource_cta.py written first. It discovers the pages from the Resources cards, so a new free resource without the line fails it, and --live checks the live site. RED 13/38 on 2173411, GREEN 38/38 on this build. Eleven planted faults each went RED: the line removed, the line in a comment, other wording, a broken contact link, no mailto, an em dash, a tag after the line, no style, two lines, a new card to a page without the line, and no contact page.
+- The other website verifiers match the baseline on 2173411. verify_care_playbook stays RED 23/24 (its PDF), verify_resources_pics RED 44/47, verify_products_packs RED 40/41 and verify_cb_logo_pages RED 31/32, each on the same checks as before. verify_cb_logo_pages pins its list of changed files to 0bb3920, so that list now also names the five pages.
+
 ## 2026-11-15 [C] Care Playbook page back on dev, fourth time
 - The page, its Resources card and its sitemap line return unchanged after the fourth park, so main carries the Thought contact line alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

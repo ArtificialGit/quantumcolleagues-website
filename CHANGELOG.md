@@ -1,12 +1,9 @@
-## 2026-11-15 [C] Career & Beyond v5.26.4: the branching & logo inside the app (staged, not live)
+## 2026-11-15 [C] Career & Beyond v5.26.4: the branching & logo inside the app
 - Jonathan, 15 Nov 17:04 UK: "Agreed", that the app header shows the Career & Beyond logo on its own, with "from QuantumColleagues" small at the foot.
 - career-beyond.html: the top bar shows the Career & Beyond logo (inline SVG, white with a light teal branch) in place of qc_logo_topbar.png, and the link keeps its target. Every foot reads "from QuantumColleagues.". The page names cb-icon-192.png as its tab icon and home screen icon. og:image and twitter:image move to cb-social-1200x630-v2.png, a copy of the card, so LinkedIn fetches the new image.
 - Built from the OneDrive master: master_v5.26.4.html sha256 8e6051af, and the bundle 7cdd3280 is minify(master) on Mother and the same splice here, byte for byte. gzip -9 is 288,035 (v5.26.2 285,347). sw.js is career-beyond-v5.26.4.
 - Verifier verify_cb_v5264.js written first: RED on v5.26.2, GREEN 91/91 on the master and 92/92 on the bundle, mutation RED. A7 gates on the bundle: privacy (verify_v5260 JOBS CV) 38/38 with both PRIVACY checks, LAYOUT 24/24, menu19 legs no fails (SIMPLE repointed, because an SVG logo has no naturalWidth), simplemenu 28/28, v5253_settle 45/45, fold 26/26 in both halves, standalone 9/9 (repointed for the foot label), findajob 6/6, prod 11/11, verify_cb_v5264.py 30/30. Records: OneDrive build_records/v5.26.4_staged.
-- Release waits for Jonathan's go ("release v5.26.4"). Dev also holds the Care Playbook page, which still waits for its PDF.
-
-## 2026-11-15 [C] Care Playbook page back on dev again
-- The page returns unchanged after the second park, so main carries the logo pages alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
+- Jonathan, 15 Nov 18:12 UK: "1", so the logo keeps its size in the top bar (90 px wide on a 320 px phone, the space the old logo had) and the logo rules get an exception for the app's top bar. Then he chose "Release v5.26.4 now". The Care Playbook page is parked again so it stays off main until its PDF is in guides/, and it goes back on dev in the next commit.
 
 ## 2026-11-15 [C] Career & Beyond logo on the Resources and Mission pages
 - Jonathan, 15 Nov 12:05 UK: "Is it on the website?" No page showed the branching & yet. Only the app icons and the link preview card carried it.
@@ -17,9 +14,6 @@
 - The app page header (career-beyond.html) still shows the QuantumColleagues logo. That change goes through the OneDrive master.
 - Jonathan, 15 Nov 14:14 UK: "Promote". The Care Playbook page is parked again so it stays off main until its PDF is in guides/, and it goes back on dev in the next commit.
 
-## 2026-11-15 [C] Care Playbook page back on dev
-- The page from 0c8970e returns unchanged after the park, so main carries the Career & Beyond logo alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
-
 ## 2026-11-15 [C] Career & Beyond v5.26.3: the branching & logo on the site
 - Jonathan, 15 Nov 11:10 UK: "I like the branching Ampersand", which picks the recommended direction on the Career & Beyond logo board. At 11:16 UK he said: "Let's activate this everywhere".
 - cb-icon-192.png and cb-icon-512.png, the app's manifest icons ("any maskable"), now carry the branching & on full bleed navy. Before, they held the QuantumColleagues wordmark on white. The artwork stays inside the maskable safe zone (0.35 of the width, against 0.40).
@@ -29,13 +23,6 @@
 - Verifier verify_cb_icons_v5263.py written first: RED 19/34 on 0c8970e, GREEN 34/34 after. Mutation (the old 512 icon put back) RED.
 - Still to do for "everywhere": the Google Play listing icon (Play Console needs the QuantumColleagues developer account signed in), Android 1.0.3 so the phone icon changes (needs the upload key), and the app's own header, which still shows the QuantumColleagues logo (needs the OneDrive master).
 - Jonathan, 15 Nov 11:38 UK, chose to promote the logo only. The Care Playbook page (0c8970e) is parked by a revert so it does not go live before its PDF is in guides/, and it goes back on dev in the next commit.
-
-## 2026-11-12 [C] Resources: the AI Playbook for Care Operators, gated download page (Lane 1 Stage 4)
-- Jonathan, 12 Nov 21:46 UK: "Go on all", which covered the Playbook download page offered at 20:02. The 9 November ruling made the Playbook the Stage 4 follow up and the gated download that feeds HubSpot.
-- New page care-playbook.html, built by add_care_playbook.py from guide.html's chrome and form pattern: the ten plays listed, the one rule, the vendor questions and the first thirty days, then the same gate as Adopting AI (FormSubmit to information@ as the system of record, subject "Playbook download", best effort HubSpot capture of email and first name on the guide form), then the PDF download. No price, hedged Regulation wording, exact ISO 42001 wording, no em dashes.
-- resources.html: a card after the scorecard. sitemap.xml: the page with today's lastmod. The page also points at the scorecard.
-- guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf (444 KB) is NOT in this commit. It goes up by the GitHub upload page when Jonathan is signed in to GitHub in Chrome; the file is in OneDrive Sales\Business Acquisition 2026. Until then the page's download would 404, so this entry must not be promoted to main.
-- Verifier verify_care_playbook.py written first: RED 7/24 on 689fa9a; after the build every check passes except "the Playbook PDF is present in guides/", which goes GREEN when the PDF lands.
 
 ## 2026-11-12 [C] Products & Services: the Advisory box links to the Safe AI Readiness Scorecard
 - Jonathan, 12 Nov 19:38 UK: "I think it leads to a product so it might be on both?" The scorecard stays on Resources (it is free) and now also sits on Products & Services, as a second line under Explore Advisory in the Advisory box, because it leads to the Review. No new tile, no price, no "diagnostic".

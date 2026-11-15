@@ -1,3 +1,11 @@
+## 2026-11-15 [C] Contact line on every Thought (on dev, not live)
+- Jonathan, 15 Nov 18:11 UK: every Thought must give the reader a way to connect with us, worded "If you'd like to talk to us about this, then please contact us here or email us directly at information@quantumcolleagues.org", with "here" linking /contact.html and the address a mailto link.
+- All nine Thoughts now carry the line straight after the article body, in a light box with a teal top rule (p.talk-cta, plus one small style block per page). The post text is unchanged, so the five Thoughts that already end with their own invitation keep it.
+- Verifier verify_thought_cta.py written first. It discovers the Thoughts from thoughts/ and from the Thoughts index, so a new Thought without the line fails it, and --live checks the live site after promotion. RED 22/67 on d8e4e35 and on 422fc4f, GREEN 67/67 on this build. Six planted faults each went RED, among them a new Thought without the line and the line hidden in a comment. Builder: add_thought_cta.py (all pages or none, idempotent).
+- The other Thought verifiers match the baseline, except verify_thought_ribe.py. Its build time checks are pinned to dc2e324: it was already RED 69/70 on the sitemap check, and it is now RED 68/70 because it also asserts that no other Thought has changed since then.
+- Checked by eye in Chrome against the Spark's dev server (rule-zero.html and rules-it-cannot-bend.html); the server was stopped afterwards.
+- Promotion waits for Jonathan's go. Dev also holds the Care Playbook page, which still waits for its PDF, so it is parked again for the promotion unless the PDF is up by then.
+
 ## 2026-11-15 [C] Care Playbook page back on dev, third time
 - The page returns unchanged after the third park, so main carries v5.26.4 alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

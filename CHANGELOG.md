@@ -1,3 +1,8 @@
+## 2026-11-15 [C] Thought hub live (feed, Article markup, llms.txt, "here first"): Care Playbook page parked for the promotion
+- Jonathan, 15 Nov 21:54 UK: "Put live what you can". Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (the reverse of 004b6f1), so changes 2 to 4 of the Thought hub go live without the Playbook. build_thought_hub.py ran again after the park, so llms.txt does not list the Playbook. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
+- Change 1, counting visits to the Thoughts, is not in this promotion. It waits for the second GoatCounter site.
+- Against main f3827af this commit changes only llms.txt, thoughts/feed.xml, the heads of the ten Thoughts, the Thoughts list and this file. On this tree verify_thought_hub.py is GREEN 184/184, verify_thoughts.py is GREEN, verify_thought_cta.py GREEN 74/74, verify_resource_cta.py GREEN 31/31, verify_thought_cbm.py GREEN 54/54 and verify_latest_thought_airr.py GREEN 41/41.
+
 ## 2026-11-15 [C] The Thought becomes the hub: feed, Article markup, llms.txt and "here first" (on dev, not live)
 - Jonathan, 15 Nov 21:32 UK: "1 is fine. They're all fine. Go for it", on four site changes that make the Thought on quantumcolleagues.org the master copy for every channel. This commit carries changes 2 to 4. Change 1, counting visits to the Thoughts, waits for a second GoatCounter site, because the impact page shows the whole total of the Career & Beyond site as its user count.
 - thoughts/feed.xml is an RSS 2.0 feed of every Thought, newest first, built from the Thoughts list. Every Thought page and the list point to it.

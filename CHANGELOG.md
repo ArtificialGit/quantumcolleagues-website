@@ -1,3 +1,10 @@
+## 2026-11-15 [C] Career & Beyond v5.26.4: the branching & logo inside the app (staged, not live)
+- Jonathan, 15 Nov 17:04 UK: "Agreed", that the app header shows the Career & Beyond logo on its own, with "from QuantumColleagues" small at the foot.
+- career-beyond.html: the top bar shows the Career & Beyond logo (inline SVG, white with a light teal branch) in place of qc_logo_topbar.png, and the link keeps its target. Every foot reads "from QuantumColleagues.". The page names cb-icon-192.png as its tab icon and home screen icon. og:image and twitter:image move to cb-social-1200x630-v2.png, a copy of the card, so LinkedIn fetches the new image.
+- Built from the OneDrive master: master_v5.26.4.html sha256 8e6051af, and the bundle 7cdd3280 is minify(master) on Mother and the same splice here, byte for byte. gzip -9 is 288,035 (v5.26.2 285,347). sw.js is career-beyond-v5.26.4.
+- Verifier verify_cb_v5264.js written first: RED on v5.26.2, GREEN 91/91 on the master and 92/92 on the bundle, mutation RED. A7 gates on the bundle: privacy (verify_v5260 JOBS CV) 38/38 with both PRIVACY checks, LAYOUT 24/24, menu19 legs no fails (SIMPLE repointed, because an SVG logo has no naturalWidth), simplemenu 28/28, v5253_settle 45/45, fold 26/26 in both halves, standalone 9/9 (repointed for the foot label), findajob 6/6, prod 11/11, verify_cb_v5264.py 30/30. Records: OneDrive build_records/v5.26.4_staged.
+- Release waits for Jonathan's go ("release v5.26.4"). Dev also holds the Care Playbook page, which still waits for its PDF.
+
 ## 2026-11-15 [C] Care Playbook page back on dev again
 - The page returns unchanged after the second park, so main carries the logo pages alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

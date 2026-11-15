@@ -1,3 +1,6 @@
+## 2026-11-15 [C] Care Playbook page back on dev, fourth time
+- The page, its Resources card and its sitemap line return unchanged after the fourth park, so main carries the Thought contact line alone. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
+
 ## 2026-11-15 [C] Thought contact line live: Care Playbook page parked for the promotion
 - Jonathan, 15 Nov 19:24 UK: "Promote". Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (reverting 422fc4f), so the contact line on every Thought goes live alone. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
 - Against main 573fe16 this commit changes only the nine Thoughts and this file. verify_thought_cta.py and verify_thoughts.py are GREEN on this tree.

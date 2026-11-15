@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts from QuantumColleagues</title>
+    <link>https://quantumcolleagues.org/thoughts/</link>
+    <description>One thought about AI a week, for people running small and regulated businesses. Plain, practical ideas, no jargon.</description>
+    <language>en-gb</language>
+    <atom:link href="https://quantumcolleagues.org/thoughts/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 16 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The will is there. What’s often missing is a map.</title>
+      <link>https://quantumcolleagues.org/thoughts/the-will-is-there.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/the-will-is-there.html</guid>
+      <pubDate>Mon, 16 Nov 2026 09:00:00 +0000</pubDate>
+      <description>84% of young people who aren’t working, studying or training want to be. Career &amp; Beyond, our free careers app, helps them map their next step.</description>
+    </item>
+    <item>
+      <title>We’ve been awarded 10,000 GPU hours on Isambard-AI</title>
+      <link>https://quantumcolleagues.org/thoughts/airr-isambard-ai.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/airr-isambard-ai.html</guid>
+      <pubDate>Fri, 06 Nov 2026 09:00:00 +0000</pubDate>
+      <description>The UK’s national AI supercomputer will help us find the best open models for care work, using synthetic data only, so the evidence is ready for a National Care Service.</description>
+    </item>
+    <item>
+      <title>In regulated markets, wrap every AI model in rules it cannot bend</title>
+      <link>https://quantumcolleagues.org/thoughts/rules-it-cannot-bend.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/rules-it-cannot-bend.html</guid>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0000</pubDate>
+      <description>AI models are probabilistic, so every QuantumColleagues agent works inside a deterministic framework. Each action passes a fixed check, and a named person signs off anything with consequence.</description>
+    </item>
+    <item>
+      <title>A day with the team</title>
+      <link>https://quantumcolleagues.org/thoughts/a-day-with-the-team.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/a-day-with-the-team.html</guid>
+      <pubDate>Wed, 28 Oct 2026 09:00:00 +0000</pubDate>
+      <description>One ordinary day with our AI colleagues: the overnight inbox, a policy answer with its source, training certificates flagged, and a daily report held until the manager signs it off.</description>
+    </item>
+    <item>
+      <title>Capacity that gives back</title>
+      <link>https://quantumcolleagues.org/thoughts/capacity-that-gives-back.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/capacity-that-gives-back.html</guid>
+      <pubDate>Mon, 19 Oct 2026 09:00:00 +0100</pubDate>
+      <description>Two CEOs who think they're doing enough, a regulated team that hit a wall at Copilot, and how that work funds free career planning and post-AI training.</description>
+    </item>
+    <item>
+      <title>Transformation using AI: Rule Zero</title>
+      <link>https://quantumcolleagues.org/thoughts/rule-zero.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/rule-zero.html</guid>
+      <pubDate>Sat, 10 Oct 2026 09:00:00 +0100</pubDate>
+      <description>A school woodwork lamp, three rules for starting with AI, and the one that comes before them all: write down your constraints first.</description>
+    </item>
+    <item>
+      <title>A National Care Service is coming. The admin is already here.</title>
+      <link>https://quantumcolleagues.org/thoughts/national-care-service.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/national-care-service.html</guid>
+      <pubDate>Tue, 29 Sep 2026 09:00:00 +0100</pubDate>
+      <description>The Prime Minister has promised a National Care Service. While the organisation and funding are worked out, we show how Admin Core puts more of a care budget on care and less on admin.</description>
+    </item>
+    <item>
+      <title>First steps toward simplifying with agents and AI don’t need to be tricky.</title>
+      <link>https://quantumcolleagues.org/thoughts/first-steps.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/first-steps.html</guid>
+      <pubDate>Mon, 21 Sep 2026 09:00:00 +0100</pubDate>
+      <description>Three rules we learned inside regulated UK businesses: pick one task, write down the boundaries, and run a two week trial on live work. Five pages.</description>
+    </item>
+    <item>
+      <title>People decide. Agent colleagues do the work.</title>
+      <link>https://quantumcolleagues.org/thoughts/people-decide.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/people-decide.html</guid>
+      <pubDate>Mon, 14 Sep 2026 09:00:00 +0100</pubDate>
+      <description>We designed our agent threshold model to ensure that anything with real world consequences stops with a named person. Three pages on how it works.</description>
+    </item>
+    <item>
+      <title>You don’t need to burn cloud tokens on every job.</title>
+      <link>https://quantumcolleagues.org/thoughts/dont-burn-cloud-tokens.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/dont-burn-cloud-tokens.html</guid>
+      <pubDate>Tue, 08 Sep 2026 09:00:00 +0100</pubDate>
+      <description>Most agentic automation wants rules, orchestration and a model on your own kit. Save the big models for judgement.</description>
+    </item>
+  </channel>
+</rss>

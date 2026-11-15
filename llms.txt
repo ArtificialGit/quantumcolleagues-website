@@ -1,0 +1,48 @@
+# QuantumColleagues
+
+> QuantumColleagues builds AI colleagues for UK SMEs and regulated organisations, starting with Admin Core. What businesses buy funds free post-AI training for every generation.
+
+QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagues Training CIC (company number 17244034). Email information@quantumcolleagues.org or call 0333 880 0712.
+
+## Products and services
+
+- [Admin Core](https://quantumcolleagues.org/admincore.html): the AI automation platform for back office work (policy questions, the inbox, HR and training records, incident and complaint paperwork, inspection evidence).
+- [Proust](https://quantumcolleagues.org/proust.html): an AI assistant with its own mailbox.
+- [Advisory](https://quantumcolleagues.org/advisory.html): advice for SMEs and regulated businesses on secure and responsible AI automation. We teach your team, and you own the capability rather than a contract.
+- [Products and services](https://quantumcolleagues.org/products.html): Admin Core, Proust and Advisory on one page.
+
+## Free resources
+
+- [Career guides](https://quantumcolleagues.org/careers/): free, honest guides to 87 real UK jobs, covering what the day is like, what you need to start, official pay, and how AI is changing each one.
+- [Career & Beyond](https://quantumcolleagues.org/career-beyond.html): a free careers app for every generation, with 87 real UK jobs, honest pay and how AI changes each one. It runs in any browser and on Google Play, and nothing you type leaves your device.
+- [Adopting AI: first steps for SMEs](https://quantumcolleagues.org/guide.html): a free guide in plain English to adopting AI as support and extra capacity for your SME, with people and AI working together.
+- [Safe AI Readiness Scorecard](https://quantumcolleagues.org/scorecard.html): a free three minute scorecard for owners and managers of small regulated organisations, with ten questions, three pillars, a plain result and three next steps.
+- [AI Playbook for Care Operators](https://quantumcolleagues.org/care-playbook.html): a free seven page playbook for care operators running more than one site, with ten plays that take paperwork off your team without a single resident record leaving your control.
+- [Gated Autonomy](https://quantumcolleagues.org/gated-autonomy.html): the QuantumColleagues delivery method for AI and AI-led automation. The AI works freely, and every boundary that matters is a hard gate it cannot talk its way through.
+- [The Human-AI Operating Model](https://quantumcolleagues.org/human-ai-operating-model.html): how a business puts AI colleagues to work in its back office while its own people stay in charge.
+
+## Thoughts
+
+- [The will is there. What’s often missing is a map.](https://quantumcolleagues.org/thoughts/the-will-is-there.html): 16 November 2026. 84% of young people who aren’t working, studying or training want to be. Career & Beyond, our free careers app, helps them map their next step.
+- [We’ve been awarded 10,000 GPU hours on Isambard-AI](https://quantumcolleagues.org/thoughts/airr-isambard-ai.html): 6 November 2026. The UK’s national AI supercomputer will help us find the best open models for care work, using synthetic data only, so the evidence is ready for a National Care Service.
+- [In regulated markets, wrap every AI model in rules it cannot bend](https://quantumcolleagues.org/thoughts/rules-it-cannot-bend.html): 2 November 2026. AI models are probabilistic, so every QuantumColleagues agent works inside a deterministic framework. Each action passes a fixed check, and a named person signs off anything with consequence.
+- [A day with the team](https://quantumcolleagues.org/thoughts/a-day-with-the-team.html): 28 October 2026. One ordinary day with our AI colleagues: the overnight inbox, a policy answer with its source, training certificates flagged, and a daily report held until the manager signs it off.
+- [Capacity that gives back](https://quantumcolleagues.org/thoughts/capacity-that-gives-back.html): 19 October 2026. Two CEOs who think they're doing enough, a regulated team that hit a wall at Copilot, and how that work funds free career planning and post-AI training.
+- [Transformation using AI: Rule Zero](https://quantumcolleagues.org/thoughts/rule-zero.html): 10 October 2026. A school woodwork lamp, three rules for starting with AI, and the one that comes before them all: write down your constraints first.
+- [A National Care Service is coming. The admin is already here.](https://quantumcolleagues.org/thoughts/national-care-service.html): 29 September 2026. The Prime Minister has promised a National Care Service. While the organisation and funding are worked out, we show how Admin Core puts more of a care budget on care and less on admin.
+- [First steps toward simplifying with agents and AI don’t need to be tricky.](https://quantumcolleagues.org/thoughts/first-steps.html): 21 September 2026. Three rules we learned inside regulated UK businesses: pick one task, write down the boundaries, and run a two week trial on live work. Five pages.
+- [People decide. Agent colleagues do the work.](https://quantumcolleagues.org/thoughts/people-decide.html): 14 September 2026. We designed our agent threshold model to ensure that anything with real world consequences stops with a named person. Three pages on how it works.
+- [You don’t need to burn cloud tokens on every job.](https://quantumcolleagues.org/thoughts/dont-burn-cloud-tokens.html): 8 September 2026. Most agentic automation wants rules, orchestration and a model on your own kit. Save the big models for judgement.
+
+## About
+
+- [Mission](https://quantumcolleagues.org/mission.html): businesses buy AI colleagues from QuantumColleagues, Admin Core first, and that revenue funds free post-AI training for people who need it most.
+- [Impact](https://quantumcolleagues.org/impact.html): a defined share of what businesses pay QuantumColleagues funds post-AI training. The page shows how it works and what it has reached so far.
+- [Press](https://quantumcolleagues.org/press.html): press releases and media information.
+- [Contact](https://quantumcolleagues.org/contact.html): email information@quantumcolleagues.org or call 0333 880 0712.
+
+## Optional
+
+- [Thoughts feed (RSS)](https://quantumcolleagues.org/thoughts/feed.xml): every Thought, newest first.
+- [Sitemap](https://quantumcolleagues.org/sitemap.xml)
+- [Privacy](https://quantumcolleagues.org/privacy.html)

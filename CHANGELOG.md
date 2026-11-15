@@ -1,3 +1,13 @@
+## 2026-11-15 [C] The Thought becomes the hub: feed, Article markup, llms.txt and "here first" (on dev, not live)
+- Jonathan, 15 Nov 21:32 UK: "1 is fine. They're all fine. Go for it", on four site changes that make the Thought on quantumcolleagues.org the master copy for every channel. This commit carries changes 2 to 4. Change 1, counting visits to the Thoughts, waits for a second GoatCounter site, because the impact page shows the whole total of the Career & Beyond site as its user count.
+- thoughts/feed.xml is an RSS 2.0 feed of every Thought, newest first, built from the Thoughts list. Every Thought page and the list point to it.
+- Every Thought page carries one Article block (JSON-LD) in its head, with the headline, date, description, address, image, author (Jonathan Clark) and publisher (QuantumColleagues). Only the page heads change, so readers see no difference.
+- /llms.txt describes the site for AI assistants, Admin Core first, with every free resource, every Thought, the About pages and the feed. Its lines follow the pages' own wording, without dashes.
+- The Thoughts list now says: "We share one thought about AI most weeks, here first and then on LinkedIn and Instagram." The older Thoughts keep "First published on LinkedIn", because that is true for them.
+- build_thought_hub.py makes all of this. It must run again whenever a Thought or a free resource is added, or the Care Playbook page is parked or restored. Verifier verify_thought_hub.py written first: RED 14/62 on 004b6f1, GREEN 185/185 on this build. 16 planted faults each went RED, among them a new Thought or a new resource card that misses the feed, the markup or llms.txt. verify_thoughts.py now calls it.
+- Two list checks compared the whole Thoughts page with an older copy, so the new head and intro read as changes to the list: "rest of the list unchanged" in verify_thought_cbm.py and verify_latest_thought_airr.py. Both now compare the cards only, and both still go RED when a card is edited or two cards are swapped. Every other website verifier gives the same verdict as on 004b6f1.
+- Checked by eye in Chrome against the Spark's dev server.
+
 ## 2026-11-15 [C] Care Playbook page back on dev, fifth time
 - The page, its Resources card and its sitemap line return after the fifth park, so main carries the resource contact line and the new Thought alone. The page now carries the contact line too. It still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

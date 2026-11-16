@@ -2,6 +2,7 @@
 - Jonathan, 16 Nov 16:21 UK: "I think the CSR website download should demand an email address".
 - social-value.html: the direct download button becomes the same gate as guide.html. It asks for a first name and a work email (required). On submit the details go to information@quantumcolleagues.org through FormSubmit, the system of record, with a best-effort copy to HubSpot form 4f765d73 carrying pageUri social-value.html, and then the PDF downloads. If the send fails, the page asks the reader to try again or email information@ for the pack, so it offers no direct link that bypasses the gate. The privacy policy is linked from the form.
 - The PDF still has a public address in guides/, as the Adopting AI guide does, so the gate is a soft one. The page text stays fully readable for search.
+- The home guards in home_guard.py and verify_hero_sovereign.py now also strip the CSR pill from origin/main, which has carried it since f0f5584, so they compare like with like. One extra byte in index.html still turns all six RED.
 - Builder gate_social_value.py. verify_social_value.py gains eight V9 gate checks, written first: RED 34/42 on f41e1fa, GREEN 42/42 on this build. Backup of the earlier verifier in test_results.
 
 ## 2026-11-16 [C] Care Playbook page back on dev, seventh time

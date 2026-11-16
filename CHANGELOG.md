@@ -1,3 +1,10 @@
+## 2026-11-16 [C] CSR page search setup for "CSR AI UK" and "CSR AI Northampton" (on dev, not live)
+- Jonathan, 16 Nov 16:36 UK: "Are all the right seo links and da stuff in the website for CSR AI UK and CSR AI Northampon?"
+- social-value.html: the title becomes "CSR and social value through AI | Northampton and UK | QuantumColleagues". The meta description is rewritten to 150 characters, so it fits a search snippet, and names CSR, AI and Northampton. The subtitle adds "Based in Northampton, working across the UK."
+- Open Graph and Twitter tags added (og-image.jpg, as on the other pages), so a shared link shows a proper card.
+- One JSON-LD graph added: a WebPage, a Service ("CSR and social value through AI") whose provider is the site organisation (#org on the home page), serving Northampton, Northamptonshire and the United Kingdom, with no price; and a breadcrumb Home > CSR and social value. No postal address.
+- Builder seo_social_value.py. verify_social_value.py gains seventeen V10 checks, written first: RED 43/59 on 7a8a6c3, GREEN 59/59 on this build. verify_seo_batch1.py 103/103 and verify_seo_products.py GREEN 37/37 unchanged.
+
 ## 2026-11-16 [C] Care Playbook page back on dev, eighth time
 - The page, its Resources card and its sitemap line return after the eighth park, so main carries the CSR pack email gate alone. build_thought_hub.py ran again, so llms.txt lists the Playbook on dev. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
 

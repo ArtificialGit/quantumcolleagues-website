@@ -1,3 +1,6 @@
+## 2026-11-16 [C] Care Playbook page back on dev, eighth time
+- The page, its Resources card and its sitemap line return after the eighth park, so main carries the CSR pack email gate alone. build_thought_hub.py ran again, so llms.txt lists the Playbook on dev. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
+
 ## 2026-11-16 [C] CSR pack email gate live: Care Playbook page parked for the promotion
 - Jonathan, 16 Nov 16:28 UK: "Go", on the CSR pack email gate (9111751, b53eb25). Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (the reverse of f41e1fa), so the gate goes live without the Playbook. build_thought_hub.py ran again after the park, so llms.txt does not list the Playbook. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
 - On this tree verify_social_value.py is GREEN 42/42, verify_resource_cta.py GREEN 38/38, verify_thought_hub.py GREEN 185/185, verify_hero_sovereign.py 18/18, verify_thought_cbm.py GREEN 54/54, verify_latest_thought_airr.py GREEN 41/41, verify_team_compact.py and verify_proust_tenant.py GREEN 10/10, verify_landing_simplify.py 13/13 and verify_scorecard.py GREEN 47/47.

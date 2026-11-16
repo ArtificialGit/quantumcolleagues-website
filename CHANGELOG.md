@@ -1,3 +1,6 @@
+## 2026-11-16 [C] Care Playbook page back on dev, ninth time
+- The page, its Resources card and its sitemap line return after the ninth park, so main carries the CSR page search setup alone. build_thought_hub.py ran again, so llms.txt lists the Playbook on dev. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf before promotion.
+
 ## 2026-11-16 [C] CSR page search setup live: Care Playbook page parked for the promotion
 - Jonathan, 16 Nov 16:57 UK: "Go", on the CSR page search setup (a48ec65). Main moves to this commit, which takes the Care Playbook page, its Resources card and its sitemap line back off (the reverse of 7a8a6c3), so the search setup goes live without the Playbook. build_thought_hub.py ran again after the park, so llms.txt does not list the Playbook. The page still waits for guides/QC_AI_Playbook_for_Care_Operators_v1.0.pdf.
 - On this tree verify_social_value.py is GREEN 59/59, verify_resource_cta.py GREEN 38/38, verify_thought_hub.py GREEN 185/185, verify_hero_sovereign.py 18/18, verify_thought_cbm.py GREEN 54/54, verify_latest_thought_airr.py GREEN 41/41, verify_team_compact.py and verify_proust_tenant.py GREEN 10/10, verify_seo_batch1.py 103/103, verify_seo_products.py GREEN 37/37 and verify_scorecard.py GREEN 47/47.

@@ -116,6 +116,24 @@
             .talk-cta{max-width:66ch;margin:1.6rem 0 .6rem;padding:1rem 1.2rem;border-top:3px solid #2D8C6F;background:#F3F8F6;font-size:1.02rem;line-height:1.6;color:#2c2c33}
         .talk-cta a{color:#1F6B53;font-weight:600;text-decoration:none}
         .talk-cta a:hover,.talk-cta a:focus{text-decoration:underline}
+            /* ===== EMAIL GATE (as guide.html) ===== */
+        .cta .gate { max-width: 560px; margin: 0 auto 0.8rem; text-align: left; }
+        .gate-row { display: flex; gap: 0.8rem; margin-bottom: 0.9rem; }
+        .gate-field { flex: 1; display: flex; flex-direction: column; }
+        .gate-field label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6e8a; margin-bottom: 0.35rem; }
+        .gate-field .req { color: #2D8C6F; }
+        .gate-field input { font-family: inherit; font-size: 0.95rem; color: #333; padding: 0.72rem 0.85rem; border: 1px solid #d8d8e0; border-radius: 6px; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
+        .gate-field input::placeholder { color: #b6b8c8; }
+        .gate-field input:focus { outline: none; border-color: #2D8C6F; box-shadow: 0 0 0 3px rgba(45,140,111,0.12); }
+        .download-btn { display: inline-flex; align-items: center; gap: 0.55rem; background: #2D8C6F; color: #ffffff; padding: 0.95rem 1.8rem; border-radius: 6px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: none; cursor: pointer; font-family: inherit; }
+        .download-btn:hover { background: #256f58; }
+        .download-btn:disabled { opacity: 0.6; cursor: default; }
+        .download-note { font-size: 0.78rem; color: #8c8eaf; margin-top: 0.7rem; }
+        .download-note a { color: inherit; text-decoration: underline; }
+        .gate-error { color: #b3261e; font-size: 0.82rem; margin-top: 0.7rem; line-height: 1.5; }
+        .gate-error a { color: #b3261e; font-weight: 600; }
+        .gate-success-title { font-size: 1.05rem; font-weight: 600; color: #2D8C6F; margin-bottom: 0.25rem; }
+        @media (max-width: 600px) { .gate-row { flex-direction: column; gap: 0.9rem; } }
     </style>
 </head>
 <body>
@@ -202,8 +220,28 @@
 
         <div class="cta">
             <h3>The CSR and social value pack</h3>
-            <p>Six slides on how it works, what each organisation gets and the three ways in. Free to download and share with your CSR, bid and partnership teams.</p>
-            <a class="btn" href="guides/QuantumColleagues_CSR_Social_Value_Pack.pdf" download>Download the pack (PDF)</a>
+            <p>Six slides on how it works, what each organisation gets and the three ways in. Free to share with your CSR, bid and partnership teams. Leave your email and the pack downloads straight away.</p>
+            <div class="gate" id="gate">
+                <form id="svForm" novalidate>
+                    <div class="gate-row">
+                        <div class="gate-field">
+                            <label for="sv-first">First name</label>
+                            <input type="text" id="sv-first" name="firstname" autocomplete="given-name" placeholder="Your first name">
+                        </div>
+                        <div class="gate-field">
+                            <label for="sv-email">Work email <span class="req">*</span></label>
+                            <input type="email" id="sv-email" name="email" autocomplete="email" required placeholder="you@company.com">
+                        </div>
+                    </div>
+                    <button type="submit" class="download-btn" id="sv-submit">&darr;&nbsp;&nbsp;Get the pack (PDF)</button>
+                    <p class="download-note">We use your details only to reply to you and send the occasional useful update. Unsubscribe any time. Read our <a href="privacy.html">Privacy Policy</a>.</p>
+                    <p class="gate-error" id="sv-error" hidden></p>
+                </form>
+                <div id="sv-success" hidden>
+                    <p class="gate-success-title">&check;&nbsp; Thanks. Your download is starting.</p>
+                    <p class="download-note">If it doesn't begin, <a href="guides/QuantumColleagues_CSR_Social_Value_Pack.pdf" download>click here to download the pack</a>.</p>
+                </div>
+            </div><!-- end gate -->
             <a class="alt" href="contact.html">Or talk to us &rarr;</a>
         </div>
 
@@ -220,6 +258,65 @@
         <span class="right"><a href="press.html">Press</a> &middot; Quantum Colleagues Training Community Interest Company &mdash; <a href="index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="/thoughts/">Thoughts</a></span>
     </footer>
     <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; <a href="tel:+443338800712" style="color:inherit;text-decoration:none;">Tel 0333 880 0712</a> &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></p>
+
+    <script>
+    (function () {
+        /* CSR pack gate: as guide.html. FormSubmit to information@ is the system of record;
+           the HubSpot POST is a best-effort CRM copy. */
+        var MAIL_EP = 'https://formsubmit.co/ajax/information@quantumcolleagues.org';
+        var PORTAL = '147863903';
+        var FORM_GUID = '4f765d73-e3ee-4776-ab46-f78df30e2354';
+        var ENDPOINT = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/' + PORTAL + '/' + FORM_GUID;
+        var PDF = 'guides/QuantumColleagues_CSR_Social_Value_Pack.pdf';
+        var form = document.getElementById('svForm');
+        var emailEl = document.getElementById('sv-email');
+        var firstEl = document.getElementById('sv-first');
+        var btn = document.getElementById('sv-submit');
+        var errEl = document.getElementById('sv-error');
+        var successEl = document.getElementById('sv-success');
+        var BTN_LABEL = btn.innerHTML;
+        function validEmail(s) { var at = s.indexOf('@'); var dot = s.lastIndexOf('.'); return at > 0 && dot > at + 1 && dot < s.length - 1; }
+        function triggerDownload() {
+            var a = document.createElement('a');
+            a.href = PDF; a.setAttribute('download', '');
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        }
+        function succeed() { form.hidden = true; successEl.hidden = false; triggerDownload(); }
+        function fail() {
+            btn.disabled = false; btn.innerHTML = BTN_LABEL;
+            errEl.innerHTML = 'Sorry, that didn&rsquo;t go through. Please try again, or email <a href="mailto:information@quantumcolleagues.org">information@quantumcolleagues.org</a> and we&rsquo;ll send you the pack.';
+            errEl.hidden = false;
+        }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            errEl.hidden = true;
+            var email = (emailEl.value || '').trim();
+            var first = (firstEl.value || '').trim();
+            if (!validEmail(email)) { errEl.textContent = 'Please enter a valid email address.'; errEl.hidden = false; emailEl.focus(); return; }
+            btn.disabled = true; btn.innerHTML = 'Sending&hellip;';
+            var fields = [{ name: 'email', value: email }];
+            if (first) { fields.push({ name: 'firstname', value: first }); }
+            function crmCapture() { /* best-effort; failures deliberately ignored */
+                try {
+                    fetch(ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ fields: fields, context: { pageUri: 'https://quantumcolleagues.org/social-value.html', pageName: 'CSR and social value pack' } })
+                    }).catch(function () {});
+                } catch (err) {}
+            }
+            var payload = { email: email, _subject: 'Pack download: CSR and social value pack', _replyto: email, _template: 'table' };
+            if (first) { payload.name = first; }
+            fetch(MAIL_EP, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function (res) { return res.json(); })
+              .then(function (d) { if (String(d.success) === 'true') { crmCapture(); succeed(); } else { fail(); } })
+              .catch(function () { fail(); });
+        });
+    })();
+    </script>
 
 </body>
 </html>

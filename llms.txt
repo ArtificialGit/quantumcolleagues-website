@@ -13,6 +13,7 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 
 ## Free resources
 
+- [CSR and social value pack](https://quantumcolleagues.org/social-value.html): how every Admin Core deployment funds free post-AI training through an asset-locked CIC, and how partners, providers and their customers report it as CSR and social value. Six slides, free to download.
 - [Career guides](https://quantumcolleagues.org/careers/): free, honest guides to 87 real UK jobs, covering what the day is like, what you need to start, official pay, and how AI is changing each one.
 - [Career & Beyond](https://quantumcolleagues.org/career-beyond.html): a free careers app for every generation, with 87 real UK jobs, honest pay and how AI changes each one. It runs in any browser and on Google Play, and nothing you type leaves your device.
 - [Adopting AI: first steps for SMEs](https://quantumcolleagues.org/guide.html): a free guide in plain English to adopting AI as support and extra capacity for your SME, with people and AI working together.

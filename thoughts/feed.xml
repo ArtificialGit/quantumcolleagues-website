@@ -6,7 +6,14 @@
     <description>One thought about AI a week, for people running small and regulated businesses. Plain, practical ideas, no jargon.</description>
     <language>en-gb</language>
     <atom:link href="https://quantumcolleagues.org/thoughts/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Which AI can care providers trust?</title>
+      <link>https://quantumcolleagues.org/thoughts/which-ai-can-care-providers-trust.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/which-ai-can-care-providers-trust.html</guid>
+      <pubDate>Tue, 17 Nov 2026 09:00:00 +0000</pubDate>
+      <description>Our care AI study on Isambard-AI is up and running. It tests which open models handle care admin well and safely on a provider’s own hardware.</description>
+    </item>
     <item>
       <title>The will is there. What’s often missing is a map.</title>
       <link>https://quantumcolleagues.org/thoughts/the-will-is-there.html</link>

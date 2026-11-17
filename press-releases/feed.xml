@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Press releases from QuantumColleagues</title>
+    <link>https://quantumcolleagues.org/press.html</link>
+    <description>Press releases and media information from QuantumColleagues™. Businesses buy AI colleagues from us, Admin Core first, and the revenue funds free post-AI training for every generation.</description>
+    <language>en-gb</language>
+    <atom:link href="https://quantumcolleagues.org/press-releases/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <lastBuildDate>Fri, 06 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>QuantumColleagues awarded 10,000 GPU hours on Isambard-AI to find the best AI models for UK social care</title>
+      <link>https://quantumcolleagues.org/press-releases/airr-isambard-ai.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/press-releases/airr-isambard-ai.html</guid>
+      <pubDate>Fri, 06 Nov 2026 09:00:00 +0000</pubDate>
+      <description>The Northamptonshire AI company will use the UK’s national AI supercomputer, through the AI Research Resource (AIRR) programme, to test which open models suit care work and how to run them on providers’ own hardware.</description>
+    </item>
+    <item>
+      <title>Career &amp; Beyond reaches 1,200 users in its first week, the free careers tool that takes no data</title>
+      <link>https://quantumcolleagues.org/press-releases/career-beyond-week-one.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/press-releases/career-beyond-week-one.html</guid>
+      <pubDate>Thu, 03 Sep 2026 09:00:00 +0100</pubDate>
+      <description>QuantumColleagues’ free careers app took no money and no personal data from the people who used it, and around 1,200 of them used it in week one.</description>
+    </item>
+    <item>
+      <title>QuantumColleagues launches Career &amp; Beyond, a free career change tool for every generation</title>
+      <link>https://quantumcolleagues.org/press-releases/career-and-beyond.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/press-releases/career-and-beyond.html</guid>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 +0100</pubDate>
+      <description>The UK AI-for-good company releases its first free give back: a web app that maps working life as a tree, starting from the skills people already have. No sign up, no cost, on any phone.</description>
+    </item>
+    <item>
+      <title>New UK AI company is built to give back, funding post-AI training for every generation</title>
+      <link>https://quantumcolleagues.org/press-releases/new-uk-ai-company-is-built-to-give-back.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/press-releases/new-uk-ai-company-is-built-to-give-back.html</guid>
+      <pubDate>Thu, 04 Jun 2026 09:00:00 +0100</pubDate>
+      <description>Businesses buy AI from QuantumColleagues™, and the revenue funds post-AI training for the people most at risk of being left behind by it, young people starting out, and people in later life. Giving back isn’t a side project; it’s the reason the company exists. Its first product, Proust, is available now.</description>
+    </item>
+  </channel>
+</rss>

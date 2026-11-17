@@ -36,6 +36,13 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 - [People decide. Agent colleagues do the work.](https://quantumcolleagues.org/thoughts/people-decide.html): 14 September 2026. We designed our agent threshold model to ensure that anything with real world consequences stops with a named person. Three pages on how it works.
 - [You don’t need to burn cloud tokens on every job.](https://quantumcolleagues.org/thoughts/dont-burn-cloud-tokens.html): 8 September 2026. Most agentic automation wants rules, orchestration and a model on your own kit. Save the big models for judgement.
 
+## Press releases
+
+- [QuantumColleagues awarded 10,000 GPU hours on Isambard-AI to find the best AI models for UK social care](https://quantumcolleagues.org/press-releases/airr-isambard-ai.html): 6 November 2026.
+- [Career & Beyond reaches 1,200 users in its first week, the free careers tool that takes no data](https://quantumcolleagues.org/press-releases/career-beyond-week-one.html): 3 September 2026.
+- [QuantumColleagues launches Career & Beyond, a free career change tool for every generation](https://quantumcolleagues.org/press-releases/career-and-beyond.html): 21 July 2026.
+- [New UK AI company is built to give back, funding post-AI training for every generation](https://quantumcolleagues.org/press-releases/new-uk-ai-company-is-built-to-give-back.html): 4 June 2026.
+
 ## About
 
 - [Mission](https://quantumcolleagues.org/mission.html): businesses buy AI colleagues from QuantumColleagues, Admin Core first, and that revenue funds free post-AI training for people who need it most.
@@ -46,5 +53,6 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 ## Optional
 
 - [Thoughts feed (RSS)](https://quantumcolleagues.org/thoughts/feed.xml): every Thought, newest first.
+- [Press releases feed (RSS)](https://quantumcolleagues.org/press-releases/feed.xml): every press release, newest first.
 - [Sitemap](https://quantumcolleagues.org/sitemap.xml)
 - [Privacy](https://quantumcolleagues.org/privacy.html)

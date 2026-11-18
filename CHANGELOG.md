@@ -1,8 +1,13 @@
+## 2026-11-18 [C] Correction to the Care Playbook PDF entry, and verifier upkeep for the Bracton pages
+- The restore entry below first said that regress_all.py showed nothing going from pass to fail. That was wrong. The comparison listed verify_thought_bracton_pages.py, and the commit was pushed before the result was read. Its scope check allows only the Bracton rewrite's files to differ from its base, and the Playbook PDF differs too. Its other 19 checks passed, including verify_thought_bracton.py. The line below now says so.
+- Verifier upkeep, as the Bracton work did for verify_press_hub.py this morning: verify_thought_bracton_pages.py now sets aside guides/QC_AI_Playbook_for_Care_Operators_v1.1.pdf by name in its scope check. It is GREEN 20/20 on 5560c5b and on 4aaa15a, and a stray file added to the tree still turns it RED 19/20.
+- regress_all.py, rerun: 37/49 here and 36/49 on 5560c5b, and nothing goes from pass to fail (verify_care_playbook.py goes from fail to pass).
+
 ## 2026-11-18 [C] Care Playbook page back on dev with its PDF; complete, and waiting for Jonathan's Promote
 - guides/QC_AI_Playbook_for_Care_Operators_v1.1.pdf is in, taken from the temporary branch playbook-pdf-v1-1 (4a007e5): 457,821 bytes, sha256 32582e17...3713, the file approved on 18 November. The page, its Resources card, its sitemap line and its llms.txt line return with it (the reverse of 306b67c).
 - Built by add_care_playbook.py, add_resource_cta.py, build_press_hub.py and build_thought_hub.py. Against 5560c5b the only change apart from this file is the PDF.
 - verify_care_playbook.py GREEN 31/31, the first time this page has been complete. plant_faults_care_playbook_copy.py caught 7/7 planted faults against a clean baseline, including a wrong PDF at the v1.1 path. Served locally from this tree, the page, the PDF (the same sha256) and resources.html all answer 200.
-- regress_all.py: 36/49 here and 36/49 on 5560c5b, and nothing goes from pass to fail.
+- regress_all.py at first showed verify_thought_bracton_pages.py going from pass to fail, and this commit was pushed before that result was read. See the correction above.
 - One revert of this commit parks the whole page, PDF included, if a promotion before Jonathan's Promote for the Playbook needs it parked.
 
 ## 2026-11-18 [C] Care Playbook page parked on dev so its PDF rides in one restore commit (no promotion)

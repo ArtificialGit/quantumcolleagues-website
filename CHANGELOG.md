@@ -1,3 +1,10 @@
+## 2026-11-18 [C] Care Playbook page back on dev with its PDF; complete, and waiting for Jonathan's Promote
+- guides/QC_AI_Playbook_for_Care_Operators_v1.1.pdf is in, taken from the temporary branch playbook-pdf-v1-1 (4a007e5): 457,821 bytes, sha256 32582e17...3713, the file approved on 18 November. The page, its Resources card, its sitemap line and its llms.txt line return with it (the reverse of 306b67c).
+- Built by add_care_playbook.py, add_resource_cta.py, build_press_hub.py and build_thought_hub.py. Against 5560c5b the only change apart from this file is the PDF.
+- verify_care_playbook.py GREEN 31/31, the first time this page has been complete. plant_faults_care_playbook_copy.py caught 7/7 planted faults against a clean baseline, including a wrong PDF at the v1.1 path. Served locally from this tree, the page, the PDF (the same sha256) and resources.html all answer 200.
+- regress_all.py: 36/49 here and 36/49 on 5560c5b, and nothing goes from pass to fail.
+- One revert of this commit parks the whole page, PDF included, if a promotion before Jonathan's Promote for the Playbook needs it parked.
+
 ## 2026-11-18 [C] Care Playbook page parked on dev so its PDF rides in one restore commit (no promotion)
 - Jonathan signed in to GitHub in Chrome at 12:30 UK, and v1.1 of the Playbook PDF went up through the GitHub upload page into the temporary branch playbook-pdf-v1-1 (4a007e5, 457,821 bytes, sha256 32582e17...3713, the approved file).
 - This commit takes the page, its Resources card, its sitemap line and its llms.txt line off dev (the reverse of fc0adc3). The next commit restores all of it with the PDF inside, so a promotion that is not for the Playbook still parks the whole page, PDF included, with one revert. build_press_hub.py and build_thought_hub.py changed nothing on the parked tree.

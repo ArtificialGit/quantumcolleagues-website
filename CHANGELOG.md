@@ -1,3 +1,7 @@
+## 2026-11-18 [C] Care Playbook page parked on dev so its copy fixes ride in one restore commit (no promotion)
+- Jonathan, 18 Nov 08:36 UK: "Go", on matching the page to the PDF (no "no supplier" claim, the PDF's one rule, the PDF's thirty days) and on a v1.1 of the PDF that drops "for two weeks" from step 4, so it agrees with ten working days from signed order to live.
+- This commit takes the page, its Resources card, its sitemap line and its llms.txt line off dev (the reverse of c5989e5). The next commit restores all of it with the fixes, so a promotion still parks the page by reverting the latest restore commit. The parked tree is byte equal to main (b5aa68e) apart from this file, and build_press_hub.py and build_thought_hub.py changed nothing.
+
 ## 2026-11-18 [C] Care Playbook page back on dev, twelfth time
 - The page, its Resources card, its sitemap line and its llms.txt line return after the twelfth park (the reverse of b5aa68e), so main carries the Bracton Thought alone. The restored tree is byte equal to 727222b apart from this file. build_press_hub.py and build_thought_hub.py ran and changed nothing. The page still waits for its PDF: verify_care_playbook.py is RED 23/24 on this tree on that one check, as before. verify_thought_bracton.py GREEN 60/60, verify_press_hub.py GREEN 162/162, verify_thought_hub.py GREEN 217/217, verify_resource_cta.py GREEN 45/45.
 - On the live site at 08:46 UK, verify_thought_bracton.py --live is GREEN 58/58.

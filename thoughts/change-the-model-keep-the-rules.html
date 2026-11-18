@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change the model. Keep the rules. | QuantumColleagues™</title>
-    <meta name="description" content="Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what&rsquo;s allowed, and the rules stay put when the model changes.">
+    <meta name="description" content="Bracton is our deterministic safety layer around AI models. It puts seven protections round the model, and they stay the same whichever model does the drafting.">
     <link rel="canonical" href="https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,17 +102,18 @@
 <meta property="og:site_name" content="QuantumColleagues">
 <meta property="og:url" content="https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html">
 <meta property="og:title" content="Change the model. Keep the rules. &middot; QuantumColleagues&trade;">
-<meta property="og:description" content="Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what&rsquo;s allowed, and the rules stay put when the model changes.">
+<meta property="og:description" content="Bracton is our deterministic safety layer around AI models. It puts seven protections round the model, and they stay the same whichever model does the drafting.">
 <meta property="og:image" content="https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules-social.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Change the model. Keep the rules. &middot; QuantumColleagues&trade;">
-<meta name="twitter:description" content="Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what&rsquo;s allowed, and the rules stay put when the model changes.">
+<meta name="twitter:description" content="Bracton is our deterministic safety layer around AI models. It puts seven protections round the model, and they stay the same whichever model does the drafting.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style id="talk-cta-css">.talk-cta{max-width:66ch;margin:1.6rem 0 .6rem;padding:1rem 1.2rem;border-top:3px solid #2D8C6F;background:#F3F8F6;font-size:1.02rem;line-height:1.6;color:#2c2c33}.talk-cta a{color:#1F6B53;font-weight:600;text-decoration:none}.talk-cta a:hover,.talk-cta a:focus{text-decoration:underline}</style>
 <link rel="alternate" type="application/rss+xml" title="Thoughts from QuantumColleagues" href="/thoughts/feed.xml">
 <style id="pages-css">.pages{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0 .6rem}.pages img{width:100%;border:1px solid #e6e6e6;border-radius:4px}.pdf-link{display:inline-block;margin:.4rem 0 1.4rem;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1F6B53;text-decoration:none;border-bottom:2px solid #2D8C6F;padding-bottom:.15rem}@media(max-width:600px){.pages{grid-template-columns:1fr}}</style>
-<script type="application/ld+json" id="thought-ld">{"@context": "https://schema.org", "@type": "Article", "headline": "Change the model. Keep the rules.", "description": "Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what’s allowed, and the rules stay put when the model changes.", "datePublished": "2026-11-18", "url": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html"}, "image": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules-social.jpg", "inLanguage": "en-GB", "author": {"@type": "Person", "name": "Jonathan Clark"}, "publisher": {"@type": "Organization", "name": "QuantumColleagues", "url": "https://quantumcolleagues.org", "logo": {"@type": "ImageObject", "url": "https://quantumcolleagues.org/qc_logo_navy.png"}}}</script>
+<style id="protections-css">.art-body ul.protections{margin:0 0 1.1rem 1.25rem;padding:0;max-width:64ch}.art-body ul.protections li{font-size:1.02rem;color:#2c2c33;line-height:1.6;margin:0 0 .55rem}.art-body ul.protections strong{color:#050830;font-weight:600}</style>
+<script type="application/ld+json" id="thought-ld">{"@context": "https://schema.org", "@type": "Article", "headline": "Change the model. Keep the rules.", "description": "Bracton is our deterministic safety layer around AI models. It puts seven protections round the model, and they stay the same whichever model does the drafting.", "datePublished": "2026-11-18", "url": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html"}, "image": "https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules-social.jpg", "inLanguage": "en-GB", "author": {"@type": "Person", "name": "Jonathan Clark"}, "publisher": {"@type": "Organization", "name": "QuantumColleagues", "url": "https://quantumcolleagues.org", "logo": {"@type": "ImageObject", "url": "https://quantumcolleagues.org/qc_logo_navy.png"}}}</script>
 </head>
 <body>
     <header>
@@ -131,17 +132,26 @@
 
         <div class="art-body">
             <p>A better AI model arrives every few months. That&rsquo;s good news, but it raises an awkward question for a regulated organisation. If your safeguards live inside the model, what happens to them when the model changes?</p>
-            <p>Ours don&rsquo;t live there. Admin Core runs inside Bracton, our <a class="in" href="/thoughts/rules-it-cannot-bend.html">deterministic framework</a>. The model drafts the reply, sorts the inbox or answers the policy question, and Bracton decides what&rsquo;s allowed to happen next.</p>
-            <p>Business rules have to pass. A policy answer has to cite a real source. Anything with consequence stops with a named person, and every decision is logged.</p>
-            <p>We named it after Henry de Bracton, an English judge of the 1200s who is remembered for the line that even the King is under the law. Nothing sits above the rules in our framework either, and that includes the model.</p>
+            <p>Ours don&rsquo;t live there. Admin Core runs inside Bracton, our <a class="in" href="/thoughts/rules-it-cannot-bend.html">deterministic safety layer</a> around AI models. Bracton is ordinary code, not another model, and it meets the test we set for every safeguard: it holds without the AI&rsquo;s cooperation. A rule that a model merely agrees to follow is an aspiration, not a control.</p>
+            <p>Bracton puts seven protections round the model.</p>
+            <ul class="protections">
+                <li><strong>Guarded inputs.</strong> Nothing reaches the model until our code has cleaned it, checked who sent it and decided what kind of work it is.</li>
+                <li><strong>No direct power.</strong> The model drafts and proposes. It holds no send button and has no say over who hears from it, and live actions stay switched off unless the system is cleared to act.</li>
+                <li><strong>Checked outputs.</strong> Everything it drafts is checked before it goes out. The policies it cites and the figures it quotes must match your own sources, and anything it can&rsquo;t prove goes to a person.</li>
+                <li><strong>Written limits.</strong> What each colleague may do is written down outside the model and enforced in code, not left to its judgement.</li>
+                <li><strong>People decide.</strong> Anything with consequence stops with a named person, and the approval is recorded against them.</li>
+                <li><strong>A full record.</strong> Every message reaches a recorded end, and every decision shows what was checked and why.</li>
+                <li><strong>Safe by default.</strong> Each colleague is kept apart, runs on local models and is watched for faults, and when it&rsquo;s in doubt it stops.</li>
+            </ul>
+            <p>We named it after Henry de Bracton, an English judge of the 1200s who is remembered for the line that even the King is under the law. Nothing sits above the rules in Bracton either, and that includes the model.</p>
             <p>Bracton is the third part of how we work. <a class="in" href="/gated-autonomy.html">Gated Autonomy</a> is how we build and change our AI. Our <a class="in" href="/thoughts/people-decide.html">threshold model</a> sets the line for each colleague, so everyone knows what it may do on its own and what waits for a person. Bracton holds that line while the colleague works.</p>
-            <p>Because Bracton sits outside the model, it doesn&rsquo;t care which model does the drafting. We can move routine work to a smaller, cheaper model, or bring in a stronger one where judgement matters, and the rules, the approvals and the audit trail stay as they were. A new model still passes through Gated Autonomy before it goes live, but nobody has to rebuild your safeguards each time.</p>
+            <p>Because every protection sits outside the model, any model can do the drafting and the protections stay the same. We can move routine work to a smaller, cheaper model, or bring in a stronger one where judgement matters, and the checks, the approvals and the audit trail stay as they were. A new model still passes through Gated Autonomy before it goes live, but nobody has to rebuild your safeguards each time.</p>
             <p>Your safeguards shouldn&rsquo;t belong to whoever supplies the model. Models will keep changing, and your rules shouldn&rsquo;t have to.</p>
         </div>
         <p class="talk-cta">If you’d like to talk to us about this, then please contact us <a href="/contact.html">here</a> or email us directly at <a href="mailto:information@quantumcolleagues.org">information@quantumcolleagues.org</a>.</p>
         <div class="pages">
-            <img src="/thoughts/change-the-model-keep-the-rules-page2.jpg" alt="Page 2: How Bracton works. The model drafts. Bracton decides. Admin Core runs inside Bracton, our deterministic framework. Business rules have to pass. A policy answer has to cite a real source. Anything with consequence stops with a named person. Every decision is logged.">
-            <img src="/thoughts/change-the-model-keep-the-rules-page3.jpg" alt="Page 3: How we work. Three parts, one job each. Gated Autonomy builds and changes our AI. The threshold model sets each colleague&rsquo;s line. Bracton holds the line, whatever the model. Which rule should no model ever bend? Talk to us at quantumcolleagues.org.">
+            <img src="/thoughts/change-the-model-keep-the-rules-page2.jpg" alt="Page 2: How Bracton works. Seven protections round the model. Guarded inputs: code cleans everything first. No direct power: it drafts, and it can&rsquo;t send. Checked outputs: claims must match your sources. Written limits: code enforces every limit. People decide: a named person signs off. A full record: every decision is logged. Safe by default: in doubt, it stops. All seven sit outside the model.">
+            <img src="/thoughts/change-the-model-keep-the-rules-page3.jpg" alt="Page 3: Why it lasts. Any model fits in the middle, and the protections stay the same, whatever the model. The picture shows Bracton, ordinary code outside the model, with the AI model in the middle inside no direct power, guarded inputs coming in, checked outputs going out, written limits and people decide above, and a full record and safe by default below. Which protection matters most to you? Talk to us at quantumcolleagues.org.">
         </div>
         <a class="pdf-link" href="/thoughts/QC_Bracton_LinkedIn_3pp.pdf" target="_blank" rel="noopener">Download the three page PDF &rarr;</a>
     </div>

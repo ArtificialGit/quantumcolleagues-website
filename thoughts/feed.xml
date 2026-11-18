@@ -13,7 +13,7 @@
       <link>https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html</link>
       <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html</guid>
       <pubDate>Wed, 18 Nov 2026 09:00:00 +0000</pubDate>
-      <description>Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what’s allowed, and the rules stay put when the model changes.</description>
+      <description>Bracton is our deterministic safety layer around AI models. It puts seven protections round the model, and they stay the same whichever model does the drafting.</description>
     </item>
     <item>
       <title>Which AI can care providers trust?</title>

@@ -1,3 +1,7 @@
+## 2026-11-18 [C] Care Playbook page live: the checks on the live site and the new main
+- On the live site at 23:38 UK, care-playbook.html and the PDF answer 200, the PDF is the approved v1.1 (sha256 32582e17...3713, 457,821 bytes), and the Resources card links the page. verify_care_playbook_gate_live.py is GREEN 14/14 against the live page, with no email sent. verify_thought_gfg.py --live is GREEN 32/32, verify_thought_bracton.py --live GREEN 62/62 and verify_thought_bracton_pages.py --live GREEN 21/21.
+- On a clone of the new main (2aab640), verify_care_playbook.py is GREEN 31/31 and verify_advisory_consultancy.py GREEN 15/15. Nothing is parked any more, so dev and main carry the same site.
+
 ## 2026-11-18 [C] Care Playbook page live, with its email gate checked in a browser
 - Jonathan, 18 Nov 23:33 UK: "Put care up, e-mail guarded". Main moves to this commit, which puts care-playbook.html (the AI Playbook for Care Operators), its v1.1 PDF in guides/, its Resources card, its sitemap line and its llms.txt line on the live site. The page and the PDF had waited on dev since the morning (4aaa15a, then the restores 2bf07e2, 0803441, 78535e3 and 9734e6c). Against live main (65750a4) this tree differs in those five files and CHANGELOG.md, and nothing else.
 - The gate is the house pattern for free guides, as on guide.html. The page asks for an email address, sends it to information@quantumcolleagues.org through FormSubmit, and only then starts the download. If FormSubmit fails, the page says so and offers the PDF by a link, so nobody is left stuck.

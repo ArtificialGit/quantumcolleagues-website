@@ -18,7 +18,6 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 - [Career & Beyond](https://quantumcolleagues.org/career-beyond.html): a free careers app for every generation, with 87 real UK jobs, honest pay and how AI changes each one. It runs in any browser and on Google Play, and nothing you type leaves your device.
 - [Adopting AI: first steps for SMEs](https://quantumcolleagues.org/guide.html): a free guide in plain English to adopting AI as support and extra capacity for your SME, with people and AI working together.
 - [Safe AI Readiness Scorecard](https://quantumcolleagues.org/scorecard.html): a free three minute scorecard for owners and managers of small regulated organisations, with ten questions, three pillars, a plain result and three next steps.
-- [AI Playbook for Care Operators](https://quantumcolleagues.org/care-playbook.html): a free seven page playbook for care operators running more than one site, with ten plays that take paperwork off your team without a single resident record leaving your control.
 - [Gated Autonomy](https://quantumcolleagues.org/gated-autonomy.html): the QuantumColleagues delivery method for AI and AI-led automation. The AI works freely, and every boundary that matters is a hard gate it cannot talk its way through.
 - [The Human-AI Operating Model](https://quantumcolleagues.org/human-ai-operating-model.html): how a business puts AI colleagues to work in its back office while its own people stay in charge.
 

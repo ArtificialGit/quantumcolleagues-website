@@ -7,7 +7,14 @@
     <language>en-gb</language>
     <atom:link href="https://quantumcolleagues.org/thoughts/feed.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
-    <lastBuildDate>Tue, 17 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Change the model. Keep the rules.</title>
+      <link>https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html</guid>
+      <pubDate>Wed, 18 Nov 2026 09:00:00 +0000</pubDate>
+      <description>Bracton is the deterministic framework Admin Core runs inside. The model drafts, Bracton decides what’s allowed, and the rules stay put when the model changes.</description>
+    </item>
     <item>
       <title>Which AI can care providers trust?</title>
       <link>https://quantumcolleagues.org/thoughts/which-ai-can-care-providers-trust.html</link>

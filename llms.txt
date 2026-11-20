@@ -9,7 +9,8 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 - [Admin Core](https://quantumcolleagues.org/admincore.html): the AI automation platform for back office work (policy questions, the inbox, HR and training records, incident and complaint paperwork, inspection evidence).
 - [Proust](https://quantumcolleagues.org/proust.html): an AI assistant with its own mailbox.
 - [Advisory](https://quantumcolleagues.org/advisory.html): advice for SMEs and regulated businesses on secure and responsible AI automation. We teach your team, and you own the capability rather than a contract.
-- [Products and services](https://quantumcolleagues.org/products.html): Admin Core, Proust and Advisory on one page.
+- [Bracton](https://quantumcolleagues.org/bracton.html): our deterministic safety layer around AI models, licensed on its own with implementation support, so your safeguards hold whichever model does the work.
+- [Products and services](https://quantumcolleagues.org/products.html): Admin Core, Proust, Advisory and Bracton on one page.
 
 ## Free resources
 

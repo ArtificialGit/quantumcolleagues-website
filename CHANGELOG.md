@@ -1,3 +1,7 @@
+## 2026-11-24 [C] CHANGELOG: the AI promise Thought's checks on the live site and the new main
+- Jonathan approved the text at 13:02 UK ("Approve") and gave the word at 14:38 UK ("Promote"). main moved from 91c63df to f38ea71 by fast forward at 14:39 UK; dev held that one commit and nothing else.
+- On the live site: verify_thought_promise.py --live GREEN 66/66, verify_thought_hub.py --live GREEN 244/244 and verify_press_hub.py --live GREEN 157/157, all at 14:40 UK.
+
 ## 2026-11-24 [C] Thought: "If your AI makes a promise, you've made it."
 - Jonathan, 24 Nov 09:28 and 09:29 UK: "I'd turn this into a thought on the website too" and "This should be a website thought along with a pexel". It follows his LinkedIn post of the same morning on WRAL News's report of 19 November (a tenant in Raleigh, North Carolina, an email from her landlord's AI assistant and an eviction notice), with the lesson for regulated care. Built on dev; it waits for his word on the text and for his Promote.
 - thoughts/if-your-ai-makes-a-promise.html, dated 24 November 2026 under Social care, from the-will-is-there.html as the house template. The text stays inside what WRAL reports: it links the report, says "served with an eviction notice" and never "evicted", gives the AI explanation as the tenant's account, and names neither the tenant, the complex nor the assistant. It names three of Bracton's protections in their public wording (written limits, people decide, a full record), links Admin Core before Bracton, and makes no CQC or Regulation claim.

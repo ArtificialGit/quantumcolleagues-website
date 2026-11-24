@@ -7,7 +7,14 @@
     <language>en-gb</language>
     <atom:link href="https://quantumcolleagues.org/thoughts/feed.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
-    <lastBuildDate>Wed, 18 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>If your AI makes a promise, you’ve made it.</title>
+      <link>https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html</link>
+      <guid isPermaLink="true">https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html</guid>
+      <pubDate>Tue, 24 Nov 2026 09:00:00 +0000</pubDate>
+      <description>A US tenant says her landlord’s AI assistant agreed a late rent date, and an eviction notice still came. Here’s what that means for AI in regulated care.</description>
+    </item>
     <item>
       <title>Change the model. Keep the rules.</title>
       <link>https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html</link>

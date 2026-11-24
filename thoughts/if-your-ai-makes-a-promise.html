@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If your AI makes a promise, you&rsquo;ve made it. | QuantumColleagues™</title>
+    <meta name="description" content="A US tenant says her landlord&rsquo;s AI assistant agreed a late rent date, and an eviction notice still came. Here&rsquo;s what that means for AI in regulated care.">
+    <link rel="canonical" href="https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #333333; line-height: 1.6; }
+        header { padding: 1.5rem 3rem; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center; justify-content: space-between; }
+        .logo-text { font-size: 1.4rem; letter-spacing: -0.3px; color: #050830; }
+        .logo-text .light { font-weight: 300; } .logo-text .bold { font-weight: 700; } .logo-text .dot { color: #2D8C6F; font-weight: 700; }
+        .back-link { font-size: 0.85rem; color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .strapline-strip { background: #fafafc; border-bottom: 1px solid #e6e6e6; padding: 0.7rem 1rem; text-align: center; }
+        .strapline-text { font-size: 0.78rem; color: #6b6e8a; letter-spacing: 0.18em; text-transform: uppercase; }
+        .strapline-text .dot { color: #2D8C6F; font-weight: 700; }
+        .faces-hero { position: relative; height: 340px; overflow: hidden; background: #050830; }
+        #mosaic { position: absolute; inset: 0; display: grid; grid-auto-rows: 70px; gap: 2px; z-index: 0; }
+        #mosaic .tile { background-color: #0d1240; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.6s ease; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(5,8,48,0.62); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #7fd8bd; margin-bottom: 0.6rem; }
+        .hero-title { font-size: 2.6rem; font-weight: 300; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
+        .hero-title .dot { color: #2D8C6F; font-weight: 600; }
+        .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.82); max-width: 560px; }
+        .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+        .kick { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #2D8C6F; margin-bottom: 0.5rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { font-size: 1.5rem; font-weight: 600; color: #050830; margin-bottom: 0.8rem; letter-spacing: -0.3px; }
+        .section p { margin-bottom: 0.9rem; font-size: 0.95rem; color: #444; max-width: 72ch; }
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-top: 1.2rem; }
+        .rule-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 1.3rem 1.4rem; }
+        .rule-card h3 { font-size: 0.95rem; font-weight: 600; color: #050830; margin-bottom: 0.4rem; }
+        .rule-card p { font-size: 0.88rem; color: #555; margin: 0; }
+        .mission-box { background: #050830; color: rgba(255,255,255,0.88); border-radius: 4px; padding: 1.4rem 1.6rem; margin-top: 1.4rem; font-size: 0.92rem; }
+        .mission-box strong { color: #7fd8bd; font-weight: 600; }
+        .form-card { background: #fafafc; border: 1px solid #e6e6e6; border-top: 3px solid #2D8C6F; border-radius: 4px; padding: 2rem; margin-top: 1.4rem; max-width: 620px; }
+        .field { margin-bottom: 1.1rem; display: flex; flex-direction: column; }
+        .field label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6e8a; margin-bottom: 0.35rem; }
+        .field .req { color: #2D8C6F; }
+        .field input, .field textarea { font-family: inherit; font-size: 0.95rem; color: #333; padding: 0.72rem 0.85rem; border: 1px solid #d8d8e0; border-radius: 6px; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
+        .field textarea { resize: vertical; min-height: 120px; }
+        .field input::placeholder, .field textarea::placeholder { color: #b6b8c8; }
+        .field input:focus, .field textarea:focus { outline: none; border-color: #2D8C6F; box-shadow: 0 0 0 3px rgba(45,140,111,0.12); }
+        .submit-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D8C6F; color: #fff; border: none; cursor: pointer; font-family: inherit; padding: 0.85rem 1.6rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; }
+        .submit-btn:hover { background: #256f58; }
+        .form-note { font-size: 0.78rem; color: #8c8eaf; margin-top: 0.8rem; }
+        .form-error { color: #b3261e; font-size: 0.82rem; margin-top: 0.6rem; }
+        footer { border-top: 1px solid #e6e6e6; margin-top: 3rem; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        footer a { color: #2D8C6F; text-decoration: none; font-weight: 500; }
+        footer .right { color: #8c8eaf; }
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.5rem; }
+            .faces-hero { height: 260px; }
+            .hero-title { font-size: 2rem; }
+            .page { padding: 2rem 1.5rem; }
+            .rules-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+<style>.hero-card{display:block;width:100%;border-radius:6px;margin-bottom:1.8rem;box-shadow:0 6px 28px rgba(5,8,48,.14)}.art-body a.in{color:#1F6B53;font-weight:600;text-decoration:none}.hero-fig{margin:0 0 1.8rem}.hero-fig .hero-card{margin-bottom:.45rem}.hero-fig figcaption{font-size:.72rem;color:#8c8eaf;text-align:center}</style>
+<style>
+/* --- thoughts section --- */
+.thoughts-intro{max-width:72ch;margin-bottom:1.6rem;font-size:0.98rem;color:#444}
+.t-list{display:grid;gap:1.2rem;margin-top:1rem}
+.t-item{background:#fafafc;border:1px solid #e6e6e6;border-top:3px solid #2D8C6F;border-radius:4px;padding:1.5rem 1.6rem;display:block;text-decoration:none;color:inherit;transition:box-shadow .15s ease,transform .15s ease}
+.t-item:hover{box-shadow:0 6px 22px rgba(5,8,48,.10);transform:translateY(-1px)}
+.t-meta{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8c8eaf;margin-bottom:.6rem;display:flex;gap:1rem;flex-wrap:wrap}
+.t-item h3{font-size:1.3rem;font-weight:700;color:#050830;line-height:1.28;margin-bottom:.5rem;letter-spacing:-.2px}
+.t-item p{font-size:.95rem;color:#555;margin:0}
+.t-item .go{display:inline-block;margin-top:1rem;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1F6B53}
+.t-more{margin-top:2rem;font-size:.9rem;color:#6b6e8a}
+.t-more a{color:#1F6B53;font-weight:600;text-decoration:none}
+.art-wrap{max-width:720px;margin:0 auto;padding:2.6rem 2rem 1rem}
+.crumb{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8c8eaf;margin-bottom:1.6rem}
+.crumb a{color:#1F6B53;text-decoration:none}
+.thought-card{background:#050830;border-radius:6px;padding:2.6rem 2.4rem;margin-bottom:1.8rem}
+.thought-card .tc-eyebrow{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:#E8630A;margin-bottom:1.1rem}
+.thought-card .tc-head{font-weight:800;color:#fff;font-size:2.1rem;line-height:1.14;letter-spacing:-.4px}
+.thought-card .tc-head .k{color:#E8630A}
+.thought-card .tc-foot{margin-top:1.4rem;font-size:.8rem;color:rgba(255,255,255,.72)}
+.thought-card .tc-foot .dot{color:#7FE0C4;font-weight:700}
+.art-h{font-size:1.7rem;font-weight:700;color:#050830;line-height:1.18;margin-bottom:.4rem;letter-spacing:-.3px}
+.art-meta{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8c8eaf;margin-bottom:1.4rem}
+.art-body p{font-size:1.02rem;color:#2c2c33;margin-bottom:1rem;max-width:66ch}
+.art-body p.dek{font-size:1.16rem;color:#34343C;font-weight:500}
+.close-band{background:#2D648C;color:#fff;padding:1.7rem 2rem;margin-top:2rem}
+.close-band .cb-in{max-width:720px;margin:0 auto}
+.close-band b{font-weight:700}
+.close-band .strap{font-weight:700;font-size:1.2rem;margin-top:.4rem}
+.close-band .dot{color:#7FE0C4}
+@media(max-width:768px){.thought-card{padding:2rem 1.5rem}.thought-card .tc-head{font-size:1.7rem}.art-wrap{padding:2rem 1.5rem}}
+</style>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuantumColleagues">
+<meta property="og:url" content="https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html">
+<meta property="og:title" content="If your AI makes a promise, you&rsquo;ve made it. &middot; QuantumColleagues&trade;">
+<meta property="og:description" content="A US tenant says her landlord&rsquo;s AI assistant agreed a late rent date, and an eviction notice still came. Here&rsquo;s what that means for AI in regulated care.">
+<meta property="og:image" content="https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise-social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="If your AI makes a promise, you&rsquo;ve made it. &middot; QuantumColleagues&trade;">
+<meta name="twitter:description" content="A US tenant says her landlord&rsquo;s AI assistant agreed a late rent date, and an eviction notice still came. Here&rsquo;s what that means for AI in regulated care.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style id="talk-cta-css">.talk-cta{max-width:66ch;margin:1.6rem 0 .6rem;padding:1rem 1.2rem;border-top:3px solid #2D8C6F;background:#F3F8F6;font-size:1.02rem;line-height:1.6;color:#2c2c33}.talk-cta a{color:#1F6B53;font-weight:600;text-decoration:none}.talk-cta a:hover,.talk-cta a:focus{text-decoration:underline}</style>
+<link rel="alternate" type="application/rss+xml" title="Thoughts from QuantumColleagues" href="/thoughts/feed.xml">
+<script type="application/ld+json" id="thought-ld">{"@context": "https://schema.org", "@type": "Article", "headline": "If your AI makes a promise, you’ve made it.", "description": "A US tenant says her landlord’s AI assistant agreed a late rent date, and an eviction notice still came. Here’s what that means for AI in regulated care.", "datePublished": "2026-11-24", "url": "https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html"}, "image": "https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise-social.jpg", "inLanguage": "en-GB", "author": {"@type": "Person", "name": "Jonathan Clark"}, "publisher": {"@type": "Organization", "name": "QuantumColleagues", "url": "https://quantumcolleagues.org", "logo": {"@type": "ImageObject", "url": "https://quantumcolleagues.org/qc_logo_navy.png"}}}</script>
+</head>
+<body>
+    <header>
+        <span class="logo-text"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <a href="/thoughts/" class="back-link">&larr; Thoughts</a>
+    </header>
+    <div class="strapline-strip"><span class="strapline-text">Do some good with AI<span class="dot">.</span></span></div>
+
+    <div class="art-wrap">
+        <p class="crumb"><a href="/thoughts/">Thoughts</a> / AI promises</p>
+
+        <figure class="hero-fig"><img class="hero-card" src="/thoughts/if-your-ai-makes-a-promise.jpg" alt="Two hands holding a mobile phone in a dark room, lit only by the glow of its screen."><figcaption>Photo: Jaroslav Maléř, Pexels</figcaption></figure>
+
+        <h1 class="art-h">If your AI makes a promise, you&rsquo;ve made it.</h1>
+        <p class="art-meta">Social care &middot; 24 November 2026</p>
+
+        <div class="art-body">
+            <p class="dek">A tenant in Raleigh, North Carolina, told her landlord&rsquo;s leasing office that she&rsquo;d pay her overdue rent at the end of the month, and an email came back to say that would work. Eight days later she was served with an eviction notice.</p>
+            <p>She told <a class="in" href="https://www.wral.com/news/investigates/eviction-raleigh-apartment-ai-leasing-agent-november-2026/">WRAL News</a> that the office then explained the email - its AI assistant had sent it, and it had got it wrong. WRAL reports that the email didn&rsquo;t say an AI had written it, and that the landlord hadn&rsquo;t replied to its questions when the story ran.</p>
+            <p>I don&rsquo;t know the whole story, so I won&rsquo;t judge it. I do know the question it leaves behind - who answers for a promise that software makes in your name?</p>
+            <p>My answer is that you do. If your AI makes a promise, you&rsquo;ve made it, and &ldquo;the chatbot did it&rdquo; won&rsquo;t mean much to the person who relied on it.</p>
+            <p>Now put that email in a UK care home. A daughter asks for more time on her mum&rsquo;s fees, and something says yes at 11pm. The provider answers to that family for every word sent in its name, and I&rsquo;d expect its regulator to see it the same way.</p>
+            <p>None of that is a reason to keep AI away from care admin. AI is support and extra capacity for a stretched team, and it can read, sort, draft and chase all day. The answer is in how you set it up, and we hold ourselves to three things.</p>
+            <p><b>Written limits.</b> What the AI may do on its own is written down outside the model and enforced in code, not left to its judgement.</p>
+            <p><b>People decide.</b> Anything with consequence, such as money, a contract or a complaint, stops with a named person, and the approval is recorded against them.</p>
+            <p><b>A full record.</b> Every message reaches a recorded end, and every decision shows what was checked and why.</p>
+            <p>That&rsquo;s how <a class="in" href="/admincore.html">Admin Core</a> works, inside <a class="in" href="/bracton.html">Bracton</a>, our safety layer around AI models.</p>
+            <p>If your AI wrote to a family tonight, who would&rsquo;ve agreed it first?</p>
+        </div>
+        <p class="talk-cta">If you’d like to talk to us about this, then please contact us <a href="/contact.html">here</a> or email us directly at <a href="mailto:information@quantumcolleagues.org">information@quantumcolleagues.org</a>.</p>
+    </div>
+
+    <div class="close-band">
+        <div class="cb-in">
+            <div>Businesses buy our AI, and that funds free <b>post-AI training</b> for every generation.</div>
+            <div class="strap">Do some good with AI<span class="dot">.</span></div>
+        </div>
+    </div>
+    <footer>
+        <span class="logo-text" style="font-size:1rem;"><span class="light">Quantum</span><span class="bold">Colleagues</span><span class="dot">.</span></span>
+        <span class="right"><a href="/index.html">quantumcolleagues.org</a> &nbsp;&middot;&nbsp; <a href="/thoughts/">Thoughts</a> &nbsp;&middot;&nbsp; <a href="/mission.html">Mission</a></span>
+    </footer>
+    <p style="text-align:center;font-size:0.68rem;color:#aaa;padding:0.3rem 0 0.8rem;line-height:1.5;">&copy; QuantumColleagues Ltd 2026 &middot; Company No. 17219359 &middot; <a href="tel:+443338800712" style="color:inherit;text-decoration:none;">Tel 0333 880 0712</a> &middot; 50% owned by Quantum Colleagues Training CIC (No. 17244034) &middot; <a href="https://www.pexels.com" style="color:inherit;text-decoration:none;">Photos: Pexels</a> &middot; <a href="/privacy.html" style="color:inherit;">Privacy</a> &middot; <a href="https://www.google.com/preferences/source?q=quantumcolleagues.org" style="color:inherit;">Follow on Google</a></p>
+
+    <script src="/qc-faces.js"></script>
+</body>
+</html>

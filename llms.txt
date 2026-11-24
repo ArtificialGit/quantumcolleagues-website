@@ -25,6 +25,7 @@ QuantumColleagues Ltd (company number 17219359) is 50% owned by Quantum Colleagu
 
 ## Thoughts
 
+- [If your AI makes a promise, you’ve made it.](https://quantumcolleagues.org/thoughts/if-your-ai-makes-a-promise.html): 24 November 2026. A US tenant says her landlord’s AI assistant agreed a late rent date, and an eviction notice still came. Here’s what that means for AI in regulated care.
 - [Change the model. Keep the rules.](https://quantumcolleagues.org/thoughts/change-the-model-keep-the-rules.html): 18 November 2026. Bracton is our deterministic safety layer around AI models. It puts seven protections around the model, and they stay the same whichever model does the drafting.
 - [Which AI can care providers trust?](https://quantumcolleagues.org/thoughts/which-ai-can-care-providers-trust.html): 17 November 2026. Our care AI study on Isambard-AI is up and running. It tests which open models handle care admin well and safely on a provider’s own hardware.
 - [The will is there. What’s often missing is a map.](https://quantumcolleagues.org/thoughts/the-will-is-there.html): 16 November 2026. 84% of young people who aren’t working, studying or training want to be. Career & Beyond, our free careers app, helps them map their next step.
